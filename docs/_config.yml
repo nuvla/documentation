@@ -16,7 +16,7 @@
 title: Nuvla
 email: support@sixsq.com
 description: Comprehensive cloud-to-edge management platform
-baseurl: "/nuvla" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sixsq
 github_username: nuvla
