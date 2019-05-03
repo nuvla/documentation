@@ -5,7 +5,7 @@ applications on multiple infrastructures, including those on the edge.
 
 This repository contains the core documentation for the platform:
 
- - [Nuvla Platform Guides](https://nuvla.github.io/nuvla/)
+ - [Nuvla Platform Guides](https://docs.nuvla.io)
  - [Nuvla Developer Information](https://github.com/nuvla/nuvla/wiki)
 
 The code for the platform can be found in the other repositories
