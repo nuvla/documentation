@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Adding Applications
-parent: Training
+parent: Developer Training
+grand_parent: Training
 nav_order: 6
 ---
 

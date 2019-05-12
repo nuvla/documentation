@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Add Swarm Cluster
-parent: Training
+parent: Developer Training
+grand_parent: Training
 nav_order: 8
 ---
 

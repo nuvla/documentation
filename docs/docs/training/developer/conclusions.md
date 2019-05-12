@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Conclusions
-parent: Training
+parent: Developer Training
+grand_parent: Training
 nav_order: 10
 ---
 

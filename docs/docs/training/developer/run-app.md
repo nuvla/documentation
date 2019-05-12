@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Running Applications
-parent: Training
+parent: Developer Training
+grand_parent: Training
 nav_order: 5
 ---
 
@@ -18,6 +19,10 @@ Running Applications with Data
    - The emphasis is on the simplicity of the process, so this is done
      entirely through the UI and none of the "details" of the modules,
      deployments, etc. should be shown.
+
+```sh
+{% include_relative code/code.sh %}
+```
 
 ## Hands-on: End-user deployment with data access (A)
 

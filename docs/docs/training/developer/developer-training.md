@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Training
-nav_order: 5
+title: Developer Training
+parent: Training
+nav_order: 1
 has_children: true
-permalink: /training
+permalink: /training/developer
 ---
 
-# Training
+# Developer Training
 
 Descriptions of the [actors](https://sixsq.com/developer/personae)
 within the Nuvla ecosystem can be found on the SixSq website.  This

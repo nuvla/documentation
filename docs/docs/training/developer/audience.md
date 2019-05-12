@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Target Audience
-parent: Training
+parent: Developer Training
+grand_parent: Training
 nav_order: 1
 ---
 
