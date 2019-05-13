@@ -9,18 +9,17 @@ nav_order: 1
 Target Audience
 ===============
 
-   - Training is primarily aimed at people who will:
+This training course targets primarily people who will:
+
+ - Develop applications (Clara) that will be deployed by end-users,
    
-      1. Develop applications (C) that will be deployed by end-users,
-      
-      1. Manage data (E) for consumption by end-users via
-         applications, and
+ - Manage data (Emma) for consumption by end-users via applications,
+   and
 
-      1. Deploy Swarm infrastructures (D) that will provide compute
-         and storage resources through Nuvla
+ - Integrate Swarm infrastructures (Dave) with Nuvla that provide
+   compute and storage resources.
 
-   - Information about end-users' (A) interactions with Nuvla will
-     also be provided so that the audience can understand the benefits
-     of how Nuvla brings together container-based applications, data
-     management, and resources.
-
+Information about end-users' (Alice) interactions with Nuvla will also
+be provided so that the audience can understand the benefits of how
+Nuvla combines container-based applications, data management, and
+computing resources.
