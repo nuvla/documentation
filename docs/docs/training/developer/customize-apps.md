@@ -3,7 +3,7 @@ layout: default
 title: Customize Applications
 parent: Developer Training
 grand_parent: Training
-nav_order: 9
+nav_order: 10
 ---
 
 Customize Applications

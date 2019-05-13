@@ -3,7 +3,7 @@ layout: default
 title: Managing Data
 parent: Developer Training
 grand_parent: Training
-nav_order: 7
+nav_order: 8
 ---
 
 Managing Data
