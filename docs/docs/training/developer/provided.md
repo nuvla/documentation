@@ -27,5 +27,5 @@ access to a:
 
  - "Target" Docker Swarm infrastructure.
 
-Instructions for deploying those services are available elsewhere in
-the documentation.
+Instructions for deploying those services are available [elsewhere in
+the documentation](/administrators.html).

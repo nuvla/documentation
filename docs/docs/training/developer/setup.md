@@ -86,40 +86,63 @@ to select data to analyze, the "apps" section to see available
 applications, and the "dashboard" to manage deployed applications. The
 "api" section will typically only be used by experts.
 
-## Add Swarm Credentials
+## Add Credentials
 
 Deploying an application requires access to a "target" Docker Swarm
-cluster. The manager of an organization will likely have created
-Docker Swarm credentials that are available to end-users.
+cluster with an S3 (Minio) service.
 
-If you are a manager, the process for adding credentials to an
-**existing** service involves the following steps:
+The manager of an organization (or the instructor for the course) will
+likely have created credentials that are available to you.
 
- 1. From the "api" section, choose the "infrastructure-service"
-    resource and click "search".
+![Credential List]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/api-creds.png)
 
- 1. Look at the available services and choose the one for which you
-    will be adding a credential.
+You can check if you have the appropriate credentials through the
+browser interface by selecting the "api" section, choosing
+"credential" for the resource, and clicking "search".  You can add the
+"type" column by clicking on the "columns" button.  If you have
+credentials of types "infrastructure-service-swarm" and
+"infrastructure-service-minio", you're good to go.
 
- 1. Note its identifier: the value of the `id` attribute.
+If you need to create credentials for these services in Nuvla, first
+extract the service identifiers that you'll need.
 
- 1. From the "api" section, choose the "credential" resource and click
-    "search".
+![Service List]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/api-services.png)
 
- 1. Click "add" to bring up a dialog.
+Select the "api" section, choose "infrastructure-service" for the
+resource, and click "search".  You can add the "type" column by
+clicking on the "columns" button.  Note the values in the "id" column
+for the Swarm and Minio services.
 
- 1. Choose the "credential-template/infrastructure-service-swarm"
-    option.
+You can then add the credentials through the Python API. First,
+install the API on your local machine with:
 
- 1. Update the document with the correct values for the credential; in
-    particular, the `key`, `cert`, and `infrastructure-services`
-    attributes.
+```sh
+pip install nuvla-api
+```
 
- 1. Click "create" to create the credential.
+You must have Python installed on your machine.
 
- 1. View the credential to ensure that all values are correct. Change
-    them if necessary.
+You can then add the Swarm credential with the following python
+script and the command:
 
-You can adjust who can access the credential by changing the ACL.  If
-you are adding individual users, you will need to know their user
-identifier, a string starting with "user/" and followed by a UUID.
+```python
+{% include_relative code/add-swarm-cred.py %}
+```
+
+```sh
+python add-swarm-cred.py
+```
+
+**Note that you'll need to define the listed environmental
+variables.** The credential identifier will be printed on success.
+Modify the script as necessary.
+
+Similarly for Minio, use the script:
+
+```python
+{% include_relative code/add-minio-cred.py %}
+```
+
+Again, the credential identifier will be printed on success.
+
+
