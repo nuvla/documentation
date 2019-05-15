@@ -9,38 +9,80 @@ nav_order: 8
 Managing Data
 =============
 
-## Demonstration: Managing data (E)
+The data management facilities in Nuvla revolve around three
+resources:
 
-   - Demonstrate the standard workflow for uploading a data "object"
-     and providing metadata for it.  Do this through the API and if
-     available, also show through the UI.  Note that the system uses
-     "pre-signed" URLs for access via S3 (HTTPS), so access control is
-     done via Nuvla authentication and ACLs.
+ - `data-object` representing a data object stored in S3,
 
-   - Show how to create a data set, explaining the various filters
-     that can be provided (and what they do!). Point out that these
-     are dynamic and depend entirely on the "objects" that are
-     currently registered with the system.
+ - `data-record`, providing additional, domain-specific metadata for
+   objects, and
 
-   - For POSIX access, show what information is needed from the owner
-     of the Swarm cluster and how this is added to the data record
-     resources. 
+ - `data-set`, dynamic grouping of the other resources based on
+   filters.
 
-   - Demonstrate how data and metadata can be removed from the system.
+See the full [data management](/docs/users/data-management.html) description
+to understand the data model, the resources, and workflows for data
+management.
 
-## Hands on: Managing data (E)
+## Demonstration: Managing data (Emma)
 
-   - Repeat the data upload, ready, download, delete workflow for data
-     objects, verifying that the ACLs work as expected for different
-     users (e.g. share an object with your neighbor).  Provide a
-     number of data objects to play with. 
+The full lifecycle of a data object consists of the following steps:
 
-   - Create some data objects and then create associated data record
-     resources to provide additional metadata.  Provide metadata for
-     all the data object resources that you've created and vary this
-     metadata to make queries more interesting.
+ - Create a new `data-object` resource in Nuvla,
 
-   - Try various queries over the data object and data record
-     resources to understand the filter syntax and learn how to select
-     the resources that you want.
+ - Use the "upload" action to obtain an upload URL for the data,
+
+ - Upload the data using the URL,
+
+ - Mark the `data-object` as "ready" and read-only via the "ready"
+   action,
+
+ - Use the "download" action to obtain a download URL,
+
+ - Download the data using the URL,
+
+ - Delete the `data-object` to remove the Nuvla resource and the
+   backing S3 object.
+
+All these actions can be completed with either the Python API or
+directly with the REST API, for example, with `curl`.
+
+In parallel, optional `data-record` resources can also be
+created. These resources associate enhanced, domain-specific metadata
+with the data objects. POSIX access information can be provided via
+`data-record` resources on infrastructures that expose data objects
+via S3 and via POSIX.
+
+The following text describes the full data object workflow via the
+Nuvla Python API.
+
+### Create Object
+
+### Upload Data
+
+### Mark Object as Ready
+
+### Download Data
+
+### Provide Metadata
+
+### Create Dataset
+
+### Remove Resources
+
+## Hands On Exercises
+
+Repeat the data upload, ready, download, delete workflow for data
+objects, verifying that the ACLs work as expected for different users
+(e.g. share an object with your neighbor).  Provide a number of data
+objects to play with.
+
+Create some data objects and then create associated data record
+resources to provide additional metadata.  Provide metadata for all
+the data object resources that you've created and vary this metadata
+to make queries more interesting.
+
+Try various queries over the data object and data record resources to
+understand the filter syntax and learn how to select the resources
+that you want.
 
