@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: Running Applications
@@ -7,8 +6,7 @@ grand_parent: Training
 nav_order: 7
 ---
 
-Running Applications with Data
-==============================
+# Running Applications with Data
 
 ## Demonstration: End-user deployment with data access (Alice)
 

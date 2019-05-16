@@ -30,8 +30,6 @@ Prerequisites
    programmatic interaction with Nuvla and is the primary language for
    (most) containers used in the demonstrations.
 
- - An account on [Docker Hub](https://hub.docker.com/). If you are
-   taking this course with an instructor, you will be given access to
-   the "nuvlatraining" organization to publish the containers you
-   create during the training. If not, you can create your own
-   organization on Docker Hub.
+ - An account on [Docker Hub](https://hub.docker.com/).  From your
+   account, you'll need to create a repository to hold your customized
+   images.

@@ -11,8 +11,8 @@ Target Audience
 
 This training course targets primarily people who will:
 
- - Manage data (Emma) for consumption by end-users via applications,
-   and  
+ - Manage data (Emma) for consumption by end-users via applications
+   and
 
  - Develop applications (Clara) that will be deployed by end-users.
    

@@ -6,22 +6,17 @@ grand_parent: Training
 nav_order: 3
 ---
 
-Provided Resources
-==================
+# Provided Resources
 
-If you're participating in a **formal, organized training course**
-with an instructor, the following will be provided:
-
- - Access to a running Nuvla service and a "target" Docker Swarm
-   infrastructure that provides compute and storage resources for the
-   training.
-
-If you're following this course **on your own**, you'll need to have
-access to a:
+To follow this course you must have access to a: 
 
  - Running Nuvla service and
 
  - "Target" Docker Swarm infrastructure.
 
-Instructions for deploying those services are available [elsewhere in
-the documentation](/administrators.html).
+If you're participating in a **formal, organized training course**
+with an instructor, access to these will be provided.  If you're
+following this course **on your own**, you may need to deploy those
+services. Instructions are available [elsewhere in the
+documentation](/administrators.html), but require significant service
+administration experience.
