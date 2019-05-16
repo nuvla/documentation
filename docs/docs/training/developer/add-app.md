@@ -3,47 +3,102 @@ layout: default
 title: Adding Applications
 parent: Developer Training
 grand_parent: Training
-nav_order: 7
+nav_order: 8
 ---
 
 Adding Applications
 ===================
 
-## Demonstration: Add new module to Nuvla (C)
+## Demonstration: Add new module to Nuvla (Clara)
 
-   - Show how an existing image can be referenced from Nuvla by
-     supplying its location and some simple metadata. Probably the
-     best example is a database (e.g. MongoDB) or a content management
-     platform (e.g. Django).
+Adding an application to Nuvla is straightforward; you simply must
+reference an existing Docker image and provide some simple metadata
+for the application.
 
-   - Show how to provide the important metadata: ports, URL patterns,
-     etc. through the UI so that the image is well integrated with the
-     UI and can be used easily.
+For example, the Jupyter Notebook application was added with the
+following Python script.
 
-   - Show how the module definition can be done as well through the
-     Python API.
+```python
+{% include_relative code/add-jupyter-notebook.py %}
+```
 
-   - Also use this as an opportunity to bring up why developers will
-     probably want to make customized versions of images: specific
-     configuration changes, persistence of data, integration with the
-     Nuvla data management.
+The first important field to point out is the image definition.  This
+looks like the following:
 
-   - The same integration workflow applies to any image, customized or
-     not.
+```python
+"image": {"repository": "sixsq",
+          "image-name": "gssc-jupyter",
+          "tag": "latest"},
+```
 
-## Hands on: Add new module to Nuvla (C)
+The repository, image-name, and tag are exactly the values that you
+would use to start the image with Docker. If the image is an
+"official" image from Docker, then simply leave out the "repository"
+field.  The "repository" can also contain the server address, if you
+are not using the Docker Hub.
 
-   1. Choose a standard image from Docker Hub to add to Nuvla. Discuss
-      the limitations in using a standard image. Suggestions could
-      include nginx (duplicating the existing definition), Django (or
-      other content management platform), or Galaxy (relevant for IFB,
-      but quite large).
+> **WARNING**: Only open repositories are supported at the moment. You
+> cannot use repositories that require authentication.
 
-   1. Determine what metadata needs to be specified based on the
-      description of the image on Docker Hub and if it is possible to
-      provide data. 
+The second important field is "output-parameters". These list the
+values that will be set by the container itself.  A common use of
+output parameters is to provide authentication tokens or passwords, as
+is the case for the Jupyter Notebook.
 
-   1. Add the image as a new module to Nuvla.
+The third important field is the "ports".  This field lists the ports
+that are exposed by the container.  These ports will be mapped
+automatically to ephemeral ports.  The actual port mappings can be
+recovered from the output parameters.  For example, a port definition
+like the following:
 
-   1. Deploy the module (possibly with data) and ensure that the
-      container's service is available (and properly configured).
+```python
+"ports": [{"protocol": "tcp",
+           "target-port": 8888}] 
+```
+
+will produce the output parameter "tcp.8888" which will contain the
+actual port.
+
+Fourth, the application developer can provide a list of URL patterns
+that is used by the UI (or other clients) to construct URLs to the
+application services.  For the Jupyter Notebook, the value is:
+
+```python
+"urls": [["jupyter", "http://${hostname}:${tcp.8888}/?token=${jupyter-token}"]],
+```
+
+Note the syntax for referencing the values of output parameters. The
+use of output parameter values allows the developer to specify the
+URLs independently of a particular deployment.
+
+Last, the application developer can provide a list of accepted content
+types for the application:
+
+```python
+"data-accept-content-types": ["text/plain", "application/octet-stream"]
+```
+
+This allows the UI (and other clients) to associate appropriate data
+formats with a given application. 
+
+## Hands on: Add new module to Nuvla (Clara)
+
+Try to define your own application within Nuvla, using an existing
+docker image.  For example, you might try a web server: 
+
+```python
+{% include_relative code/add-nginx.py %}
+```
+
+This will deploy nginx and should allow you to see the standard
+welcome page. If you have an image that you use frequently, you might
+try to define an application in Nuvla with that image.
+
+Some questions you might ask about the application definitions:
+
+ - What happens if you don't define the accepted data types?
+
+ - Is the data you selected actually visible?
+
+ - What limitations do you see when using an standard Docker image
+   with Nuvla? 

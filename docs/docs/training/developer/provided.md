@@ -16,10 +16,6 @@ with an instructor, the following will be provided:
    infrastructure that provides compute and storage resources for the
    training.
 
- - Credit for creating an account on the
-   [Exoscale](https://www.exoscale.com/) cloud infrastructure, if you
-   want to try Nuvla and Docker Swarm deployments in the cloud.
-
 If you're following this course **on your own**, you'll need to have
 access to a:
 

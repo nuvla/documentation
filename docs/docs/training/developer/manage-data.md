@@ -3,7 +3,7 @@ layout: default
 title: Managing Data
 parent: Developer Training
 grand_parent: Training
-nav_order: 8
+nav_order: 6
 ---
 
 Managing Data
@@ -25,6 +25,8 @@ to understand the data model, the resources, and workflows for data
 management.
 
 ## Demonstration: Managing data (Emma)
+
+### Data Objects/Records
 
 The full lifecycle of a data object consists of the following steps:
 
@@ -53,36 +55,55 @@ with the data objects. POSIX access information can be provided via
 `data-record` resources on infrastructures that expose data objects
 via S3 and via POSIX.
 
-The following text describes the full data object workflow via the
+The following script describes the full data object workflow via the
 Nuvla Python API.
 
-### Create Object
+```python
+{% include_relative code/create-data.py %}
+```
 
-### Upload Data
+> **NOTE**: The process of creating an object will also create the S3
+> bucket if it doesn't exist. Similarly, the S3 bucket will be removed
+> if the last object is removed from it.
 
-### Mark Object as Ready
+> **NOTE**: The visibility of the data objects and records is
+> determined by the ACL. Change the ACL to share data with other
+> users.
 
-### Download Data
+### Data Sets
 
-### Provide Metadata
+Once you have more than a few data objects, working with them
+individually becomes tedious. Instead you would usually group those
+objects (and records) into data sets.
 
-### Create Dataset
+Nuvla has a `data-set` resource exactly for this purpose.  Via the
+standard filtering syntax, you can create dynamic definitions of data
+sets.
 
-### Remove Resources
+The following script shows how this can be accomplished.
+
+```python
+{% include_relative code/add-data-sets.py %}
+```
+
+Once the data sets are created, they should be visible in the "data"
+section of the Nuvla UI. Check that they are visible and that they
+contain the objects that you expect. 
+
+> **NOTE**: The visibility of the data sets is determined by the
+> ACL. Change the ACL to share data with other users.
 
 ## Hands On Exercises
 
 Repeat the data upload, ready, download, delete workflow for data
 objects, verifying that the ACLs work as expected for different users
 (e.g. share an object with your neighbor).  Provide a number of data
-objects to play with.
-
-Create some data objects and then create associated data record
-resources to provide additional metadata.  Provide metadata for all
-the data object resources that you've created and vary this metadata
-to make queries more interesting.
+objects/records to play with.
 
 Try various queries over the data object and data record resources to
 understand the filter syntax and learn how to select the resources
 that you want.
 
+Create data sets that group the objects and records.  Verify that the
+data sets are visible in the UI and that they contain the objects and
+records that you expect.

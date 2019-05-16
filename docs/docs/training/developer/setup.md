@@ -28,9 +28,9 @@ choose the "sign up" menu item.
 ![Sign Up Menu Item]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/sign-up-menu-item.png)
 
 This should bring up the "sign up" dialog, where you can enter your
-email address and a valid password.  The password must have at least 8
-characters, including 1 uppercase letter, 1 lowercase letter, a digit,
-and a special character.
+email address and a valid password.  **The password must have at least
+8 characters, including 1 uppercase letter, 1 lowercase letter, a
+digit, and a special character.**
 
 ![Sign Up Dialog]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/sign-up-dialog.png)
 
@@ -60,22 +60,22 @@ server.
 
 ![Successful Log In]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/log-in-success.png)
 
-## Nuvla Layout
+## Browser Interface Sections
 
 On the welcome page and in the menu bar on the left side of the page,
 you can see the main sections of the Nuvla browser interface.  These
 sections provide specialized views of certain resources ("documents")
 stored in the Nuvla server:
 
- - dashboard: deployed applications
+ - **dashboard**: deployed applications
 
- - apps: defined, containerized applications
+ - **apps**: defined, containerized applications
 
- - data: defined data sets
+ - **data**: defined data sets
 
- - infrastructures: accessible Docker Swarm clusters
+ - **infrastructures**: accessible Docker Swarm clusters
 
- - api: "raw" view of all Nuvla resources ("documents")
+ - **api**: "raw" view of all Nuvla resources ("documents")
 
 The contents of each page are defined by the Access Control List (ACL)
 associated with the underlying resources. Users only see those
@@ -86,10 +86,12 @@ to select data to analyze, the "apps" section to see available
 applications, and the "dashboard" to manage deployed applications. The
 "api" section will typically only be used by experts.
 
-## Add Credentials
+## Credentials
 
 Deploying an application requires access to a "target" Docker Swarm
 cluster with an S3 (Minio) service.
+
+### Shared Credentials
 
 The manager of an organization (or the instructor for the course) will
 likely have created credentials that are available to you.
@@ -102,6 +104,8 @@ browser interface by selecting the "api" section, choosing
 "type" column by clicking on the "columns" button.  If you have
 credentials of types "infrastructure-service-swarm" and
 "infrastructure-service-minio", you're good to go.
+
+## Add Credentials
 
 If you need to create credentials for these services in Nuvla, first
 extract the service identifiers that you'll need.

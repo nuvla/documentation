@@ -3,7 +3,7 @@ layout: default
 title: Customize Applications
 parent: Developer Training
 grand_parent: Training
-nav_order: 10
+nav_order: 9
 ---
 
 # Customize Applications
@@ -192,11 +192,6 @@ You might consider using one of the following images:
  1. **rocker/rstudio-stable**: Generate a random password for the
     image and publish it via an output parameter.
 
- 1. **galaxy**: Mount data selected through Nuvla into a local
-    directory scanned by Galaxy.  You will probably also have to
-    modify the default configuration of Galaxy to make this data
-    visible.
-
 In all cases, you'll need to perform the following tasks:
 
  1. Create a `Dockerfile` to incorporate your changes into a new
@@ -214,4 +209,3 @@ In all cases, you'll need to perform the following tasks:
 
 If the container doesn't start as you expect, you may need to access
 the logs from Docker Swarm directly to help with the debugging. 
-
