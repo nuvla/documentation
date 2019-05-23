@@ -124,9 +124,8 @@ We will show how each of these customizations are accomplished in the
 The `Dockerfile` used to generate this the customized Jupyter Notebook
 is duplicated below:
 
-```
-{% include_relative code/dockerfile-jupyter %}
-```
+{% include code_snippet.md file='code/dockerfile-jupyter' language=docker %}
+
 
 This `Dockerfile` is short and straightforward. It:
 
