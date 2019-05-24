@@ -6,6 +6,10 @@ grand_parent: Training
 nav_order: 9
 ---
 
+<span markdown='1' style='position:absolute; top:0; right:0;'>
+[EDIT <i class="material-icons">file_copy</i>](//{{site.github.repository_url}}/blob/master/docs/{{page.path}})
+</span>
+
 # Customize Applications
 
 Although standard, unmodified containers can be deployed through
@@ -17,8 +21,6 @@ Because of these limitations, most containers used from Nuvla have
 been customized. The good news is that customizing images is easy,
 especially as Docker allows you to build directly from existing
 containers.
-
-[EDIT THIS PAGE](//{{site.github.repository_url}}/blob/master/docs/{{page.path}})
 
 ## Contextualization
 
