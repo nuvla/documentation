@@ -18,7 +18,7 @@ been customized. The good news is that customizing images is easy,
 especially as Docker allows you to build directly from existing
 containers.
 
-[EDIT THIS PAGE]({{site.github.repository_url}}/blob/gh-pages/{{page.path}})
+[EDIT THIS PAGE](https://{{site.github.repository_url}}/blob/master/docs/{{page.path}})
 
 ## Contextualization
 
