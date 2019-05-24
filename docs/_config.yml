@@ -31,6 +31,8 @@ search_enabled: true
 aux_links:
     "Nuvla on GitHub":
       - "//github.com/nuvla"
+    "Edit this page:"
+      - "{{site.github.repository_url}}/blob/gh-pages/{{page.path}}"
 
 
 #plugins:
