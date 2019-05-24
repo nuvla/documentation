@@ -7,7 +7,7 @@ nav_order: 9
 ---
 
 <span markdown='1' style='position:absolute; top:0; right:0;'>
-[EDIT <i class="material-icons">file_copy</i>]({{site.github.repository_url}}/blob/master/docs/{{page.path}})
+[<i class="material-icons">create</i>]({{site.github.repository_url}}/blob/master/docs/{{page.path}}){: .fs-2}
 </span>
 
 # Customize Applications
