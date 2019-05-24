@@ -58,9 +58,7 @@ via S3 and via POSIX.
 The following script describes the full data object workflow via the
 Nuvla Python API.
 
-```python
-{% include_relative code/create-data.py %}
-```
+{% include code_snippet.md file='code/create-data.py' language=python %}
 
 > **NOTE**: The process of creating an object will also create the S3
 > bucket if it doesn't exist. Similarly, the S3 bucket will be removed
@@ -82,9 +80,7 @@ sets.
 
 The following script shows how this can be accomplished.
 
-```python
-{% include_relative code/add-data-sets.py %}
-```
+{% include code_snippet.md file='code/add-data-sets.py' language=python %}
 
 Once the data sets are created, they should be visible in the "data"
 section of the Nuvla UI. Check that they are visible and that they

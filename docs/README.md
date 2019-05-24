@@ -8,6 +8,26 @@ site](https://nuvla.github.io/nuvla) linked to this
 repository. Commits to the master branch of this repository will
 automatically regenerate the online documentation.
 
+## Syntax
+
+Markdown syntax as supported by
+[Kramdown](https://kramdown.gettalong.org/) is the primary formatting
+for the bulk of the documentation. However, the pages are processed by
+[Jekyll](https://jekyllrb.com/), so you can also use Jekyll/Liquid
+directives in the sources.
+
+One customized element in this documentation is a code block (from a
+file) that contains a "copy to clipboard" button.  The following
+directive:
+
+```
+{% include code_snippet.md file='code/my_file.py' language=python %}
+```
+
+will include `code/my_file.py` as a preformatted code block with a
+"copy to clipboard" button in the upper, right corner. The language
+option is optional.
+
 ## Serving Documentation Locally
 
 When writing documentation, it can be frustrating to run through the
