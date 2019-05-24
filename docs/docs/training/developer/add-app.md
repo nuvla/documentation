@@ -18,9 +18,7 @@ for the application.
 For example, the Jupyter Notebook application was added with the
 following Python script.
 
-```python
-{% include_relative code/add-jupyter-notebook.py %}
-```
+{% include code_snippet.md file='code/add-jupyter-notebook.py' language=python %}
 
 The first important field to point out is the image definition.  This
 looks like the following:
@@ -86,9 +84,7 @@ formats with a given application.
 Try to define your own application within Nuvla, using an existing
 docker image.  For example, you might try a web server: 
 
-```python
-{% include_relative code/add-nginx.py %}
-```
+{% include code_snippet.md file='code/add-nginx.py' language=python %}
 
 This will deploy nginx and should allow you to see the standard
 welcome page. If you have an image that you use frequently, you might

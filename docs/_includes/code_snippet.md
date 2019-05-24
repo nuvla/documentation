@@ -3,7 +3,11 @@
 
 {% assign nanosecond = "now" | date: "%N" %}
 
-<button id="copybutton{{ nanosecond }}" class="btn btn-blue" style="float:right" data-clipboard-target="#code{{ nanosecond }}">
+<div markdown="1" style="position:relative">
+<button id="copybutton{{ nanosecond }}"
+        class="btn btn-blue"
+        style="position:absolute; top:0; right:0"
+        data-clipboard-target="#code{{ nanosecond }}">
 <i class="material-icons">file_copy</i>
 </button>
 
@@ -11,6 +15,7 @@
 {% include_relative {{ file }} %}
 ```
 {: #code{{ nanosecond }}}
+</div>
 
 <script>
 var clipboard{{ nanosecond }} = new ClipboardJS('#copybutton{{ nanosecond }}');

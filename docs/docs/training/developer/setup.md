@@ -129,9 +129,7 @@ You must have Python installed on your machine.
 You can then add the Swarm credential with the following python
 script and the command:
 
-```python
-{% include_relative code/add-swarm-cred.py %}
-```
+{% include code_snippet.md file='code/add-swarm-cred.py' language=python %}
 
 ```sh
 python add-swarm-cred.py
@@ -143,9 +141,7 @@ Modify the script as necessary.
 
 Similarly for Minio, use the script:
 
-```python
-{% include_relative code/add-minio-cred.py %}
-```
+{% include code_snippet.md file='code/add-minio-cred.py' language=python %}
 
 Again, the credential identifier will be printed on success.
 
