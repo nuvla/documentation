@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Docker Swarm Infrastructures
 parent: Administrators
 nav_order: 2

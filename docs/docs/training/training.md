@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Training
 nav_order: 5
 has_children: true

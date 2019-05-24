@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Managers
 nav_order: 3
 has_children: false

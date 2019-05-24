@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Nuvla Deployment
 parent: Administrators
 nav_order: 1

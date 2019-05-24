@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Setup
 parent: Developer Training
 grand_parent: Training

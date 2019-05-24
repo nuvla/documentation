@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Data Management
 parent: Users
 nav_order: 1

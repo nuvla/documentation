@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Legal
 nav_order: 6
 ---

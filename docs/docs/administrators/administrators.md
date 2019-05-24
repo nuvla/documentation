@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Administrators
 nav_order: 4
 has_children: true

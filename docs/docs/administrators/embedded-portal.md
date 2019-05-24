@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Embedded Portal
 parent: Administrators
 nav_order: 3

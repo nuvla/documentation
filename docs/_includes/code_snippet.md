@@ -6,7 +6,7 @@
 <div markdown="1" style="position:relative">
 <button id="copybutton{{ nanosecond }}"
         class="btn btn-blue"
-        style="position:absolute; top:0; right:0"
+        style="position:absolute; top:0; right:0;"
         data-clipboard-target="#code{{ nanosecond }}">
 <i class="material-icons">file_copy</i>
 </button>

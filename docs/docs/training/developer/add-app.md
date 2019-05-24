@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Adding Applications
 parent: Developer Training
 grand_parent: Training

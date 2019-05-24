@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-edit
 title: Developer Training
 parent: Training
 nav_order: 1
