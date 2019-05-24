@@ -20,7 +20,9 @@ One customized element in this documentation is a code block (from a
 file) that contains a "copy to clipboard" button.  The following
 directive:
 
+```
 {% include code_snippet.md file='code/my_file.py' language=python %}
+```
 
 will include `code/my_file.py` as a preformatted code block with a
 "copy to clipboard" button in the upper, right corner. The language
