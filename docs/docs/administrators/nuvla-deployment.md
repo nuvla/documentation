@@ -99,3 +99,63 @@ login button in the upper-right corner.
 
 ![Nuvla Welcome Page]({{ site.url }}{{ site.baseurl }}/docs/administrators/assets/nuvla-welcome.png)
 
+## Configuration
+
+### Administrator Password
+
+If you have used the default password for the "super" (administrator)
+account, you should change it before providing access to other
+users. From the Nuvla welcome page, click the login button, fill in
+the form with the administrator credentials, and click "login".
+
+If you have successfully logged in, the button in the upper, right
+corner should have the administrator's username "super" as the
+label. When you click on the button, you will see the profile page,
+which contains a button to reset your password.
+
+![Administrator Profile]({{ site.url }}{{ site.baseurl }}/docs/administrators/assets/admin-profile.png)
+
+When you click on the "Change password" button, this will open a
+dialog for you to enter your current password and then a new password.  
+
+![Change Password Dialog]({{ site.url }}{{ site.baseurl }}/docs/administrators/assets/change-password-dialog.png)
+
+Only valid passwords will be accepted; they must contain at least:
+
+ - 8 characters
+ - 1 lowercase character
+ - 1 uppercase character
+ - 1 digit, and
+ - 1 special character.
+
+If the password change is accepted, you will see a success message.
+If not, an error message will appear in the dialog.  Be sure that the
+password you provided is valid.
+
+## SMTP Configuration
+
+For the user registration and invitation features to work, the Nuvla
+server must have access to an SMTP server to send emails.  To provide
+this configuration, open the "api" section, select "configuration"
+resources, click on "search", and then you should see the "nuvla"
+configuration resource in the results.
+
+![Configuration Resources]({{ site.url }}{{ site.baseurl }}/docs/administrators/assets/configuration-resources.png)
+
+Click on the "nuvla" configuration resource, which will bring up the
+details page for the configuration.
+
+![Configuration Resources]({{ site.url }}{{ site.baseurl }}/docs/administrators/assets/nuvla-configuration-details.png)
+
+To provide the SMTP values, click on "raw" and edit the JSON source
+directly.
+
+![Nuvla Configuration]({{ site.url }}{{ site.baseurl }}/docs/administrators/assets/nuvla-configuration-edit.png)
+
+Some of the attributes will already be present in the document; don't
+provide duplicate attributes or saving the document will not
+succeed. Click on the "Save" button to the save the document.
+
+If successful, you should see the new values on the refreshed details
+page.
+
