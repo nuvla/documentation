@@ -1,10 +1,10 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get update && apt-get install -y openssh-server && apt-get clean
 RUN mkdir /run/sshd
 
-ADD init.sh /root/init.sh
-RUN chmod a+x /root/init.sh
+ADD nuvla-init.sh /root/nuvla-init.sh
+RUN chmod a+x /root/nuvla-init.sh
 
 EXPOSE 22
-CMD ["/root/init.sh"]
+CMD ["/root/nuvla-init.sh"]
