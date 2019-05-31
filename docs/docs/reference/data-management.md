@@ -1,8 +1,8 @@
 ---
 layout: default-edit
 title: Data Management
-parent: Users
-nav_order: 1
+parent: Reference
+nav_order: 2
 ---
 
 # Data Management
