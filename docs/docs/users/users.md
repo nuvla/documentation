@@ -2,7 +2,7 @@
 layout: default-edit
 title: Users
 nav_order: 2
-has_children: true
+has_children: false
 permalink: /users
 ---
 
@@ -76,6 +76,15 @@ As a result, using Nuvla, Emma can manage metadata according to Alice’s busine
 ## Felix
 
 ![Felix](/docs/users/assets/felix.png){:style="float: left;margin-right: 7px;margin-top: 7px;"}
+
+Felix is a software developer and in the Nuvla context, he is contributing to the Nuvla code base. Since Nuvla is primarily built using Clojure, Clojurescript and Python, he is fluent in these languages and their eco-systems.
+
+To contribute, Felix follows the [Best Practices](https://github.com/nuvla/nuvla/wiki/GitHub-Best-Practices) we have put in place using [GitHub](https://github.com/nuvla/nuvla).
+
+
+
+
+
 
 
 
