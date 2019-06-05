@@ -1,9 +1,9 @@
 ---
 layout: default-edit
-title: Managers
-nav_order: 3
+title: Emma - Data Specialist
+nav_order: 7
 has_children: false
-permalink: /docs/managers
+permalink: /emma
 ---
 
 # Managers

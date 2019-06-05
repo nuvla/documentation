@@ -1,8 +1,8 @@
 ---
 layout: default-edit
 title: Embedded Portal
-parent: Administrators
-nav_order: 3
+parent: Dave - Administrator
+nav_order: 6
 ---
 
 Embedded Portal
