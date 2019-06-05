@@ -10,4 +10,6 @@ permalink: /felix
 
 # Felix - Nuvla Developer
 
-People within an organisation or collaboration who manage the applications and data that are visible to other users of the platform.
+[Felix](/felix) is a software developer and in the Nuvla context.  **And yes we know... like us, he's very cool! :-P**
+
+He is contributing to the Nuvla code base. Since Nuvla is primarily built using Clojure, Clojurescript and Python, he is fluent in these languages and their eco-systems.

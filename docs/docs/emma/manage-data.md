@@ -1,9 +1,8 @@
 ---
 layout: default-edit
 title: Managing Data
-parent: Developer Training
-grand_parent: Training
-nav_order: 6
+parent: Emma - Data Specialist
+nav_order: 2
 ---
 
 Managing Data
@@ -58,7 +57,7 @@ via S3 and via POSIX.
 The following script describes the full data object workflow via the
 Nuvla Python API.
 
-{% include code_snippet.md file='code-sample/create-data.py' language=python %}
+{% include code_snippet.md file='/code-sample/create-data.py' language=python %}
 
 > **NOTE**: The process of creating an object will also create the S3
 > bucket if it doesn't exist. Similarly, the S3 bucket will be removed
@@ -80,7 +79,7 @@ sets.
 
 The following script shows how this can be accomplished.
 
-{% include code_snippet.md file='code-sample/add-data-sets.py' language=python %}
+include code_snippet.md file='/docs/code-sample/add-data-sets.py' language=python
 
 Once the data sets are created, they should be visible in the "data"
 section of the Nuvla UI. Check that they are visible and that they
@@ -93,7 +92,7 @@ contain the objects that you expect.
 
 Repeat the data upload, ready, download, delete workflow for data
 objects, verifying that the ACLs work as expected for different users
-(e.g. share an object with your neighbour).  Provide a number of data
+(e.g. share an object with your neighbor).  Provide a number of data
 objects/records to play with.
 
 Try various queries over the data object and data record resources to

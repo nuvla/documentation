@@ -12,7 +12,7 @@
 </button>
 
 ``` {{ language }}
-{% include_relative {{ file }} %}
+{% include {{ file }} %}
 ```
 {: #code{{ nanosecond }}}
 </div>

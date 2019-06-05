@@ -25,21 +25,21 @@ server, change the host name in the URL (here and below)
 appropriately. Click the arrow on the right of the "login" button and
 choose the "sign up" menu item.
 
-![Sign Up Menu Item]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/sign-up-menu-item.png)
+![Sign Up Menu Item](/docs/training/developer/assets/sign-up-menu-item.png)
 
 This should bring up the "sign up" dialog, where you can enter your
 email address and a valid password.  **The password must have at least
 8 characters, including 1 uppercase letter, 1 lowercase letter, a
 digit, and a special character.**
 
-![Sign Up Dialog]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/sign-up-dialog.png)
+![Sign Up Dialog](/docs/training/developer/assets/sign-up-dialog.png)
 
 Fill in the fields and then click the "sign up" button.  This will
 send a confirmation message to the email address you provided.
 
-![Sign Up Confirmation]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/sign-up-message.png)
+![Sign Up Confirmation](/docs/training/developer/assets/sign-up-message.png)
 
-![Sign Up Message]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/sign-up-email.png)
+![Sign Up Message](/docs/training/developer/assets/sign-up-email.png)
 
 Visit the link given in that email to finish the registration process.
 This will send you back to the Nuvla welcome page, so that you can log
@@ -51,20 +51,20 @@ Once you've registered with the Nuvla, you can then log into the
 server.  From the welcome page, click the "login" button in the upper,
 righthand corner to bring up the login dialog.
 
-![Log In Dialog]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/log-in-dialog.png)
+![Log In Dialog](/docs/training/developer/assets/log-in-dialog.png)
 
 Fill in the form and click the "login" button.  This should take you
 back to the welcome page. Your email address should now be shown
 in the upper, righthand corner, indicating that you've logged into the
 server.
 
-![Successful Log In]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/log-in-success.png)
+![Successful Log In](/docs/training/developer/assets/log-in-success.png)
 
 ## Browser Interface Sections
 
 On the welcome page and in the menu bar on the left side of the page,
 you can see the main sections of the Nuvla browser interface.  These
-sections provide specialized views of certain resources ("documents")
+sections provide specialised views of certain resources ("documents")
 stored in the Nuvla server:
 
  - **dashboard**: deployed applications
@@ -96,7 +96,7 @@ cluster with an S3 (Minio) service.
 The manager of an organization (or the instructor for the course) will
 likely have created credentials that are available to you.
 
-![Credential List]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/api-creds.png)
+![Credential List](/docs/training/developer/assets/api-creds.png)
 
 You can check if you have the appropriate credentials through the
 browser interface by selecting the "api" section, choosing
@@ -110,7 +110,7 @@ credentials of types "infrastructure-service-swarm" and
 If you need to create credentials for these services in Nuvla, first
 extract the service identifiers that you'll need.
 
-![Service List]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/api-services.png)
+![Service List](/docs/training/developer/assets/api-services.png)
 
 Select the "api" section, choose "infrastructure-service" for the
 resource, and click "search".  You can add the "type" column by
@@ -129,7 +129,7 @@ You must have Python installed on your machine.
 You can then add the Swarm credential with the following python
 script and the command:
 
-{% include code_snippet.md file='code/add-swarm-cred.py' language=python %}
+{% include code_snippet.md file='code-sample/add-swarm-cred.py' language=python %}
 
 ```sh
 python add-swarm-cred.py
@@ -141,7 +141,7 @@ Modify the script as necessary.
 
 Similarly for Minio, use the script:
 
-{% include code_snippet.md file='code/add-minio-cred.py' language=python %}
+{% include code_snippet.md file='code-sample/add-minio-cred.py' language=python %}
 
 Again, the credential identifier will be printed on success.
 

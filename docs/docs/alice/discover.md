@@ -2,7 +2,7 @@
 layout: default-edit
 title: Discover Nuvla
 parent: Alice - Domain Specialist
-nav_order: 3
+nav_order: 2
 ---
 
 Discover
@@ -10,24 +10,19 @@ Discover
 
 ## Browser Interface Sections
 
-On the welcome page and in the menu bar on the left side of the page,
-you can see the main sections of the Nuvla browser interface.  These
-sections provide specialized views of certain resources ("documents")
-stored in the Nuvla server:
+On the welcome page and in the menu bar on the left side of the page, you can see the main sections of the Nuvla web user interface.  These pages present the main features of the application:
+
+![Nuvla Welcome](/docs/assets/sign-up-button.png)
 
  - **dashboard**: deployed applications
+ - **apps**: defined, containerised applications
+ - **data**: defined data sets and start apps to process selected data
+ - **infrastructures**: accessible Docker Swarm clusters and S3 object storage services
+ - **credentials**: view and manage all your credentials in one place
+ - **edge**: your cockpit to manage your edge devices
+ - **api**: "raw" view of all Nuvla api
 
- - **apps**: defined, containerized applications
+Nuvla has a rich and advanced security model, including who has access to what and with which rights. This is captured using what we call an Access Control List (ACL) mechanism.  As a result, users can share, or not, the different Nuvla resources with other users and groups.
 
- - **data**: defined data sets
-
- - **infrastructures**: accessible Docker Swarm clusters
-
- - **api**: "raw" view of all Nuvla api, composed of resources ("documents")
-
-The contents of each page are defined by the Access Control List (ACL)
-associated with the underlying resources. Users only see those
-resources that the ACL allows them to view.
-
-Alice will typically use the "apps" for simple contaner deployment and the "data" section to select data to analyse and applications able to process the selected data, and the "dashboard" to manage deployed applications. The
+Alice will typically use the "apps" for simple deployments and the "data" section to select data to analyse and applications able to process the selected data. The "dashboard" is great to manage deployed applications. The
 "api" section is typically only be used by experts, such as [Felix](/felix).

@@ -124,7 +124,7 @@ We will show how each of these customizations are accomplished in the
 The `Dockerfile` used to generate this the customized Jupyter Notebook
 is duplicated below:
 
-{% include code_snippet.md file='code/dockerfile-jupyter' language=docker %}
+{% include code_snippet.md file='code-sample/dockerfile-jupyter' language=docker %}
 
 This `Dockerfile` is short and straightforward. It:
 
@@ -136,13 +136,11 @@ This `Dockerfile` is short and straightforward. It:
  - Adds a script (`start-service.sh`) that replaces the entry point of
    the parent image.
 
-All the detailed changes are emcapsulated in the two included
-scripts.
+All the detailed changes are encapsulated in the two included scripts.
 
-The simpler of the two scripts is `start-service.sh`.  The contents
-are shown below:
+The simpler of the two scripts is `start-service.sh`.  The contents are shown below:
 
-{% include code_snippet.md file='code/start-service.sh' language=sh %}
+{% include code_snippet.md file='code-sample/start-service.sh' language=sh %}
 
 This script calls the `link-data.py` script, recovers the generated
 token to access the notebook, and then starts Jupyter Notebook using
@@ -151,7 +149,7 @@ this token.
 The slightly more complicated script `link-data.py` is duplicated
 below:
 
-{% include code_snippet.md file='code/link-data.py' language=python %}
+{% include code_snippet.md file='code-sample/link-data.py' language=python %}
 
 The first part of the script simply includes the Nuvla Python API and
 a few other dependencies, ensures that the expected environmental

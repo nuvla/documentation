@@ -2,109 +2,62 @@
 layout: default-edit
 title: Setup
 parent: Alice - Domain Specialist
-nav_order: 2
+nav_order: 3
 ---
 
 Setup
 =====
 
-Although anonymous (unauthenticated) users can access a few Nuvla
-features, you will want to register and authenticate with the server
-to take full advantage of Nuvla's benefits.
+First thing first, you need a Nuvla account.  You'll then need access to credentials for the infrastructures you will be deploying your containerised applications to.
+
+> Note: In this documentation, we assume you will be using SixSq's managed Nuvla service running on [nuvla.io](https://test.nuvla.io). If you are using an on premise installation of Nuvla, or any other installation, just adjust these instructions.
 
 ## Register
 
-To deploy applications through Nuvla, a user must be registered
-(i.e. have an account) on the Nuvla server. The standard registration
-process requires a valid email address and a valid password.
+To deploy applications through Nuvla, you need to sign-up. The standard registration process requires a valid email address and a valid password.
 
-To create an account, visit the [home page](https://nuvla.io/) of
-the Nuvla service with your browser. If you're using a different
-server, change the host name in the URL (here and below)
-appropriately. Click the arrow on the right of the "login" button and
-choose the "sign up" menu item.
+To create an account, visit the [home page](https://nuvla.io/) of the Nuvla service with your browser. Click the "sign up" button on the top right of the page.
 
-![Sign Up Menu Item](/docs/training/developer/assets/sign-up-menu-item.png)
+![Sign Up Menu Item](/docs/assets/sign-up-button.png)
 
-This should bring up the "sign up" dialog, where you can enter your
-email address and a valid password.  **The password must have at least
-8 characters, including 1 uppercase letter, 1 lowercase letter, a
-digit, and a special character.**
+This should bring up the "sign up" dialog, where you can enter your email address and a valid password.
 
-![Sign Up Dialog](/docs/training/developer/assets/sign-up-dialog.png)
+![Sign Up Dialog](/docs/assets/sign-up-dialog.png)
 
-Fill in the fields and then click the "sign up" button.  This will
-send a confirmation message to the email address you provided.
+Fill in the fields and then click the "sign up" button.  This will send a confirmation message to the email address you provided.
 
-![Sign Up Confirmation]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/sign-up-message.png)
+![Sign Up Confirmation](/docs/assets/sign-up-message.png)
 
-![Sign Up Message]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/sign-up-email.png)
+![Sign Up Message](/docs/assets/sign-up-email.png)
 
-Visit the link given in that email to finish the registration process.
-This will send you back to the Nuvla welcome page, so that you can log
-in with your new account.
+Visit the link given in that email to finish the registration process. This will send you back to the Nuvla welcome page, so that you can log in with your new account.
+
+> Note: the link provided by email can only be used once. If you use it again, you will receive an error message.
 
 ## Login
 
-Once you've registered with the Nuvla, you can then log into the
-server.  From the welcome page, click the "login" button in the upper,
-righthand corner to bring up the login dialog.
+Once you've registered with the Nuvla, you can then log into the server.  From the welcome page, click the "login" button in the upper, righthand corner to bring up the login dialog.
 
-![Log In Dialog]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/log-in-dialog.png)
+![Log In Dialog](/docs/assets/log-in-dialog.png)
 
-Fill in the form and click the "login" button.  This should take you
-back to the welcome page. Your email address should now be shown
-in the upper, righthand corner, indicating that you've logged into the
-server.
+Fill in the form and click the "login" button.  This should take you back to the welcome page. Your email address should now be shown in the upper, righthand corner, indicating that you've logged into the server.
 
-![Successful Log In]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/log-in-success.png)
+![Successful Log In](/docs/assets/log-in-success.png)
 
 ## Credentials
 
-Deploying an application requires access to a "target" Docker Swarm
-cluster with an S3 (Minio) service.
+Deploying an application requires access to a "target" Docker Swarm cluster.  Further, if you deploy applications that use Nuvla's data management features, your target Swarm will also require an S3 (Minio) service.
 
 ### Shared Credentials
 
-The manager of an organization (or the instructor for the course) will
-likely have created credentials that are available to you.
+[Bob](/bob), the manager of your organisation in Nuvla will likely have created credentials that are available to you.
 
-![Credential List]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/api-creds.png)
+![Credential List](/docs/assets/api-creds.png)
 
-You can check if you have the appropriate credentials through the
-browser interface by selecting the "api" section, choosing
-"credential" for the resource, and clicking "search".  You can add the
-"type" column by clicking on the "columns" button.  If you have
-credentials of types "infrastructure-service-swarm" and
-"infrastructure-service-minio", you're good to go.
+To check which credentials you have access to, simply click on the "Credentials" button on the left bar menu.If you have credentials of types "infrastructure-service-swarm" and "infrastructure-service-minio", you're good to go.
 
-## Add Credentials
+### Add Credentials
 
-If you need to create credentials for these services in Nuvla, first
-extract the service identifiers that you'll need.
+If you do not have access to shared credentials, get in touch with the "Bob" of your organisation or create your own if you have deployed your own Docker Swarm cluster and optionally your MinIO service. To do that, simple click on the "add" button the the "Credentials" page.
 
-![Service List]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/api-services.png)
-
-Select the "api" section, choose "infrastructure-service" for the
-resource, and click "search".  You can add the "type" column by
-clicking on the "columns" button.  Note the values in the "id" column
-for the Swarm and Minio services.
-
-
-.......
-
-
-
-**Note that you'll need to define the listed environmental
-variables.** The credential identifier will be printed on success.
-Modify the script as necessary.
-
-Similarly for Minio, use the script:
-
-
-.......
-
-
-Again, the credential identifier will be printed on success.
-
-
+You can also get in touch with [SixSq's helpdesk](mailto:support@sixsq.com) to help you move forward if you get stuck.
