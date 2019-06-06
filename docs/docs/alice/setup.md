@@ -18,7 +18,7 @@ To deploy applications through Nuvla, you need to sign-up. The standard registra
 
 To create an account, visit the [home page](https://nuvla.io/) of the Nuvla service with your browser. Click the "sign up" button on the top right of the page.
 
-![Sign Up Menu Item](/docs/assets/sign-up-button.png)
+![Sign Up Menu Item](/docs/assets/welcome.png)
 
 This should bring up the "sign up" dialog, where you can enter your email address and a valid password.
 

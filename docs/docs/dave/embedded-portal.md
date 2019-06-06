@@ -8,14 +8,12 @@ nav_order: 6
 Embedded Portal
 ===============
 
-You may want to embed the Nuvla user interface into another portal.
-The easiest way to do this is simply to include the Nuvla browser
-interface into the portal via an `iframe` element. 
+You may want to embed the Nuvla user interface into another portal. The easiest way to do this is simply to include the Nuvla browser interface into the portal via an `iframe` element. 
 
 To embed the Nuvla browser-based interface, add this content:
 
 ```html
-<iframe src="https://nuv.la/webui"
+<iframe src="https://nuvla.io"
         style="width:100%; height:100ex; v-scroll:auto; padding: 1ex !important; margin: 0 !important">
     <p>Your browser does not support iframes.</p>
 </iframe>
@@ -23,5 +21,4 @@ To embed the Nuvla browser-based interface, add this content:
 
 to the `main` element of a page on the portal.
 
-Embedding the interface in this way avoids issues with cross-site
-scripting restrictions, conflicts with Javascript libraries, etc.
+Embedding the interface in this way avoids issues with cross-site scripting restrictions, conflicts with Javascript libraries, etc.

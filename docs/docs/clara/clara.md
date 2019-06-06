@@ -6,7 +6,7 @@ has_children: true
 permalink: /clara
 ---
 
-![Clara](/docs/users/assets/clara.png){:style="float: right;margin-right: 7px;margin-top: 7px;"}
+![Clara](/docs/assets/clara.png){:style="float: right; margin: 7px"}
 
 # Clara - IT Expert
 

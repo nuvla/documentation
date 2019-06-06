@@ -6,7 +6,7 @@ has_children: false
 permalink: /felix
 ---
 
-![Felix](/docs/users/assets/felix.png){:style="float: right;margin-right: 7px;margin-top: 7px;"}
+![Felix](/docs/assets/felix.png){:style="float: right; margin: 7px"}
 
 # Felix - Nuvla Developer
 

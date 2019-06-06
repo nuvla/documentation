@@ -1,20 +1,18 @@
 ---
 layout: default-edit
-title: Docker Swarm Infrastructures
+title: CaaS Infrastructure
 parent: Dave - Administrator
 nav_order: 4
 ---
 
-Docker Swarm Infrastructures
+Container as a Service Infrastructures
 ============================
 
-Docker Swarm infrastructures can be used to host Nuvla micro-services, but also receive containers. Docker Swarm is also integrated in the NuvlaBox, SixSq's edge software solution.
+Container as a Service (CaaS) are used to host the Nuvla micro-services, but also receive user containers. We currently use Docker Swarm as our default CaaS.
 
- - **Target infrastructure for user containers**: A Docker Swarm infrastructure on which Nuvla will **deploy** containers. This is a basic deployment of Swarm with Minio/NFS for data access and Prometheus for monitoring. Nuvla can be configured to deploy to any number of target Docker Swarm infrastructures.
+Docker Swarm is also integrated in the NuvlaBox, SixSq's edge software solution.
 
- - **Nuvla micro-service host**: A Docker Swarm infrastructure that will **host** a Nuvla deployment. In this documentation, we show how to create a basic deployment of Swarm with Prometheus for monitoring.
-
-In both cases, volumes are used for data persistency.
+Nuvla also supports an advanced data management feature. For this to work, the CaaS used When deploying containers must include an S3 service and a distributed file system.  The [optional infrastructure service](optional-services.html) page contains instructions on how to install these optional services. 
 
 Before starting, review the entire installation procedure.  The [nuvla/deployment](https://github.com/nuvla/deployment) GitHub repository contains a [Swarm folder](https://github.com/nuvla/deployment/tree/master/swarm) with Swarm related files that will help you deploy and configure your Docker Swarm cluster.  You may need to customise the provided scripts, configurations, and Docker Compose files for your deployment.
 

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default-edit
 title: Overview
 nav_order: 1
 description: "Nuvla: secured edge-to-cloud (and back) management platform that enables near-data AI for a connected world"
@@ -18,14 +18,14 @@ This documentation is intended for the users of a Nuvla platform.
 
 Edge computing is becoming a standard companion to cloud computing when it comes to implementing successful IoT projects. The naïve approach of sending all data back to the cloud for processing is no longer viable or future-proof. Implementing an edge strategy means processing data close to its source, thereby reducing latency and cost. It is not, however, a simple strategy to implement. Any edge-to-cloud architecture involves the coordination of a highly distributed infrastructure, multiple applications, and several skill sets, either in a single team or across organisations. It also raises a whole raft of questions relating to governance, security and data management.
 
-The open and secure Nuvla® service by SixSq is a secure edge-to-cloud management platform which facilitates the implementation of operational edge-to-cloud solutions. The solution leverages near data processing, edge and cloud computing, as well as smart data management. It optimises the different skills required to realise real-life solutions, ensuring the project is put on a path towards success.
-
-The value proposition of Nuvla is explained through the eyes of 5 team members: Alice, Bob, Clara, Dave and Emma. Of course every organisation is unique, but these roles exist in one form or another in most organisations. Nuvla simply provides a collaboration framework to facilitate work between the area of concern represented by these personae. In reality, one person will often be able to perform several of these roles in an organisation, and Nuvla will work the same.
-
 ![Overview](/docs/assets/overview.png)
 
 Figure 1: Overview
 {: style="color:gray; text-align: center;"}
+
+The open and secure Nuvla® service by SixSq is a secure edge-to-cloud management platform which facilitates the implementation of operational edge-to-cloud solutions. The solution leverages near data processing, edge and cloud computing, as well as smart data management. It optimises the different skills required to realise real-life solutions, ensuring the project is put on a path towards success.
+
+The value proposition of Nuvla is explained through the eyes of 5 team members: Alice, Bob, Clara, Dave and Emma. Of course every organisation is unique, but these roles exist in one form or another in most organisations. Nuvla simply provides a collaboration framework to facilitate work between the area of concern represented by these personae. In reality, one person will often be able to perform several of these roles in an organisation, and Nuvla will work the same.
 
 Illustrated in Figure 1, Nuvla is a multi-cloud, hybrid-cloud and edge management platform able to interface with numerous cloud providers and cloud solutions. It automates the full management lifecycle, including the deployment, testing, certification and optimisation of applications within cloud and edge infrastructures. Nuvla can be interfaced with a wide range of infrastructures, which can be grouped as follows:
 

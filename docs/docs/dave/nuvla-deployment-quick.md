@@ -56,13 +56,13 @@ server has been started on port 8200. Once this is the case, you can
 visit https://master-ip/api/cloud-entry-point, which should return a
 directory of the available resources in JSON format.
 
-![Cloud Entry Point](assets/cloud-entry-point-json.png)
+![Cloud Entry Point](/docs/assets/cloud-entry-point-json.png)
 
 Similarly, you can verify that the web browser interface is available
 by visiting https://master-ip/. You should see the Nuvla UI with a
 login button in the upper-right corner.
 
-![Nuvla Welcome Page](assets/nuvla-welcome.png)
+![Nuvla Welcome Page](/docs/assets/welcome.png)
 
 ## Configure SMTP
 

@@ -12,7 +12,7 @@ Discover
 
 On the welcome page and in the menu bar on the left side of the page, you can see the main sections of the Nuvla web user interface.  These pages present the main features of the application:
 
-![Nuvla Welcome](/docs/assets/sign-up-button.png)
+![Nuvla Welcome](/docs/assets/welcome.png)
 
  - **dashboard**: deployed applications
  - **apps**: defined, containerised applications

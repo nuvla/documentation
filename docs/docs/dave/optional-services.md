@@ -1,11 +1,11 @@
 ---
 layout: default-edit
-title: Docker Swarm Infrastructures Additional Services
+title: Additional Infrastructure Services
 parent: Dave - Administrator
 nav_order: 5
 ---
 
-Docker Swarm Infrastructures Additional Services
+Additional Infrastructure Services
 ================
 
 Once you have deployed a basic Docker Swarm cluster, you might want to add a few optional services to improve the service and provide additional functionality, such as:
@@ -15,6 +15,7 @@ Once you have deployed a basic Docker Swarm cluster, you might want to add a few
  - [Monitoring](#monitoring)
  - [NFS](#nfs)
  - [MinIO](#minio)
+ - [VPN](#vpn)
  
 But before we get to these services, let's review some firewall rules we need to enable these optional services.
 
@@ -145,3 +146,7 @@ Minio is a container-based implementation that can expose NFS volumes via the S3
 
 The service will be available at the URL `https://master-ip/minio/`. (Be patient, minio takes a minute or so to
 start and then traefik must adjust its configuration.) The default username/password will be admin/admin, if you've not changed them in the configuration.
+
+## VPN
+
+...

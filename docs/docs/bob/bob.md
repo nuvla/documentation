@@ -6,7 +6,7 @@ has_children: true
 permalink: /bob
 ---
 
-![Bob](/docs/users/assets/bob.png){:style="float: right;margin-right: 7px;margin-top: 7px;"}
+![Bob](/docs/assets/bob.png){:style="float: right; margin: 7px"}
 
 # Bob: the project manager
 
