@@ -1,15 +1,20 @@
 ---
 layout: default-edit
-title: Quick Nuvla Deployment
-parent: Dave - Administrator
+title: Nuvla Deployment
+parent: Production - more robust Nuvla Deployment
+grand_parent: Dave - Administrator
+has_children: true
 nav_order: 2
 ---
 
-Quick Nuvla Deployment
+For Production - a more robust Nuvla Deployment
 ================
 
-The Nuvla services and their dependent services are all containerised
-and can be deployed easily into a Docker Swarm cluster.
+If you are looking for quick instructions on deploying Nuvla to simply give it a try or evaluation, we suggest you have a look at the [quick guide](/docs/dave/quick/nuvla-deployment-try-it). 
+
+Here's a quick guide to quickly install Nuvla for evaluation purposes. So if you're looking for quickly trying out Nuvla, you're at the right place. However, if you're looking for a more robust installation, you probably want to look at [this page](/...).
+
+The Nuvla services and their dependent services are all containerised and can be deployed easily into a Docker Swarm cluster.
 
 While for [production deployment](nuvla-deployment-prod) we recommend to split the stateful and stateless services, for this quick deployment, we will deploy all services together on a single node.
 

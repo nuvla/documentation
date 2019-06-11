@@ -1,8 +1,9 @@
 ---
 layout: default-edit
 title: Nuvla Module Population
-parent: Dave - Administrator
-nav_order: 3
+parent: Start here - quick Nuvla Deployment
+grand_parent: Dave - Administrator
+nav_order: 2
 ---
 
 # Populate Nuvla Installation

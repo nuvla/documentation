@@ -1,7 +1,8 @@
 ---
 layout: default-edit
 title: Additional Infrastructure Services
-parent: Dave - Administrator
+parent: Production - more robust Nuvla Deployment
+grand_parent: Dave - Administrator
 nav_order: 5
 ---
 
