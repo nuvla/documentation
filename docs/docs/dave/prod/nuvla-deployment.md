@@ -3,79 +3,93 @@ layout: default-edit
 title: Nuvla Deployment
 parent: Production - more robust Nuvla Deployment
 grand_parent: Dave - Administrator
-has_children: true
 nav_order: 2
 ---
 
-For Production - a more robust Nuvla Deployment
+Nuvla Deployment
 ================
 
-If you are looking for quick instructions on deploying Nuvla to simply give it a try or evaluation, we suggest you have a look at the [quick guide](/docs/dave/quick/nuvla-deployment-try-it). 
+The Nuvla services and their dependent services are all containerised and can be deployed easily into a Docker Swarm cluster. The deployment has been split into two groups to facilitate the management of the services:
 
-Here's a quick guide to quickly install Nuvla for evaluation purposes. So if you're looking for quickly trying out Nuvla, you're at the right place. However, if you're looking for a more robust installation, you probably want to look at [this page](/...).
+ - **db**: Deploys the database elements of the Nuvla software stack, which consists of Elasticsearch and Zookeeper. 
 
-The Nuvla services and their dependent services are all containerised and can be deployed easily into a Docker Swarm cluster.
+ - **core**: Deploys the "business logic" of Nuvla, which consists of a number of micro-services.
 
-While for [production deployment](nuvla-deployment-prod) we recommend to split the stateful and stateless services, for this quick deployment, we will deploy all services together on a single node.
+A graphical overview of the deployment can be seen below.
+
+![Nuvla Deployment](/docs/assets/caas.png)
+
+Before starting, review the entire deployment procedure.  The [nuvla/deployment](https://github.com/nuvla/deployment) GitHub repository contains files that will help you deploy Nuvla.
 
 ## Prerequisites
 
-We recommend deploying Nuvla on a Docker Swarm cluster. If you don't have one yet, just [follow these simple instructions](swarm-deployment) to setup your own. If you are on MacOS, simply install the [Mac distribution](https://docs.docker.com/docker-for-mac/install/) and you should be good to go. 
+Review the requirements for the **host** Docker Swarm cluster that you will use to deploy Nuvla. These can be found in the [Docker Swarm Infrastructures](swarm-deployment.html) section. In particular, **be sure that you have created the "traefik-public" network and that Traefik has been deployed**.
 
-If running Docker locally, you'll need to initialise your deployment to run in swarm mode. Just run the command:
+## Backend Network
 
-    docker swarm init
+The Nuvla services and their dependencies communicate over a network that is not accessible publicly. Because this is shared between separate deployments, it must be created manually. 
 
-The `docker stack` commands below should then work.
+Create the private, backend overlay network by running the following command on the master node of the Swarm cluster:
 
-## Clone GitHub Repository
+    docker network create --driver=overlay nuvla-backend
 
-Clone to the [nuvla/deployment](https://github.com/nuvla/deployment) GitHub
-repository.
+Verify that the network has been properly created by using `docker network ls`.
 
-    git clone https://github.com/nuvla/deployment
+## Database
 
-This repo contains all the the Docker compose files you need to setup Nuvla.
+Nuvla uses Elasticsearch to store the vast majority of its state, including all the stored documents that represent resources in the system. Zookeeper stores the remaining state, which consists of the states of asynchronous jobs in the system.
 
-## Deploy
+**Before** trying to deploy Nuvla's core services, first start the database elements.  To do so, clone the nuvla/deployment repository on the Docker Swarm master.
 
-The `deployment` repository contains a `demo` folder that includes a compose file. This file contains all the instructions to start the different containers composing the Nuvla micro-service architecture.
+Navigate to the "prod/db" directory in your checked out repository. There you execute the command:
 
-    cd deployment/demo
+    docker stack deploy -c docker-compose.yml db
+
+Verify that the Elasticsearch and Zookeeper services come up correctly, by listing them with Docker (`docker service ls`) or by inspecting the logs.
+
+## Core Services
+
+Once the database services have been deployed, you can then deploy the core services for Nuvla.  In your clone of the nuvla/deployment repository, navigate to the "prod/core" directory. To do so, execute the commands:
+
+    ./generate-certificates.sh
     docker stack deploy -c docker-compose.yml nuvla
 
-This will create a set of Docker service, prefixed with the last argument provided above (in our example: `nuvla`).
+Verify that all of the services start by listing them with Docker.
 
-Now verify that all of the services start by listing them with Docker:
-
-    docker stack ls
-    docker service ls
-
-You should also verify that the API server has fully started by
-inspecting the logs:
+You should also verify that the API server has fully started by inspecting the logs:
 
     docker service logs -f nuvla_api
 
-After the configuration messages, the log should indicate that a
-server has been started on port 8200. Once this is the case, you can
-visit https://master-ip/api/cloud-entry-point, which should return a
-directory of the available resources in JSON format.
+After the configuration messages, the log should indicate that a server has been started on port 8200. Once this is the case, you can visit https://master-ip/api/cloud-entry-point, which should return a directory of the available resources in JSON format.
 
 ![Cloud Entry Point](/docs/assets/cloud-entry-point-json.png)
 
-Similarly, you can verify that the web browser interface is available
-by visiting https://master-ip/. You should see the Nuvla UI with a
-login button in the upper-right corner.
+Similarly, you can verify that the web browser interface is available by visiting https://master-ip/. You should see the Nuvla UI with a login button in the upper-right corner.
 
 ![Nuvla Welcome Page](/docs/assets/welcome.png)
 
-## Configure SMTP
+## Configuration
 
-In order to invite users, you will need to configure Nuvla with SMTP parameters...
+### Administrator Password
 
-The following parameters must be provided:
+If you have used the default password for the "super" (administrator) account, you should change it before providing access to other users. From the Nuvla welcome page, click the login button, fill in the form with the administrator credentials, and click "login".
 
-    smtp-password: "<secret>"
-    smtp-port: 465 (default SMTP port)
-    smtp-host: e.g. smtp.gmail.com
-    smtp-username: <username or email>
+If you have successfully logged in, the button in the upper, right corner should have the administrator's username "super" as the label. When you click on the button, you will see the profile page, which contains a button to reset your password.
+
+## SMTP Configuration
+
+For the user registration and invitation features to work, the Nuvla server must have access to an SMTP server to send emails.  To provide this configuration, open the "api" section, select "configuration" resources, click on "search", and then you should see the "nuvla" configuration resource in the results.
+
+![Configuration Resources](/docs/assets/configuration-resources.png)
+
+Click on the "nuvla" configuration resource, which will bring up the details page for the configuration.
+
+![Configuration Resources](/docs/assets/nuvla-configuration-details.png)
+
+To provide the SMTP values, click on "raw" and edit the JSON source directly.
+
+![Nuvla Configuration](/docs/assets/nuvla-configuration-edit.png)
+
+Some of the attributes will already be present in the document; don't provide duplicate attributes or saving the document will not succeed. Click on the "Save" button to the save the document.
+
+If successful, you should see the new values on the refreshed details page.
