@@ -92,29 +92,25 @@ This will generate temporary, self-signed certificates and bring up traefik.  Yo
 
 Having an overview of the activity on the Docker Swarm cluster is very helpful in understanding the overall load and for diagnosing any problems that arise. We recommend using Prometheus to monitor the cluster.
 
-To deploy Prometheus with the standard configuration (from a cloned version of the [nuvla/deployment](https://github.com/nuvla/deployment) repository), run the command on the
-Swarm master:
+To deploy Prometheus with the standard configuration (from a cloned version of the [nuvla/deployment](https://github.com/nuvla/deployment) repository), run the command on the Swarm master:
 
     cd swarm/monitoring
     docker stack deploy -c docker-compose.yml prometheus
 
-The service will be available at the URL `https://master-ip/prometheus`.
-The following services will appear:
+The service will be available at the URL `https://master-ip/prometheus`. The following services will appear:
 
 | service | URL |
 | --- | --- |
 | grafana | https://master-ip/grafana | monitoring dashboard |
 | prometheus | https://master-ip/prometheus/ | Prometheus administration |
 
-Normally, you will only be interested in the Grafana dashboard, which
-provides a visual overview of the Swarm cluster operation.
+Normally, you will only be interested in the Grafana dashboard, which provides a visual overview of the Swarm cluster operation.
 
 ## NFS
 
 To allow for user data "objects" to be accessed via POSIX from within containers (see [Emma - Data Specialist](/emma) on how to use this feature), the nodes of the Docker Swarm cluster hosting user container must have NFS installed.  This is optional, but strongly recommended.
 
-This can be done, for example on Ubuntu, by accessing the nodes as
-`root` via SSH and running the command:
+This can be done, for example on Ubuntu, by accessing the nodes as `root` via SSH and running the command:
 
      apt-get update
      apt-get install nfs-kernel-server
@@ -145,8 +141,7 @@ Minio is a container-based implementation that can expose NFS volumes via the S3
      cd swarm/minio
      docker stack deploy -c docker-compose.yml minio
 
-The service will be available at the URL `https://master-ip/minio/`. (Be patient, minio takes a minute or so to
-start and then traefik must adjust its configuration.) The default username/password will be admin/admin, if you've not changed them in the configuration.
+The service will be available at the URL `https://master-ip/minio/`. (Be patient, minio takes a minute or so to start and then traefik must adjust its configuration.) The default username/password will be admin/admin, if you've not changed them in the configuration.
 
 ## VPN
 
