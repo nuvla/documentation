@@ -1,7 +1,7 @@
 ---
 layout: default-edit
 title: CaaS Infrastructure
-parent: Production - more robust Nuvla Deployment
+parent: Production Nuvla Deployment
 grand_parent: Dave - Administrator
 nav_order: 4
 ---
