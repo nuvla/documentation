@@ -2,10 +2,12 @@
 layout: default-edit
 title: Running Applications with Data
 parent: Alice - Domain Specialist
-nav_order: 4
+nav_order: 5
 ---
 
 # Running Applications with Data
+
+...
 
 ## Demonstration: End-user deployment with data access (Alice)
 
@@ -17,12 +19,12 @@ visible in the Notebook.
 Visit the "data" section, adjust the time window, and then select a
 dataset that has some objects associated with it.
 
-![Select Data Set]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/select-data-set.png)
+![Select Data Set](/docs/assets/select-data-set.png)
 
 Click on the "process" button at the top to start an application to
 analyze these data.
 
-![Select Application Dialog]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/select-app-dialog.png)
+![Select Application Dialog](/docs/assets/select-app-dialog.png)
 
 Select the application in the dialog and then click launch.  This will
 take you to the "dashboard" section, which shows you the state of your
@@ -30,13 +32,13 @@ application deployments. The application you launched will be in the
 "STARTING" state initially.  Eventually, it will be in the "STARTED"
 state and show a URL for accessing the deployed notebook.
 
-![Running Application]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/running-app.png)
+![Running Application](/docs/assets/running-app.png)
 
 Click on the URL button to visit the Jupyter Notebook.  You should be
 logged in automatically.  You can browse the available data in the
 panel on the left.
 
-![Running Application]({{ site.url }}{{ site.baseurl }}/docs/training/developer/assets/jupyter-notebook.png)
+![Running Application](/docs/assets/jupyter-notebook.png)
 
 You should be able to open one of the data files you've selected in
 the Notebook and verify its contents.

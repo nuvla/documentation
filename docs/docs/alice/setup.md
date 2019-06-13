@@ -2,7 +2,7 @@
 layout: default-edit
 title: Setup
 parent: Alice - Domain Specialist
-nav_order: 3
+nav_order: 2
 ---
 
 Setup
