@@ -1,12 +1,8 @@
 # Nuvla Documentation
 
-This subdirectory contains the sources for the high-level Nuvla
-documentation intended for users, managers, and administrators.
+This subdirectory contains the sources for the high-level Nuvla documentation intended for users, managers, and administrators.
 
-This documentation appears on a [GitHub Pages
-site](https://nuvla.github.io/nuvla) linked to this
-repository. Commits to the master branch of this repository will
-automatically regenerate the online documentation.
+This documentation appears on a [GitHub Pages site](https://docs.nuvla.io) linked to this repository. Commits to the master branch of this repository will automatically regenerate the online documentation.
 
 ## Syntax
 
