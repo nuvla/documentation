@@ -1,9 +1,9 @@
 ---
 layout: default-edit
-title: Nuvla Module Population
-parent: Production - more robust Nuvla Deployment
+title: Add Example Apps
+parent: Production Nuvla Deployment
 grand_parent: Dave - Administrator
-nav_order: 3
+nav_order: 4
 ---
 
 # Populate Nuvla Installation

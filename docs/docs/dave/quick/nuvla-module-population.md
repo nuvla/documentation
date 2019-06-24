@@ -1,16 +1,16 @@
 ---
 layout: default-edit
-title: Nuvla Module Population
-parent: Start here - quick Nuvla Deployment
+title: Add Example Apps
+parent: Quick demo Nuvla Deployment
 grand_parent: Dave - Administrator
-nav_order: 2
+nav_order: 3
 ---
 
-# Populate Nuvla Installation
+# Add Example Applications
 
-With your new Nuvla installation up and running, you can now populate it with useful modules. The Nuvla team maintains a few example module components on the [Nuvla GitHub](https://github.com/nuvla) organisation.
+With your new Nuvla installation up and running, you can now populate it with useful container based applications. The Nuvla team maintains a few example applications on the [Nuvla GitHub](https://github.com/nuvla) organisation.
 
-These images are configured to take advantage of Nuvla features, including for example SSH configuration or data management integration.
+The docker images of these applications are configured to take advantage of Nuvla features, including for example SSH configuration or data management integration.
 
 For example, we have:
 1. [example-ubuntu](https://github.com/nuvla/example-ubuntu)
@@ -18,12 +18,9 @@ For example, we have:
 3. [example-rstudio](https://github.com/nuvla/example-rstudio)
 4. [example-jupyter](https://github.com/nuvla/example-jupyter)
 
-These GitHub repos contain a `add-module.py` script you can run to register the container in Nuvla. You simply have to set
-a few environment variables to point to your Nuvla installation.
+These GitHub repos contain `add-module.py` script you can run to register the container in Nuvla. You simply have to set a few environment variables to point to your Nuvla installation.
 
-To use these scripts, simply execute these simple steps:
-
-Clone the repository.  And execute the following commands:
+To use these scripts, simply execute the steps below. 
 
 ```sh
 pip install nuvla-api
@@ -32,4 +29,4 @@ cd example-ubuntu                                     # for example for Ubuntu
 python add-module.py
 ```
 
-You should now see the modules component in the App Store.
+You should now see the application in your Nuvla's App Store. 

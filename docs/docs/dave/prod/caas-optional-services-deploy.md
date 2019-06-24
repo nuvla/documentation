@@ -1,13 +1,13 @@
 ---
 layout: default-edit
-title: Additional Infrastructure Services
-parent: Production - more robust Nuvla Deployment
-grand_parent: Dave - Administrator
-nav_order: 5
+title: Deploy
+parent: Additional CaaS Services
+grand_parent: Production Nuvla Deployment
+nav_order: 1
 ---
 
-Additional Infrastructure Services
-================
+Deploy Additional CaaS Services
+=========================================
 
 Once you have deployed a basic Docker Swarm cluster, you might want to add a few optional services to improve the service and provide additional functionality, such as:
 

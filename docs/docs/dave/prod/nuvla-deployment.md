@@ -1,7 +1,7 @@
 ---
 layout: default-edit
-title: Nuvla Deployment
-parent: Production - more robust Nuvla Deployment
+title: Deploy
+parent: Production Nuvla Deployment
 grand_parent: Dave - Administrator
 nav_order: 2
 ---
@@ -15,7 +15,7 @@ The Nuvla services and their dependent services are all containerised and can be
 
  - **core**: Deploys the "business logic" of Nuvla, which consists of a number of micro-services.
 
-A graphical overview of the deployment can be seen below.
+A graphical overview of the Nuvla deployment can be seen below (on the right).
 
 ![Nuvla Deployment](/docs/assets/caas.png)
 
@@ -23,7 +23,7 @@ Before starting, review the entire deployment procedure.  The [nuvla/deployment]
 
 ## Prerequisites
 
-Review the requirements for the **host** Docker Swarm cluster that you will use to deploy Nuvla. These can be found in the [Docker Swarm Infrastructures](swarm-deployment.html) section. In particular, **be sure that you have created the "traefik-public" network and that Traefik has been deployed**.
+Review the requirements for the **host** Docker Swarm cluster that you will use to deploy Nuvla. These can be found in the [Docker Swarm Infrastructures](/docs/dave/prod/caas-deployment) section. In particular, **be sure that you have created the "traefik-public" network and that Traefik has been deployed**.
 
 ## Backend Network
 
