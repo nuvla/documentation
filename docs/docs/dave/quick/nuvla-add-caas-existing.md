@@ -1,13 +1,9 @@
 ---
 layout: default-edit
 title: Add CaaS
-parent: Quick demo Nuvla Deployment
-grand_parent: Dave - Administrator
-nav_order: 2
+parent: CaaS Infrastructures
+grand_parent: Quick Demo Nuvla Deployment
+nav_order: 3
 ---
 
-# Add CaaS
-
-TODO.
-
-Add existing docker swarm endpoint (CaaS) and credentials with screenshots.
+{% include dave/nuvla-add-caas-existing.md %}

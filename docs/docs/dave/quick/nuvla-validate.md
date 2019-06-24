@@ -1,9 +1,9 @@
 ---
 layout: default-edit
 title: Validate
-parent: Quick demo Nuvla Deployment
+parent: Quick Demo Nuvla Deployment
 grand_parent: Dave - Administrator
-nav_order: 4
+nav_order: 6
 ---
 
 # Validate Nuvla Deployment

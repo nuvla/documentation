@@ -1,6 +1,6 @@
 ---
 layout: default-edit
-title: Quick demo Nuvla Deployment
+title: Quick Demo Nuvla Deployment
 parent: Dave - Administrator
 has_children: true
 nav_order: 1

@@ -1,7 +1,7 @@
 ---
 layout: default-edit
 title: Deploy
-parent: Quick demo Nuvla Deployment
+parent: Quick Demo Nuvla Deployment
 grand_parent: Dave - Administrator
 nav_order: 1
 ---

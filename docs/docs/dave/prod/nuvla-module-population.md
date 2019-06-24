@@ -1,9 +1,9 @@
 ---
 layout: default-edit
-title: Add CaaS
+title: Add Example Apps
 parent: Production Nuvla Deployment
 grand_parent: Dave - Administrator
-nav_order: 3
+nav_order: 4
 ---
 
-{% include dave/nuvla-add-caas-existing.md %}
+{%include dave/nuvla-module-population.md %}

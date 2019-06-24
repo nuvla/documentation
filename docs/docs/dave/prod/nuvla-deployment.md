@@ -3,7 +3,7 @@ layout: default-edit
 title: Deploy
 parent: Production Nuvla Deployment
 grand_parent: Dave - Administrator
-nav_order: 2
+nav_order: 1
 ---
 
 Nuvla Deployment
