@@ -3,7 +3,7 @@ layout: default-edit
 title: CaaS Infrastructure
 parent: Production Nuvla Deployment
 grand_parent: Dave - Administrator
-nav_order: 4
+nav_order: 1
 ---
 
 Container as a Service Infrastructures

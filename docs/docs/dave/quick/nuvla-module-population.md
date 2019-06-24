@@ -1,12 +1,12 @@
 ---
 layout: default-edit
-title: Nuvla Module Population
-parent: Start here - quick Nuvla Deployment
+title: Add Example Apps
+parent: Quick demo Nuvla Deployment
 grand_parent: Dave - Administrator
-nav_order: 2
+nav_order: 3
 ---
 
-# Populate Nuvla Installation
+# Add Example Applications
 
 With your new Nuvla installation up and running, you can now populate it with useful container based applications. The Nuvla team maintains a few example applications on the [Nuvla GitHub](https://github.com/nuvla) organisation.
 
@@ -29,4 +29,4 @@ cd example-ubuntu                                     # for example for Ubuntu
 python add-module.py
 ```
 
-You should now see the application in your Nuvla's App Store. Repeat the same steps for other example applications.
+You should now see the application in your Nuvla's App Store. 
