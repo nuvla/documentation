@@ -76,20 +76,4 @@ If you have used the default password for the "super" (administrator) account, y
 
 If you have successfully logged in, the button in the upper, right corner should have the administrator's username "super" as the label. When you click on the button, you will see the profile page, which contains a button to reset your password.
 
-## SMTP Configuration
-
-For the user registration and invitation features to work, the Nuvla server must have access to an SMTP server to send emails.  To provide this configuration, open the "api" section, select "configuration" resources, click on "search", and then you should see the "nuvla" configuration resource in the results.
-
-![Configuration Resources](/docs/assets/configuration-resources.png)
-
-Click on the "nuvla" configuration resource, which will bring up the details page for the configuration.
-
-![Configuration Resources](/docs/assets/nuvla-configuration-details.png)
-
-To provide the SMTP values, click on "raw" and edit the JSON source directly.
-
-![Nuvla Configuration](/docs/assets/nuvla-configuration-edit.png)
-
-Some of the attributes will already be present in the document; don't provide duplicate attributes or saving the document will not succeed. Click on the "Save" button to the save the document.
-
-If successful, you should see the new values on the refreshed details page.
+{%include dave/smtp-configuration.md %}

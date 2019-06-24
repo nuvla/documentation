@@ -1,9 +1,9 @@
 ---
 layout: default-edit
 title: CaaS Infrastructure
-parent: Production Nuvla Deployment
+parent: Quick demo Nuvla Deployment
 grand_parent: Dave - Administrator
-nav_order: 1
+nav_order: 2
 ---
 
 {% include dave/caas-deployment.md %}

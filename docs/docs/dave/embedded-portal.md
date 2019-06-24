@@ -21,4 +21,6 @@ To embed the Nuvla browser-based interface, add this content:
 
 to the `main` element of a page on the portal.
 
+> **Note:** if you are using your own Nuvla deployment, simply adjust the `src="https://nuvla.io"` value.
+
 Embedding the interface in this way avoids issues with cross-site scripting restrictions, conflicts with Javascript libraries, etc.

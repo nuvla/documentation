@@ -24,4 +24,4 @@ In terms of infrastructure, Nuvla is deployed on a CaaS, since it is composed of
 
 Further, Nuvla deploys user containers on a CaaS as well.  It can either use the same CaaS as the one it is deployed on, or more often it is configured to point to one or many other CaaS.  This makes Nuvla very flexible and is what makes it a powerful edge-to-cloud solution.
 
-Furthermore, if the CaaS on which Nuvla deploys containers includes optional services, such as an S3 service (e.g. on public clouds or MinIO on private infrastructures), it offers a nice data management solution, delivering data directly in the container.
+Furthermore, if the CaaS on which Nuvla deploys containers includes optional services, such as an S3 service (e.g. on public clouds or MinIO on private infrastructures), it offers a nice data management solution, delivering data directly in containers.
