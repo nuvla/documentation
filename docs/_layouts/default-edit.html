@@ -6,7 +6,7 @@
 
   <div class="page-wrap">
     <div class="side-bar">
-      <a href="{{ site.url }}{{ site.baseurl }}" class="site-title fs-6 lh-tight">{{ site.title }}</a>
+      <a href="{{ site.url }}{{ site.baseurl }}" class="site-title fs-7 lh-tight">{{ site.title }}</a>
       <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
       <div class="navigation main-nav js-main-nav">
         {% include nav.html %}
@@ -56,6 +56,10 @@
           {% endif %}
         {% endunless %}
         <div id="main-content" class="page-content" role="main">
+          <blockquote>
+            <p><strong>WARNING</strong>: This documentation is a draft and will be released with Nuvla on 27 June 2019.</p>
+          </blockquote>
+
           {{ content }}
 
           {% if page.has_children == true and page.has_toc != false %}
