@@ -13,6 +13,8 @@ The Nuvla services and their dependent services are all containerised and can be
 
 While for [production deployment](/docs/dave/prod/nuvla-prod) we recommend to split the stateful and stateless services, for this quick deployment, we will deploy all services together on a single node.
 
+This installation assumes that you will only use the `super` user. If you want to invite or create other users from this setup, you will need to configure SMTP. [Here are the instructions](/docs/dave/prod/nuvla-deployment#smtp-configuration). 
+
 ## Prerequisites
 
 We recommend deploying Nuvla on a Docker Swarm cluster (CaaS). If you don't have one yet, just [follow these simple instructions](/docs/dave/quick/caas-deployment) to setup your own. If you are on MacOS, simply install the [Mac distribution](https://docs.docker.com/docker-for-mac/install/) and you should be good to go. 
@@ -60,6 +62,4 @@ Similarly, you can verify that the web browser interface is available by visitin
 
 ## Invite users
 
-Probably not relevant in case of the local test deployment, but in order to invite users, you will need to configure Nuvla with SMTP parameters. For details see the next section.
-
-{%include dave/smtp-configuration.md %}
+Probably not relevant in case of the local test deployment, but in order to invite users, you will need to configure Nuvla with SMTP parameters. For details see [these instructions](/docs/dave/prod/nuvla-deployment#smtp-configuration).
