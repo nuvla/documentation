@@ -47,3 +47,28 @@ a {
 ::selection {
   background: gray !important;
 }
+
+@page {
+  size: A4;
+  counter-increment: page;
+  @top-left {
+      content: "Nuvla documentation";
+      border-top: .25pt solid #666;
+      width: 50%;
+  }
+  @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+      border-top: .25pt solid #666;
+      width: 50%;
+  }
+  @bottom-left {
+      content: "Source: https://docs.nuvla.io";
+      border-top: .25pt solid #666;
+      width: 50%;
+  }
+  @bottom-center {
+      content: "Apache 2.0";
+      border-top: .25pt solid #666;
+      width: 50%;
+  }
+}
