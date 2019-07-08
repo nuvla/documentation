@@ -57,9 +57,9 @@ a {
       width: 50%;
   }
   @bottom-right {
-      content: "Page " counter(page) " of " counter(pages);
-      border-top: .25pt solid #666;
-      width: 50%;
+    content: "License: Apache 2.0";
+    border-top: .25pt solid #666;
+    width: 50%;
   }
   @bottom-left {
       content: "Source: https://docs.nuvla.io";
@@ -67,8 +67,9 @@ a {
       width: 50%;
   }
   @bottom-center {
-      content: "Apache 2.0";
+      content: "Copyright © 2019 SixSq Sàrl";
       border-top: .25pt solid #666;
+      border-left: .25pt;
       width: 50%;
   }
 }

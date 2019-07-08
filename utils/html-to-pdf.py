@@ -3,7 +3,7 @@
 from weasyprint import HTML, CSS
 
 base_url = 'https://docs.nuvla.io'
-base_url = 'http://localhost:4000'
+#base_url = 'http://localhost:4000'
 target_doc = open('docs.pdf','wb')
 pages = ['dave',
          'docs/dave/quick/nuvla-quick.html',
@@ -27,7 +27,9 @@ pages = ['dave',
 docs = []
 
 CSSs = [CSS(string='.side-bar, .site-footer {display: none !important;}'),
-        CSS(string='#edit-button {display: none !important;}')]
+        CSS(string='#edit-button {display: none !important;}'),
+        CSS(string='#top-warning {display: none !important;}'),
+        CSS(string='#toc {display: none !important;}'),]
 
 for page in pages:
     url = '/'.join([base_url, page])
