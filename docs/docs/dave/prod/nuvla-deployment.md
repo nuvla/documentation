@@ -23,7 +23,7 @@ Before starting, review the entire deployment procedure.  The [nuvla/deployment]
 
 ## Prerequisites
 
-Review the requirements for the **host** Docker Swarm cluster that you will use to deploy Nuvla. These can be found in the [Docker Swarm Infrastructures](/docs/dave/prod/caas-deployment) section. In particular, **be sure that you have created the "traefik-public" network and that Traefik has been deployed**.
+Review the requirements for the **host** Docker Swarm cluster that you will use to deploy Nuvla. These can be found in the [Docker Swarm Infrastructures](/docs/dave/prod/caas-infrastructures) section. In particular, **be sure that you have created the "traefik-public" network and that Traefik has been deployed**.
 
 ## Backend Network
 
