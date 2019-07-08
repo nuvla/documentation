@@ -1,11 +1,11 @@
 ---
 layout: default-edit
-title: Before we start
+title: Prerequisites
 parent: Clara - IT Expert
 nav_order: 2
 ---
 
-Before we start
+Prerequisites
 =============
 
 To get going, as Clara, you'll need a local development environment. This minimum kit is:
