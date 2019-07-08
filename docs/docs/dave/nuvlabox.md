@@ -79,7 +79,7 @@ export HOST='raspberrypi-demo-remote'
 export HOSTNAME="${HOST}"
 export HOST_ADDRESSES='10.0.128.98'
 
-export NUVLA_ENDPOINT=test.nuvla.io
+export NUVLA_ENDPOINT=nuvla.io
 export NUVLABOX_UUID=fc1190b8-1db1-4bd0-99dd-d0c51ca96bb9
 
 docker stack deploy -c docker-compose.onpremise.yml nuvlabox
@@ -93,7 +93,7 @@ export HOST='nuvlabox-alfred-werner-demo-remote'
 export HOSTNAME="${HOST}"
 export HOST_ADDRESSES='10.0.128.99'
 
-export NUVLA_ENDPOINT=test.nuvla.io
+export NUVLA_ENDPOINT=nuvla.io
 export NUVLABOX_UUID=f8a62930-f287-4946-9e22-e4297a7b81cf
 
 docker stack deploy -c docker-compose.onpremise.yml nuvlabox

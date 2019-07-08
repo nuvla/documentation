@@ -19,7 +19,7 @@ resources:
  - `data-set`, dynamic grouping of the other resources based on
    filters.
 
-See the full [data management](/docs/users/data-management.html) description
+See the full [data management](/docs/reference/data-management.html) description
 to understand the data model, the resources, and workflows for data
 management.
 

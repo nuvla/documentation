@@ -17,7 +17,7 @@ This installation assumes that you will only use the `super` user. If you want t
 
 ## Prerequisites
 
-We recommend deploying Nuvla on a Docker Swarm cluster (CaaS). If you don't have one yet, just [follow these simple instructions](/docs/dave/quick/caas-deployment) to setup your own. If you are on MacOS, simply install the [Mac distribution](https://docs.docker.com/docker-for-mac/install/) and you should be good to go. 
+We recommend deploying Nuvla on a Docker Swarm cluster (CaaS). If you don't have one yet, just [follow these simple instructions](/docs/dave/quick/caas-infrastructures#caas-deployment) to setup your own. If you are on MacOS, simply install the [Mac distribution](https://docs.docker.com/docker-for-mac/install/) and you should be good to go. 
 
 If running Docker locally, you'll need to initialise your deployment to run in swarm mode. Just run the command:
 

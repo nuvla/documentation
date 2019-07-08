@@ -1,14 +1,14 @@
-# Add CaaS
+# Add CaaS or Other Infrastructure Services
 
-Existing CaaS is simple. First, on the *infrastructures* page, click the *add* button.
+Adding to (or registering with) Nuvla existing CaaS (or other infrastructure services) is simple. First, on the *infrastructures* page, click the *add* button.
 
 ![Add CaaS](/docs/assets/dave-add-caas-1.png)
 
-Then, select the type of service you want to add. Currently, we only support (Docker) Swarm (Kubernetes is coming soon).
+Then, select the type of service you want to add. Currently, we support (Docker) Swarm (Kubernetes is coming soon) CaaS.
 
 ![Add CaaS](/docs/assets/dave-add-caas-2.png)
 
-From there, fill the form, including the endpoint to the CaaS reachable from Nuvla.
+From there, fill the form, including the endpoint to the service reachable from Nuvla.
 
 ![Add CaaS](/docs/assets/dave-add-caas-3.png)
 

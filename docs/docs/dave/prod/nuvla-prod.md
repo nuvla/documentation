@@ -9,7 +9,7 @@ nav_order: 2
 Production Nuvla Deployment
 ================
 
-If you are looking for quick instructions on how to deploy Nuvla or to simply give it a try for evaluation, we suggest you have a look at the [quick guide](/docs/dave/quick/nuvla-deployment-try-it). 
+If you are looking for quick instructions on how to deploy Nuvla or to simply give it a try for evaluation, we suggest you have a look at the [quick guide](/docs/dave/quick/nuvla-deployment.html). 
 
 The Nuvla services and their dependent services are all containerised and can be deployed easily into a CaaS (e.g. Docker Swarm cluster).
 

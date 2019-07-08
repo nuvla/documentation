@@ -10,7 +10,7 @@ Setup
 
 First thing first, you need a Nuvla account.  You'll then need access to credentials for the infrastructures you will be deploying your containerised applications to.
 
-> Note: In this documentation, we assume you will be using SixSq's managed Nuvla service running on [nuvla.io](https://test.nuvla.io). If you are using an on premise installation of Nuvla, or any other installation, just adjust these instructions.
+> Note: In this documentation, we assume you will be using SixSq's managed Nuvla service running on [nuvla.io](https://nuvla.io). If you are using an on premise installation of Nuvla, or any other installation, just adjust these instructions.
 
 ## Register
 
