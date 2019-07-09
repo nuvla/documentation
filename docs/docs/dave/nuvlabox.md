@@ -6,33 +6,91 @@ nav_order: 7
 ---
 
 NuvlaBox
-===============
+========
 
 The NuvlaBox software allows Dave to transform most ARM and x86 hardware platform into a smart edge device, managed by a Nuvla service.
 
 SixSq has certified a number of hardware platforms. Using such platforms ensures a smooth deployment.  For x86 based systems, these include machines from HPE, Dell and Logic Supply. For ARM based systems, these include Raspberry Pi.  For a complete list, please refer to [SixSq website](https://sixsq.com/products-and-services/nuvlabox/tech-spec).
 
-**Coming soon!!**
+## Raspberry Pi (ARM example)
 
-<!--
-## Registration
+### Raspberry Pi Base Installation
 
-...
+The Raspberry Pi is a nice ARM based single board computer. It's a good place to start if you are looking at small footprint edge devices.
 
-Raspbian download: https://www.raspberrypi.org/downloads/raspbian/
-Raspbian installation: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
-Raspbian enable SSH (Section 3.): https://www.raspberrypi.org/documentation/remote-access/ssh/ (modifié) 
+[Install Raspbian](https://www.raspberrypi.org/downloads/raspbian/) on your SD card. The *Raspbian <something> Lite* distribution is sufficient. Raspbian is the default operating system for Raspberry Pi and is based on Debian.
 
-Install Docker on Raspbian: https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-convenience-script:
+> **Note:** *Etcher* is a nice tool that facilitates Raspbian installation on an SD card. 
+
+> **Note:** Don't eject your SD card just yet.
+
+### Install and Configure Dependencies for NuvlaBox
+
+Before we can deploy the NuvlaBox Engine, we need to install Docker and configure the Raspbian environment.
+
+**Enable SSH**
+
+To complete the installation of the NuvlaBox Engine software, you will need to enable ssh into the RPi.  There are [few ways of doing this](https://www.raspberrypi.org/documentation/remote-access/ssh/). Since we are backing a new SD card, the easiest way is to create an empty file at the root of the SD card:
+
+```
+touch ssh
+```
+
+With this file present, when the RPi boots, it will enable ssh.  However, it will have the default username (*pi*) and password (*raspbian*), so you probably want to change this before you put this device on the network.
+
+**Install Docker**
+
+The NuvlaBox Engine is a set of Docker micro-services.  To [install Docker on the RPi](https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-convenience-script), run the following commands:
+
+Put the newly backed SD card into your RPi and connect it to the network (providing DHCP) or directly to your laptop (make sure you don't have a firewall blocking the RPi). You can then power up the RPi.
+
+SSH into it and run the following commands:
+
+```
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker $USER
+```
 
-(exit and re-login to adjust user)
+Then, **don't forget the logout and log back in**.  This will update your group configuration.
 
+**Install Git**
+
+Git is used to retrieve the Docker Compose file describing the NuvlaBox Engine micro-services.
+
+``` 
 sudo apt install git
+```
 
+**Install NuvlaBox Engine**
 
+Now let's clone the GitHub [nuvlabox/deployment](https://github.com/nuvlabox/deployment) repository, which contains Docker Compose files:
+
+```
+git clone https://github.com/nuvlabox/deployment.git
+cd deployment
+```
+
+From there, the simplest way to install the NuvlaBox Engine is to use [Nuvla.io](https://nuvla.io), SixSq managed Nuvla service.  You will find alternative [deployment instructions](https://github.com/nuvlabox/deployment/blob/master/README.md) in GitHub - e.g. on-premise and local Nuvla deployments.
+
+Before you can deploy on the RPi a NuvlaBox Engine, you need a *NuvlaBox UUID*. This ensures that the NuvlaBox is unique and belongs to you. To create a new NuvlaBox entry, following these steps:
+
+ 1. login into [Nuvla.io](https://nuvla.io)
+ 2. on the edge page, create a new `nuvlabox` (*+add* button top right of the page) and save the UUID.
+ 3. simply `export NUVLABOX_UUID=` UUID you saved, **or** paste that UUID in the `docker-compose.yml` file, under the NUVLABOX_UUID environment variable
+    ```
+    export NUVLABOX_UUID=_____CHANGE_ME______
+    ```
+ 4. install the NuvlaBox Engine
+    ```bash
+    docker-compose up --abort-on-container-exit
+    ```
+
+Once the deployment is complet, in the Nuvla edge page, you should see your new NuvlaBox *online*.
+
+You're now good to go!
+
+<!--
 >> add to docker group
 
 docker swarm init --advertise-addr 192.168.3.3
