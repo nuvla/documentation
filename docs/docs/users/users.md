@@ -44,6 +44,8 @@ Bob manages the team. He is concerned about budget, resource consumption and del
 Nuvla is key to Bob. It provides a clear overview of how many resources users are consuming on each infrastructure. He can see which applications are being deployed, and where, and when resource limits are being reached. Nuvla provides Bob with all the information he needs to keep his project on track.
 Bob can create groups and invite users (see thick blue line in [Figure 1](#nuvla-collaboration-framework)).  Once authorised by [Dave](#dave-the-operator), Bob can invite [Alice](#alice-the-domain-specialist), [Clara](#clara-the -it-specialist) and Emma to the Nuvla platform. This gives him the ability to ensure the right people have the right access, and that the right people can collaborate, with risking to lose control.
 
+To get started as Bob, [go here](bob).
+
 ## Clara: the IT specialist
 
 ![Clara](/docs/assets/clara.png){:style="float: left;margin-right: 7px;margin-top: 7px;"}
@@ -54,6 +56,8 @@ Using basic knowledge in scripting and container configuration, Clara can easily
 
 Nuvla works will virtually all public and private cloud solutions. Clara can therefore create a Container-as-a-Service environment in any public or private cloud, as well as at the edge on NuvlaBoxes, enabling the collection of data for near data processing, including machine learning models
 Nuvla deploys an end-to-end security strategy for all of its services, including the edge. Clara leverages this to provide [Alice](#alice-the-domain-specialist) and Emma a secure environment minimising any security risk associated with handling data in an edge-to-cloud architecture.
+
+To get started as Clara, [go here](clara).
 
 ## Dave: the operator
 
@@ -79,6 +83,8 @@ Nuvla helps by providing a data ledger service (i.e. a metadata catalogue) that 
 
 As a result, using Nuvla, Emma can manage metadata according to [Alice](#alice-the-domain-specialist)’s business needs. In return, [Alice](#alice-the-domain-specialist) can focus on what data she wants to process with which application, and let Nuvla do the heavy lifting, automatically and securely (step 4 and 5 in [Figure 1](#nuvla-collaboration-framework)). 
 
+To get started as Emma, [go here](Emma).
+
 ## Felix
 
 ![Felix](/docs/assets/felix.png){:style="float: left;margin-right: 7px;margin-top: 7px;"}
@@ -86,3 +92,5 @@ As a result, using Nuvla, Emma can manage metadata according to [Alice](#alice-t
 Felix is a software developer and in the Nuvla context, he is contributing to the Nuvla code base. Since Nuvla is primarily built using Clojure, Clojurescript and Python, he is fluent in these languages and their eco-systems.
 
 To contribute, Felix follows the [Best Practices](https://github.com/nuvla/nuvla/wiki/GitHub-Best-Practices) we have put in place using [GitHub](https://github.com/nuvla/nuvla).
+
+To get started as Felix, [go here](felix).
