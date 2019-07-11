@@ -102,7 +102,6 @@ SSH into it and run the following commands:
 
 ```
 sudo apt update -y
-curl -fsSL https://get.docker.com -o get-docker.sh
 curl -sL get.docker.com | sed 's/9)/10)/' | sh
 sudo apt install -y python-pip
 sudo apt install libffi-dev
