@@ -25,7 +25,7 @@ to a machine that will be convenient for managing your cluster.
 
 This script uses Docker Machine to deploy a Swarm cluster on the [Exoscale](https://exoscale.ch) cloud. Customise this script to change the cloud driver or the sizes of machines deployed.
 
-In your cloned repository, descend into the `swarm` subdirectory and copy `env-example.sh` to `env.sh`. 
+In your cloned repository, descend into the `swarm` subdirectory and copy `env-example.sh` to `env.sh`.
 
     cd deployment/swarm
     cp env-example.sh env.sh
@@ -40,7 +40,7 @@ After your changes, run:
 
     source env.sh
 
-to set all of the environmental variables for the Swarm management script. 
+to set all of the environmental variables for the Swarm management script.
 
 The command to use to create the cluster is:
 
@@ -48,13 +48,13 @@ The command to use to create the cluster is:
 
 This creates a cluster with one master and two workers (three nodes in total). If you do not provide the second argument, it defaults to one.
 
-The size and number of worker nodes to deploy depends entirely on the foreseen workload. The script uses "Large" instances that have 4 vCPUs, 8 GB RAM, and 50 GB disk.
+The size and number of worker nodes to deploy depends entirely on the foreseen workload. The script uses "Small" instances that have 2 vCPUs, 2 GB RAM, and 50 GB disk.
 
 You will want to note the IP addresses of the Docker Swarm master and workers (if any). You can recover these IP addresses by running the command `docker-machine ls` if necessary.
 
 You can access your machines with:
 
-    docker-machine ssh dockermachine-1556097484    
+    docker-machine ssh dockermachine-1556097484
 
 using the name of the machine provided in the machine listing. This may be a non-root account; to become root use the command `sudo su -`.
 

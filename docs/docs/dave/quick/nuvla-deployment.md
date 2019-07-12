@@ -52,11 +52,11 @@ You should also verify that the API server has fully started by inspecting the l
 
     docker service logs -f nuvla_api
 
-After the configuration messages, the log should indicate that a server has been started on port 8200. Once this is the case, you can visit https://master-ip/api/cloud-entry-point, which should return a directory of the available resources in JSON format.
+After the configuration messages, the log should indicate that a server has been started on port 8200. Once this is the case, you can visit https://<master-ip>/api/cloud-entry-point, which should return a directory of the available resources in JSON format.
 
 ![Cloud Entry Point](/docs/assets/cloud-entry-point-json.png)
 
-Similarly, you can verify that the web browser interface is available by visiting https://master-ip/. You should see the Nuvla UI with a login button in the upper-right corner.
+Similarly, you can verify that the web browser interface is available by visiting https://<master-ip>/. You should see the Nuvla UI with a login button in the upper-right corner.
 
 ![Nuvla Welcome Page](/docs/assets/welcome.png)
 
