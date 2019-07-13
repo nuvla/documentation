@@ -43,16 +43,15 @@ Before you can deploy on the RPi a NuvlaBox Engine, you need a *NuvlaBox UUID*. 
     ```
     export NUVLABOX_UUID=_____CHANGE_ME______
     ```
- 4. Also set a couple more environment variables:
-    ```
-    export HOST=nuvlabox-$(echo ${NUVLABOX_ID} | cut -d / -f 2)
-    export HOSTNAME="${HOST}"
-    ````
-
- 5. install the NuvlaBox Engine
+ 4. install the NuvlaBox Engine
     ```bash
     docker-compose up --abort-on-container-exit
     ```
+ 5. finally, activate the swarm, by running this command:
+    ```
+    docker swarm init --advertise-addr ______CHANGE_ME_VPNIP______
+    ```
+    where the value of the `______CHANGE_ME_VPNIP______` is the IP of the NuvlaBox on your VPN, or any other IP you want Nuvla to use to contact the NuvlaBox.
 
 Once the deployment is complet, in the Nuvla edge page, you should see your new NuvlaBox *online*.
 
@@ -89,7 +88,7 @@ With this file present, when the RPi boots, it will enable ssh.  However, it wil
 The security infrastructure of Nuvla and the NuvlaBox leverages [OpenVPN](https://openvpn.net). To install the client, run the follong command:
 
 ```
-sudo apt install openvpn
+sudo apt install -y openvpn
 ```
 
 **Install Docker**
@@ -126,10 +125,13 @@ In order to establish a secured connection into the NuvlaBox, Nuvla uses OpenVPN
 While this step will soon be fully automated, currently you will require to get an OpenVPN configuration. For Nuvla.io, please contact the [support service](mailto:support@sixsq.com) to receive the configuration file. Then save the file as:
 
 ```
-/etc/openvpn/client/nuvlabox.conf
+mkdir -p /etc/openvpn/client
+sudo nano /etc/openvpn/client/nuvlabox.conf
 ```
 
-And then enable the OpenVPN client service:
+And paste the configuration file.
+
+Finally enable the OpenVPN client service:
 
 ```
 sudo systemctl enable openvpn-client@nuvlabox
