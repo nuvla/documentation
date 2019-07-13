@@ -90,7 +90,7 @@ To deploy traefik do the following on the master node of the cluster:
     ./generate-certificates.sh
     docker stack deploy -c docker-compose.yml traefik
 
-This will generate temporary, self-signed certificates and bring up traefik.  You can view the current configuration of traefik at the URL http://master-ip:8080; this is updated dynamically as services are added and removed.
+This will generate temporary, self-signed certificates and bring up traefik.  You can view the current configuration of traefik at the URL http://<master-ip>:8080; this is updated dynamically as services are added and removed.
 
 ### Monitoring
 
@@ -101,12 +101,12 @@ To deploy Prometheus with the standard configuration (from a cloned version of t
     cd swarm/monitoring
     docker stack deploy -c docker-compose.yml prometheus
 
-The service will be available at the URL `https://master-ip/prometheus`. The following services will appear:
+The service will be available at the URL `https://<master-ip>/prometheus`. The following services will appear:
 
 | service | URL |
 | --- | --- |
-| grafana | https://master-ip/grafana | monitoring dashboard |
-| prometheus | https://master-ip/prometheus/ | Prometheus administration |
+| grafana | https://<master-ip>/grafana | monitoring dashboard |
+| prometheus | https://<master-ip>/prometheus/ | Prometheus administration |
 
 Normally, you will only be interested in the Grafana dashboard, which provides a visual overview of the Swarm cluster operation.
 
@@ -145,7 +145,7 @@ Minio is a container-based implementation that can expose NFS volumes via the S3
      cd swarm/minio
      docker stack deploy -c docker-compose.yml minio
 
-The service will be available at the URL `https://master-ip/minio/`. (Be patient, minio takes a minute or so to start and then traefik must adjust its configuration.) The default username/password will be admin/admin, if you've not changed them in the configuration.
+The service will be available at the URL `https://<master-ip>/minio/`. (Be patient, minio takes a minute or so to start and then traefik must adjust its configuration.) The default username/password will be admin/admin, if you've not changed them in the configuration.
 
 ### VPN
 
