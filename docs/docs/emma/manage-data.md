@@ -79,7 +79,7 @@ sets.
 
 The following script shows how this can be accomplished.
 
-include code_snippet.md file='/docs/code-sample/add-data-sets.py' language=python
+{% include code_snippet.md file='/docs/code-sample/add-data-sets.py' language=python %}
 
 Once the data sets are created, they should be visible in the "data"
 section of the Nuvla UI. Check that they are visible and that they
