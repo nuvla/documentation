@@ -1,66 +1,29 @@
 ---
 layout: default-edit
-title: NuvlaBox - Edge Solution
-parent: Dave - Administrator
-nav_order: 7
+title: NuvlaBox Raspbian OS
+parent: NuvlaBox - Edge Solution
+grand_parent: Dave - Administrator
+nav_order: 2
 ---
 
-NuvlaBox
+NuvlaBox Raspbian OS
 ========
 
-The NuvlaBox software allows Dave to transform most ARM and x86 hardware platform into a smart edge device, managed by a Nuvla service.
-
-SixSq has certified a number of hardware platforms. Using such platforms ensures a smooth deployment.  For x86 based systems, these include machines from HPE, Dell and Logic Supply. For ARM based systems, these include Raspberry Pi.  For a complete list, please refer to [SixSq website](https://sixsq.com/products-and-services/nuvlabox/tech-spec).
-
-### Prerequisites 
-
-To install the NuvlaBox Engine, you'll need:
- - *Docker (version 18 or higher)*
- - *Docker Compose (version 1.23.2 or higher)*
- 
-The NuvlaBox Engine will, during bootstrap, double check for other requirements, but you'll be automatically prompted in case some of these are not met.
-
-If you need help setting-up the base operating system, we have documented [instructions for the Raspberry Pi](#raspberry-pi-arm-example), as an example of small ARM based single board computer. For x86 architecture, using a recent Ubuntu or CentOS should most of the required dependencies.
-
-## NuvlaBox Engine
-
-**Install NuvlaBox Engine**
-
-Now let's clone the GitHub [nuvlabox/deployment](https://github.com/nuvlabox/deployment) repository, which contains Docker Compose files:
-
-```
-git clone https://github.com/nuvlabox/deployment.git
-cd deployment
-```
-
-From there, the simplest way to install the NuvlaBox Engine is to use [Nuvla.io](https://nuvla.io), SixSq's managed Nuvla service.  But you can also use your own Nuvla service. You will find alternative [deployment instructions](https://github.com/nuvlabox/deployment/blob/master/README.md) in GitHub - e.g. on-premise and local Nuvla deployments.
-
-Before you can deploy on the RPi a NuvlaBox Engine, you need a *NuvlaBox UUID*. This ensures that the NuvlaBox is unique and belongs to you. To create a new NuvlaBox entry, following these steps:
-
- 1. login into [Nuvla.io](https://nuvla.io)
- 2. on the edge page, create a new `nuvlabox` (*+add* button top right of the page) and save the UUID.
- 3. simply `export NUVLABOX_UUID=` UUID you saved, **or** paste that UUID in the `docker-compose.yml` file, under the NUVLABOX_UUID environment variable
-    ```
-    export NUVLABOX_UUID=_____CHANGE_ME______
-    ```
- 4. install the NuvlaBox Engine
-    ```bash
-    docker-compose up --abort-on-container-exit
-    ```
- 5. finally, activate the swarm, by running this command:
-    ```
-    docker swarm init --advertise-addr ______CHANGE_ME_VPNIP______
-    ```
-    where the value of the `______CHANGE_ME_VPNIP______` is the IP of the NuvlaBox on your VPN, or any other IP you want Nuvla to use to contact the NuvlaBox.
-
-Once the deployment is complet, in the Nuvla edge page, you should see your new NuvlaBox *online*.
-
-You're now good to go!
+For NuvlaBox running on the Raspberry Pi, we recommend using the Raspbian operating system. The following instructions are based on this assumption.
 
 ## Raspberry Pi
 
 The Raspberry Pi is a nice ARM based single board computer. It's a good place to start if you are looking at small footprint edge devices.
 
+To facilitate the creation of an SC card ready to host the NuvlaBox Engine, we have created NuvlaBox Raspbian OS images.
+
+Simply download and inflate the [NuvlaBox Raspbian OS pre-release]() on your laptop/desktop.  Then use an imaging tool, such as [Etcher](https://www.balena.io/etcher/), to image your SD Card.  
+
+> **Note:** this is a pre-release and should not be used in production.
+
+Once the card is imaged (or flashed), you can now [instal the NuvlaBox Engine](/docs/dave/nuvlabox/nuvlabox-engine)
+
+<!--
 ### Raspbian Installation
 
 [Install Raspbian](https://www.raspberrypi.org/downloads/raspbian/) on your SD card. The following documentation assumes you are using the **Raspbian Buster Lite** distribution is sufficient. Raspbian is the default operating system for Raspberry Pi and is based on Debian.
