@@ -17,7 +17,7 @@ The Raspberry Pi is a nice ARM based single board computer. It's a good place to
 
 To facilitate the creation of an SC card ready to host the NuvlaBox Engine, we have created NuvlaBox Raspbian OS images.
 
-Simply download and inflate the [NuvlaBox Raspbian OS pre-release]() on your laptop/desktop.  Then use an imaging tool, such as [Etcher](https://www.balena.io/etcher/), to image your SD Card.  
+Simply download and inflate the [NuvlaBox Raspbian OS pre-release](https://github.com/nuvlabox/nuvlabox/releases/tag/v0.1.0) on your laptop/desktop.  Then use an imaging tool, such as [Etcher](https://www.balena.io/etcher/), to flash your SD Card.  
 
 > **Note:** this is a pre-release and should not be used in production.
 
