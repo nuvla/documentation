@@ -2,6 +2,7 @@
 layout: default-edit
 title: Embedded Portal
 parent: Dave - Administrator
+grand_parent: Users
 nav_order: 7
 ---
 

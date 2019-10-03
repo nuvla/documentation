@@ -2,6 +2,7 @@
 layout: default-edit
 title: Felix - Nuvla Developer
 nav_order: 8
+parent: Users
 has_children: false
 permalink: /felix
 ---

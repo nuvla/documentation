@@ -2,6 +2,7 @@
 layout: default-edit
 title: Managing Data
 parent: Emma - Data Specialist
+grand_parent: Users
 nav_order: 2
 ---
 

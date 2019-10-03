@@ -3,6 +3,7 @@ layout: default-edit
 title: Emma - Data Specialist
 nav_order: 7
 has_children: true
+parent: Users
 permalink: /emma
 ---
 

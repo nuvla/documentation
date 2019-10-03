@@ -3,6 +3,7 @@ layout: default-edit
 title: Clara - IT Expert
 nav_order: 5
 has_children: true
+parent: Users
 permalink: /clara
 ---
 

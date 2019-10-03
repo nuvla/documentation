@@ -3,6 +3,7 @@ layout: default-edit
 title: Dave - Administrator
 nav_order: 6
 has_children: true
+parent: Users
 permalink: /dave
 ---
 

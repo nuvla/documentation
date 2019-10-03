@@ -1,7 +1,8 @@
 ---
 layout: default-edit
 title: Alice - Domain Specialist
-nav_order: 3
+nav_order: 1
+parent: Users
 has_children: true
 permalink: /alice
 ---

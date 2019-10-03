@@ -3,6 +3,7 @@ layout: default-edit
 title: Bob - Manager
 nav_order: 4
 has_children: true
+parent: Users
 permalink: /bob
 ---
 

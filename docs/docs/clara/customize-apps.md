@@ -2,6 +2,7 @@
 layout: default-edit
 title: Customise Applications
 parent: Clara - IT Expert
+grand_parent: Users
 nav_order: 5
 ---
 

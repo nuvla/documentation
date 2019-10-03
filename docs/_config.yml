@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Nuvla
+title: NuvlaDocs
 email: support@sixsq.com
 description: Secured edge-to-cloud management platform for near data processing
 baseurl: "/" # the subpath of your site, e.g. /blog
@@ -31,6 +31,8 @@ search_enabled: true
 aux_links:
     "Nuvla on GitHub":
       - "//github.com/nuvla"
+    "NuvlaBox on GitHub":
+      - "//github.com/nuvlabox"
 
 
 #plugins:

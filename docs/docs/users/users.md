@@ -2,7 +2,7 @@
 layout: default-edit
 title: Users
 nav_order: 2
-has_children: false
+has_children: true
 permalink: /users
 ---
 

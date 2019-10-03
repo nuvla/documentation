@@ -2,7 +2,8 @@
 layout: default-edit
 title: Inviting Users
 parent: Bob - Manager
-nav_order: 2
+grand_parent: Users
+nav_order: 1
 ---
 
 # Inviting Users

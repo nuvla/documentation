@@ -2,6 +2,7 @@
 layout: default-edit
 title: Discover Nuvla
 parent: Alice - Domain Specialist
+grand_parent: Users
 nav_order: 1
 ---
 
