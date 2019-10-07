@@ -1,7 +1,7 @@
 ---
 layout: default-edit
 title: Nuvla
-nav_order: 3
+nav_order: 2
 description: "Multi-cloud, hybrid-cloud and edge application management service"
 has_children: true
 permalink: /nuvla
