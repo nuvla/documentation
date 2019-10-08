@@ -1,7 +1,7 @@
 ---
 ---
 
-//@import "{{ site.theme }}";
+//@import "{{ site.theme }}"; 
 
 $sidebar-background-color: #24292e;
 $sidebar-text-color: #fff;
@@ -52,9 +52,9 @@ a {
   size: A4;
   counter-increment: page;
   @top-left {
-      content: "Nuvla documentation";
-      border-top: .25pt solid #666;
-      width: 50%;
+    content: "Nuvla documentation";
+    border-top: .25pt solid #666;
+    width: 50%;
   }
   @bottom-right {
     content: "License: Apache 2.0";
