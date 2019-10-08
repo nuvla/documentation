@@ -1,10 +1,12 @@
 ---
 layout: default-edit
-title: Customise Applications
-parent: Clara - IT Expert
-grand_parent: Who Am I
-nav_order: 5
+title: Customize Applications
+parent: User Guide
+grand_parent: Nuvla
+nav_order: 6
+permalink: /nuvla/customize-apps
 ---
+
 
 # Customise Applications
 

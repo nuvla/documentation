@@ -1,23 +1,26 @@
 ---
 layout: default-edit
-title: Deploy
-parent: Quick Demo Nuvla Deployment
-grand_parent: Dave - Administrator
+title: Quickstart
 nav_order: 1
+parent: Installation
+grand_parent: Nuvla
 ---
+
+Here's a simple guide to quickly install Nuvla for evaluation purposes. So if you're looking for quickly trying out Nuvla, you're at the right place. However, if you're looking for a robust production level installation, you probably want to look at [the production deployment page](/nuvla/installation/production).
+
+The Nuvla services and their dependent services are all containerised and can be deployed easily into a Docker Swarm CaaS cluster. **For this quick deployment, we will deploy all services together on a single node**.
+
 
 Quick Nuvla Deployment
 ================
 
 The Nuvla services and their dependent services are all containerised and can be deployed easily into a Docker Swarm cluster.
 
-While for [production deployment](/docs/dave/prod/nuvla-prod) we recommend to split the stateful and stateless services, for this quick deployment, we will deploy all services together on a single node.
-
-This installation assumes that you will only use the `super` user. If you want to invite or create other users from this setup, you will need to configure SMTP. [Here are the instructions](/docs/dave/prod/nuvla-deployment#smtp-configuration). 
+This installation assumes that you will only use the `super` user. 
 
 ## Prerequisites
 
-We recommend deploying Nuvla on a Docker Swarm cluster (CaaS). If you don't have one yet, just [follow these simple instructions](/docs/dave/quick/caas-infrastructures#caas-deployment) to setup your own. If you are on MacOS, simply install the [Mac distribution](https://docs.docker.com/docker-for-mac/install/) and you should be good to go. 
+We recommend deploying Nuvla on a Docker Swarm cluster (CaaS). 
 
 If running Docker locally, you'll need to initialise your deployment to run in swarm mode. Just run the command:
 
@@ -60,6 +63,3 @@ Similarly, you can verify that the web browser interface is available by visitin
 
 ![Nuvla Welcome Page](/docs/assets/welcome.png)
 
-## Invite users
-
-Probably not relevant in case of the local test deployment, but in order to invite users, you will need to configure Nuvla with SMTP parameters. For details see [these instructions](/docs/dave/prod/nuvla-deployment#smtp-configuration).

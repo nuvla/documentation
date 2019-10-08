@@ -3,7 +3,7 @@ layout: default-edit
 title: Invite Users
 parent: User Guide
 grand_parent: Nuvla
-nav_order: 3
+nav_order: 4
 permalink: /nuvla/invite-users
 ---
 

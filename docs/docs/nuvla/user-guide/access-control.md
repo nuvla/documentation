@@ -1,8 +1,9 @@
 ---
 layout: default-edit
 title: Access Control
-parent: Reference
-nav_order: 1
+parent: User Guide
+nav_order: 10
+grand_parent: Nuvla
 ---
 
 # Access Control

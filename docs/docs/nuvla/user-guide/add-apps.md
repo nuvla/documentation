@@ -1,13 +1,17 @@
 ---
 layout: default-edit
-title: Adding Applications with Python Library
-parent: Clara - IT Expert
-grand_parent: Who Am I
-nav_order: 4
+title: Add New Applications
+parent: User Guide
+grand_parent: Nuvla
+nav_order: 5
+permalink: /nuvla/add-apps
 ---
 
-Adding Applications with the Python Library
-===================
+# Adding Applications via the UI
+
+(coming soon...)
+
+# Adding Applications with the Python Library
 
 ## Adding new module
 
@@ -98,3 +102,5 @@ Some questions you might ask about the application definitions:
 
  - What limitations do you see when using an standard Docker image
    with Nuvla? 
+
+

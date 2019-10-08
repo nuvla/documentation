@@ -1,10 +1,12 @@
 ---
 layout: default-edit
-title: Operations and Maintenance
-parent: Production Nuvla Deployment
-grand_parent: Dave - Administrator
-nav_order: 6
+title: Operate & Maintain
+nav_order: 4
+parent: Installation
+grand_parent: Nuvla
+permalink: /nuvla/installation/operation-maintenance
 ---
+
 
 Nuvla Operations and Maintenance
 ================================
@@ -207,4 +209,4 @@ Once the database services have been recovered, you can then restart the core Nu
 
 This section describes how to update the service.
 
-TODO...
+(coming soon...)

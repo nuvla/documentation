@@ -1,7 +1,7 @@
 ---
 layout: default-edit
 title: Discover Nuvla
-nav_order: 2
+nav_order: 3
 parent: User Guide
 grand_parent: Nuvla
 permalink: /nuvla/discover

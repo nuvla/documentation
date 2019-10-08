@@ -1,9 +1,10 @@
 ---
 layout: default-edit
-title: CaaS Infrastructures
-parent: Quick Demo Nuvla Deployment
-grand_parent: Dave - Administrator
-nav_order: 2
+title: Manage Infrastructures
+parent: User Guide
+grand_parent: Nuvla
+nav_order: 7
+permalink: /nuvla/infrastructures
 ---
 
 # CaaS Infrastructures
