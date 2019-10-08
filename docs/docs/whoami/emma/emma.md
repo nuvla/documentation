@@ -9,7 +9,7 @@ permalink: /emma
 
 # Emma: the Data Expert
 
-{% include /code-sample/skills.html %} {% include /code-sample/skills-ai.html %} 
+{% include /code-sample/skills.html %} {% include /code-sample/skills-ai.html %}  {% include /code-sample/skills-data.html %} 
 
 ![Emma](/docs/assets/emma.png){:style="margin: auto; display: block; width: 7em"}
 

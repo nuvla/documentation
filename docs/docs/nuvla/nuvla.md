@@ -7,7 +7,7 @@ has_children: true
 permalink: /nuvla
 ---
 
-# Nuvla - What is it?
+![nuvla-logo](/docs/assets/nuvla-logo.png)
 
 Nuvla is a secured edge-to-cloud (and back) management platform that enables near-data AI for a connected world.
 

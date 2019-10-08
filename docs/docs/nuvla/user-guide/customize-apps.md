@@ -1,6 +1,6 @@
 ---
 layout: default-edit
-title: Customize Applications
+title: Customise Applications
 parent: User Guide
 grand_parent: Nuvla
 nav_order: 6

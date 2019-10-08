@@ -1,8 +1,8 @@
 ---
 layout: default-edit
 title: Access Control
-parent: User Guide
-nav_order: 10
+parent: Advanced Usage
+nav_order: 2
 grand_parent: Nuvla
 ---
 

@@ -8,7 +8,6 @@ has_children: true
 ---
 
 ![nuvlabox-logo](/docs/assets/nuvlabox-logo.png)
-========
 
 With NuvlaBox, you can transform most ARM and x86 hardware platforms into a smart edge device, to be managed by a Nuvla service.
 

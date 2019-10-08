@@ -22,4 +22,4 @@ He is contributing to the Nuvla and NuvlaBox code base.
 
 # Felix can...
 
-#### do everything, cause he's amazing! **but mainly**, he's here you help *you*
+#### do everything, 'cause he's amazing! **but mainly**, he's here to help *you*

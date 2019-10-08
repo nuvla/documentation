@@ -1,6 +1,6 @@
 ---
 layout: default-edit
-title: NuvlaBox ...Engine or OS?
+title: NuvlaBox... Engine or OS?
 nav_order: 1
 parent: NuvlaBox
 ---

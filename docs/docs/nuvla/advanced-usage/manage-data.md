@@ -1,10 +1,10 @@
 ---
 layout: default-edit
 title: Manage Data
-parent: User Guide
+parent: Advanced Usage
 grand_parent: Nuvla
-nav_order: 8
-permalink: /nuvla/user-guide/manage-data
+nav_order: 1
+permalink: /nuvla/advanced-usage/manage-data
 ---
 
 Managing Data
