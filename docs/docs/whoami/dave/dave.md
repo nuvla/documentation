@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Dave
 nav_order: 4
 parent: Who Am I?

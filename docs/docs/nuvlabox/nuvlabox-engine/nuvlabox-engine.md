@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: NuvlaBox Engine
 nav_order: 1
 parent: NuvlaBox

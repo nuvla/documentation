@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Emma
 nav_order: 5
 parent: Who Am I?

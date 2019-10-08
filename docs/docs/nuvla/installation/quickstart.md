@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Quickstart
 nav_order: 1
 parent: Installation

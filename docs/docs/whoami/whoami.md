@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Who Am I?
 nav_order: 4
 has_children: true

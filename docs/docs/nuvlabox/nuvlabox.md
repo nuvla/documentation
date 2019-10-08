@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: NuvlaBox
 nav_order: 3
 description: "Secure and intelligent edge computing solution"
@@ -7,7 +7,7 @@ permalink: /nuvlabox
 has_children: true
 ---
 
-![nuvlabox-logo](/docs/assets/nuvlabox-logo.png)
+![nuvlabox-logo](/docs/assets/nuvlabox-logo.png){: .center-image }
 
 With NuvlaBox, you can transform most ARM and x86 hardware platforms into a smart edge device, to be managed by a Nuvla service.
 

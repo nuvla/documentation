@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Nuvla
 nav_order: 2
 description: "Multi-cloud, hybrid-cloud and edge application management service"
@@ -7,7 +7,7 @@ has_children: true
 permalink: /nuvla
 ---
 
-![nuvla-logo](/docs/assets/nuvla-logo.png)
+![nuvla-logo](/docs/assets/nuvla-logo.png){: .center-image }
 
 Nuvla is a secured edge-to-cloud (and back) management platform that enables near-data AI for a connected world.
 

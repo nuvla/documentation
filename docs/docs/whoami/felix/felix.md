@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Felix
 nav_order: 6
 parent: Who Am I?

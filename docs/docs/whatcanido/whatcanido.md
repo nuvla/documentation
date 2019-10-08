@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: What Can I Do?
 nav_order: 5
 has_children: true

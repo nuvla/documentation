@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: NuvlaBox Raspbian OS
 parent: NuvlaBox - Edge Solution
 grand_parent: Dave - Administrator

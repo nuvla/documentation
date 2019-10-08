@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Alice
 nav_order: 1
 parent: Who Am I?

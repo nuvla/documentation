@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Access Control
 parent: Advanced Usage
 nav_order: 2

@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Example Apps
 nav_order: 3
 parent: Installation

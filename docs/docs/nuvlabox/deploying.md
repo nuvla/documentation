@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Your First NuvlaBox App
 nav_order: 4
 parent: NuvlaBox

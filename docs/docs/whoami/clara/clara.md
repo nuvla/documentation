@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Clara
 nav_order: 3
 parent: Who Am I?

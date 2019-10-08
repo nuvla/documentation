@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Manage Infrastructures
 parent: User Guide
 grand_parent: Nuvla

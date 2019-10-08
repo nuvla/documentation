@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Operate & Maintain
 nav_order: 4
 parent: Installation

@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Manage Data
 parent: Advanced Usage
 grand_parent: Nuvla

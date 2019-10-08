@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Overview
 nav_order: 1
 description: "Secured edge to cloud (and back) management platform that enables near-data AI for connected world use cases"

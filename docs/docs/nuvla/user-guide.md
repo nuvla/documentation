@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: User Guide
 nav_order: 2
 parent: Nuvla

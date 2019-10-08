@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Advanced Installation
 nav_order: 3
 parent: NuvlaBox Engine

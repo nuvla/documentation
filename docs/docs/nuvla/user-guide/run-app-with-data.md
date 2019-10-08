@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Applications with Data
 parent: User Guide
 grand_parent: Nuvla

@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: API
 parent: User Guide
 grand_parent: Nuvla

@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Bob
 nav_order: 2
 parent: Who Am I?

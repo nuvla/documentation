@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Customise Applications
 parent: User Guide
 grand_parent: Nuvla

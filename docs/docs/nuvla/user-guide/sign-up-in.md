@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Sign Up/In
 nav_order: 1
 parent: User Guide

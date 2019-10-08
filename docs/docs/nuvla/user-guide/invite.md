@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Invite Users
 parent: User Guide
 grand_parent: Nuvla

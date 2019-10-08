@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: page
 title: Production Installation
 nav_order: 2
 parent: Installation
