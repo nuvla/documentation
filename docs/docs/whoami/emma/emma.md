@@ -19,4 +19,4 @@ This section of the documentation is for [Emma](/whoami#emma-the-data-expert). A
 
 # Emma can...
 
-#### [Manage data](/nuvla/user-guide/manage-data)
+#### [Manage data](/nuvla/advanced-usage/manage-data)
