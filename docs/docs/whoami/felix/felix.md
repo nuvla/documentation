@@ -1,16 +1,25 @@
 ---
 layout: default-edit
-title: Felix - Nuvla Developer
-nav_order: 8
-parent: Who Am I
-has_children: false
+title: Felix
+nav_order: 6
+parent: Who Am I?
 permalink: /felix
 ---
 
-![Felix](/docs/assets/felix.png){:style="float: right; margin: 7px"}
 
-# Felix - Nuvla Developer
+# Felix: the Nuvla* Developer
 
-[Felix](/felix) is a software developer and in the Nuvla context.  **And yes we know... like us, he's very cool! :-P**
+{% include /code-sample/skills.html %} {% include /code-sample/skills-python.html %} {% include /code-sample/skills-shell.html %} {% include /code-sample/skills-docker.html %} {% include /code-sample/skills-team-mgmt.html %} {% include /code-sample/skills-clojure.html %} {% include /code-sample/skills-clojurescript.html %} {% include /code-sample/skills-fom.html %} {% include /code-sample/skills-om.html %} {% include /code-sample/skills-pm.html %} {% include /code-sample/skills-ai.html %}  {% include /code-sample/skills-sysadmin.html %} 
 
-He is contributing to the Nuvla code base. Since Nuvla is primarily built using Clojure, Clojurescript and Python, he is fluent in these languages and their eco-systems.
+![Felix](/docs/assets/felix.png){:style="margin: auto; display: block; width: 7em"}
+
+[Felix](/felix) is a software developer. **And yes we know... like us, he's very cool!** 
+<span style="font-size:1em">&#128526;</span>
+
+
+He is contributing to the Nuvla and NuvlaBox code base.
+
+
+# Felix can...
+
+#### do everything, cause he's amazing! **but mainly**, he's here you help *you*

@@ -1,28 +1,47 @@
 ---
 layout: default-edit
-title: Dave - Administrator
-nav_order: 6
-has_children: true
-parent: Who Am I
+title: Dave
+nav_order: 4
+parent: Who Am I?
 permalink: /dave
 ---
 
-![Dave](/docs/assets/dave.png){:style="float: right; margin: 7px"}
 
-# Dave - Administrators
+# Dave: the Administrator
 
-This section of the documentation is for [Dave: the operator](/users#dave-the-operator).  Here you will find instructions on how to:
-* install and configure Nuvla
-* add exiting or provision new Container-as-a-Service (CaaS) infrastructures (running in public or private clouds) on which to deploy containers from Nuvla.
-* register, install and configure a NuvlaBox, and,
-* embed the Nuvla UI into another web application
+{% include /code-sample/skills.html %} {% include /code-sample/skills-sysadmin.html %} {% include /code-sample/skills-om.html %} 
 
-The following diagram shows the main blocks of the Nuvla Architecture. 
+![Dave](/docs/assets/dave.png){:style="margin: auto; display: block; width: 7em"}
 
-![Nuvla Architecture](/docs/assets/architecture.png)
 
-In terms of infrastructure, Nuvla is deployed on a CaaS, since it is composed of micro-services packaged as containers.
+This section of the documentation is for [Dave](/whoami#dave-the-administrator).  Here you will find instructions on how to setup your own Nuvla instance, manage Container-as-a-Service (CaaS) infrastructures and even install NuvlaBox devices at the edge.
 
-Further, Nuvla deploys user containers on a CaaS as well.  It can either use the same CaaS as the one it is deployed on, or more often it is configured to point to one or many other CaaSs.  This makes Nuvla very flexible and is what makes it a powerful edge-to-cloud solution.
+[Dave](/whoami#dave-the-administrator) is quite an hands-on guy and might even be administrating multiple services and infrastructures. 
 
-Furthermore, if the CaaS on which Nuvla deploys containers includes optional services, such as an S3 service (e.g. on public clouds or MinIO on private infrastructures), it offers a nice data management solution, delivering data directly in containers.
+
+# Dave can...
+
+#### [Install his own Nuvla instance](/nuvla/installation)
+#### [Create and Manage Infrastructures](/nuvla/infrastructures)
+#### [Populate Nuvla with Example Applications](/nuvla/installation/example-apps)
+#### [Fine tune a Swarm Cluster to host a production Nuvla Instance](/nuvla/installation/production#deploy-additional-caas-services)
+#### [Operate and maintain his own Nuvla instance](/nuvla/installation/operation-maintenance)
+#### [Deploy a NuvlaBox](/nuvlabox)
+---
+#### Embed the Nuvla UI into another web application 
+
+The easiest way to do this is simply to include the Nuvla browser interface into the web application via an `iframe` element:
+
+```html
+<iframe src="https://nuvla.io"
+        style="width:100%; height:100ex; v-scroll:auto; padding: 1ex !important; margin: 0 !important">
+    <p>Your browser does not support iframes.</p>
+</iframe>
+```
+
+
+> **Note:** if you are using your own Nuvla deployment, simply adjust the `src="https://nuvla.io"` value.
+
+Embedding the interface in this way avoids issues with cross-site scripting restrictions, conflicts with Javascript libraries, etc.
+
+

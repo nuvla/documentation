@@ -13,6 +13,7 @@ Edge computing is becoming a standard companion to cloud computing when it comes
 
 The products and services offered by [SixSq](https://sixsq.com/) provide the technical means to easily implement secured edge to cloud solutions for an interconnected digital world. 
 
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/k2scM2-KJrw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 Our value proposition is explained through the eyes of 5 team members: `Alice`, `Bob`, `Clara`, `Dave` and `Emma`. Of course every organisation is unique, but these roles exist in one form or another in most organisations. We simply provides a collaboration framework to facilitate work between the areas of concern represented by these personae. In reality, one person will often be able to perform several of these roles in an organisation.
 

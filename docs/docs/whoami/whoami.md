@@ -29,9 +29,9 @@ Alice will also need the support from [Dave](#dave-the-operator) in order to hav
 
 Alice can deploy any of the applications in the Nuvla library herself (step 4 and 5 in [Figure 1](#nuvla-collaboration-framework)), onto the edge-to-cloud architecture at any time and as often as needed. She can then process the data and carefully analyse the results, which is her key expertise. 
 
-Once datasets are registered with Nuvla, courtesy of Emma (more about Emma very soon), she can use the platform to select datasets she wants to analyse and process, and Nuvla will propose compatible applications and infrastructure in which to deploy them.
+Once datasets are registered with Nuvla, courtesy of [Emma](#emma-the-data-expert), she can use the platform to select datasets she wants to analyse and process, and Nuvla will propose compatible applications and infrastructure in which to deploy them.
 
-Importantly, Alice doesn’t need any advanced IT skills for performing her job, thanks to Nuvla, [Clara](#clara-the -it-specialist) and Emma. 
+Importantly, Alice doesn’t need any advanced IT skills for performing her job, thanks to Nuvla, [Clara](#clara-the -it-specialist) and [Emma](#emma-the-data-expert). 
 
 To get started as Alice, [go here](alice).
 
@@ -42,24 +42,24 @@ To get started as Alice, [go here](alice).
 Bob: the project manager
 Bob manages the team. He is concerned about budget, resource consumption and delivering his project on time, which is challenging when assets are spread across locations. He also wants to give his team the best tools for the job.
 Nuvla is key to Bob. It provides a clear overview of how many resources users are consuming on each infrastructure. He can see which applications are being deployed, and where, and when resource limits are being reached. Nuvla provides Bob with all the information he needs to keep his project on track.
-Bob can create groups and invite users (see thick blue line in [Figure 1](#nuvla-collaboration-framework)).  Once authorised by [Dave](#dave-the-operator), Bob can invite [Alice](#alice-the-domain-specialist), [Clara](#clara-the -it-specialist) and Emma to the Nuvla platform. This gives him the ability to ensure the right people have the right access, and that the right people can collaborate, with risking to lose control.
+Bob can create groups and invite users (see thick blue line in [Figure 1](#nuvla-collaboration-framework)).  Once authorised by [Dave](#dave-the-operator), Bob can invite [Alice](#alice-the-domain-specialist), [Clara](#clara-the -it-specialist) and [Emma](#emma-the-data-expert) to the Nuvla platform. This gives him the ability to ensure the right people have the right access, and that the right people can collaborate, with risking to lose control.
 
 To get started as Bob, [go here](bob).
 
-## Clara: the IT specialist
+## Clara: the IT expert
 
 ![Clara](/docs/assets/clara.png){:style="float: left;margin-right: 7px;margin-top: 7px;"}
 
-Now that [Alice](#alice-the-domain-specialist) and Emma have agreed on how the data is to be managed and processed (step 1 in [Figure 1](#nuvla-collaboration-framework)), Clara can put together an IoT architecture that supports the overall data flow defined by Emma and the processing needs of the applications selected by [Alice](#alice-the-domain-specialist). This requires special skills of IT specialists like Clara. 
+Now that [Alice](#alice-the-domain-specialist) and [Emma](#emma-the-data-expert) have agreed on how the data is to be managed and processed (step 1 in [Figure 1](#nuvla-collaboration-framework)), Clara can put together an IoT architecture that supports the overall data flow defined by [Emma](#emma-the-data-expert) and the processing needs of the applications selected by [Alice](#alice-the-domain-specialist). This requires special skills of IT specialists like Clara. 
 
 Using basic knowledge in scripting and container configuration, Clara can easily create components and stacks for [Alice](#alice-the-domain-specialist) within Nuvla (step 3 in [Figure 1](#nuvla-collaboration-framework)). Further, Clara can configure application deployment policies, so that Nuvla can match the right data with the right application.
 
 Nuvla works will virtually all public and private cloud solutions. Clara can therefore create a Container-as-a-Service environment in any public or private cloud, as well as at the edge on NuvlaBoxes, enabling the collection of data for near data processing, including machine learning models
-Nuvla deploys an end-to-end security strategy for all of its services, including the edge. Clara leverages this to provide [Alice](#alice-the-domain-specialist) and Emma a secure environment minimising any security risk associated with handling data in an edge-to-cloud architecture.
+Nuvla deploys an end-to-end security strategy for all of its services, including the edge. Clara leverages this to provide [Alice](#alice-the-domain-specialist) and [Emma](#emma-the-data-expert) a secure environment minimising any security risk associated with handling data in an edge-to-cloud architecture.
 
 To get started as Clara, [go here](clara).
 
-## Dave: the operator
+## Dave: the administrator
 
 ![Dave](/docs/assets/dave.png){:style="float: left;margin-right: 7px;margin-top: 7px;"}
 

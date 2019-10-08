@@ -8,6 +8,8 @@ grand_parent: NuvlaBox
 
 # Quickstart
 
+Installing the NuvlaBox Engine is as simple as:
+
  0. [download](https://github.com/nuvlabox/deployment/releases) the desired NuvlaBox release  
  1. login into [nuvla.io](https://nuvla.io)
  2. from the [edge panel](https://nuvla.io/ui/edge), add a new `nuvlabox` and copy the UUID
