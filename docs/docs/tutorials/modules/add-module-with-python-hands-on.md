@@ -6,7 +6,7 @@ grand_parent: Tutorials
 parent: Add modules with Python
 ---
 
-# Hands on: Add new module to Nuvla
+## Hands on: Add new module to Nuvla
 
 Try to define your own application within Nuvla, using an existing
 docker image.  For example, you might try a web server: 
