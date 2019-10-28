@@ -33,10 +33,9 @@ Finally, due to its versatility, Nuvla's API also provide custom operations for 
 
 ## Understanding the Nuvla REST API output format
 
-All the Nuvla API calls will return a JSON output, like the one in the example below:
+All the Nuvla API calls will return a JSON output, and you'll notice that all of these outputs contain a set of common attributes:
 
-
-Certains attributes are server-side..*[]: 
+ - _**id**_: unique resource identifier, defined by the API server
 
 
 
@@ -46,11 +45,28 @@ Resources are managed individually, which means that the data schemas and availa
 
 ### cloud-entry-point
 
+{% include request_snippet.md file='api/cep.sh' action='GET' endpoint='/api/cloud-entry-point' %}
+
+
 The primary directory of resources is the Cloud Entry Point (CEP), which contains a list of named resource collections and their URLs (in the href field) relative to the baseURI value. The CEP also contains some other metadata.
 
-The endpoint is accessible for all registered and anonymous Nuvla users:
+The endpoint is accessible for all registered and anonymous Nuvla users.
 
-{% include code_snippet.md file='api/cep.sh' language=shell %}
+---
+
+_**Example**_
+
+{% include code_snippet.md file='api/cep.sh' language='shell' %}
+
+_Response:_
+
+{% include api/cep-response.md %}
+
+
+
+### user
+
+
 
 # Python API
 
