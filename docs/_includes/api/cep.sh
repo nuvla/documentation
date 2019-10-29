@@ -1,0 +1,1 @@
+curl https://nuvla.io/api/cloud-entry-point
