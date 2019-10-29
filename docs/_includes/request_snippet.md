@@ -1,18 +1,23 @@
 {% assign file = include.file %}
-{% assign action = include.action %}
+{% assign actions = include.actions | split: " "  %}
 {% assign endpoint = include.endpoint %}
 
 {% assign nanosecond = "now" | date: "%N" %}
 
 <div markdown="1" style="margin: 5px; font-size: 12px; position:relative; background: #2f2f2f;">
+
+{% for action in actions  %}
+
 <div class="http {{ action }}">
-    {{ action }}
+{{ action }} 
 </div>
+
+{% endfor %}
+
 
 <div class="endpoint">
     {{ endpoint }}
 </div>
-
 
 {: #code{{ nanosecond }}}
 </div>
