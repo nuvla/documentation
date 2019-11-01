@@ -12,9 +12,21 @@ permalink: /nuvla/api
   * [API Syntax](#api-syntax)
   * [Resources](#resources)
     + [cloud-entry-point](#cloud-entry-point)
+      + [Get the cloud entry point](#get-the-cloud-entry-point)
     + [credential](#credential)
+      + [Generate an Amazon EC2 credential](#generate-an-amazon-ec2-credential)
+      + [Generate an API key credential](#generate-an-api-key-credential)
+      + [Generate an Azure credential](#generate-an-azure-credential)
+      + [Generate a Docker Swarm HTTP API credential](#generate-a-docker-swarm-http-api-credential)
+      + [Generate a Docker Swarm token credential](#generate-a-docker-swarm-token-credential)
+      + [Generate an Exoscale credential](#generate-an-exoscale-credential)
+      + [Generate a Google Compute Engine credential](#generate-a-google-compute-engine-credential)
+      + [Generate a Minio credential](#generate-a-minio-credential)
     + [deployment](#deployment)
+      + [Start/Stop an application](#start-stop-an-application)
     + [session](#session)
+      + [Login with username and password](#login-with-username-and-password)
+      + [Login with API keys](#login-with-api-keys)
     + [user](#user)
     
 - [Python API](#python-api)
@@ -75,7 +87,7 @@ where
 | `orderby` | To order the returned resources by the specified attribute | `?orderby=created:desc` <br><br> `?orderby=people/surname:asc` |
 | `aggregate` | On top of the requested resources, it will also return on-the-fly aggregations based on the specified function. Available functions: `avg`, `max`, `min`, `sum`, `cardinality`, `terms`, `stats`, `extendedstats`, `percentiles`, `count`, `missing`  | `?aggregation=avg:people/age` | 
 | `last` and `first` | Returns a range of resources by setting the first and last (1-based) query parameters | `?first=10&last=20` |
-| `select` | Selects only certain attributes to be returned by the server. Avoiding sending information that will not be useful reduces the load on the network and the server | `&select=people/id` |
+| `select` | Selects only certain attributes to be returned by the server. Avoiding sending information that will not be useful reduces the load on the network and the server | `?select=people/id` |
 
 
 ## Resources
@@ -93,7 +105,7 @@ The endpoint is accessible for all registered and anonymous Nuvla users.
 
 _Examples_
 
- - Get the cloud entry point
+##### Get the cloud entry point
 
 {% include request_snippet.md file='api/cep.sh' actions='GET' endpoint='/api/cloud-entry-point' %}
 
@@ -109,14 +121,78 @@ The `credential` resource is used to save all the credentials necessary to manag
 ---
 _Examples_
 
+##### Generate an Amazon EC2 credential
 
- - Generate an API key credential
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST' endpoint='/api/credential' %}
 
-{% include request_snippet.md file='api/credential-apikey.sh' actions='POST' endpoint='/api/cloud-entry-point' %}
+{% include code_snippet.md file='api/credential-amazonec2.sh' language='shell' %}
+
+{% include response_snippet.md file='api/credential-amazonec2-response.md' %}
+
+
+
+##### Generate an API key credential
+
+{% include request_snippet.md file='api/credential-apikey.sh' actions='POST' endpoint='/api/credential' %}
 
 {% include code_snippet.md file='api/credential-apikey.sh' language='shell' %}
 
 {% include response_snippet.md file='api/credential-apikey-response.md' %}
+
+
+##### Generate an Azure credential
+
+{% include request_snippet.md file='api/credential-azure.sh' actions='POST' endpoint='/api/credential' %}
+
+{% include code_snippet.md file='api/credential-azure.sh' language='shell' %}
+
+{% include response_snippet.md file='api/credential-azure-response.md' %}
+
+
+##### Generate a Docker Swarm HTTP API credential
+
+{% include request_snippet.md file='api/credential-swarm.sh' actions='POST' endpoint='/api/credential' %}
+
+{% include code_snippet.md file='api/credential-swarm.sh' language='shell' %}
+
+{% include response_snippet.md file='api/credential-swarm-response.md' %}
+
+
+##### Generate a Docker Swarm token credential
+
+{% include request_snippet.md file='api/credential-swarmtoken.sh' actions='POST' endpoint='/api/credential' %}
+
+{% include code_snippet.md file='api/credential-swarmtoken.sh' language='shell' %}
+
+{% include response_snippet.md file='api/credential-swarmtoken-response.md' %}
+
+
+##### Generate an Exoscale credential
+
+{% include request_snippet.md file='api/credential-exoscale.sh' actions='POST' endpoint='/api/credential' %}
+
+{% include code_snippet.md file='api/credential-exoscale.sh' language='shell' %}
+
+{% include response_snippet.md file='api/credential-exoscale-response.md' %}
+
+##### Generate a Google Compute Engine credential
+
+{% include request_snippet.md file='api/credential-gcloud.sh' actions='POST' endpoint='/api/cloud-entry-point' %}
+
+{% include code_snippet.md file='api/credential-gcloud.sh' language='shell' %}
+
+{% include response_snippet.md file='api/credential-gcloud-response.md' %}
+
+
+
+##### Generate a Minio credential
+
+{% include request_snippet.md file='api/credential-minio.sh' actions='POST' endpoint='/api/credential' %}
+
+{% include code_snippet.md file='api/credential-minio.sh' language='shell' %}
+
+{% include response_snippet.md file='api/credential-minio-response.md' %}
+
 
 
 ### deployment
@@ -126,7 +202,7 @@ The `deployment` resource allows you to deploy an instance of a `module`.
 ---
 _Examples_
 
- - Start/Stop an application
+##### Start/Stop an application
  
 {% include request_snippet.md file='api/deployment.sh' actions='POST PUT GET' endpoint='/api/deployment' %}
 
@@ -147,7 +223,7 @@ The `session` resource allows you to use your credentials for authenticating wit
 _Examples_
 
 
- - Login with username and password 
+##### Login with username and password 
 
 {% include request_snippet.md file='api/session.sh' actions='POST' endpoint='/api/session' %}
 
@@ -156,7 +232,7 @@ _Examples_
 {% include response_snippet.md file='api/login-response.md' %}
 
 
- - Login with API keys
+##### Login with API keys
  
 {% include request_snippet.md file='api/session.sh' actions='POST' endpoint='/api/session' %}
 
