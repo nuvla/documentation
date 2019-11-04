@@ -23,12 +23,13 @@ permalink: /nuvla/api
       + [Generate a Google Compute Engine credential](#generate-a-google-compute-engine-credential)
       + [Generate a Minio credential](#generate-a-minio-credential)
     + [deployment](#deployment)
-      + [Start/Stop an application](#start-stop-an-application)
+      + [Start/Stop an application](#startstop-an-application)
     + [session](#session)
       + [Login with username and password](#login-with-username-and-password)
       + [Login with API keys](#login-with-api-keys)
     + [user](#user)
-    
+    + [voucher](#voucher)
+      + [Create a new voucher](#create-a-new-voucher)
 - [Python API](#python-api)
 
 
@@ -48,6 +49,38 @@ Users have at their disposal all the usual CRUD (Create, Read, Update, Delete) o
 | Delete        | DELETE      | resource            |
 
 Finally, due to its versatility, Nuvla's API also provide custom operations for certain resources. These will be covered individually in the subsections below.
+
+Here are a few examples on how to construct the different HTTP requests:
+
+ - **GET** all the resources of a specific type:
+    
+    `GET /api/<resource-name>`
+    
+ - **GET** a specific resource:
+ 
+    `GET /api/<resource-name>/<resource-uuid>`
+    
+ - **CREATE** a new resource:
+ 
+    ```
+POST       /api/<resource-name>
+  HEADERS  Content-type:application/json
+  DATA     <JSON resource>
+    ```
+    
+ - **EDIT** an existing resource:
+ 
+    ```
+PUT        /api/<resource-name>/<resource-uuid>
+  HEADERS  Content-type:application/json
+  DATA     <JSON with the attribute name and value to be changed>
+    ```
+
+ - **DELETE** a resource:
+ 
+    `DELETE /api/<resource-name>/<resource-uuid>`
+         
+ 
 
 ## Understanding the Nuvla REST API output format
 
@@ -94,8 +127,10 @@ where
 
 Resources are managed individually, which means that the data schemas and available operations might defer from one to the other. These options are all explained and exemplified in the following sections.
 
+
 ### cloud-entry-point
 
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='GET' endpoint='/api/cloud-entry-point' maincolor='none' prefix='allowed:' lettercolor='black' %}
 
 The primary directory of resources is the Cloud Entry Point (CEP), which contains a list of named resource collections and their URLs (in the href field) relative to the baseURI value. The CEP also contains some other metadata.
 
@@ -115,6 +150,8 @@ _Examples_
 
 
 ### credential
+
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST GET PUT DELETE' endpoint='/api/credential/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
 
 The `credential` resource is used to save all the credentials necessary to manage your Nuvla resources. From API keys, to Cloud Provider credentials, Docker Swarm tokens, TLS certificates, etc.
 
@@ -197,6 +234,8 @@ _Examples_
 
 ### deployment
 
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST GET PUT DELETE' endpoint='/api/deployment/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
 The `deployment` resource allows you to deploy an instance of a `module`.
 
 ---
@@ -214,6 +253,7 @@ _Examples_
 
 ### session
 
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST GET DELETE' endpoint='/api/session/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
 
 The `session` resource allows you to use your credentials for authenticating with Nuvla.
 
@@ -242,6 +282,27 @@ _Examples_
 
 ### user
 
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST GET PUT DELETE' endpoint='/api/user/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+
+### voucher
+
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST GET PUT DELETE' endpoint='/api/voucher/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+The `voucher` resource let's you create and manage digital vouchers, associated with any digital service provider, for better tracking and accounting of voucher consumption.
+
+
+---
+_Examples_
+
+
+##### Create a new voucher
+
+{% include request_snippet.md file='api/voucher.sh' actions='POST' endpoint='/api/voucher' %}
+
+{% include code_snippet.md file='api/voucher.sh' language='shell' %}
+
+{% include response_snippet.md file='api/voucher-response.md' %}
 
 
 # Python API

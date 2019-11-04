@@ -1,10 +1,19 @@
 {% assign file = include.file %}
 {% assign actions = include.actions | split: " "  %}
 {% assign endpoint = include.endpoint %}
+{% assign maincolor = include.maincolor %}
+{% assign prefix = include.prefix %}
+{% assign lettercolor = include.lettercolor %}
+
 
 {% assign nanosecond = "now" | date: "%N" %}
 
-<div markdown="1" style="margin: 5px; font-size: 12px; position:relative; background: #2f2f2f;">
+<div markdown="1" style="margin: 5px; font-size: 12px; position:relative; background: {{ maincolor | default: "#2f2f2f" }};">
+
+<div class="endpoint prefix" style="color: {{ lettercolor | default: "#fff" }};">
+{{ prefix }}
+</div>
+
 
 {% for action in actions  %}
 
@@ -15,7 +24,7 @@
 {% endfor %}
 
 
-<div class="endpoint">
+<div class="endpoint" style="color: {{ lettercolor | default: "#fff" }};">
     {{ endpoint }}
 </div>
 
@@ -28,10 +37,15 @@ var clipboard{{ nanosecond }} = new ClipboardJS('#copybutton{{ nanosecond }}');
 
 <style>
 
+.prefix {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
 .endpoint {
     display: inline-block; 
     margin-left: 7px;
-    color: #fff;
     font-family: "Courier New";
 }
 
