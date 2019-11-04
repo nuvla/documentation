@@ -24,6 +24,14 @@ permalink: /nuvla/api
       + [Generate a Minio credential](#generate-a-minio-credential)
     + [deployment](#deployment)
       + [Start/Stop an application](#startstop-an-application)
+    + [evidence-record](#evidence-record)
+      + [Create an evidence record](#create-an-evidence-record)
+    + [infrastructure-service](#infrastructure-service)
+      + [Create Docker Swarm infrastructure service](#create-docker-swarm-infrastructure-service)
+      + [Create generic infrastructure service](#create-generic-infrastructure-service)
+      + [Create Kubernetes infrastructure service](#create-kubernetes-infrastructure-service)
+    + [infrastructure-service-group](#infrastructure-service-group)
+      + [Create an infrastructure-service-group](#create-an-infrastructure-service-group)
     + [session](#session)
       + [Login with username and password](#login-with-username-and-password)
       + [Login with API keys](#login-with-api-keys)
@@ -248,6 +256,89 @@ _Examples_
 {% include code_snippet.md file='api/deployment.sh' language='shell' %}
 
 {% include response_snippet.md file='api/deployment-response.md' %}
+
+
+
+
+### evidence-record
+
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST GET PUT DELETE' endpoint='/api/evidence-record/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+The `evidence-record` resource allows you to create and manage audit evidence records that can afterwards help you keep track of your infrastructures' compliance to certain standards and certification schemas.
+
+---
+_Examples_
+
+##### Create an evidence record
+ 
+{% include request_snippet.md file='api/evidence-record.sh' actions='POST' endpoint='/api/evidencerecord' %}
+
+{% include code_snippet.md file='api/evidencerecord.sh' language='shell' %}
+
+{% include response_snippet.md file='api/evidencerecord-response.md' %}
+
+ 
+
+
+### infrastructure-service
+
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST GET PUT DELETE' endpoint='/api/infrastructure-service/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+The `infrastructure-service` resource represents any manageable service with a working endpoint. This resource is templated, which means, like `session` and `credential`, you can also create infrastructure-services of different types.
+
+---
+_Examples_
+
+
+##### Create Docker Swarm infrastructure service
+ 
+{% include request_snippet.md file='api/infrastructure-service.sh' actions='POST' endpoint='/api/infrastructure-service-swarm' %}
+
+{% include code_snippet.md file='api/infrastructure-service-swarm.sh' language='shell' %}
+
+{% include response_snippet.md file='api/infrastructure-service-swarm-response.md' %}
+
+
+##### Create generic infrastructure service
+ 
+{% include request_snippet.md file='api/infrastructure-service.sh' actions='POST' endpoint='/api/infrastructure-service' %}
+
+{% include code_snippet.md file='api/infrastructure-service.sh' language='shell' %}
+
+{% include response_snippet.md file='api/infrastructure-service-response.md' %}
+
+
+
+##### Create Kubernetes infrastructure service
+ 
+{% include request_snippet.md file='api/infrastructure-service-k8s.sh' actions='POST' endpoint='/api/infrastructure-service' %}
+
+{% include code_snippet.md file='api/infrastructure-service-k8s.sh' language='shell' %}
+
+{% include response_snippet.md file='api/infrastructure-service-k8s-response.md' %}
+
+
+
+
+### infrastructure-service-group
+
+{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST GET DELETE' endpoint='/api/infrastructure-service-group/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+The `infrastructure-service-group` resource is a logical container for your infrastructure-service and respective credential and data resources.
+
+
+---
+_Examples_
+
+
+##### Create an infrastructure-service-group
+
+{% include request_snippet.md file='api/infrastructure-service-group.sh' actions='POST' endpoint='/api/infrastructure-service-group' %}
+
+{% include code_snippet.md file='api/infrastructure-service-group.sh' language='shell' %}
+
+{% include response_snippet.md file='api/infrastructure-service-group-response.md' %}
+
 
 
 
