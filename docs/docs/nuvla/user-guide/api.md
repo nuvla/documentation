@@ -396,6 +396,53 @@ _Examples_
 {% include response_snippet.md file='api/voucher-response.md' %}
 
 
+### data-record
+
+The `data-record` resource allows for storing documents describing individual 
+data files or objects. The document schema has a number of mandatory fields. 
+The schema for the this resource is open, allowing any information to be associated with the data object
+The schema is extensible via extra fields that can provide more details (meta-data) 
+about the file or object. This extensibility is achieved through first defining 
+a named prefix as `data-record-key-prefix` object (see "data-record-key-prefix" 
+section), then using it in the document by `"my-prefix:my-field": "field value"`.
+The key itself may be described in a `data-record-key` resource.
+
+---
+
+_Examples_
+
+#### Create data-record
+
+{% include request_snippet.md file='api/infrastructure-service-group.sh' actions='POST' endpoint='/api/infrastructure-service-group' %}
+
+{% include code_snippet.md file='api/infrastructure-service-group.sh' language='shell' %}
+
+{% include response_snippet.md file='api/infrastructure-service-group-response.md' %}
+
+#### Get data-record
+
+{% include request_snippet.md file='api/infrastructure-service-group.sh' actions='POST' endpoint='/api/infrastructure-service-group' %}
+
+{% include code_snippet.md file='api/infrastructure-service-group.sh' language='shell' %}
+
+{% include response_snippet.md file='api/infrastructure-service-group-response.md' %}
+
+
+### data-record-key-prefix
+
+Every attribute in a `data-record` resource must be prefixed to avoid 
+collisions. The `data-record-key-prefix` resources maintain the mapping 
+between a prefix and the associated, complete URI.
+
+A `data-record` resource cannot be uploaded to the server unless all 
+of the prefixes within the document have been defined.
+
+Currently, only an administrator can create, update, or delete 
+`data-record-key-prefix` resources. These actions follow the standard 
+API patterns. Most users will only search these resources and look at 
+the details for a particular `data-record-key-prefix` resource.
+
+
 # Python API
 
 (coming soon...)
