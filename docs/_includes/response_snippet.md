@@ -1,8 +1,10 @@
 {% assign file = include.file %}
 
-<details><summary><i>Response:</i></summary>
-
+<div>
+<details>
+<summary><i>Response:</i></summary>
+</details>
 <div markdown="1">
 {% include {{ file }} %}
 </div>
-</details>
+</div>
