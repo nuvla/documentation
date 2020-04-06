@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Your First NuvlaBox App
-nav_order: 4
-parent: NuvlaBox
+nav_order: 1
+parent: Apps Deployment
+grand_parent: NuvlaBox
 has_children: false
 ---
 
