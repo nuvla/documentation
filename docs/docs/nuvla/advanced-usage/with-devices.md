@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Apps Using Devices
-nav_order: 2
-parent: Apps Deployment
-grand_parent: NuvlaBox
+nav_order: 3
+parent: Advanced Usage
+grand_parent: Nuvla
 has_children: false
 ---
 
-# Single node NuvlaBox
+# Single node Docker endpoint
 
 In Nuvla service, the application definition page for apps to be deployed on
-NuvlaBox Docker endpoints running not in swarm mode supports `devices` option in
+Docker endpoints not running in swarm mode supports `devices` option in
 [Docker compose](https://docs.docker.com/compose/compose-file/#devices). Use
 this option to add a host device to the container
 
@@ -22,12 +22,11 @@ services:
             - "/dev/ttyUSB0"
 ```
 
-# Multiple node NuvlaBox
+# Multi-node Docker cluster
 
-In the case of NuvlaBox consisting of more than one node and running in Docker
-swarm mode, the addition of the host devices to the containers on the nodes of
-the swarm must be handled as follows. We suggest to use `docker-in-docker`
-approach.
+In the case of multi-node Docker cluster running in Docker swarm mode, the
+addition of the host devices to the containers on the nodes of the swarm must be
+handled as follows. We suggest to use `docker-in-docker` approach.
 
 ## Docker-in-docker with sidecar container
 
@@ -72,7 +71,7 @@ extra capabilities to your container:
 && docker run --cap-add=SYS_ADMIN --device /dev/fuse --rm --name $${CONT_NAME} your_repo/your_image
 ``` 
 
-In some cases if [apparmor](https://en.wikipedia.org/wiki/AppArmor) on the host
+In some cases, if [apparmor](https://en.wikipedia.org/wiki/AppArmor) on the host
 node is configured too strictly, you might need to use `--privileged` flag:
 
 ```
@@ -116,10 +115,10 @@ services:
 ```
 
 In the `command` above, we've added the discovery of the IP of the node
-(`NODE_IP`) your container is running on and publishes its ports from (`-P`
+(`NODE_IP`) your container runs on and from which it publishes its ports (`-P`
 parameter is used). You need to wrap your image's entry point into a script that
 would first publish `hostname` deployment parameter and then start your
-application. The full example of how to this must be done can be found
+application. The full example of how this must be done can be found
 [here](https://github.com/nuvla/example-jupyter/blob/master/s3-mount). Here is
 the link to
 [entrypoint](https://github.com/nuvla/example-jupyter/blob/master/s3-mount/nuvla-init.sh),
