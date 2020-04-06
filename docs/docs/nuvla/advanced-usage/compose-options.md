@@ -1,16 +1,23 @@
 ---
 layout: page
-title: Apps Using Devices
-nav_order: 2
-parent: Apps Deployment
-grand_parent: NuvlaBox
+title: Docker Compose options in Swarm
+nav_order: 3
+parent: Advanced Usage
+grand_parent: Nuvla
 has_children: false
 ---
 
-# Single node NuvlaBox
+# Using Docker Compose options in Swarm
 
-In Nuvla service, the application definition page for apps to be deployed on
-NuvlaBox Docker endpoints running not in swarm mode supports `devices` option in
+Certain Docker Compose options, like `devices`, `cap_add` etc., cannot be used
+when deploying applications on Docker Swarm clusters. Below we describe this on
+the example of `devices` option, and provide workarounds to this and other
+associated issues.
+
+# Single node Docker endpoint
+
+In Nuvla, the application definition page for apps to be deployed on
+Docker infrastructures supports `devices` option, as in
 [Docker compose](https://docs.docker.com/compose/compose-file/#devices). Use
 this option to add a host device to the container
 
@@ -22,17 +29,21 @@ services:
             - "/dev/ttyUSB0"
 ```
 
-# Multiple node NuvlaBox
+Please note that by doing this, you'll be deploying your app as a native Docker 
+Compose application, and thus all of your containers will be executed within 
+the host that is exposing your infrastructure endpoint.
 
-In the case of NuvlaBox consisting of more than one node and running in Docker
-swarm mode, the addition of the host devices to the containers on the nodes of
-the swarm must be handled as follows. We suggest to use `docker-in-docker`
-approach.
+# Multi-node Docker swarm cluster
+
+In the case of multi-node Docker cluster running in Docker swarm mode, the
+addition of the host devices to the containers is not natively supported by
+Docker. However, it is still possible to make this functionality work, following
+a `docker-in-docker` approach.
 
 ## Docker-in-docker with sidecar container
 
-Docker does not support devices, capabilities nor privileged for Docker
-services. **However**, you can work around this limitation by adapting your
+Docker Swarm does not support devices, capabilities nor privileged mode. 
+**However**, you can work around this limitation by adapting your
 compose file as shown below:
 
 ```
@@ -61,7 +72,7 @@ services:
           && docker run --rm --device /dev/ttyUSB0 --name $${CONT_NAME} your_repo/your_image'
 ```
 
-This uses a side-car container from `sixsq/wrapper-cleaner` image provided by
+This uses a sidecar container from `sixsq/wrapper-cleaner` image provided by
 SixSq that will make sure the container running your application is properly
 terminated after the deployment gets terminated.
 
@@ -72,7 +83,7 @@ extra capabilities to your container:
 && docker run --cap-add=SYS_ADMIN --device /dev/fuse --rm --name $${CONT_NAME} your_repo/your_image
 ``` 
 
-In some cases if [apparmor](https://en.wikipedia.org/wiki/AppArmor) on the host
+In some cases, if [apparmor](https://en.wikipedia.org/wiki/AppArmor) on the host
 node is configured too strictly, you might need to use `--privileged` flag:
 
 ```
@@ -81,7 +92,8 @@ node is configured too strictly, you might need to use `--privileged` flag:
 
 ## Application publishing ports
 
-If your application is a service needing to publish ports, use the following example.
+If your application is a service needing to publish ports, use the following
+example.
 
 The example is based on Jupyter Notebook needing to add host's `/dev/fuse`
 device to remotely mount S3 buckets. Jupyter Notebook runs web UI (TCP:8888)
@@ -115,14 +127,14 @@ services:
       && docker run -v /var/run/docker.sock:/var/run/docker.sock --cap-add=SYS_ADMIN --device /dev/fuse --rm -P --name $${CONT_NAME} -e NODE_IP -e CONT_NAME -e NUVLA_DEPLOYMENT_ID -e NUVLA_ENDPOINT -e NUVLA_API_KEY -e NUVLA_API_SECRET myrepo/myimage:tag'
 ```
 
-In the `command` above, we've added the discovery of the IP of the node
-(`NODE_IP`) your container is running on and publishes its ports from (`-P`
-parameter is used). You need to wrap your image's entry point into a script that
-would first publish `hostname` deployment parameter and then start your
-application. The full example of how to this must be done can be found
+In the `command` option above, we've added the discovery of the node's IP
+(`NODE_IP`) where your container is running, and from which it publishes its
+ports (`-P` parameter is used). You need to wrap your image's entrypoint into a
+script that would first publish the `hostname` deployment parameter and then
+start your application. The full example of how this must be done can be found
 [here](https://github.com/nuvla/example-jupyter/blob/master/s3-mount). Here is
-the link to
-[entrypoint](https://github.com/nuvla/example-jupyter/blob/master/s3-mount/nuvla-init.sh),
+the link to the [entrypoint
+script](https://github.com/nuvla/example-jupyter/blob/master/s3-mount/nuvla-init.sh),
 and this is the ["Nuvla integration"
 script](https://github.com/nuvla/example-jupyter/blob/master/s3-mount/nuvla-integration.py)
 that publishes the required deployment parameters to Nuvla.
