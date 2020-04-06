@@ -9,8 +9,8 @@ has_children: false
 
 # Single node Docker endpoint
 
-In Nuvla service, the application definition page for apps to be deployed on
-Docker endpoints not running in swarm mode supports `devices` option in
+In Nuvla, the application definition page for apps to be deployed on
+Docker infrastructures supports `devices` option, as in
 [Docker compose](https://docs.docker.com/compose/compose-file/#devices). Use
 this option to add a host device to the container
 
@@ -22,16 +22,21 @@ services:
             - "/dev/ttyUSB0"
 ```
 
+Please note that by doing this, you'll be deploying your app as a native Docker 
+Compose application, and thus all of your containers will be executed within 
+the host that is exposing your infrastructure endpoint.
+
 # Multi-node Docker cluster
 
 In the case of multi-node Docker cluster running in Docker swarm mode, the
-addition of the host devices to the containers on the nodes of the swarm must be
-handled as follows. We suggest to use `docker-in-docker` approach.
+addition of the host devices to the containers is not natively supported by Docker.
+However, it is still possible to make this functionality work, following a 
+`docker-in-docker` approach.
 
 ## Docker-in-docker with sidecar container
 
-Docker does not support devices, capabilities nor privileged for Docker
-services. **However**, you can work around this limitation by adapting your
+Docker Swarm does not support devices, capabilities nor privileged mode. 
+**However**, you can work around this limitation by adapting your
 compose file as shown below:
 
 ```
@@ -60,7 +65,7 @@ services:
           && docker run --rm --device /dev/ttyUSB0 --name $${CONT_NAME} your_repo/your_image'
 ```
 
-This uses a side-car container from `sixsq/wrapper-cleaner` image provided by
+This uses a sidecar container from `sixsq/wrapper-cleaner` image provided by
 SixSq that will make sure the container running your application is properly
 terminated after the deployment gets terminated.
 
@@ -114,14 +119,14 @@ services:
       && docker run -v /var/run/docker.sock:/var/run/docker.sock --cap-add=SYS_ADMIN --device /dev/fuse --rm -P --name $${CONT_NAME} -e NODE_IP -e CONT_NAME -e NUVLA_DEPLOYMENT_ID -e NUVLA_ENDPOINT -e NUVLA_API_KEY -e NUVLA_API_SECRET myrepo/myimage:tag'
 ```
 
-In the `command` above, we've added the discovery of the IP of the node
-(`NODE_IP`) your container runs on and from which it publishes its ports (`-P`
-parameter is used). You need to wrap your image's entry point into a script that
-would first publish `hostname` deployment parameter and then start your
+In the `command` option above, we've added the discovery of the node's IP
+(`NODE_IP`) where your container is running, and from which it publishes its ports (`-P`
+parameter is used). You need to wrap your image's entrypoint into a script that
+would first publish the `hostname` deployment parameter and then start your
 application. The full example of how this must be done can be found
 [here](https://github.com/nuvla/example-jupyter/blob/master/s3-mount). Here is
-the link to
-[entrypoint](https://github.com/nuvla/example-jupyter/blob/master/s3-mount/nuvla-init.sh),
+the link to the 
+[entrypoint script](https://github.com/nuvla/example-jupyter/blob/master/s3-mount/nuvla-init.sh),
 and this is the ["Nuvla integration"
 script](https://github.com/nuvla/example-jupyter/blob/master/s3-mount/nuvla-integration.py)
 that publishes the required deployment parameters to Nuvla.
