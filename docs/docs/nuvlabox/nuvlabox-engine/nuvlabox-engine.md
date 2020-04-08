@@ -4,6 +4,9 @@ title: NuvlaBox Engine
 nav_order: 1
 parent: NuvlaBox
 has_children: true
+permalink: /nuvlabox/nuvlabox-engine
+redirect_from:
+ - /nuvlabox/nuvlabox-engine/nuvlabox-engine
 ---
 
 NuvlaBox Engine
