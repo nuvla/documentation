@@ -63,4 +63,3 @@ To check which credentials you have access to, simply click on the "Credentials"
 If you do not have access to shared credentials, get in touch with the "Bob" of your organisation or create your own if you have deployed your own Docker Swarm cluster and optionally your MinIO service. To do that, simple click on the "add" button the the "Credentials" page.
 
 You can also get in touch with [SixSq's helpdesk](mailto:support@sixsq.com) to help you move forward if you get stuck.
-

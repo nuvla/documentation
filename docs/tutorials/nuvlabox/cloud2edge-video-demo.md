@@ -109,36 +109,3 @@ You can run this demo by yourself. Simply go through the following steps:
  7. you are now be able to see the video feed, coming from your webcam. If you move, you'll see some video processing happening
  8. connect to the MQTT broker running in your Docker Swarm cluster in the cloud, you'll get a notification every time there's movement! You can use whatever MQTT client you prefer (*mosquitto_sub* or even an Android/iPhone app)
     1. for example, if using *mosquitto_sub*, you can simply execute `mosquitto_sub -h URL.IP -p URL.PORT -t video_analysis/message`, where **URL.IP** and **URL.PORT** are the URL and port number taken from your "mqtt" **URL** in step 3. above
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
