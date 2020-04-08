@@ -5,17 +5,17 @@ nav_order: 1
 parent: NuvlaBox
 ---
 
-# You should choose:
+# NuvlaBox Engine or OS?
 
-#### NuvlaBox Engine...
+NuvlaBox allows you to create a smart edge device, such that you can share its computing power for all sorts of edge processing tasks. You have two ways of achieving this goal.
 
-> if all you want is to take an existing functional device (with an OS and Docker Engine already installed), and turn it into an Edge device, so that you can share its computing power for all sorts of edge processing.
+#### NuvlaBox Engine
 
-
----
-
-#### NuvlaBox OS...
-
-> if you have an hardware platform but no Operating System installed, and you'd like to dedicate and optimize it for the Edge by flashing a new customized and edge-specific OS into it.
+> you can take an existing functional device (with an OS and Docker Engine already installed), and turn it into an Edge device. [Follow these instructions](/nuvlabox/nuvlabox-engine).
 
 
+#### NuvlaBox OS
+
+> if you have a hardware platform without an Operating System (OS) installed, you can install the NuvlaBox OS, a dedicated and optimised OS for the edge. [Follow these instructions](/nuvlabox/nuvlabox-os).
+
+Both options will result in a functional NuvlaBox, connected to a Nuvla service, able to deliver an edge computing solution, at scale.
