@@ -11,7 +11,7 @@ Deployment of Applications on NuvlaBox
 
 This section provides examples on deployment of user applications on NuvlaBox.
 
-![nuvlabox-os-arch-detail](/docs/assets/nuvlabox-os-arch-detail.png)
+![nuvlabox-os-arch-detail](/assets/img/nuvlabox-os-arch-detail.png)
 
 
 

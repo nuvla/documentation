@@ -58,12 +58,12 @@ You can run this demo by yourself. Simply go through the following steps:
  4. click "*+add*" (top left), and select Swarm
  5. fill in the form and click "*create*" (replace the **IP** and **PORT** with the values from steps 1. and 2. above)
  
-    ![new-infra](/docs/assets/new-infra-modal.png)
+    ![new-infra](/assets/img/new-infra-modal.png)
  6. now that you see your infrastructure listed, go to *Credentials* on the left sidebar
  7. we need to tell Nuvla how to authenticate with your cluster, so click "*+add*" and select Swarm/Kubernetes
  8. fill in the form and click "*create*" (replace the **CA**, **CERT**, and **KEY** with the saved values from step 2. above)
  
-    ![new-cred](/docs/assets/new-credential-modal.png)
+    ![new-cred](/assets/img/new-credential-modal.png)
 
 ### 3: Launching your Message Broker
 
@@ -73,7 +73,7 @@ You can run this demo by yourself. Simply go through the following steps:
  4. select the credential you've created before, and click "*launch*"
  5. you'll be redirected to your dashboard...wait until the app has "STARTED" and you can see a green button on the app card (this can take a few minutes the 1st time you do it, cause your Docker Swarm cluster will have to download this Docker image)
     
-    ![new-dep](/docs/assets/new-deployment-card.png){:style="margin: auto; width: 18em;"}
+    ![new-dep](/assets/img/new-deployment-card.png){:style="margin: auto; width: 18em;"}
  6. click on the card, and you'll see a detailed page with information about your deployment. Make note of the **URL** called "mqtt"
  
 ### 4: Get the NuvlaBox into your edge device
@@ -82,7 +82,7 @@ You can run this demo by yourself. Simply go through the following steps:
  2. let's create a NuvlaBox. Click "*+add*"
  3. fill in the form and click "*create*"
      
-     ![new-nb](/docs/assets/new-nb-modal.png)
+     ![new-nb](/assets/img/new-nb-modal.png)
  4. you'll be given a **NuvlaBoxID**, please take note
  5. SSH into your edge device
     1. make sure you're logged in with a user that can [manage Docker](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user) - test it by running `docker ps`
@@ -100,7 +100,7 @@ You can run this demo by yourself. Simply go through the following steps:
  2. a panel with appear - select your NuvlaBox credential from there
  3. click on the environment tab and paste the "mqtt" **URL** that you saved above
  
-     ![env-var](/docs/assets/env-modal.png)
+     ![env-var](/assets/img/env-modal.png)
  4. click "*launch*" and wait
  5. once the deployment is ready, you'll the the green button with the link to your Motion Detector endpoint - click on it
  6. you'll be redirected to a new tab on your browser, pointing to your NuvlaBox via a SixSq VPN IP that has been assigned automatically to your NuvlaBox
