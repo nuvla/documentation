@@ -17,7 +17,7 @@ The products and services offered by [SixSq](https://sixsq.com/) provide the tec
 
 Our value proposition is explained through the eyes of 5 team members: `Alice`, `Bob`, `Clara`, `Dave` and `Emma`. Of course every organisation is unique, but these roles exist in one form or another in most organisations. We simply provides a collaboration framework to facilitate work between the areas of concern represented by these personae. In reality, one person will often be able to perform several of these roles in an organisation.
 
-![Overview](/docs/assets/overview.png)
+![Overview](/assets/img/overview.png)
 
 Figure 1: Overview
 {: style="color:gray; text-align: center;"}
