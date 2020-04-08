@@ -1,11 +1,12 @@
-curl -XPOST https://nuvla.io/api/infrastructure-service -H 'content-type:application/json' -b cookies -d '''
+curl -XPOST https://nuvla.io/api/infrastructure-service -H 'content-type:application/json' -b cookies -d '
 {
-    "template": {
-        "parent": "infrastructure-service-group/<UUID of your IS group>",
-        "method": "generic",
-        "state": "STARTED",
-        "endpoint": "https://service.example.org:1234",
-        "href": "infrastructure-service-template/generic"
-    }
+  "template": {
+    "name": "Generic",
+    "description": "Generic",
+    "parent": "infrastructure-service-group/<UUID of your IS group>",
+    "subtype": "generic",
+    "href": "infrastructure-service-template/generic",
+    "endpoint": "https://service.example.org:1234"
+  }
 }
-'''
+'

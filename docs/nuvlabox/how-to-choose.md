@@ -7,7 +7,7 @@ parent: NuvlaBox
 
 # NuvlaBox Engine or OS?
 
-NuvlaBox allows you to create a smart edge device, such the you can share its computing power for all sorts of edge processing tasks. You have two ways of achieving this goal.
+NuvlaBox allows you to create a smart edge device, such that you can share its computing power for all sorts of edge processing tasks. You have two ways of achieving this goal.
 
 #### NuvlaBox Engine
 
@@ -16,6 +16,6 @@ NuvlaBox allows you to create a smart edge device, such the you can share its co
 
 #### NuvlaBox OS
 
-> if you have a hardware platform without an Operating System (OS) installed, you can install the NuvlaBox OS, a dedicate and optimise OS for the edge. [Follow these instructions](/nuvlabox/nuvlabox-os).
+> if you have a hardware platform without an Operating System (OS) installed, you can install the NuvlaBox OS, a dedicated and optimised OS for the edge. [Follow these instructions](/nuvlabox/nuvlabox-os).
 
 Both options will result in a functional NuvlaBox, connected to a Nuvla service, able to deliver an edge computing solution, at scale.
