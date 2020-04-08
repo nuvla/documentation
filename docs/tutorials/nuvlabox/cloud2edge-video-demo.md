@@ -34,7 +34,7 @@ You can run this demo by yourself. Simply go through the following steps:
 ### 1: You'll need
 
  - one or more Linux VMs, with a public IP, running Docker in Swarm mode
- - an [edge device](https://docs.nuvla.io/docs/nuvlabox/nuvlabox-engine/requirements.html) (RaspberryPi, Laptop, etc.) with Docker and Docker Compose installed, and Swarm mode enabled
+ - an [edge device](https://docs.nuvla.io/nuvlabox/nuvlabox-engine/requirements.html) (RaspberryPi, Laptop, etc.) with Docker and Docker Compose installed, and Swarm mode enabled
  - an internet connection
  - a [Nuvla.io](https://nuvla.io) account
  - one USB webcam
@@ -89,10 +89,10 @@ You can run this demo by yourself. Simply go through the following steps:
  6. setup the environment by running `export NUVLABOX_UUID=NuvlaBoxID` where `NuvlaBoxID` is the **NuvlaBoxID** from step 4.
  7. download the [NuvlaBox Engine software installer](https://github.com/nuvlabox/deployment/releases). Run `wget https://github.com/nuvlabox/deployment/releases/download/1.3.1/docker-compose.yml`
  8. now just execute `docker-compose up -d`
-    1. it will just take a few seconds for you to see your NuvlaBox become green (online) in [Nuvla.io](https//nuvla.io). You can follow the installation and lifecycle process by running `docker-compose logs`
-    2. after a couple of minutes, you'll also see a new infrastructure (of the type NuvlaBox) and credential appear in [Nuvla.io](https//nuvla.io)
+    1. it will just take a few seconds for you to see your NuvlaBox become green (online) in [Nuvla.io](https://nuvla.io). You can follow the installation and lifecycle process by running `docker-compose logs`
+    2. after a couple of minutes, you'll also see a new infrastructure (of the type NuvlaBox) and credential appear in [Nuvla.io](https://nuvla.io)
  9. if not yet plugged in, plug your USB camera into the NuvlaBox (edge device)
-    1. in [Nuvla.io](https//nuvla.io), if you go to *Edge* and select your NuvlaBox, you'll see the USB camera automatically listed as a peripheral
+    1. in [Nuvla.io](https://nuvla.io), if you go to *Edge* and select your NuvlaBox, you'll see the USB camera automatically listed as a peripheral
     
 ### 5: Deploy the AI app to the edge
 
@@ -104,7 +104,7 @@ You can run this demo by yourself. Simply go through the following steps:
  4. click "*launch*" and wait
  5. once the deployment is ready, you'll the the green button with the link to your Motion Detector endpoint - click on it
  6. you'll be redirected to a new tab on your browser, pointing to your NuvlaBox via a SixSq VPN IP that has been assigned automatically to your NuvlaBox
-    1. PLEASE note that you'll only be able to access your NuvlaBox via this IP if you have a SixSq VPN client configuration running on your computer. If you don't have one, please drop us an email at [Support](support@sixsq.com)
+    1. PLEASE note that you'll only be able to access your NuvlaBox via this IP if you have a SixSq VPN client configuration running on your computer. If you don't have one, please drop us an email at [Support](mailto:support@sixsq.com)
     2. if you don't want to use SixSq's VPN service, you can also access the Motion Detector endpoint directly via the NuvlaBox's IP (check `ifconfig` in your NuvlaBox to get the IP)
  7. you are now be able to see the video feed, coming from your webcam. If you move, you'll see some video processing happening
  8. connect to the MQTT broker running in your Docker Swarm cluster in the cloud, you'll get a notification every time there's movement! You can use whatever MQTT client you prefer (*mosquitto_sub* or even an Android/iPhone app)

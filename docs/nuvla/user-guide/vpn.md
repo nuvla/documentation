@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Virtual Private Network (VPN)
-nav_order: 9
+nav_order: 11
 parent: User Guide
 grand_parent: Nuvla
 permalink: /nuvla/vpn

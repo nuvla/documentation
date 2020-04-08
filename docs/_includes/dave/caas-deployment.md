@@ -5,7 +5,7 @@ Container as a Service (CaaS) are used to host the Nuvla micro-services, but als
 
 Docker Swarm is also integrated in the NuvlaBox, SixSq's edge software solution.
 
-Nuvla also supports an advanced data management feature. For this to work, the CaaS used When deploying containers must include an S3 service and a distributed file system.  The [optional infrastructure service](/docs/dave/prod/caas-optional-services.html) page contains instructions on how to install these optional services. 
+Nuvla also supports an advanced data management feature. For this to work, the CaaS used When deploying containers must include an S3 service and a distributed file system.  To learn how to install and configure these services, please get in touch. 
 
 Before starting, review the entire installation procedure.  The [nuvla/deployment](https://github.com/nuvla/deployment) GitHub repository contains a [Swarm folder](https://github.com/nuvla/deployment/tree/master/swarm) with Swarm related files that will help you deploy and configure your Docker Swarm cluster.  You may need to customise the provided scripts, configurations, and Docker Compose files for your deployment.
 

@@ -21,6 +21,6 @@ Alice is our **end-user**. As described in the [Alice introduction](/whoami#alic
 
 #### [Discover and Browse Nuvla](/nuvla/discover)
 
-#### [Launch Applications](/nuvla/launch-applications)
+#### [Launch Applications](/nuvla/launch-app)
 
 #### [Launch Applications with Data](/nuvla/data-app)
