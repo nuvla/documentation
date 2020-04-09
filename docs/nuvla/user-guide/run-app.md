@@ -7,6 +7,6 @@ nav_order: 9
 permalink: /nuvla/launch-app
 ---
 
-# Running a simple applications
+# Running simple applications
 
 To run a simple application on a NuvlaBox, [go here](/nuvlabox/deploying-apps/first-app).
