@@ -10,17 +10,14 @@ grand_parent: NuvlaBox
 Building your own NuvlaBox Peripheral Manager
 ========
 
-There is a set of natively supported peripheral managers that you can opt to add to your NuvlaBox at installation time. Those are also open-source and can be found at [NuvlaBox@GitHub](https://github.com/nuvlabox?q=peripheral-manager-).
+There is a set of natively supported peripheral managers that you can opt to add to your NuvlaBox at installation time. Those are also open-source and can be found on GitHub [here](https://github.com/nuvlabox?q=peripheral-manager-).
 
-NuvlaBox Peripheral Managers are completely optional and should only be used if you'd like to have an automated mechanism to discover, register and manager peripheral devices that are attached to your NuvlaBox. Once registered, these peripheral devices can be visualized, managed and sometimes even directly controlled from Nuvla (like USB webcams).
+NuvlaBox Peripheral Managers are completely optional and should only be used if you'd like to have an automated mechanism to discover, register and manage peripheral devices that are attached to your NuvlaBox. Once registered, these peripheral devices can be visualized, managed and sometimes even directly controlled from Nuvla (like USB webcams).
 
-Due to the wide variety of IoT sensors/actuators and generic peripheral devices, it would be an impossible task of us at SixSq, to develop all the NuvlaBox Peripheral Manager to support every single peripheral out there.
+Due to the wide variety of IoT sensors/actuators and generic peripheral devices, it would be an impossible task for us at SixSq to develop all the NuvlaBox Peripheral Managers to support every single peripheral out there.
 
----
-
-**This is where you come in**!!
-
----
+## **This is where you come in!!**
+{:style="text-align: center;"}
 
 Let's say you need a new NuvlaBox Peripheral Manager for a specific peripheral device. There are two ways you can go about it:
 
@@ -34,13 +31,13 @@ We support community-built NuvlaBox Peripheral Managers, so you can let us know 
 
 ---
 
-Building a new NuvlaBox Peripheral Manager is quite simple. We have built a transparent and generic REST API within the NuvlaBox Engine core installation that allows to register and manage your peripheral devices in the Nuvla-NuvlaBox ecosystem without any in-depth knowledge nor code dependencies.
+Building a new NuvlaBox Peripheral Manager is quite simple. We have built a transparent and generic REST API within the NuvlaBox Engine core installation that allows you to register and manage your peripheral devices in the Nuvla-NuvlaBox ecosystem without any in-depth knowledge nor code dependencies.
 
 There are only **2 requirements** for having your microservice functioning correctly as a NuvlaBox Peripheral Manager:
 
  a. _Your microservice needs to be on the same Docker network as the [NuvlaBox Agent component](https://github.com/nuvlabox/agent). This is usually guaranteed when you deploy all components at once, as described in the [Installation Quickstart](https://docs.nuvla.io/nuvlabox/nuvlabox-engine/quickstart.html)_
  
- b. _Your code must manage the NuvlaBox peripheral devices through the management interface provided by the NuvlaBox Agent on port 80. The specification for this API can be found at [https://github.com/nuvlabox/agent#manage-nuvlabox-peripherals](https://github.com/nuvlabox/agent#manage-nuvlabox-peripherals)_
+ b. _Your code must manage the NuvlaBox peripheral devices through the management interface provided by the NuvlaBox Agent on port 80. The specification for this API can be found [here](https://github.com/nuvlabox/agent#manage-nuvlabox-peripherals)_
  
 
 Mocking a NuvlaBox Peripheral Manager
@@ -53,7 +50,7 @@ Here's an example of a mock peripheral manager, that you can use as a starting p
 
 Create a working environment (local folder, GitHub repository, etc.) where you can put your code. 
 
-We have created [https://github.com/nuvlabox/peripheral-manager-mock](https://github.com/nuvlabox/peripheral-manager-mock) for this exercise.
+We have created a [peripheral manager mock](https://github.com/nuvlabox/peripheral-manager-mock) for this exercise.
 
 
 ### Step 2
@@ -167,7 +164,7 @@ docker buildx build --platform linux/arm/v6,linux/arm/v7,linux/amd64,linux/arm64
 ### Step 7
 
 
-We need a compose file to go alongside the other NuvlaBox Engine compose files. Remember use **your Docker image** from [Step 6](#step-6), and to bind mount (read-only) the host's _/dev_ directory.
+We need a compose file to go alongside the other NuvlaBox Engine compose files. Remember to use **your Docker image** from [Step 6](#step-6), and to bind mount (read-only) the host's _/dev_ directory.
 
 _docker-compose.mock.yml:_
 {% include code_snippet.md file='/nuvlabox-peripherals/docker-compose.mock.yml' language=yaml %}
