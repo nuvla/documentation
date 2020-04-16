@@ -3,8 +3,8 @@
 The Nuvla platform allows you to manage your container-based
 applications on multiple infrastructures, including those on the edge.
 
-This repository contains the core documentation for the platform.
-The [Nuvla Software Documentation Website](https://docs.nuvla.io) is deployed as GitHub pages website.
+This repository contains the core documentation for the software.
+The resulting [Nuvla Software Documentation Website](https://docs.nuvla.io) is deployed as GitHub pages website.
 
 The code for the platform can be found in the other repositories within the [Nuvla](https://github.com/nuvla)
 and [NuvlaBox](https://github.com/nuvlabox) organizations on GitHub.
