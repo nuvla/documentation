@@ -53,7 +53,7 @@ subdirectory.  The contents of this directory are ignored by git.
 Finally, build and serve the documentation with the following command:
 
 ```sh
-bundle exec jekyll serve --watch --baseurl "" --config _config_local.yml,_config.yml
+bundle exec jekyll serve --watch --config _config_local.yml
 ```
 
 The startup logging will indicate the server's URL; this is usually
