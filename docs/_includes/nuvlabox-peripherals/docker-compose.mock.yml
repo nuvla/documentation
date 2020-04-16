@@ -1,0 +1,20 @@
+version: "3.6"
+
+x-common: &common
+  stop_grace_period: 4s
+  logging:
+    options:
+      max-size: "250k"
+      max-file: "10"
+  labels:
+    - "nuvlabox.peripheral.component=True"
+    - "nuvlabox.peripheral.type=mock"
+
+services:
+  peripheral-manager-mock:
+    <<: *common
+    # Remeber to change the Docker image to match your own custom peripheral manager
+    image: nuvlabox/peripheral-manager-mock
+    restart: on-failure
+    volumes:
+      - /dev:/dev:ro
