@@ -18,7 +18,7 @@ The advantages of this installation method are:
 
 ## Additional requirements
 
-This installation method requires an additional NuvlaBox plugin to be installed in your Operating System, which will trigger the USB-based installation whenever you plug the flash drive.
+This installation method requires a specific NuvlaBox plugin to be installed in your Operating System, which will trigger the USB-based installation whenever you plug the flash drive.
 
  - if your devices **are running** a [NuvlaBox OS](https://docs.nuvla.io/nuvlabox/nuvlabox-os.html), then you're good! You can jump straight to the [installation procedure below](#procedure)
  
@@ -81,11 +81,11 @@ This installation method requires an additional NuvlaBox plugin to be installed 
         sudo systemctl status nuvlabox-auto-installer-usb
         ```
 
-You can now streamline the bulk installation of the NuvlaBox Engine into your fleet of edge devices.
+You can now automate the installation of the NuvlaBox Engine into your fleet of edge devices.
 
 # Procedure
 
-If your edge devices' OS meets the [requirements](#additional-requirements), then all you have to do is to prepare your USB flash drive. 
+If the OS of your edge device meets the [requirements](#additional-requirements), then all you have to do is to prepare your USB flash drive. 
 
 Just follow these steps:
 
@@ -104,11 +104,11 @@ Just follow these steps:
  
     **IMPORTANT:** make your your USB stick's filesystem is formatted as one of the following: _vfat, ext2, ext3, ext4, hfsplus_ or _ntfs_.
         
- 5. get you USB stick, and plug it into your edge device. 
+ 5. plug your USB stick into your edge device. 
  
  6. the NuvlaBox Auto-installer plugin that is installed in your device's OS will automatically be triggered by the USB stick, and kickstart the installation of the NuvlaBox Engine. At this stage, all you need to do is wait...
  
-     It shouldn't take more than a few seconds for the process to start. Depending on your hardware, you might be able to get some external feedback, to let you know on the installation progress. This feedback signal works for the following machine types:
+     It shouldn't take more than a few seconds for the process to start. Depending on your hardware, you might be able to get some external feedback on the progress of the installation. This feedback signal works for the following machine types:
       - `raspberrypi`:
         - **CONSTANT GREEN LED** for 10 sec. This means the NuvlaBox Engine installation process has **started** and you can safely remove your USB stick
         
@@ -122,7 +122,7 @@ Just follow these steps:
         
             ![rpi-nb-error](/assets/img/rpi-nb-error.gif)
         
- 7. go back to the NuvlaBox tab in [Nuvla](https://nuvla.io) and your new NuvlaBox resource will appear 
+ 7. go back to the NuvlaBox tab in [Nuvla](https://nuvla.io) and your new NuvlaBox resource will appear.
  
 
 # Environment Variables
@@ -141,12 +141,10 @@ The procedure is the same as described [above](#procedure). If in Nuvla, you sel
 
 # Overwrite an existing installation
 
-It is also possible to use the USB stick method to completely delete and re-install your NuvlaBox Engine installation.
+It is also possible to use the USB stick method to completely delete and re-install your NuvlaBox Engine installation. However, in order to avoid damaging an existing installation, this process can only happen if the following conditions are met:
 
-**If**:
  - your previous NuvlaBox Engine installation is misconfigured, or
  - your NuvlaBox resource is DECOMMISSIONED or in ERROR in [Nuvla](https://nuvla.io/ui/edge), or
  - your NuvlaBox resource does not exist anymore in [Nuvla](https://nuvla.io/ui/edge),
  
 then the NuvlaBox Auto-installer will completely remove the existing NuvlaBox Engine installation from your device, and install a fresh new one.
-        
