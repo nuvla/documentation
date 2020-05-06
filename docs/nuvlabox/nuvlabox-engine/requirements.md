@@ -13,6 +13,7 @@ To ensure a smooth and fully functional installation of the NuvlaBox Engine, ple
 
 ## OS Requirements
 
+
 Ideally, you should be running one of the following:
   - Ubuntu
   - CentOS
@@ -23,6 +24,7 @@ Other Linux distributions should also work, but will require testing.
 
 Functionalities like the automatic discovery and categorization of peripherals are **not** ensured for macOS and Windows.
 
+You also need **an internet connection**.
 
 ## Software Requirements
 

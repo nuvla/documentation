@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Installation
+title: Manual Installation
 nav_order: 2
 parent: NuvlaBox Engine
 grand_parent: NuvlaBox
