@@ -28,12 +28,12 @@ This installation method requires a specific NuvlaBox plugin to be installed in 
     2. get the latest version of the NuvlaBox USB Auto-installer plugin from GitHub:
    
         ```bash
-        git clone https://github.com/nuvlabox/nuvlabox.git /tmp/nuvlabox
+        git clone https://github.com/nuvlabox/nuvlabox-os.git /tmp/nuvlabox
         ```
     3. navigate to the folder where the plugin scripts are
    
         ```bash
-        cd /tmp/nuvlabox/scripts/auto-installer
+        cd /tmp/nuvlabox/common/0_usb-auto-installer/auto-installer
         ```
     4. there are a few dependencies that need to be installed first
     
