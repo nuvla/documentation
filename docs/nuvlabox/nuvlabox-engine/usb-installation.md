@@ -60,11 +60,15 @@ This installation method requires a specific NuvlaBox plugin to be installed in 
         ```bash
         # again, make sure /usr/local/bin is in PATH 
 
+	# since this binary is machine specific, you'll need to find it in the appropriate build folder
+	pushd /tmp/nuvlabox/${MACHINE}/99_usb-auto-installer-feedback/
         # replace ${MACHINE} by one of the supported types above
-        sudo cp feedback/${MACHINE}/nuvlabox-auto-installer-feedback /usr/local/bin
-        
+       
+	sudo cp files/nuvlabox-auto-installer-feedback /usr/local/bin
         sudo chmod +x /usr/local/bin/nuvlabox-auto-installer-feedback
-        ```
+      
+	popd
+	```
         
     7. enable the plugin script to run as a systemd service
     
