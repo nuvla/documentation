@@ -121,17 +121,17 @@ For more information about which options are Docker Compose and Swarm-specific, 
 
 (coming soon...)
 
-# Enabling fast&dedicated monitoring for Application Deployments
+# Enabling fast & dedicated monitoring for Application Deployments
 
 When you launch an application, Nuvla starts scheduling metric collection jobs for retrieving your deployment's state, parameters, etc.
 
 These jobs are scheduled at a well defined and short intervals. 
 
-In might happen however, that you cannot wait for these Nuvla jobs, and instead you need your deployment metrics as soon as possible. **If that's the case**, then SixSq offers an additional sidekick container that you can adjoin to your application, which will push those deployment metrics to Nuvla much more regularly.
+However, if you need faster updates on your deployments (aka shorter response time), SixSq offers an additional sidekick container that you can adjoin to your application, which will push those deployment metrics to Nuvla much more regularly.
 
 Here's an example on how to do it:
 
- 1. let's say you have a Docker Stack application...and this is your Compose file:
+ 1\. let's say you have a Docker Stack application...and this is your Compose file:
   
   ```yaml
   version: '3'
@@ -143,7 +143,7 @@ Here's an example on how to do it:
         replicas: 4
   ```
   
-  2. to enable this fast and dedicated deployment monitoring, please add the `sixsq-deployment-monitor` service to your Compose file:
+  2\. to enable this fast and dedicated deployment monitoring, please add the `sixsq-deployment-monitor` service to your Compose file:
   
   ```yaml
   version: '3'
@@ -168,4 +168,4 @@ Here's an example on how to do it:
         - NUVLA_API_SECRET=$NUVLA_API_SECRET
   ```
   
-**NOTE:** if your application is Docker Compose compatible, then simply remove the entire `deploy` section from the `sixsq-deployment-monitor` service  
+**NOTE:** if your application is Docker Compose compatible, then simply remove the entire `deploy` section from the `sixsq-deployment-monitor` service
