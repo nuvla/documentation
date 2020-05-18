@@ -45,6 +45,46 @@ In an edge environment, halting your devices is sometimes necessary.
 **When manually halting** the NuvlaBox, you can simply find the original compose files in your edge device, re-export the original environment variables (if not exported already), and run `docker-compose -p nuvlabox down`. Then **to resume**, simply run `docker-compose -p nuvlabox up -d`.
 
 
+# Upgrade/Downgrade the NuvlaBox
+
+To upgrade or downgrade your existing NuvlaBox Engine installation, you will need to SSH into your edge device, and find the original project folder where you saved your Compose files.
+
+If you've initially installed the NuvlaBox Engine according to the instructions above, then you should see all of its components by running:
+
+```bash
+$ docker-compose -p nuvlabox ps
+```
+
+You should get something like this:
+
+```
+         Name                        Command                  State                Ports          
+--------------------------------------------------------------------------------------------------
+datagateway               /entrypoint.sh --entrypoin ...   Up             80/tcp                  
+nbmosquitto               /docker-entrypoint.sh /usr ...   Up (healthy)   1883/tcp                
+sixsq_agent_1             ./app.py                         Up             5000/tcp                
+sixsq_compute-api_1       ./api.sh                         Up             0.0.0.0:5000->5000/tcp  
+sixsq_management-api_1    ./app.py                         Up (healthy)   0.0.0.0:5001->5001/tcp  
+sixsq_network-manager_1   /opt/nuvlabox/network-mana ...   Up             1194/udp                
+sixsq_system-manager_1    ./app.py                         Up (healthy)   127.0.0.1:3636->3636/tcp
+vpn-client                ./openvpn-client.sh              Up      
+```
+
+ - **Cherry picking a NuvlaBox Engine component to be upgraded/downgraded:** let's say, as an example, that we want to upgrade the NuvlaBox Engine's Agent component. Then:
+    1. open the `docker-compose.yml` file and find the `agent` service
+    2. replace the corresponding Docker image tag (nuvlabox/agent:X.Y.Z)with the target version number. Save the file
+    3. re-import all the necessary environment variables for the component being upgraded. In this case, make sure that at least NUVLABOX_UUID is set (if you're using [Nuvla.io](https://nuvla.io)
+    4. execute `docker-compose -p nuvlabox up -d agent`
+    
+    This is valid for any NuvlaBox Engine component
+    
+ - **Upgrade/Downgrade the entire NuvlaBox Engine installation**: let's say we want to upgrade our existing NuvlaBox Engine installation to the latest release in [GitHub](https://github.com/nuvlabox/deployment/releases). Then:
+    1. halt the NuvlaBox with `docker-compose -p nuvlabox down`, as explained [above](#halt-the-nuvlabox)
+    2. move (or delete) the Compose files from the project folder you are in
+    3. download the Compose files from the [target release in GitHub](https://github.com/nuvlabox/deployment/releases)
+    4. resume the NuvlaBox Engine installation by running `docker-compose -p nuvlabox up -d`
+
+
 # Uninstall the NuvlaBox
 
 To completely and **permanently** uninstall the NuvlaBox from your edge device, simply find your original compose files in the edge device, and run `docker-compose -p nuvlabox down -v`.
