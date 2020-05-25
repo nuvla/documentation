@@ -28,61 +28,27 @@ This installation method requires a specific NuvlaBox plugin to be installed in 
     2. get the latest version of the NuvlaBox USB Auto-installer plugin from GitHub:
    
         ```bash
-        git clone https://github.com/nuvlabox/nuvlabox-os.git /tmp/nuvlabox
+        git clone https://github.com/nuvlabox/nuvlabox-os.git /tmp/nuvlabox-os
+
+        cd /tmp/nuvlabox-os
         ```
-    3. navigate to the folder where the plugin scripts are
+        
+    3. you'll find different NuvlaBox OS distributions here. These are enclosed within folders like `raspberrypi` (for a Raspbian-like NuvlaBox OS) or `generic` (for generic amd64 Debian-like NuvlaBox OS). Navigate to the folder that it closer to your own distribution
    
         ```bash
-        cd /tmp/nuvlabox/common/0_usb-auto-installer/auto-installer
-        ```
-    4. there are a few dependencies that need to be installed first
-    
-        ```bash
-        sudo sh install-requirements.sh
+        cd /tmp/nuvlabox-os/<your-distro>
         ```
         
-        **NOTE:** make sure you also have the base [NuvlaBox Engine requirements](https://docs.nuvla.io/nuvlabox/nuvlabox-engine/requirements.html) setup
-      
-    5. copy the plugin script to your binaries folder, and make it executable
-    
-        ```bash
-        # make sure /usr/local/bin is in PATH
-        echo $PATH
+    4. inside you'll find a `99_usb-auto-installer` folder
         
-        sudo cp nuvlabox-auto-installer-usb /usr/local/bin/
-
-        sudo chmod +x /usr/local/bin/nuvlabox-auto-installer-usb
+        ```bash
+        ls 99_usb-auto-installer
         ```
-     
-    6. install a machine-specific binary, to provide visual feedbacks on the progress of the USB installation. Currently, the supported MACHINE types are:
-        - raspberrypi
         
-        ```bash
-        # again, make sure /usr/local/bin is in PATH 
-
-	# since this binary is machine specific, you'll need to find it in the appropriate build folder
-	pushd /tmp/nuvlabox/${MACHINE}/99_usb-auto-installer-feedback/
-        # replace ${MACHINE} by one of the supported types above
-       
-	sudo cp files/nuvlabox-auto-installer-feedback /usr/local/bin
-        sudo chmod +x /usr/local/bin/nuvlabox-auto-installer-feedback
-      
-	popd
-	```
-        
-    7. enable the plugin script to run as a systemd service
+    5. for all distros, inside the `99_usb-auto-installer` folder, you'll find an `.howToInstall` file. Run it
     
         ```bash
-        sudo cp systemd/nuvlabox-auto-installer-usb.service /etc/systemd/system/nuvlabox-auto-installer-usb.service
-
-        sudo chmod 644 /etc/systemd/system/nuvlabox-auto-installer-usb.service
-        
-        sudo systemctl daemon-reload
-        sudo systemctl start nuvlabox-auto-installer-usb
-        sudo systemctl enable nuvlabox-auto-installer-usb
-        
-        # double check that the service is up and running
-        sudo systemctl status nuvlabox-auto-installer-usb
+        sudo sh .howToInstall
         ```
 
 You can now automate the installation of the NuvlaBox Engine into your fleet of edge devices.
