@@ -30,6 +30,8 @@ remote_theme: pmarsceill/just-the-docs
 # Theme configuration.
 search_enabled: true
 aux_links:
+    "Nuvla.io: edge as a Service":
+      - "//nuvla.io"
     "Nuvla on GitHub":
       - "//github.com/nuvla"
     "NuvlaBox on GitHub":

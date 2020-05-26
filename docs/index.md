@@ -6,7 +6,7 @@ description: "Secured edge to cloud (and back) management platform that enables 
 permalink: /
 ---
 
-## What is going on these days?
+# Edge to cloud management platform
 
 Edge computing is becoming a standard companion to cloud computing when it comes to implementing successful IoT projects. The naive approach of sending all data back to the cloud for processing is no longer viable or future-proof. Implementing an edge strategy means processing data close to its source, thereby reducing latency and cost. It is not, however, a simple strategy to implement. Any edge-to-cloud architecture involves the coordination of a highly distributed infrastructure, multiple applications, and several skill sets, either in a single team or across organisations. It also raises a whole raft of questions relating to governance, security and data management.
 
