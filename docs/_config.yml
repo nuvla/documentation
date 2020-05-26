@@ -38,7 +38,8 @@ aux_links:
       - "//github.com/nuvlabox"
 
 
-#plugins:
+plugins:
+  - jekyll-sitemap
 #  - jekyll-feed
 
 # Exclude from processing.
