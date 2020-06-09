@@ -51,7 +51,7 @@ This installation method requires a specific NuvlaBox plugin to be installed in 
         sudo sh .howToInstall
         ```
 
-You can now automate the installation of the NuvlaBox Engine into your fleet of edge devices.
+You can now automate the installation of the NuvlaBox Engine into your fleet of edge devices. 
 
 # Procedure
 
