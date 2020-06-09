@@ -20,6 +20,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://docs.nuvla.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sixsq
 github_username: nuvla
+footer_content: Copyright 2020, SixSq
 
 # Build settings
 markdown: kramdown
@@ -29,13 +30,16 @@ remote_theme: pmarsceill/just-the-docs
 # Theme configuration.
 search_enabled: true
 aux_links:
+    "Nuvla.io: edge as a Service":
+      - "//nuvla.io"
     "Nuvla on GitHub":
       - "//github.com/nuvla"
     "NuvlaBox on GitHub":
       - "//github.com/nuvlabox"
 
 
-#plugins:
+plugins:
+  - jekyll-sitemap
 #  - jekyll-feed
 
 # Exclude from processing.

@@ -83,7 +83,7 @@ Nuvla helps by providing a data ledger service (i.e. a metadata catalogue) that 
 
 As a result, using Nuvla, Emma can manage metadata according to [Alice](#alice-the-domain-specialist)’s business needs. In return, [Alice](#alice-the-domain-specialist) can focus on what data she wants to process with which application, and let Nuvla do the heavy lifting, automatically and securely (step 4 and 5 in [Figure 1](#nuvla-collaboration-framework)). 
 
-To get started as Emma, [go here](Emma).
+To get started as Emma, [go here](emma).
 
 ## Felix
 
