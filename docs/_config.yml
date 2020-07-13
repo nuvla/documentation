@@ -25,7 +25,7 @@ footer_content: Copyright 2020, SixSq
 # Build settings
 markdown: kramdown
 highlighter: rouge
-remote_theme: pmarsceill/just-the-docs
+remote_theme: architect/jekyll-theme-architect
 
 # Theme configuration.
 search_enabled: true
