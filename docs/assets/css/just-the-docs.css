@@ -605,7 +605,7 @@ hr {
   height: 100%;
   padding: 1rem;
   align-items: center;
-  color: #7253ed;
+  color: #B00000;
   text-transform: uppercase;
   background: transparent;
   border: 0; }
@@ -1096,7 +1096,7 @@ li .highlight {
     outline: 0;
     box-shadow: none; }
     .search-input:focus + .search-icon {
-      fill: #7253ed; }
+      fill: #B00000; }
   @media (min-width: 50rem) {
     .search-input {
       background-color: #fff;
@@ -1201,7 +1201,7 @@ li .highlight {
 
 .search-result-highlight {
   font-weight: bold;
-  color: #7253ed; }
+  color: #B00000; }
 
 .table-wrapper {
   display: block;
