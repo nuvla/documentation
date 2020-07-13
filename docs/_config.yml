@@ -26,7 +26,6 @@ footer_content: Copyright 2020, SixSq
 markdown: kramdown
 highlighter: rouge
 remote_theme: pmarsceill/just-the-docs
-theme: pmarsceill/just-the-docs
 
 # Theme configuration.
 search_enabled: true
