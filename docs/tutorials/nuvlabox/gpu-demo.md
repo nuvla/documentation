@@ -29,9 +29,17 @@ To be able to deploy the application we also need a Nuvla account.
 
 ## Setup
 
-Follow the NuvlaBox setup to connect our device to Nuvla. 
+
+Follow the [NuvlaBox setup to connect](https://docs.nuvla.io/nuvlabox/nuvlabox-engine/quickstart.html) your device to Nuvla. 
 
 ## Docker Compose with GPU
+
+To know which GPU to use, and its libraries, we use the GPU Peripheral Manager, which can be deployed with NuvlaBox. 
+The ouput is something similar to this: 
+
+![gpuDemo](/assets/peripheral-manager-gpu.png){: :center}
+
+
 
 To use the GPUs, we need to specify the run command in our Docker Compose file. It looks like this:
 
@@ -43,12 +51,13 @@ services:
         ports:
             - "5000:5000"
         devices:
-            - /dev/nvidiactl
-            - /dev/nvidia-uvm
+            - /dev/nvhost-ctrl
+            - /dev/nvhost-ctrl-gpu
             - /dev/nvidia0
         volumes:
-            - /usr/bin/:/usr/bin/
+            - /usr/lib/:/usr/lib/
 ```
+
 
 As you can see, to be able to use the GPU of the device, through Docker Compose we need to pass the device path - using the devices part - and
 the folders where the drivers and libraries are located - using the volumes. In this case, we pass the full /usr/bin/ folder, but we can pass
