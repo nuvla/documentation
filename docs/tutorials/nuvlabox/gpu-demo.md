@@ -39,11 +39,11 @@ Follow the [NuvlaBox setup documentation](https://docs.nuvla.io/nuvlabox/nuvlabo
 To know which GPU to use, and its libraries, we make use of the NuvlaBox GPU Peripheral Manager, which can be deployed with NuvlaBox as an optional module. 
 In Nuvla, the NuvlaBox overview is similar to this: 
 
-![gpuDemo](/assets/peripheral-manager-gpu.png){: :center}
+![gpuDemo](/assets/img/peripheral-manager-gpu.png){: :center}
 
 In the list of peripherals, we find the GPU to be used and extract its information to build the following compose file
 
-To use the GPUs, we need to specify the run command in our Docker Compose file. It looks like this:
+To use the GPUs, we need to specify the devices and volumes needed to use the GPU, in our Docker Compose file. It looks like this:
 
 ```yaml
 version: '3.0'
@@ -77,7 +77,12 @@ As we don't have environmental variables or files for this application, we can s
 At start, the app will download and build Darknet - this will take a while.
 Afterwards, it will launch a web server with the video feed, and the app's dynamic URL will be filled in Nuvla. So at this point we can access the web interface:
     
-    http://{IP of your machine}:5000
+    http://{IP of your machine}:5000    
+
+And the interface should look something like this:
+
+
+![gpuDemo](/assets/img/gpu-demo-interface.png){: :center}
 
 You should see the output of the camera.
 
