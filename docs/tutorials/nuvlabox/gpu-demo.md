@@ -17,7 +17,7 @@ This capability is only available to NVIDIA GPUs. While the Docker client is abl
 
 Let's say we have a Compose file-defined application to be deployed from Nuvla. Given the aforementioned Docker limitation, we need to manually select the GPU devices and libraries from the host, and pass them to the container via the Compose file.
 
-To know the correct devices and libraries, we can use the GPU discovery tool installed with NuvlaBox.
+To know the correct devices and libraries, we can use the [GPU discovery tool](https://github.com/nuvlabox/peripheral-manager-gpu) installed with NuvlaBox.
 
 ![gpuDemoSchema](/assets/img/gpu-demo-scheme.png){: :center}
 
