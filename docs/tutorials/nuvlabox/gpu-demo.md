@@ -19,6 +19,8 @@ Let's say we have a Compose file-defined application to be deployed from Nuvla. 
 
 To know the correct devices and libraries, we can use the GPU discovery tool installed with NuvlaBox.
 
+![gpuDemoSchema](/assets/img/gpu-demo-scheme.png){: :center}
+
 ## DIY: Step by step guide 
 
 
