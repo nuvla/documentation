@@ -47,18 +47,25 @@ To use the GPUs, we need to specify the devices and volumes needed to use the GP
 
 ```yaml
 version: '3.0'
-
 services:
-    darknet:
-        image: 'franciscomendonca/darknet:1.0',
-        ports:
-            - "5000:5000"
-        devices:
-            - /dev/nvhost-ctrl
-            - /dev/nvhost-ctrl-gpu
-            - /dev/NVIDIA0
-        volumes:
-            - /usr/lib/:/usr/lib/
+  darknet:
+    image: 'franciscomendonca/darknet:1.0'
+    ports:
+      - "8000:8000"
+    volumes: 
+      - '/usr/local/cuda-10.0/:/usr/local/cuda-10.0/'
+      - '/usr/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu' 
+      - '/usr/local/cuda/lib64:/usr/local/cuda/lib64'
+    devices:
+      - '/dev/nvhost-gpu:/dev/nvhost-gpu'
+      - '/dev/nvhost-as-gpu:/dev/nvhost-as-gpu'
+      - '/dev/nvhost-ctrl:/dev/nvhost-ctrl'
+      - '/dev/nvhost-ctrl-gpu:/dev/nvhost-ctrl-gpu'
+      - '/dev/nvhost-prof-gpu:/dev/nvhost-prof-gpu'
+      - '/dev/nvmap:/dev/nvmap'
+      - '/dev/video0:/dev/video0'
+    environment:
+      - LD_LIBRARY_PATH=:/usr/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu/tegra:/usr/local/cuda/lib64:/usr/local/cuda/lib64:/root/opencv-3.4.1/build/lib
 ```
 
 
