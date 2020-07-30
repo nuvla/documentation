@@ -51,7 +51,7 @@ To use the GPUs, we need to specify the devices and volumes needed to use the GP
 version: '3.0'
 services:
   darknet:
-    image: 'franciscomendonca/darknet:1.0'
+    image: 'sixsq/darknet-object-detection:1.0'
     ports:
       - "8000:8000"
     volumes: 
