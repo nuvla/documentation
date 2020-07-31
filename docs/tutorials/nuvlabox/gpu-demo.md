@@ -91,7 +91,7 @@ Afterwards, it will launch a web server with the video feed, and the app's dynam
 And the interface should look something like this:
 
 
-![gpuDemo](/assets/img/gpu-demo-interface.png){: :center}
+![gpuDemo](/assets/img/output-gpu-demo.png){: :center}
 
 You should see the output of the camera.
 
