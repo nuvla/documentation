@@ -86,8 +86,9 @@ As we don't have environmental variables or files for this application, we can s
 At start, the app will download and build Darknet - this will take a while.
 Afterwards, it will launch a web server with the video feed, and the app's dynamic URL will be filled in Nuvla. So at this point we can access the web interface:
     
-    http://{IP of your machine}:5000    
+![gpuDemo](/assets/img/deployment-ready-gpu-demo.png){: :center}
 
+  
 And the interface should look something like this:
 
 
