@@ -32,8 +32,12 @@ When installing the NuvlaBox Engine, you can customize your NuvlaBox via environ
  - **NUVLABOX_UUID**: the unique Nuvla ID given to your NuvlaBox. Nuvla will provide this UUID. Also, if you've downloaded the compose files from Nuvla, this environment variable will already be set for you;
  - **NUVLA_ENDPOINT**: endpoint for a Nuvla instance. By default it points to https://nuvla.io. But if you have your own Nuvla deployment, you can point your NuvlaBox to it by running `export NUVLA_ENDPOINT=<your_nuvla_endpoint>` before launching it;
  - **NUVLA_ENDPOINT_INSECURE**: indicated whether to allow insecure (ignore TLS verification) communication between the NuvlaBox and Nuvla. By default it is set to **_false_**. In cases where you might have your own Nuvla instance, running on self-signed certificates, make sure you run `export NUVLA_ENDPOINT_INSECURE=True` before launching the NuvlaBox;
- - **HOSTNAME**: your device's hostname. This is optional, and sometimes take by default from your `env`, if it exists. It is used to generate the self-signed NuvlaBox certificates;
- - **VPN_INTERFACE_NAME**: the NuvlaBox will have its own VPN client. By default it will create a new network interface called **_vpn_**. If this conflicts with your existing network configuration, then please run `export VPN_INTERFACE_NAME=<your_new_vpn_interface_name>` before launching the NuvlaBox.
+ - **HOST**: your device's hostname. This is optional, and sometimes take by default from your `env`, if it exists. It is used to generate the self-signed NuvlaBox certificates;
+ - **VPN_INTERFACE_NAME**: introduced in v1.3.0. the NuvlaBox will have its own VPN client. By default it will create a new network interface called **_vpn_**. If this conflicts with your existing network configuration, then please run `export VPN_INTERFACE_NAME=<your_new_vpn_interface_name>` before launching the NuvlaBox;
+ - **NUVLABOX_SSH_PUB_KEY**: introduced in v1.9.0. If set, it add the provided string as a public SSH key into the host's `${HOME}/.ssh/authorized_keys` file;
+ - **HOST_USER**: introduced in v1.9.0 and meant to be dynamically defined at installation time, to match the host's user who is installing the NuvlaBox Engine. This value is important for the SSH key management workflow and thus should only be manually fixed under very special circumstances, at the user's own risk;
+ - **SKIP_MINIMUM_REQUIREMENTS**: introduced in v1.9.3, when set to "True", it forces the installation of the NuvlaBox Engine without checking the system and software requirements. **Note**: this is not recommended, as the NuvlaBox might not behave as expected if the system requirements do not fulfil the minimum expectations;
+ - **NUVLABOX_ENGINE_VERSION**: introduced in v1.9.3. This is a variable which is set upstream and thus should not be changed by the user. Changing it manually can result in reporting and operational inconsistencies when managing and using the NuvlaBox.
  
  
 # Halt the NuvlaBox
