@@ -53,11 +53,8 @@ services:
   darknet:
     image: 'sixsq/darknet-object-detection:1.0'
     ports:
-      - "8000:8000"
-    volumes: 
-      - '/usr/local/cuda-10.0/:/usr/local/cuda-10.0/'
-      - '/usr/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu' 
-      - '/usr/local/cuda/lib64:/usr/local/cuda/lib64'
+      - "8090:8090"
+      - "8070:8070"
     devices:
       - '/dev/nvhost-gpu:/dev/nvhost-gpu'
       - '/dev/nvhost-as-gpu:/dev/nvhost-as-gpu'
@@ -71,7 +68,8 @@ services:
 ```
 
 
-As you can see, since we can not use `--gpus` in a Compose file (yet), we need to define the different host `devices` to be mapped into the container, alongside a mount for the folders where the GPU drivers and libraries are located, on the host - in this case, we pass the full /usr/bin/ folder, but we can pass only the specific sub-folders we require. 
+As you can see, since we can not use `--gpus` in a Compose file (yet), we need to define the different host `devices` to be mapped into the container, alongside a mount for the folders where the GPU drivers and libraries are located, on the host - in this
+case we don't need to pass any libraries, as the container itself has the libraries we need, already compiled for this device. 
 
 With this, you can create your own Nuvla app, by following [these steps](http://localhost:4000/nuvla/add-apps).
  
@@ -83,7 +81,7 @@ Click **“launch”** and a deployment modal will appear - select your NuvlaBox
 
 As we don't have environmental variables or files for this application, we can simply click **"Deploy"**.
 
-At start, the app will download and build Darknet - this will take a while.
+At start, the app will load the model
 Afterwards, it will launch a web server with the video feed, and the app's dynamic URL will be filled in Nuvla. So at this point we can access the web interface:
     
 ![gpuDemo](/assets/img/deployment-ready-gpu-demo.png){: :center}
@@ -96,5 +94,6 @@ And the interface should look something like this:
 
 You should see the output of the camera.
 
-The application takes a frame every 5 seconds, so it might take a while to update. Afterwards,
-a box should appear around any object in the frame.
+A box should appear around objects that the model was able to detect, with a label and a percentage of certainty.
+
+
