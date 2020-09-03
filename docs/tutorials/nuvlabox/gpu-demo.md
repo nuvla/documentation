@@ -81,8 +81,7 @@ Click **“launch”** and a deployment modal will appear - select your NuvlaBox
 
 As we don't have environmental variables or files for this application, we can simply click **"Deploy"**.
 
-At start, the app will load the model
-Afterwards, it will launch a web server with the video feed, and the app's dynamic URL will be filled in Nuvla. So at this point we can access the web interface:
+At start, the app will load the model. Afterwards, it will launch a web server with the video feed, and the app's dynamic URL will be filled in Nuvla. So at this point we can access the web interface:
     
 ![gpuDemo](/assets/img/deployment-ready-gpu-demo.png){: :center}
 
