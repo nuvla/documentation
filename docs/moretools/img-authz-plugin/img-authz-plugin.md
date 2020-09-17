@@ -87,7 +87,7 @@ Re-enable the plugin, and reload the Docker daemon:
 
 If you're using a private Docker registry with self-signed TLS certificates, **please remember** to add the client certificates to your Docker trust directory. 
 
-To do this, please follow the steps at: https://docs.docker.com/registry/insecure/#use-self-signed-certificates
+To do this, please follow the steps at: (https://docs.docker.com/registry/insecure/#use-self-signed-certificates)[https://docs.docker.com/registry/insecure/#use-self-signed-certificates]
 
 **NOTE:** using insecure Docker registries (without TLS) is not recommended and thus not covered by this plugin. Use it at your own risk.
 
@@ -98,7 +98,6 @@ The plugin logs are appended to the Docker daemon logs, and thus you can find th
 
 ## Stop and uninstall the plugin
 
-_(assuming the plugin name is sixsq/img-authz-plugin:<YOUR_CPU_ARCH>)_
 
 Stop the plugin:
  1. `docker plugin disable sixsq/img-authz-plugin:<YOUR_CPU_ARCH>`
