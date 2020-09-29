@@ -3,12 +3,10 @@ layout: page
 title: NuvlaBox OS
 nav_order: 2
 parent: NuvlaBox
-has_children: true
+has_children: false
 permalink: /nuvlabox/nuvlabox-os
 redirect_from:
  - /nuvlabox/nuvlabox-os/nuvlabox-os
 ---
-
-_(coming soon...)_
 
 ![nuvlabox-os-arch-overview](/assets/img/nuvlabox-os-arch-overview.png)

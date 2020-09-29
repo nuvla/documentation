@@ -23,3 +23,11 @@ He is contributing to the Nuvla and NuvlaBox code base.
 # Felix can...
 
 #### do everything, 'cause he's amazing! **but mainly**, he's here to help *you*
+
+If you want to be a Felix, please follow our contribution guidelines. Each GitHub repository should have a contribution section, like these for example:
+
+ - [NuvlaBox Agent](https://github.com/nuvlabox/agent#contributing)
+ - [Nuvla API Server](https://github.com/nuvla/api-server#contributing)
+ - [Nuvla UI](https://github.com/nuvla/ui#contributing)
+
+Thanks for being a Felix and stay cool (and safe and healthy!)

@@ -16,7 +16,7 @@
 title: NuvlaDocs
 email: support@sixsq.com
 description: Secured edge-to-cloud management platform for near data processing
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog 
 url: "https://docs.nuvla.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sixsq
 github_username: nuvla
@@ -25,7 +25,7 @@ footer_content: Copyright 2020, SixSq
 # Build settings
 markdown: kramdown
 highlighter: rouge
-remote_theme: pmarsceill/just-the-docs
+#remote_theme: pmarsceill/just-the-docs
 
 # Theme configuration.
 search_enabled: true
