@@ -8,7 +8,7 @@ nav_order: 11
 
 ## Copyright
 
-Copyright &copy; 2019, SixSq Sàrl.
+Copyright &copy; 2020, SixSq Sàrl.
 
 ## License
 

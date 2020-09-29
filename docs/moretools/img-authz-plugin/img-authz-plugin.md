@@ -87,7 +87,7 @@ Re-enable the plugin, and reload the Docker daemon:
 
 If you're using a private Docker registry with self-signed TLS certificates, **please remember** to add the client certificates to your Docker trust directory. 
 
-To do this, please follow the steps at: (https://docs.docker.com/registry/insecure/#use-self-signed-certificates)[https://docs.docker.com/registry/insecure/#use-self-signed-certificates]
+To do this, please follow the steps [here](https://docs.docker.com/registry/insecure/#use-self-signed-certificates).
 
 **NOTE:** using insecure Docker registries (without TLS) is not recommended and thus not covered by this plugin. Use it at your own risk.
 
@@ -101,22 +101,21 @@ The plugin logs are appended to the Docker daemon logs, and thus you can find th
 
 Stop the plugin:
  1. `docker plugin disable sixsq/img-authz-plugin:<YOUR_CPU_ARCH>`
- 2. Remove the `authorization-plugins` attribute from /etc/docker/daemon.json
+ 2. Remove the `authorization-plugins` attribute from `/etc/docker/daemon.json`
  3. `kill -SIGHUP $(pidof dockerd)`
  
 Uninstall the plugin:
  1. `docker plugin rm -f sixsq/img-authz-plugin:<YOUR_CPU_ARCH>`
  
 
-
 ## Developing, building and testing the plugin
 
-Additional information for building and testing the plugin by yourself, can be found in the plugin's GitHub repository at [https://github.com/SixSq/img-authz-plugin](https://github.com/SixSq/img-authz-plugin).
+Additional information for building and testing the plugin by yourself, can be found in the plugin's GitHub repository [here](https://github.com/SixSq/img-authz-plugin).
 
 
 ---
 
-Credits: this plugin is an adaptation of the work done in [https://github.com/crosslibs/img-authz-plugin](https://github.com/crosslibs/img-authz-plugin)
+Credits: this plugin is an adaptation of the work done here: [crosslibs/img-authz-plugin](https://github.com/crosslibs/img-authz-plugin)
 
 
 
