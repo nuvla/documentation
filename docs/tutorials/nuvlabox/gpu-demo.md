@@ -71,7 +71,7 @@ services:
 As you can see, since we can not use `--gpus` in a Compose file (yet), we need to define the different host `devices` to be mapped into the container, alongside a mount for the folders where the GPU drivers and libraries are located, on the host - for this
 tutorial we don't need to pass any libraries, as the container itself has the libraries we need, already compiled for this device. 
 
-With this, you can create your own Nuvla app, by following [these steps](http://localhost:4000/nuvla/add-apps).
+With this, you can create your own Nuvla app, by following [these steps](/nuvla/add-apps).
  
 ### Deploy the App into the NVIDIA Jetson Nano
 
