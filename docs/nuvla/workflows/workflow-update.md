@@ -19,7 +19,7 @@ The first two are triggered by the user, while the **Telemetry** workflow is aut
 
 ## Application Deployment
 
-The current deployment strategy is using a push mechanism. This means Nuvla issues remote commands on the NuvlaBox, using the appropriate Docker tools. A similar mechanism is used for Kubernetes clusters.
+The current deployment strategy is using a push mechanism. This means Nuvla issues remote commands on the NuvlaBox, using the appropriate container orchestration tools.
 
 ![nuvlabox-app-deployment.png](/assets/img/nuvlabox-app-deployment.png)
 {: style="width: 50%;" class="center-image" :}
@@ -44,7 +44,7 @@ On the NuvlaBox, the Docker software first downloads the required Docker images 
 
 **4b. Container(s) creation**
 
-The Docker container(s) is/are then created and configured by the appropriate Docker software, from the configuration provided by Nuvla.
+The Docker container(s) is/are then created and configured by the appropriate Container Orchestration Engine, from the configuration provided by Nuvla.
 
 **4c. Containers monitoring**
 
@@ -52,7 +52,7 @@ From this point on, Nuvla pulls on a regular basis each NuvlaBox to retrieve its
 
 Users can also request Nuvla to pull Docker logs for any deployment, which are then streamed 200 lines at a time, to limit bandwidth.
 
-Once all containers have been deployed, the deployment state is set by Nuvla to *started*. The application is then fully ready.
+Once all containers have been deployed, the deployment state is set by Nuvla to *started*. The application is then fully deployed.
 
 If the user has configured an Open VPN access to the NuvlaBox, services exposing a local port mapped to the NuvlaBox will be running on the VPN IP range and reachable from customer's Open VPN client.
 
@@ -88,7 +88,7 @@ Once this is done and Clara is satisfied that this application definition is goo
 
 ### Application definition update
 
-Similarly to the [Docker Image Update](#image-docker-update) workflow, Clara might also simply decide to change an application definition in Nuvla. For example, she might want to change the Docker compose file, or the default values of environment variables, or expose different URLs. The same process as the [Docker Image Update](#image-docker-update) workflow is recommended where Clara works on her own until she is satisfied that the application definition (aka module) is ready for production. At this time, she publishes the application definition, triggering the notification to Alices that a new version as available for application deployments she has running.
+Similarly to the [Docker Image Update](#image-docker-update) workflow, Clara might also simply decide to change an application definition in Nuvla. For example, she might want to change the Docker compose file or Kubernetes manifest, or the default values of environment variables, or expose different URLs. The same process as the [Docker Image Update](#image-docker-update) workflow is recommended where Clara works on her own until she is satisfied that the application definition (aka module) is ready for production. At this time, she publishes the application definition, triggering the notification to Alices that a new version as available for application deployments she has running.
 
 ### Manual Update
 
@@ -109,7 +109,7 @@ Once the update action is confirmed, an update job is scheduled on the Nuvla job
 
 **3. Job execution**
 
-An available job executor then picks up the job and executes the update. Depending on whether the application is a simple Docker image, a Docker Compose or a Docker Swarm, the appropriate actions are taken to execute the update on the target NuvlaBox.
+An available job executor then picks up the job and executes the update. Depending on whether the application is a simple Docker image, a Docker Compose, a Docker Swarm or Kubernetes, the appropriate actions are taken to execute the update on the target NuvlaBox.
 
 **4. Manual update execution**
 

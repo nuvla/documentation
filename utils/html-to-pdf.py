@@ -2,24 +2,12 @@
 
 from weasyprint import HTML, CSS
 
-base_url = 'https://docs.nuvla.io'
-#base_url = 'http://localhost:4000'
+#base_url = 'https://docs.nuvla.io'
+base_url = 'http://localhost:4000'
 target_doc = open('docs.pdf','wb')
-pages = ['dave',
-         'docs/dave/quick/nuvla-quick.html',
-         'docs/dave/quick/nuvla-deployment.html',
-         'docs/dave/quick/caas-infrastructures.html',
-         'docs/dave/quick/nuvla-module-population.html',
-         'docs/dave/quick/nuvla-validate.html',
-         'docs/dave/prod/nuvla-prod.html',
-         'docs/dave/prod/nuvla-deployment.html',
-         'docs/dave/prod/caas-infrastructures.html',
-         'docs/dave/prod/caas-optional-services.html',
-         'docs/dave/prod/nuvla-module-population.html',
-         'docs/dave/prod/nuvla-validate.html',
-         'docs/dave/prod/nuvla-ops.html',
-         'docs/dave/embedded-portal.html',
-         'docs/dave/nuvlabox.html',
+pages = ['nuvla/workflows/workflows.html',
+         'nuvla/workflows/workflow-registration.html',
+         'nuvla/workflows/workflow-update.html',
 ]
 
 docs = []

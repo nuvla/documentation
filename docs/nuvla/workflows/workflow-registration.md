@@ -19,13 +19,13 @@ Note that all HTTPS requests during this workflow are performed by the NuvlaBox,
 
 Depending on your end goal, several options are available for the installation of the NuvlaBox Engine software. Both mechanism are similar in the sense that they follow the same registration + commissioning workflow. Only the trigger of the workflow is different.
 
-**1a. Manual installation**: good for testing and prototyping
+**1a. Manual installation**: good for small scale infrastructures
 
 Installation of the NuvlaBox Engine is performed by hand, from a dedicated bundle generated from Nuvla. See details [here](/nuvlabox/nuvlabox-engine/quickstart.html).
 
 **1b. Automated installation**: good for industrialisation 
 
-A trigger installation script is embedded in the operating system of the edge device, in order to leverage a USB (or similar media) build from the Nuvla. See details [here](/nuvlabox/nuvlabox-engine/usb-installation.html)
+A trigger installation script is embedded in the operating system of the edge device, in order to leverage a USB (or similar media) build from Nuvla. See details [here](/nuvlabox/nuvlabox-engine/usb-installation.html)
 
 ---
 
@@ -37,7 +37,7 @@ Note that additional users or groups can be added to the NuvlaBox access control
 
 **2a. Manual activation**
 
-After registering a new NuvlaBox in Nuvla, the unique identifier of the newly created NuvlaBox (UUID) is embedded in the main compose file bundled and delivered to the user. This allows a single unauthenticated action to be performed, to activate the NuvlaBox. A unique identification token is created by Nuvla and returned to the NuvlaBox. From this point on, all communication between the NuvlaBox and Nuvla is authenticated. The NuvlaBox then provides Nuvla with configuration information, such as Docker Swarm parameters.
+After registering a new NuvlaBox in Nuvla, the unique identifier of the newly created NuvlaBox (UUID) is embedded in the main compose file bundled and delivered to the user. This allows a single unauthenticated action to be performed, to activate the NuvlaBox. A unique identification token is created by Nuvla and returned to the NuvlaBox. From this point on, all communication between the NuvlaBox and Nuvla is authenticated and encrypted (TLS). The NuvlaBox then provides Nuvla with configuration information, such as the Docker REST API parameters.
 
 **2b. Automated activation**
 
@@ -51,8 +51,8 @@ The state of the NuvlaBox at this stage is “activated”.
 
 **3. Commissioning of the NuvlaBox**
 
-Once the NuvlaBox is in Activated state, Nuvla will automatically generate all the information necessary to enable transparent management of the NuvlaBox device from Nuvla. For each NuvlaBox and respective owner, a VPN client configuration is created (based on the NuvlaBox owner’s organisation), which is then used to establish a secure communication route between the NuvlaBox and its owner and users. In parallel, the NuvlaBox is also given a server-side chosen human-readable unique identifier
+Once the NuvlaBox is in Activated state, Nuvla will automatically generate all the information necessary to enable transparent management of the NuvlaBox device from Nuvla. For each NuvlaBox and respective owner, a VPN client configuration is created (based on the NuvlaBox owner’s organisation), which is then used to establish a secure communication route between the NuvlaBox and its owner and users.
 
 Finally, resources are created to host the NuvlaBox status and telemetry, such that the NuvlaBox can report this information on a regular basis.
 
-At this stage, the NuvlaBox state is set to “commissioned”.  This means the NuvlaBox is fully operational, and a telemetry is sent on a regular basis from the NuvlaBox to Nuvla.
+At this stage, the NuvlaBox state is set to “commissioned”.  This means the NuvlaBox is fully operational, and telemetry is sent on a regular basis from the NuvlaBox to Nuvla.
