@@ -53,24 +53,28 @@ a {
   counter-increment: page;
   @top-left {
     content: "Nuvla documentation";
-    border-top: .25pt solid #666;
+    border-top: .12pt solid #666;
     width: 50%;
+    color: gray;
   }
   @bottom-right {
     content: "License: Apache 2.0";
-    border-top: .25pt solid #666;
+    border-top: .12pt solid #666;
     width: 50%;
+    color: gray;
   }
   @bottom-left {
-      content: "Source: https://docs.nuvla.io";
-      border-top: .25pt solid #666;
+      content: "Source: docs.nuvla.io";
+      border-top: .12pt solid #666;
       width: 50%;
+      color: gray;
   }
   @bottom-center {
-      content: "Copyright © 2019 SixSq Sàrl";
-      border-top: .25pt solid #666;
-      border-left: .25pt;
+      content: "Copyright © 2020 SixSq Sàrl";
+      border-top: .12pt solid #666;
+      border-left: .12pt;
       width: 50%;
+      color: gray;
   }
 }
 
