@@ -1,0 +1,1 @@
+curl --fail -X PUT http://agent/api/peripheral/test -H content-type:application/json -d '{"available": false}'

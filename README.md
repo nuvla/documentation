@@ -11,7 +11,7 @@ and [NuvlaBox](https://github.com/nuvlabox) organisations on GitHub.
 
 ## Copyright
 
-Copyright &copy; 2020, SixSq Sàrl
+Copyright &copy; 2021, SixSq Sàrl
 
 ## License
 

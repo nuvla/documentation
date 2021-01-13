@@ -1,0 +1,1 @@
+curl --fail -X POST http://agent/api/peripheral -H content-type:application/json -d '{"identifier": "test", "classes": ["test-class"], "available": true}'

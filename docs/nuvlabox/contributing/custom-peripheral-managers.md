@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Custom Peripheral Managers
-nav_order: 1
+nav_order: 2
 parent: Contributing
 has_children: false
 grand_parent: NuvlaBox
