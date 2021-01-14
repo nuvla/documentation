@@ -8,7 +8,7 @@ has_children: true
 
 ![nuvlabox-logo](/assets/img/nuvlabox-logo.png){: .center-image }
 
-With NuvlaBox, you can transform most ARM and x86 hardware platforms into a smart edge device, to be managed by a Nuvla service.
+With NuvlaBox (**NB**), you can transform most ARM and x86 hardware platforms into a smart edge device, to be managed by a Nuvla service.
 
 To ensure a smooth edge deployment and operation, SixSq has certified a number of [hardware platforms](https://sixsq.com/products-and-services/nuvlabox/tech-spec), including x86 and ARM based systems, from HPE, Dell, Logic Supply, Raspberry Pi and Nvidia.  
 

@@ -8,7 +8,7 @@ grand_parent: NuvlaBox
 
 # Requirements
 
-To ensure a smooth and fully functional installation of the NuvlaBox Engine, please make sure you comply with the following system requirements.
+To ensure a smooth and fully functional installation of the NuvlaBox Engine (**NBE**), please make sure you comply with the following system requirements.
 
 
 ## OS Requirements
@@ -17,30 +17,38 @@ To ensure a smooth and fully functional installation of the NuvlaBox Engine, ple
 Ideally, you should be running one of the following:
   - Ubuntu
   - CentOS
-  - Debian
-  - Raspbian
+  - Debian (and Debian variants like Raspbian and Raspberry Pi OS)
   
 Other Linux distributions should also work, but will require testing.
 
 Functionalities like the automatic discovery and categorization of peripherals are **not** ensured for macOS and Windows.
 
-You also need **an internet connection**.
+
+## Hardware Requirements
+
+In order to install the NBE and ensure its smooth execution over time, your device should have at least:
+
+ - 1GB of RAM
+ - 2GB of free disk space   
+
 
 ## Software Requirements
 
-Before you can install the NuvlaBox Engine, please make sure you have:
+Before you can install the NBE, please make sure you have:
 
- - [Docker Engine (version 18 or higher)](https://docs.docker.com/install/#supported-platforms)
+ - [Docker Engine (version 18 or higher)](https://docs.docker.com/install/#supported-platforms), running in [Swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/)
  - [Docker Compose (version 1.23.2 or higher)](https://docs.docker.com/compose/install/)
  
-## Enable Docker  mode
+ 
+## Network Requirements
 
-The NuvlaBox requires the Docker environment to run in Swarm mode.  While the NuvlaBox engine runs directly as Docker micro-services, Nuvla will normally run user applications in Docker Swarm. This makes possible clustering, facilitates placement policies and all that good stuff from Swarm.
+You need **an internet connection**.
 
-To enable Docker Swarm run the following:
+The NBE requires the following ports to be opened:
 
-```
-docker swarm init
-``` 
+| Port 	| Reason 	|
+|-:	|-	|
+| 3636  | Used by the `system-manager` to publish the internal NB dashboard |
+| 5000 	| Used by the `compute-api` as the relay endpoint for Docker |
+| 5001 | Used by the `management-api` for the NB remote management REST API |
 
-> **Note:** this assumes you only have one network interface.

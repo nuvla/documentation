@@ -1,0 +1,1 @@
+  curl --fail -X GET http://agent/api/peripheral/0424:7800

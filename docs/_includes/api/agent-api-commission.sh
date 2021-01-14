@@ -1,0 +1,1 @@
+curl --fail -X POST http://agent/api/commission -H content-type:application/json -d '{"swarm-token-manager": "xyzNewTokenxyz"}'

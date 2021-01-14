@@ -12,11 +12,14 @@ redirect_from:
 NuvlaBox Engine
 ========
 
-The NuvlaBox Engine provides the foundation services of the NuvlaBox.  This includes the Nuvla registration process, telemetry, networking and secure API for remote management.
+The NuvlaBox Engine (**NBE**) is the heart of the NuvlaBox (**NB**). It provides the foundation services of the NB, which in turn ensure a robust, feature-rich and secure remote management from Nuvla.
 
-The NuvlaBox Engine is implemented as a set of containerised micro-services. The diagram below illustrates the main micro-services and their relationships.
+The NBE is implemented as a set of loosely coupled, open-source and containerised micro-services. You can find NBE's source code in [NuvlaBox's GitHub organisation](https://github.com/nuvlabox).
 
-![nuvlabox-os-arch-detail](/assets/img/nuvlabox-os-arch-detail.png)
+You can find all releases of the NBE at [https://github.com/nuvlabox/deployment](https://github.com/nuvlabox/deployment).
+
+
+
 
 
 

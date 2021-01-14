@@ -1,0 +1,1 @@
+curl --fail -X DELETE http://agent/api/peripheral/test
