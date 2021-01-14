@@ -95,9 +95,9 @@ It is _not_ yet possible to define variables like **HOSTNAME** and **VPN_INTERFA
 
 This installation method requires a specific NuvlaBox plugin to be installed in your Operating System, which will trigger the USB-based installation whenever you plug the flash drive.
 
- - if your devices **are running** a [NuvlaBox OS](https://docs.nuvla.io/nuvlabox/nuvlabox-os.html), then you're good! You can jump straight to the [installation procedure below](#procedure)
+ - if your devices **are running** a [NuvlaBox OS](/nuvlabox/nuvlabox-os.html), then you're good! You can jump straight to the [installation procedure below](#procedure)
  
- - if your devices **are NOT running** a [NuvlaBox OS](https://docs.nuvla.io/nuvlabox/nuvlabox-os.html), then you **must** first prepare your operating system as follows:
+ - if your devices **are NOT running** a [NuvlaBox OS](/nuvlabox/nuvlabox-os.html), then you **must** first prepare your operating system as follows:
  
     1. make sure you are running a Linux distribution with `systemd` installed (we recommend using Debian or Ubuntu)
     2. get the latest version of the NuvlaBox USB Auto-installer plugin from GitHub:
