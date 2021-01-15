@@ -25,7 +25,7 @@ Installation of the NuvlaBox Engine is performed by hand, from a dedicated bundl
 
 **1b. Automated installation**: good for industrialisation 
 
-A trigger installation script is embedded in the operating system of the edge device, in order to leverage a USB (or similar media) build from Nuvla. See details [here](/nuvlabox/nuvlabox-engine/usb-installation.html)
+A trigger installation script is embedded in the operating system of the edge device, in order to leverage a USB (or similar media) build from Nuvla. See details [here](/nuvlabox/nuvlabox-engine/quickstart.html#install-via-usb-stick)
 
 ---
 
