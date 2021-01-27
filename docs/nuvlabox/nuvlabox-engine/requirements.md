@@ -37,7 +37,7 @@ In order to install the NBE and ensure its smooth execution over time, your devi
 Before you can install the NBE, please make sure you have:
 
  - [Docker Engine (version 18 or higher)](https://docs.docker.com/install/#supported-platforms), running in [Swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/)
- - [Docker Compose (version 1.23.2 or higher)](https://docs.docker.com/compose/install/)
+ - [Docker Compose (version 1.27.4 or higher)](https://docs.docker.com/compose/install/)
  
  
 ## Network Requirements
