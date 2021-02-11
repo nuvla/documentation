@@ -31,7 +31,21 @@ In an edge environment, halting your devices is sometimes necessary.
 
 ### Upgrade/Downgrade the NuvlaBox
 
-To upgrade or downgrade your existing NuvlaBox Engine installation, you will need to SSH into your edge device, and find the original project folder where you saved your Compose files.
+#### From Nuvla
+
+The NBE can be updated directly from Nuvla. On the user interface, in each NuvlaBox page, you'll find an action called "Update NuvlaBox" (as depicted below)
+
+![nb-update-nuvla.png](/assets/img/nb-update-nuvla.png)
+
+By clicking on it, you can specify which version of the NuvlaBox Engine is the target for the release. Please note that this is an asynchronous action that can take a few minutes, depending on your edge device's network.
+
+**Troubleshooting**: Please note that the update capability was only introduced in [NuvlaBox Engine v1.14.0](https://github.com/nuvlabox/deployment/releases/tag/1.14.0). You can still update your NuvlaBox to/from an older NuvlaBox Engine version, **however**, since the persistency of NB installation parameters was only introduced in v1.14.0, we can not guarantee that the final update will result in a similarly configured NBE! If you're updating to/from a NBE version <1.14.0, we recommend taking note of all the environment variables and Docker Compose arguments used during the installation, just in case a manual intervention is needed after an unsuccessful update.
+
+---
+
+#### Manually
+
+You can also SSH into your edge device, and find the original project folder where you saved your Compose files.
 
 If you've initially installed the NuvlaBox Engine according to the instructions above, then you should see all of its components by running:
 
