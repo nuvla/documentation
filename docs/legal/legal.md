@@ -8,7 +8,7 @@ nav_order: 11
 
 ## Copyright
 
-Copyright &copy; 2021, SixSq Sàrl.
+Copyright &copy; 2021, SixSq SA.
 
 ## License
 
@@ -21,4 +21,4 @@ Nuvla&reg; is a registered trademark in Switzerland and other
 countries.  The "Nuvla" trademark can be used only to identify
 unmodified versions of the Nuvla code. Services running the Nuvla
 software cannot be identified with the Nuvla trademark, except with
-the express written consent of SixSq Sàrl.
+the express written consent of SixSq SA.

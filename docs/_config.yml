@@ -20,7 +20,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://docs.nuvla.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sixsq
 github_username: nuvla
-footer_content: Copyright 2021, SixSq
+footer_content: Copyright 2021, SixSq SA
 
 # Build settings
 markdown: kramdown
