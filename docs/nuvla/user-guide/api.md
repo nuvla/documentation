@@ -125,7 +125,7 @@ where
 | --- | --- | --- |
 | `filter` | Used to return only the set of resources that have an `attribute` matching a certain `value` | `?filter=name="my-resource"` <br><br> `?filter=people/gender!="male" and people/age>=21` <br><br> `?filter=application-name^="my-app-"` |
 | `orderby` | To order the returned resources by the specified attribute | `?orderby=created:desc` <br><br> `?orderby=people/surname:asc` |
-| `aggregation` | On top of the requested resources, it will also return on-the-fly aggregations based on the specified function. Available functions: `avg`, `max`, `min`, `sum`, `cardinality`, `terms`, `stats`, `extendedstats`, `percentiles`, `count`, `missing`  | `?aggregation=avg:people/age` | 
+| `aggregation` | On top of the requested resources, it will also return on-the-fly aggregations based on the specified function. Available functions: `avg`, `max`, `min`, `sum`, `cardinality`, `terms`, `stats`, `extendedstats`, `percentiles`, `value_count`, `missing`  | `?aggregation=avg:people/age` | 
 | `last` and `first` | Returns a range of resources by setting the first and last (1-based) query parameters | `?first=10&last=20` |
 | `select` | Selects only certain attributes to be returned by the server. Avoiding sending information that will not be useful reduces the load on the network and the server | `?select=people/id` |
 
