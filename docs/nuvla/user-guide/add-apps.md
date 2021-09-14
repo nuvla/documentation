@@ -9,10 +9,8 @@ permalink: /nuvla/add-apps
 
 Before we start, there are a few terms that you need to get familiar with:
 
- - **component**: a component is the simplest type application you can get in Nuvla - a container! Components are deployed into Docker Swarm infrastructure services, as a [service](https://docs.docker.com/engine/reference/commandline/service/), with a single replica;
- - **application**: applications are broader that components, in the sense that you can re-use and create your own container deployment recipes freely (like Compose files and Manifests). Applications have _2 subtypes_:
-   - **Docker**, meant to be used for Docker Compose and Docker Swarm applications, and expecting a raw Compose file as the deployment recipe, and
-   - **Kubernetes**, meant to be used for Kubernetes applications, and expecting a Manifest as the deployment recipe.
+ - **Docker application**, meant to be used for Docker Compose and Docker Swarm applications, and expecting a raw Compose file as the deployment recipe, and
+ - **Kubernetes application**, meant to be used for Kubernetes applications, and expecting a Manifest as the deployment recipe.
 
 # Adding Applications via the UI
 
@@ -40,33 +38,6 @@ Once inside your project, you'll see the button "+add".
 
     ![add-app](/assets/img/add-app.png)
 
-## Components
-
-From the previous "add app" modal, select "Component".
-
-This will take you to the Component editing page, where you'll find all the configurable options you can set for you component. 
-
-For most fields, you'll find help text to help you configure you Component appropriately. 
-
-![component-ui](/assets/img/component-ui.png)
-
-When you're finished editing, click save, add a commit message and you'll then find your new component in the App Store (Apps page).
-
-Quick explanation of most relevant Component fields:
- - **docker image**: registry, name and tag of the Docker image to be used for your component
- - **architectures**: list of architectures compatible with your component and Docker image
- - **private registry**: in case your Docker image is located in a private registry, make sure you select it here
- - **Port Mappings**: very much like you'd [publish a Docker container port](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose), also here you can add port mappings to your container
- - **Environment Variables**: same as for setting [environment variables for a Docker container](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file), here you can define environment variable to be passed to your container. **In addition**, you can also define a default value and tell whether the variable is mandatory for launching the Component. When launching the Component, you'll also be able to edit this.
- - **Volumes**: let's you define [Docker volumes (of both types named and bind)](https://docs.docker.com/engine/reference/commandline/run/#add-bind-mounts-or-volumes-using-the---mount-flag)
- - **URLs**: URLs to help you access the Component after it has been launched, remotely. These URLs can contain variables that are dynamically substituted once your deployment has been started. Things like:
-   - `${hostname}` for getting the endpoint where your Component has been started
-   - `${portProtocol.containerPort}` for getting the published destination port corresponding to your port mapping
-   - `${envVar}` for getting any environment you might have defined above
-   - `${outputParameter}` to map to any of the available output parameters that are dynamically filled it after launching your Component
- - **Output Parameters**: allows you to add custom output parameters that your container can push back to Nuvla, and thus be used as any other deployment output parameter, like the ones used in your URL above 
-  - **Data Binding**: to bind your Component to a Data set. See [Managing Data](/nuvla/advanced-usage/manage-data) for more info.
-
 ## Applications
 
 From the previous "add app" modal, select "Application".
@@ -77,8 +48,6 @@ For most fields, you'll find help text to help you configure you Application pro
 
 ![edit-app](/assets/img/edit-app.png)
 
-By default, the **subtype** for new Applications is set to "Docker". If you want to create a Kubernetes application instead, this is the field you have to change.
-
 Quick explanation of most relevant Component fields:
  - **URLs**, **Output Parameters** and **Data Binding**: exactly the same as for [Components](#components)
  - **Files**: you can create secrets and configuration files to be used by the containers in your application. This is where you defined those. Make sure the file name matches the one referenced from within the Compose file/Manifest
@@ -88,7 +57,7 @@ Quick explanation of most relevant Component fields:
     environment:
       - ENV_FROM_NUVLA=$myVar
     ```
- - **Manifest**: the raw [Kubernetes manifest](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/) representing your application resources
+ - **Kubernetes manifest**: the raw [Kubernetes manifest](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/) representing your application resources
  - **Docker compose**: the raw YAML [Compose file](https://docs.docker.com/compose/compose-file/) representing your Docker application resources
  
 ### Docker subtype compatibility: Docker Compose vs Swarm?
