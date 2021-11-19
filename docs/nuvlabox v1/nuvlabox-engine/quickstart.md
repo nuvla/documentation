@@ -2,8 +2,9 @@
 layout: nuvlabox
 title: Installation
 nav_order: 4
-parent: NuvlaBox Engine
-grand_parent: NuvlaBox v2
+parent: NuvlaBox Engine v1
+grand_parent: NuvlaBox v1
+old_version: true
 ---
 
 The NBE installation starts from Nuvla's [edge panel](https://nuvla.io/ui/edge). From there you can opt for one of two available installation methods: Compose file bundle, or USB stick.

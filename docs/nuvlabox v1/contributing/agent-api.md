@@ -2,9 +2,10 @@
 layout: nuvlabox
 title: Before Starting
 nav_order: 1
-parent: Contributing
+parent: Contributing v1
 has_children: false
-grand_parent: NuvlaBox v2
+grand_parent: NuvlaBox v1
+old_version: true
 ---
 
 Before you start contributing to the NuvlaBox software stack, you must be acquainted not only with the NB and NBE architectures and features, but also with the internal functionalities offered specifically for allowing the interaction between NBE micro-services.

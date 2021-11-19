@@ -1,11 +1,12 @@
 ---
 layout: nuvlabox
-title: NuvlaBox Engine
+title: NuvlaBox Engine v1
 nav_order: 1
-parent: NuvlaBox v2
+parent: NuvlaBox v1
 has_children: true
 redirect_from:
  - /nuvlabox/nuvlabox-engine/nuvlabox-engine
+old_version: true
 ---
 
 NuvlaBox Engine

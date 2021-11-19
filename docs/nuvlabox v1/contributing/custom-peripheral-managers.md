@@ -2,9 +2,10 @@
 layout: nuvlabox
 title: Custom Peripheral Managers
 nav_order: 2
-parent: Contributing
+parent: Contributing v1
 has_children: false
-grand_parent: NuvlaBox v2
+grand_parent: NuvlaBox v1
+old_version: true
 ---
 
 Building your own NuvlaBox Peripheral Manager

@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+{% if page.old_version == true %}
+  {% include old_nuvlabox_warning.html %}
+{% endif %}
+
+{{ content }}

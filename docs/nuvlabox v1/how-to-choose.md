@@ -2,7 +2,8 @@
 layout: nuvlabox
 title: NuvlaBox... Engine or OS?
 nav_order: 1
-parent: NuvlaBox v2
+parent: NuvlaBox v1
+old_version: true
 ---
 
 # NuvlaBox Engine or OS?

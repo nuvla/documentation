@@ -1,9 +1,10 @@
 ---
 layout: nuvlabox
-title: NuvlaBox v2
-nav_order: 3
+title: NuvlaBox v1
+nav_order: 12
 description: "Secure and intelligent edge computing solution"
 has_children: true
+old_version: true
 ---
 
 ![nuvlabox-logo](/assets/img/nuvlabox-logo.png){: .center-image }

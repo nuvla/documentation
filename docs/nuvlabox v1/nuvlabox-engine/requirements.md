@@ -2,8 +2,9 @@
 layout: nuvlabox
 title: Requirements
 nav_order: 1
-parent: NuvlaBox Engine
-grand_parent: NuvlaBox v2
+parent: NuvlaBox Engine v1
+grand_parent: NuvlaBox v1
+old_version: true
 ---
 
 # Requirements

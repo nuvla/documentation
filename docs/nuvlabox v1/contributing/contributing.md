@@ -1,9 +1,11 @@
 ---
 layout: nuvlabox
-title: Contributing
+title: Contributing v1
 nav_order: 6
-parent: NuvlaBox v2
+parent: NuvlaBox v1
 has_children: true
+permalink: /nuvlabox/nuvlabox-contributing
+old_version: true
 ---
 
 Contributing to NuvlaBox

@@ -2,9 +2,10 @@
 layout: nuvlabox
 title: Your First NuvlaBox App
 nav_order: 1
-parent: Apps Deployment
-grand_parent: NuvlaBox v2
+parent: Apps Deployment v1
+grand_parent: NuvlaBox v1
 has_children: false
+old_version: true
 ---
 
 # Deploying your first NuvlaBox Application

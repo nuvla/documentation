@@ -1,9 +1,10 @@
 ---
 layout: nuvlabox
-title: Apps Deployment
+title: Apps Deployment v1
 nav_order: 4
-parent: NuvlaBox v2
+parent: NuvlaBox v1
 has_children: true
+old_version: true
 ---
 
 Deployment of Applications on NuvlaBox
