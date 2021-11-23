@@ -15,6 +15,11 @@
   }
 }
 
+.site-title:hover {
+  background-image: none;
+  background-color: $feedback-color;
+}
+
 $nav-list-expander: white;
 
 .site-footer a {
