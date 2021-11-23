@@ -34,7 +34,7 @@ You can run this demo by yourself. Simply go through the following steps:
 ### 1: You'll need
 
  - one or more Linux VMs, with a public IP, running Docker in Swarm mode
- - an [edge device](/nuvlabox/latest/nuvlabox-engine/requirements.html) (RaspberryPi, Laptop, etc.) with Docker and Docker Compose installed, and Swarm mode enabled
+ - an [edge device](/nuvlabox/latest/nuvlabox-engine/requirements) (RaspberryPi, Laptop, etc.) with Docker and Docker Compose installed, and Swarm mode enabled
  - an internet connection
  - a [Nuvla.io](https://nuvla.io) account
  - one USB webcam

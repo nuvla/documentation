@@ -21,7 +21,7 @@ Depending on your end goal, several options are available for the installation o
 
 **1a. Manual installation**: good for small scale infrastructures
 
-Installation of the NuvlaBox Engine is performed by hand, from a dedicated bundle generated from Nuvla. See details [here](/nuvlabox/latest/nuvlabox-engine/quickstart.html).
+Installation of the NuvlaBox Engine is performed by hand, from a dedicated bundle generated from Nuvla. See details [here](/nuvlabox/latest/nuvlabox-engine/quickstart).
 
 **1b. Automated installation**: good for industrialisation 
 
