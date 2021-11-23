@@ -5,6 +5,8 @@ nav_order: 1
 description: "Secure and intelligent edge computing solution"
 parent: NuvlaBox
 has_children: true
+redirect_from:
+ - /nuvlabox/latest
 ---
 
 ![nuvlabox-logo](/assets/img/nuvlabox-logo.png){: .center-image }

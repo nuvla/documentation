@@ -26,7 +26,7 @@ This section of the documentation is for [Dave](/whoami#dave-the-administrator).
 #### [Populate Nuvla with Example Applications](/nuvla/installation/example-apps)
 #### [Fine tune a Swarm Cluster to host a production Nuvla Instance](/nuvla/installation/production#deploy-additional-caas-services)
 #### [Operate and maintain his own Nuvla instance](/nuvla/installation/operation-maintenance)
-#### [Deploy a NuvlaBox](/nuvlabox/nuvlabox)
+#### [Deploy a NuvlaBox](/nuvlabox/latest)
 ---
 #### Embed the Nuvla UI into another web application 
 

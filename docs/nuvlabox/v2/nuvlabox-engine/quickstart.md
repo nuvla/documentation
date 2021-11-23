@@ -4,6 +4,8 @@ title: Installation
 nav_order: 4
 parent: NuvlaBox Engine
 grand_parent: v2
+redirect_from:
+ - /nuvlabox/latest/nuvlabox-engine/quickstart
 ---
 
 The NBE installation starts from Nuvla's [edge panel](https://nuvla.io/ui/edge). From there you can opt for one of two available installation methods: Compose file bundle, or USB stick.
@@ -109,9 +111,9 @@ It is _not_ yet possible to define variables like **HOSTNAME** and **VPN_INTERFA
 
 This installation method requires a specific NuvlaBox plugin to be installed in your Operating System, which will trigger the USB-based installation whenever you plug the flash drive.
 
- - if your devices **are running** a [NuvlaBox OS](/nuvlabox/nuvlabox-os.html), then you're good! You can jump straight to the [installation procedure below](#procedure)
+ - if your devices **are running** a [NuvlaBox OS](/nuvlabox/v2/nuvlabox-os.html), then you're good! You can jump straight to the [installation procedure below](#procedure)
  
- - if your devices **are NOT running** a [NuvlaBox OS](/nuvlabox/nuvlabox-os.html), then you **must** first prepare your operating system as follows:
+ - if your devices **are NOT running** a [NuvlaBox OS](/nuvlabox/v2/nuvlabox-os.html), then you **must** first prepare your operating system as follows:
  
     1. make sure you are running a Linux distribution with `systemd` installed (we recommend using Debian or Ubuntu)
     2. get the latest version of the NuvlaBox USB Auto-installer plugin from GitHub:

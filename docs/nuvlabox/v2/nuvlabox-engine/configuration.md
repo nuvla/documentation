@@ -4,6 +4,8 @@ title: Configuration
 nav_order: 3
 parent: NuvlaBox Engine
 grand_parent: v2
+redirect_from:
+ - /nuvlabox/latest/nuvlabox-engine/configuration
 ---
 
 # NuvlaBox Engine (NBE) Configuration

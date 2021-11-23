@@ -5,7 +5,7 @@ nav_order: 1
 parent: v2
 has_children: true
 redirect_from:
- - /nuvlabox/nuvlabox-engine/nuvlabox-engine
+ - /nuvlabox/latest/nuvlabox-engine
 ---
 
 NuvlaBox Engine

@@ -9,4 +9,4 @@ permalink: /nuvla/launch-app
 
 # Running simple applications
 
-To run a simple application on a NuvlaBox, [go here](/nuvlabox/deploying-apps/first-app).
+To run a simple application on a NuvlaBox, [go here](/nuvlabox/latest/deploying-apps/first-app).

@@ -4,6 +4,8 @@ title: Architecture
 nav_order: 1
 parent: NuvlaBox Engine
 grand_parent: v2
+redirect_from:
+ - /nuvlabox/latest/nuvlabox-engine/architecture
 ---
 
 NuvlaBox Engine Architecture

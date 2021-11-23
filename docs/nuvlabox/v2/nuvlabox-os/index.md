@@ -6,7 +6,7 @@ parent: v2
 has_children: false
 permalink: /nuvlabox/nuvlabox-os
 redirect_from:
- - /nuvlabox/nuvlabox-os/nuvlabox-os
+ - /nuvlabox/latest/nuvlabox-os
 ---
 
 ![nuvlabox-os-arch-overview](/assets/img/nuvlabox-os-arch-overview.png)

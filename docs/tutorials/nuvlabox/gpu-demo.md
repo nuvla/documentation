@@ -34,7 +34,7 @@ Finally, need a Nuvla account.
 
 ### Install the NuvlaBox Engine on the NVIDIA Jetson Nano
 
-Follow the [NuvlaBox setup documentation](/nuvlabox/nuvlabox-engine/quickstart.html) to connect your NVIDIA Jetson Nano to Nuvla. 
+Follow the [NuvlaBox setup documentation](/nuvlabox/latest/nuvlabox-engine/quickstart.html) to connect your NVIDIA Jetson Nano to Nuvla. 
 
 ### Build the Application that uses GPU 
 

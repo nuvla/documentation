@@ -4,6 +4,8 @@ title: Contributing
 nav_order: 6
 parent: v2
 has_children: true
+redirect_from:
+ - /nuvlabox/latest/contributing
 ---
 
 Contributing to NuvlaBox

@@ -5,6 +5,8 @@ nav_order: 1
 parent: Apps Deployment
 grand_parent: v2
 has_children: false
+redirect_from:
+ - /nuvlabox/latest/deploying-apps/first-app
 ---
 
 # Deploying your first NuvlaBox Application

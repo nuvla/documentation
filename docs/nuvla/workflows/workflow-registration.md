@@ -9,7 +9,7 @@ has_children: false
 
 # Registration and Commissioning Workflow
 
-This section describes the [NuvlaBox](/nuvlabox/nuvlabox.html) registration and commissioning workflow.
+This section describes the [NuvlaBox](/nuvlabox/latest) registration and commissioning workflow.
 
 ![nuvlabox-registration.png](/assets/img/nuvlabox-registration.png)
 
@@ -21,11 +21,11 @@ Depending on your end goal, several options are available for the installation o
 
 **1a. Manual installation**: good for small scale infrastructures
 
-Installation of the NuvlaBox Engine is performed by hand, from a dedicated bundle generated from Nuvla. See details [here](/nuvlabox/nuvlabox-engine/quickstart.html).
+Installation of the NuvlaBox Engine is performed by hand, from a dedicated bundle generated from Nuvla. See details [here](/nuvlabox/latest/nuvlabox-engine/quickstart.html).
 
 **1b. Automated installation**: good for industrialisation 
 
-A trigger installation script is embedded in the operating system of the edge device, in order to leverage a USB (or similar media) build from Nuvla. See details [here](/nuvlabox/nuvlabox-engine/quickstart.html#install-via-usb-stick)
+A trigger installation script is embedded in the operating system of the edge device, in order to leverage a USB (or similar media) build from Nuvla. See details [here](/nuvlabox/latest/nuvlabox-engine/quickstart.html#install-via-usb-stick)
 
 ---
 

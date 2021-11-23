@@ -5,13 +5,15 @@ nav_order: 1
 parent: Contributing
 grand_parent: v2
 has_children: false
+redirect_from:
+ - /nuvlabox/latest/contributing/agent-api
 ---
 
 Before you start contributing to the NuvlaBox software stack, you must be acquainted not only with the NB and NBE architectures and features, but also with the internal functionalities offered specifically for allowing the interaction between NBE micro-services.
 
 # The NBE Agent API
 
-As mentioned in the [NBE Architecture](/nuvlabox/nuvlabox-engine/architecture.html), the NBE Agent is one of the most critical components of the NB. 
+As mentioned in the [NBE Architecture](/nuvlabox/v2/nuvlabox-engine/architecture.html), the NBE Agent is one of the most critical components of the NB. 
 
 All outgoing communication to Nuvla pass through the `agent`. For that, it provides an internal REST API for other NBE micro-services to speak with when they need to reach out to Nuvla. 
 

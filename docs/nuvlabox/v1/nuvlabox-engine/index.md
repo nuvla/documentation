@@ -4,8 +4,6 @@ title: NuvlaBox Engine
 nav_order: 1
 parent: v1
 has_children: true
-redirect_from:
- - /nuvlabox/nuvlabox-engine/nuvlabox-engine
 old_version: true
 ---
 

@@ -4,6 +4,8 @@ title: Apps Deployment
 nav_order: 4
 parent: v2
 has_children: true
+redirect_from:
+ - /nuvlabox/latest/deploying
 ---
 
 Deployment of Applications on NuvlaBox

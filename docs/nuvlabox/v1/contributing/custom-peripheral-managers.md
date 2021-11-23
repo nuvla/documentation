@@ -36,7 +36,7 @@ Building a new NuvlaBox Peripheral Manager is quite simple. We have built a tran
 
 There are only **2 requirements** for having your microservice functioning correctly as a NuvlaBox Peripheral Manager:
 
- a. _Your microservice needs to be on the same Docker network as the [NuvlaBox Agent component](https://github.com/nuvlabox/agent). This is usually guaranteed when you deploy all components at once, as described in the [Installation Quickstart](/nuvlabox/nuvlabox-engine/quickstart.html)_
+ a. _Your microservice needs to be on the same Docker network as the [NuvlaBox Agent component](https://github.com/nuvlabox/agent). This is usually guaranteed when you deploy all components at once, as described in the [Installation Quickstart](/nuvlabox/v1/nuvlabox-engine/quickstart.html)_
  
  b. _Your code must manage the NuvlaBox peripheral devices through the management interface provided by the NuvlaBox Agent on port 80. The specification for this API can be found [here](https://github.com/nuvlabox/agent#manage-nuvlabox-peripherals)_
  
@@ -175,7 +175,7 @@ _docker-compose.mock.yml:_
 
 Finally, we can launch the custom NuvlaBox Peripheral Manager for Mock peripherals.
 
-Just add `-f docker-compose.mock.yml` to your NuvlaBox Engine installation command (as described in [NuvlaBox Installation](/nuvlabox/nuvlabox-engine/quickstart.html) and that's it!
+Just add `-f docker-compose.mock.yml` to your NuvlaBox Engine installation command (as described in [NuvlaBox Installation](/nuvlabox/v1/nuvlabox-engine/quickstart.html) and that's it!
 
 **NOTE**: if you want to deploy your custom NuvlaBox Peripheral Manager after the NuvlaBox Engine has been installed, then please make sure that your container runs within the same Docker network as the NuvlaBox Agent. To do so, check in which Docker network your NuvlaBox Agent is running, via `docker network ls` and `docker inspect <agent_container_id>`, and add that network to your peripheral manager container, via the Compose property `networks` (see [Docker Compose docs](https://docs.docker.com/compose/compose-file/#networks)).
 
