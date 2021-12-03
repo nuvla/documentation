@@ -18,3 +18,20 @@ Automated migrations are not currently supported. So even if it looks like your 
 </div>
 
 </details>
+
+---
+
+
+<details><summary><b>ERROR: Get https://registry-1.docker.io/v2/: net/http: request canceled while waiting for connection</b></summary>
+
+<div markdown="1">
+If you are getting this error while installing the NuvlaBox Engine:
+
+```bash
+ERROR: Get https://registry-1.docker.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+```
+
+then you might be experiencing some networking issues with your setup. Try restarting your Docker Daemon (e.g. `systemctl restart docker` on Ubuntu), or ultimately, restart your device. If none of these solutions work, have a look at this [thread](https://forums.docker.com/t/docker-pull-results-in-request-canceled-while-waiting-for-connection-client-timeout-exceeded-while-awaiting-headers/73064/27)
+</div>
+
+</details>
