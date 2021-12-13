@@ -52,4 +52,4 @@ The NBE requires the following ports to be opened:
 | 3636  | This port is used by the `system-manager` to publish the internal NB dashboard |
 | 5000 	| Used by the `compute-api` as the relay endpoint for Docker. Ingress must be allowed |
 | 5080  | This port is used by the `agent` to provide the internal REST API for other NB components to speak with, internally |
-| 1194  | (optional) UDP connections must be allowed on this port in case you'd like to remotely establish a tunnel to the edge device, via the VPN Client | 
+| 1194  | (optional) outgoing UDP connections to vpn.nuvlabox.com must be allowed on this port in case you'd like to remotely connect to the edge device, via the VPN Client | 

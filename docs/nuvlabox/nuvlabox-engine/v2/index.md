@@ -19,8 +19,9 @@ NOTE: you can check Nuvla's version number on the page's footer, or at the "abou
 
 
 | NBE Release 	| Nuvla Release 	|
-| :----:	| :----:	|
-| 2.1.0	| 2.2.25+ 	|
+| :----:	| :----:	  |
+| 2.1.1   | 2.2.25+   |
+| 2.1.0   | 2.2.25+ 	|
 | 2.0.6* 	| 2.2.25+ 	|
 | 2.0.5* 	| 2.2.24+ 	|
 | 2.0.4* 	| 2.2.24+ 	|
