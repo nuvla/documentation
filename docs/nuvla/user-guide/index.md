@@ -8,7 +8,7 @@ has_children: true
 
 # Nuvla - What is it?
 
-Nuvla is a secured edge-to-cloud (and back) management platform that enables near-data AI for a connected world.
+Nuvlaa is a secured edge-to-cloud (and back) management platform that enables near-data AI for a connected world.
 
 The container native platform supports all forms of infrastructure: public cloud, private cloud and bare metal infrastructures, as well as edge (with our NuvlaBox).
 

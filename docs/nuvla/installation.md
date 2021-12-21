@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Installation
-nav_order: 1
+nav_order: 12
 parent: Nuvla
 has_children: true
 permalink: /nuvla/installation
