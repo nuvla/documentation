@@ -2,10 +2,10 @@
 layout: page
 title: Installation
 nav_order: 12
-parent: Nuvla
+parent: Advanced Usage
 has_children: true
-permalink: /nuvla/installation
 ---
+
 
 The following diagram shows the main blocks of the Nuvla Architecture. 
 

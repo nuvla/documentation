@@ -3,7 +3,7 @@ layout: page
 title: Manage Data
 parent: Advanced Usage
 grand_parent: Nuvla
-nav_order: 1
+nav_order: 4
 permalink: /nuvla/advanced-usage/manage-data
 ---
 

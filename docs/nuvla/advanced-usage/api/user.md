@@ -1,7 +1,7 @@
 ---
 layout: page
 title: User
-nav_order: 2
+nav_order: 4
 parent: API
 has_children: false
 ---
@@ -32,3 +32,4 @@ The creation of a user with `email-password` template does not require a session
 
 The user will receive an email with a callback that he have to follow to activate his account. 
 After following the link, the state attribute of user document will transit from NEW to ACTIVE.
+

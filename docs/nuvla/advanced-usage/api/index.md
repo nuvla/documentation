@@ -1,10 +1,9 @@
 ---
 layout: page
 title: API
-parent: User Guide
+parent: Advanced Usage
 nav_order: 1
 has_children: true
-permalink: /nuvla/api
 ---
 
 # REST API
