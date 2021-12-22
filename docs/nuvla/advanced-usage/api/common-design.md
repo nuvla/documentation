@@ -71,11 +71,14 @@ Here are a few examples on how to construct the different HTTP requests:
   DATA     <JSON with the attribute name and value to be changed>
     ```
 
+    In case you want to delete existing attributes , add the attributes names in `select` parameter
+    and do not send these attributes in `DATA` request body.
+
  - **DELETE** a resource:
  
     `DELETE /api/<resource-name>/<resource-uuid>`
 
- - **SEARCH** on resources:
+ - **QUERY** on resources:
  
     `GET /api/<resource-name>?param=value&param=value`
 
