@@ -10,40 +10,63 @@ permalink: /nuvla/advanced-usage/manage-data
 Managing Data
 =============
 
-Services based on Amazon's S3 protocol for object storage are ubiquitous and have many advantages in terms of cost, scalability, and use of use. Unfortunately in a distributed environment, they also have a couple critical deficiencies: searching via stored metadata is inefficient and there are no facilities for federating S3 services from different providers.
+Services based on Amazon's S3 protocol for object storage are ubiquitous and
+have many advantages in terms of cost, scalability, and ease of use.
+Unfortunately in a distributed environment, they also have a couple critical
+deficiencies: 
+* searching via stored metadata is inefficient and 
+* there are no facilities for federating S3 services from different providers.
 
-The Nuvla data management model takes advantage of the positive aspects of S3, while providing global management of metadata for efficient search across providers.
+The Nuvla data management model takes advantage of the positive aspects of S3,
+while providing global management of metadata for efficient search across
+providers.
 
 
 ## WORM Model
 
-The data management model follows Write-Once, Read-Mostly (WORM) semantics.  This model:
+The data management model follows Write-Once, Read-Mostly (WORM) semantics. This
+model:
 
- - Optimises read access to data, simplifying access to the data via the underlying services and improving performance.
-   
- - Facilitates the replication of data objects, allowing "hot" data to be accessed efficiently on multiple providers.
+- Optimises read access to data, simplifying access to the data via the
+  underlying services and improving performance.
+- Facilitates the replication of data objects, allowing "hot" data to be
+  accessed efficiently on multiple providers.
+- Improves the reproducibility of data analyses by providing unique identifiers
+  for "versions" of data objects.
 
- - Improves the reproducibility of data analyses by providing unique identifiers for "versions" of data objects.
-
-Applications can also read data directly from other sources as necessary. For example, an application can read streamed data directly from a sensor, something common at the edge of the hybrid computing platform.
+Applications can also read data directly from other sources as necessary. For
+example, an application can read streamed data directly from a sensor, something
+common at the edge of the hybrid computing platform.
 
 Concretely, the implementation consists of three Nuvla resources:
 
- - `data-object`: This resource is a proxy for data stored in a bucket/object within S3 from a given provider.  This resource manages the lifecycle of an S3 object, allowing easy upload and download of the data.
+- `data-object`: This resource is a proxy for data stored in a bucket/object
+  within S3 from a given provider. This resource manages the lifecycle of an S3
+  object, allowing easy upload and download of the data.
+- `data-record`: This resource provides additional, user-specified metadata for
+  an object. This allows rich, domain-specific metadata to be attached to
+  objects and consequently, precise searching for relevant data objects.
+- `data-set`: This resources defines *dynamic* collections of `data-object`
+  and/or `data-record` resources via filters. These can be defined by
+  administrators, managers, or users.
 
- - `data-record`: This resource provides additional, user-specified metadata for an object.  This allows rich, domain-specific metadata to be attached to objects and consequently, precise searching for relevant data objects.
-
- - `data-set`: This resources defines *dynamic* collections of `data-object` and/or `data-record` resources via filters. These can be defined by administrators, managers, or users.
-
-Together, these provide a flexible data management framework, applicable to a wide range of use cases. The usual (simplified) workflow consists of 1) creating a `data-object` (and implicitly the S3 object), 2) optionally adding rich metadata in a `data-record` object, and 3) finding (and using) the `data-object` resources included in a `data-set`.
+Together, these provide a flexible data management framework, applicable to a
+wide range of use cases. The usual (simplified) workflow consists of 1) creating
+a `data-object` (and implicitly the S3 object), 2) optionally adding rich
+metadata in a `data-record` object, and 3) finding (and using) the `data-object`
+resources included in a `data-set`. The "using" element of the `data-object` in
+the last step is facilitated by Nuvla in the form of binding of the data types
+to the user applications that are capable of processing the data. 
 
 ## Data-Object Resources
 
-The `data-object` resource allows users to create S3 objects on service providers and to store simple metadata concerning those objects.
+The `data-object` resource allows users to create S3 objects on service
+providers and to store simple metadata concerning those objects.
 
 ### Creating
 
-The following diagram provides an overview of the workflow for creating a `data-object` resource.
+The following diagram provides an overview of the workflow for creating
+a `data-object` resource.
 
 ![Workflow to Create Data-Object Resource](/assets/img/data-object-create.png)
 
@@ -57,11 +80,14 @@ The workflow consists of the following steps:
 
 4. Mark object as “ready” (and read-only) via the “ready” action.
 
-Note that the bucket that will contain the data **must already exist**. (Future versions will create the bucket automatically for you.) The object will be created when you upload the data to S3.
+Note: if bucket does not exist it will be created as part of step 1. The object
+on S3 will be created when you explicitly upload the data to S3 in step 3.
 
 ### Reading
 
-The data can be consumed by others via the "download" action only when the object has been marked as "ready".  When the object is "ready" the object data can no longer be modified.
+The data can be consumed by others via the "download" action only when the
+object has been marked as "ready". When the object is "ready" the object data
+can no longer be modified.
 
 ![Workflow to Read Data-Object Resource](/assets/img/data-object-read.png)
 
@@ -71,7 +97,10 @@ The workflow consists of the following steps:
 
 2. Use pre-signed download URL to download object contents from S3.
 
-Note that only the pre-signed URL is generated by the Nuvla server. The heavyweight access to the data itself passes directly between the client and the provider's S3. This ensures that the data transfer occurs uses the highest possible bandwidth.
+Note that only the pre-signed URL is generated by the Nuvla server. The
+heavyweight access to the data itself happens directly between the client and
+the provider's S3. This ensures that the data transfer uses the highest possible
+bandwidth.
 
 ### Deleting
 
@@ -83,28 +112,24 @@ The workflow consists of the following steps:
 
 1. Request to delete the data-object resource via the HTTP DELETE request.
 
-2. Server verifies access and deletes object from S3.
+2. Server verifies access and deletes the object from S3.
 
 3. Server also deletes the bucket if it is empty.
 
-Once the object is deleted, it is no longer accessible either through Nuvla or the underlying S3. 
-
+Once the object is deleted, it is no longer accessible either through Nuvla or
+the underlying S3.
 
 ## Data-Record Resources
 
-.......
-
-The `data-record` resources provide rich metadata for data objects,
-either created through `data-object` resources in Nuvla or
-externally.
+The `data-record` resources provide rich metadata for data objects, either
+created through `data-object` resources in Nuvla or externally.
 
 These resources are simply JSON documents that are searched, created,
 updated, and deleted via the standard SCRUD patterns of the API.
 
 Aside from a small set of predefined keys, the schema for the
-`data-record` resources is open, allowing users, managers, and
-administrators to attach their own domain-specific metadata to a data
-object.
+`data-record` resources is open, allowing users, managers, and administrators to
+attach their own domain-specific metadata to a data object.
 
 An example `data-record` resource looks like the following:
 
@@ -144,7 +169,7 @@ An example `data-record` resource looks like the following:
 > attributes avoids collisions between domains. Only the Nuvla
 > administrator can define these prefixes.
 
-> **NOTE**: It is strongly recommended to provide a `data-record-key`
+> **NOTE**: It is strongly recommended providing a `data-record-key`
 > resource for each domain-specific key. These resources provide
 > semantic information about the key to help humans provide the right
 > information.
