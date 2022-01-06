@@ -63,6 +63,17 @@ The double configuration files are required to allow the content to be
 served locally and also on GitHub pages without build errors in either
 place.
 
+When running on Apple M1 chip, the following error can appear
+
+```shell
+... (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e')) ...
+```
+
+To remediate this issue, prepend `arch -arch x86_64` to the `bundle` command:
+```shell
+arch -arch x86_64 bundle exec jekyll serve <options>
+```
+
 In principle, the `--watch` option could be replaced with
 `--livereload`, which would then automatically reload the browser.
 Unfortunately, this fails with a link error on Mac OS.  If you find a
