@@ -25,6 +25,7 @@ permalink: /nuvla/api
       + [Create minimal data record](#create-minimal-data-record)
       + [Create with basic metadata](#create-with-basic-metadata)
       + [Create namespaced data record](#create-namespaced-data-record)
+      + [Search data records by POLYGON](#search-data-records-by-polygon)
     + [data-record-key-prefix](#data-record-key-prefix)
       + [Create data record key prefix](#create-data-record-key-prefix)
     + [data-record-key](#data-record-key)
@@ -367,6 +368,44 @@ type (like string, boolean etc.). The workaround is to create a differently name
 attribute and use the value of the new required type.
 E.g.: `{"life:meaning_monty_python": "Well, it's nothing very special."}`
 
+##### Search data records by POLYGON
+
+When data records contain `geometry` attribute, it's possible to search the
+records
+using [Well-Known Text (WKT)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)
+geometry query.
+
+For example, to find all the data records (defined as Polygon, MultiPolygon or
+Point in `geometry` attribute) which are either inside or are touching a certain
+geographical area the following `geometry intersects 'POLYGON ((...))'` query
+can be used
+
+`geometry intersects 'POLYGON ((-0.4672 51.7731, 0.4489 51.8135, 0.3508 51.3666, -0.4593 51.3325, -0.4672 51.7731))'`
+
+{% include request_snippet.md file='api/data-record-basic.sh' actions='PUT' endpoint='/api/data-record' %}
+
+{% include code_snippet.md file='api/data-record-geo-search.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-record-geo-search-response.md' %}
+
+**NOTE:** The POLYGON in the query must be closed (i.e., its last point must be
+equal to the first one). The POLYGON must contain minimum three points. 
+
+Coordinates for geometry points can be 2D (x, y) or 3D (x, y, z), which
+translates into the geographical points `[longitude, latitude[, altitude]]`.
+
+The `longitude` must be in the range -180:180, and `latitude` -90:90.
+
+The following query operations are defined:
+
+- _intersects_: return data records whose geometry attribute (point or polygon)
+  intersects the query geometry.
+- _disjoint_: return data records whose geometry attribute (point or polygon)
+  nothing in common with the query geometry.
+- _within_: return data records whose geometry attribute (point or polygon) is
+  within the query geometry.
+- _contains_: return data records whose geometry attribute (point or polygon)
+  contains the query geometry.
 
 ### data-record-key-prefix
 
