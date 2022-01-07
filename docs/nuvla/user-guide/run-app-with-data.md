@@ -18,7 +18,7 @@ permalink: /nuvla/data-app
 
 ## Data set
 
-To run an application with data go to [Nuvla data page](https://nuvla.io/ui/data).
+To run an application with data, go to [Nuvla data page](https://nuvla.io/ui/data).
 
 ### Select data
 
@@ -47,7 +47,7 @@ Click configure button (2) or launch application directly (3) when you know that
 
 When you click configure, a deployment modal will appear with an extra menu named `data` (1). This menu show you how many data-records your application is going to process (2). Select the infrastructure service to start application on (3) and accept the application license (4). Click launch button (5).
 
-You will be redirected to applicaton page.
+You will be redirected to application page.
 
 
 ## Data record
@@ -61,16 +61,16 @@ that support the `content-type`, you can create a new one and select the support
 
 ![Data Record Tab](/assets/img/data-record.png)
 
-You can than go to the data page and then navigate to data record tab (1). 
-Filter data records by using timestamp filter (2)(3), or more advanced filtering by using the filter input field (4), or the map filter to select a region of interest (5).
+You can then go to the data page and then navigate to data record tab (1). 
+Filter data records by using the timestamp filter (2)(3), or more advanced filtering by using the filter input field (4), or the map filter to select a region of interest (5).
 
 ![Data Record Tab Bottom](/assets/img/data-record-bottom.png)
 
 Select data record you would like to process by clicking on data-record card checkbox (1).
 
-If you are happy with the created filter and, you always have the possiblity to create a data set out of it by clicking `Create data set` button (2) at the bottom of the page. The data-set will not include the timestamp filter, but all other filters and selected data-records.
+If you are happy with the created filter and, you always have the possibility to create a data set out of it by clicking `Create data set` button (2) at the bottom of the page. The data-set will not include the timestamp filter, but all other filters and selected data-records.
 
-To run an application with selected data click process button (3).
+To run an application with selected data, click process button (3).
 
-You will be redirected to applicaton page.
+You will be redirected to application page.
 
