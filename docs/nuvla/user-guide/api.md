@@ -33,6 +33,7 @@ permalink: /nuvla/api
     + [session](#session)
       + [Login with username and password](#login-with-username-and-password)
       + [Login with API keys](#login-with-api-keys)
+      + [Switch group](#switch-group)
     + [user](#user)
       + [Create a user with an email and a password](#create-a-user-with-an-email-and-a-password)
     + [voucher](#voucher)
@@ -358,7 +359,7 @@ _Examples_
 
 ### session
 
-{% include request_snippet.md file='api/credential-amazonec2.sh' actions='POST GET DELETE' endpoint='/api/session/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+{% include request_snippet.md actions='POST GET DELETE' endpoint='/api/session/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
 
 The `session` resource allows you to use your credentials for authenticating with Nuvla.
 
@@ -370,20 +371,49 @@ _Examples_
 
 ##### Login with username and password 
 
-{% include request_snippet.md file='api/session.sh' actions='POST' endpoint='/api/session' %}
+{% include request_snippet.md actions='POST' endpoint='/api/session' %}
 
-{% include code_snippet.md file='api/login.sh' language='shell' %}
+{% include code_snippet.md file='api/login-username.sh' language='shell' %}
 
-{% include response_snippet.md file='api/login-response.md' %}
+{% include response_snippet.md file='api/login-username-response.md' %}
 
 
 ##### Login with API keys
  
-{% include request_snippet.md file='api/session.sh' actions='POST' endpoint='/api/session' %}
+{% include request_snippet.md actions='POST' endpoint='/api/session' %}
 
-{% include code_snippet.md file='api/login_apikey.sh' language='shell' %}
+{% include code_snippet.md file='api/login-apikey.sh' language='shell' %}
 
-{% include response_snippet.md file='api/login-response.md' %}
+{% include response_snippet.md file='api/login-apikey-response.md' %}
+
+
+##### Switch group
+
+Groups in Nuvla is the way of simplifying management of
+the [Access Control](https://docs.nuvla.io/nuvla/advanced-usage/access-control)
+to the resources.
+
+When users authenticate with Nuvla, their session contains a list of associated
+principals; this list is sometimes referred to as the user’s “claims”. There is
+always an "active claim" that is used to validate user's access rights to the
+resources and operations on them.
+
+The active claim can be a group in the form `group/<group name>`.
+
+To act on a resource on behalf of a group user is part of, user needs to
+explicitly set the group as the "active claim" using the following call 
+(provided current session ID is `session/1c490310-402f-4968-9d66-b9d3838d2286`
+and the group name is `acme`).
+
+{% include request_snippet.md actions='POST' endpoint='/api/session/uuid/switch-group' %}
+
+{% include code_snippet.md file='api/session-switch-group.sh' language='shell' %}
+
+{% include response_snippet.md file='api/session-switch-group-response.md' %}
+
+**NOTE:** `-b cookies` contains the current session token and `-c cookies` is
+the resulting updated session token containing `group/acme` as the active claim.
+
 
 ### user
 
