@@ -1,8 +1,8 @@
 curl -XPOST https://nuvla.io/api/data-object -H 'content-type:application/json' -b cookies -d '''
 {
+    "name": "Speed Camera ABC-123",
+    "description": "Speed Camera ABC-123 Configuration",
     "template": {
-        "name": "Speed Camera ABC-123",
-        "description": "Speed Camera ABC-123 Configuration",
         "bucket": "traffic-infra",
         "object": "speed-cameras/ABC-123.config",
         "content-type": "plain/text",
