@@ -1,5 +1,5 @@
 # Initialize a deployment by creating an instance of module/<uuid>
-ID=$(curl -X POST -s https://nuvla.io/api/deployment -H 'content-type: application/json' -b ~/cookies -d '''
+ID=$(curl -X POST -s https://nuvla.io/api/deployment -H 'content-type: application/json' -b cookies -d '''
     {
         "module": {
             "href": "module/<uuid>"

@@ -21,6 +21,28 @@ permalink: /nuvla/api
       + [Infrastructure Service Kubernetes HTTP API credential](#infrastructure-service-kubernetes-http-api-credential)
     + [deployment](#deployment)
       + [Start/Stop an application](#startstop-an-application)
+    + [data-record](#data-record)
+      + [Create minimal data record](#create-minimal-data-record)
+      + [Create with basic metadata](#create-with-basic-metadata)
+      + [Create namespaced data record](#create-namespaced-data-record)
+      + [Search data records by POLYGON](#search-data-records-by-polygon)
+    + [data-record-key-prefix](#data-record-key-prefix)
+      + [Create data record key prefix](#create-data-record-key-prefix)
+    + [data-record-key](#data-record-key)
+      + [Create data record key](#create-data-record-key)
+    + [data-object](#data-object)
+      + [Creating](#creating)
+        + [Create data object](#create-data-object)
+        + [Request pre-signed upload URL](#request-pre-signed-upload-url)
+        + [Upload data object to S3](#upload-data-object-to-s3)
+        + [Mark object as READY](#mark-object-as-ready)
+      + [Downloading](#downloading)
+        + [Request pre-signed download URL](#request-pre-signed-download-url)
+        + [Download data object from S3](#download-data-object-from-s3)
+      + [Deleting](#deleting)
+        + [Delete data object](#delete-data-object)
+    + [data-set](#data-set)
+      + [Create data set](#create-data-set)
     + [evidence-record](#evidence-record)
       + [Create an evidence record](#create-an-evidence-record)
     + [infrastructure-service](#infrastructure-service)
@@ -246,6 +268,356 @@ _Examples_
 {% include code_snippet.md file='api/credential-kubernetes.sh' language='shell' %}
 
 {% include response_snippet.md file='api/credential-kubernetes-response.md' %}
+
+
+### data-record
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST GET PUT DELETE' endpoint='/api/data-record/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+The `data-record` resource lets user to provide user-specified metadata for
+describing any types of data located on any storage. This allows rich,
+domain-specific metadata to be attached to any of the user data and
+consequently, precise searching for the relevant data. In essence, the
+collection of the data records constitutes a metadata catalogue. The
+immediate usage of the data records is with `data-object`.
+
+`infrastructure-service` is the only required attribute.
+
+* _**infrastructure-service**_: reference to [infrastructure-service](#infrastructure-service) resource
+
+The optional attributes are
+
+* _**bucket**_: S3 bucket name
+* _**object**_: object path
+* _**bytes**_: number of bytes in the data
+* _**md5sum**_: MD5 checksum of the data
+* _**content-type**_: format (mimetype) of the data
+* _**geometry**_: Point or area(s) associated with data. Defined as map
+  with `type` and `coordinates` attributes. The value of `type` is one
+  of: `Polygon`, `MultiPolygon`, or `Point` as defined for GeoJSON in
+  [https://datatracker.ietf.org/doc/html/rfc7946#section-3.1](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1)
+  The `coordinates` is a list of closed polygons
+  as `[[[longitude, latitude[, altitude]], ...], ...]` when `type` is `Polygon`
+  or `MultiPolygon`, and `[longitude, latitude[, altitude]]` when `type`
+  is `Point`.
+* _**location**_: **Deprecated**, instead use _**geometry**_
+  with `{ "type": "Point",
+  "coordinates": [longitude, latitude[, altitude]]}`.
+  Location `[longitude, latitude[, altitude]]` associated with the data.
+* _**mount**_: options to mount data on container
+
+Apart from the above-listed pre-defined required and optional attributes, users
+can define their own namespaced attributes. Although the schema is open, all the
+key prefixes must be defined as
+`data-record-key-prefix` resources. Having prefixed attributes avoids collisions
+between domains. For details
+see [Create namespaced data record](#create-namespaced-data-record) sub-section
+under the _Examples_ below
+and [`data-record-key-prefix`](#data-record-key-prefix)
+section. In turn, the [`data-record-key`](#data-record-key) resource is there to
+provide human-readable description (documentation) of the key prefixes to help
+to enforce the correct semantics on the data provided in the attributes.
+
+---
+_Examples_
+
+
+##### Create minimal data record
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST' endpoint='/api/data-record' %}
+
+{% include code_snippet.md file='api/data-record-minimal.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-record-minimal-response.md' %}
+
+##### Create with basic metadata
+
+{% include request_snippet.md file='api/data-record-basic.sh' actions='POST' endpoint='/api/data-record' %}
+
+{% include code_snippet.md file='api/data-record-basic.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-record-basic-response.md' %}
+
+The example above registers an S3
+object `/satellite-images/antarctica-kemp-land.png`
+stored on `infrastructure-service/9d5ab25e-7351-48a5-a149-8021c71bcadd`.
+Providing `content-type` allows for dynamic selection of applications that can be
+used to open this object. The `geometry/Polygon` and `geometry/coordinates` allow 
+geographically based filtering to discover the object. 
+
+#### Create namespaced data record
+
+Prerequisite: in the example below `traffic` prefix key of
+type `data-record-key-prefix` must exist.
+See [`data-record-key-prefix`](#data-record-key-prefix) section for details on
+how to create unique key prefixes.
+
+{% include request_snippet.md file='api/data-record-basic.sh' actions='POST' endpoint='/api/data-record' %}
+
+{% include code_snippet.md file='api/data-record-namespaced.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-record-namespaced-response.md' %}
+
+This example showcases the openness of the data record schema giving users an
+ability to define custom attributes of any type for their data records.
+
+**NOTE:** once a value of a certain type for an attribute was provided, it will
+not be possible to change the type of the value. E.g.: after the integer value
+was used `{"life:meaning": 42}` it will not be possible to provide any other
+type (like string, boolean etc.). The workaround is to create a differently named
+attribute and use the value of the new required type.
+E.g.: `{"life:meaning_monty_python": "Well, it's nothing very special."}`
+
+##### Search data records by POLYGON
+
+When data records contain `geometry` attribute, it's possible to search the
+records
+using [Well-Known Text (WKT)](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)
+geometry query.
+
+For example, to find all the data records (defined as Polygon, MultiPolygon or
+Point in `geometry` attribute) which are either inside or are touching a certain
+geographical area the following `geometry intersects 'POLYGON ((...))'` query
+can be used
+
+`geometry intersects 'POLYGON ((-0.4672 51.7731, 0.4489 51.8135, 0.3508 51.3666, -0.4593 51.3325, -0.4672 51.7731))'`
+
+{% include request_snippet.md file='api/data-record-basic.sh' actions='PUT' endpoint='/api/data-record' %}
+
+{% include code_snippet.md file='api/data-record-geo-search.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-record-geo-search-response.md' %}
+
+**NOTE:** The POLYGON in the query must be closed (i.e., its last point must be
+equal to the first one). The POLYGON must contain minimum three points. 
+
+Coordinates for geometry points can be 2D (x, y) or 3D (x, y, z), which
+translates into the geographical points `[longitude, latitude[, altitude]]`.
+
+The `longitude` must be in the range -180:180, and `latitude` -90:90.
+
+The following query operations are defined:
+
+- _intersects_: return data records whose geometry attribute (point or polygon)
+  intersects the query geometry.
+- _disjoint_: return data records whose geometry attribute (point or polygon)
+  nothing in common with the query geometry.
+- _within_: return data records whose geometry attribute (point or polygon) is
+  within the query geometry.
+- _contains_: return data records whose geometry attribute (point or polygon)
+  contains the query geometry.
+
+### data-record-key-prefix
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST GET PUT DELETE' endpoint='/api/data-record-key-prefix/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+Required attributes
+
+* _**prefix**_: unique namespace prefix for collections of data record keys
+* _**uri**_: globally-unique URI associated with prefix
+
+**WARNING:** Only the Nuvla administrator can define the prefixes. Please make a
+request to _support [ at ] sixsq.com_.
+
+See [`data-record-key`](#data-record-key) resource that allows to define and
+describe the corresponding attributes that are expected to be provided under the
+user-defined namespace (key prefix).
+
+---
+_Examples_
+
+##### Create data record key prefix
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST' endpoint='/api/data-record-key-prefix' %}
+
+{% include code_snippet.md file='api/data-record-key-prefix.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-record-key-prefix-response.md' %}
+
+
+### data-record-key
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST GET PUT DELETE' endpoint='/api/data-record-key/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+Required attributes
+
+* _**name**_: short, human-readable name for resource
+* _**description**_: human-readable description of resource
+* _**prefix**_: namespace prefix for data record attribute
+* _**key**_: a unique name of attribute within prefix namespace
+* _**subtype**_: subtype of resource (keyword consisting of lowercased words separated by dashes)
+
+**NOTE:** It is strongly recommended providing a `data-record-key` resource for
+each domain-specific (namespaced) attribute of the `data-record`.
+The `data-record-key` resources provide semantic information about the attributes
+to help humans provide the right information.
+
+---
+_Example_
+
+##### Create data record key
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST' endpoint='/api/data-record-key' %}
+
+{% include code_snippet.md file='api/data-record-key.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-record-key-response.md' %}
+
+
+### data-object
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST GET PUT DELETE' endpoint='/api/data-object/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+This resource is a proxy for data stored in a bucket/object within S3 from a
+given provider. This resource manages the lifecycle of an S3 object, allowing
+easy upload and download of the data.
+
+Prerequisites: existing [credential of type S3](#infrastructure-service-s3-credential).
+
+To upload/register/download/delete an S3 object with the help of Nuvla API see
+the workflow steps in the _Examples_ below.
+
+---
+_Examples_
+
+#### Creating
+
+The full workflow consists of the following steps:
+
+1. Create data-object resource by providing bucket, object, and S3 credential.
+2. Request pre-signed upload URL via “upload” action.
+3. Use pre-signed upload URL to upload object contents to S3.
+4. Mark object as “ready” (and read-only) via the “ready” action.
+
+##### Create data object
+
+`data-object` is a templated resource with two possible subtypes (`generic`
+or `public`). The required attributes under the `template` key are
+
+* _**bucket**_: name of the S3 bucket
+* _**object**_: name of the S3 object
+* _**credential**_: [credential of type S3](#infrastructure-service-s3-credential) that provides access to the S3 object
+* _**subtype**_: subtype of the `data-object` (`generic` or `public`)
+
+Optional attributes under `template` key:
+
+* _**name**_: object name
+* _**description**_: object extended description
+* _**tags**_: list of tags associated with the object
+* _**md5sum**_: MD5 checksum of the data
+
+This request creates and returns the ID of the `data-object` resource. 
+The returned data object ID must be used in all the successive operations.
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST' endpoint='/api/data-object' %}
+
+{% include code_snippet.md file='api/data-object-create.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-object-create-response.md' %}
+
+##### Request pre-signed upload URL
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST' endpoint='/api/data-object/uuid/upload' %}
+
+{% include code_snippet.md file='api/data-object-presigned-upload-url.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-object-presigned-upload-url-response.md' %}
+
+`https://sos-ch-gva-2.exo.io` in the `url` of the above example response corresponds to
+the URL of the S3 `infrastructure-service` behind the provided S3 `credential`.
+
+##### Upload data object to S3
+
+Provided the user file is named `ABC-123.config` and contains text data, the
+uploading of the file using the S3 one-time pre-signed upload URL will look as follows.
+Note: this is the direct upload of the file to the S3 using the one-time
+pre-signed URL obtained in the previous step.
+
+{% include code_snippet.md file='api/data-object-upload.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-object-upload-response.md' %}
+
+##### Mark object as READY
+
+After the successful uploading of the file to S3, the
+corresponding `data-object` must be marked as `READY`. After that the object is
+ready to be used.
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST' endpoint='/api/data-object/uuid/ready' %}
+
+{% include code_snippet.md file='api/data-object-ready.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-object-ready-response.md' %}
+
+#### Downloading
+
+Downloading of object is a two-step workflow.
+
+1. Request pre-signed download URL via the “download” action.
+2. Use pre-signed download URL to download object contents from S3.
+
+##### Request pre-signed download URL
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST' endpoint='/api/data-object/uuid/download' %}
+
+{% include code_snippet.md file='api/data-object-presigned-download-url.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-object-presigned-download-url-response.md' %}
+
+`https://sos-ch-gva-2.exo.io` in the `url` of the above example response
+corresponds to the URL of the S3 `infrastructure-service` behind the provided
+S3 `credential`.
+
+##### Download data object from S3
+
+Provided desired local file name is `ABC-123.config`, downloading of the
+file using the S3 one-time pre-signed download URL will look as follows.
+
+{% include code_snippet.md file='api/data-object-download.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-object-download-response.md' %}
+
+Note: this is the direct download of the file from the S3 using the one-time
+pre-signed URL obtained in the previous step.
+
+#### Deleting
+
+##### Delete data object
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='DELETE' endpoint='/api/data-object/uuid' %}
+
+{% include code_snippet.md file='api/data-object-delete.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-object-delete-response.md' %}
+
+As the result of the call:
+
+1. Server verifies access and deletes the object from S3.
+2. Server also deletes the bucket if it is empty.
+
+### data-set
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST GET PUT DELETE' endpoint='/api/data-set/uuid' maincolor='none' prefix='allowed:' lettercolor='black' %}
+
+This resource defines dynamic collections of `data-object` and/or `data-record`
+resources via filters. 
+
+The resource doesn't have required attributes. The optional attributes are:
+
+* _**data-object-filter**_: filter for data-object resources associated with this data set
+* _**data-record-filter**_: filter for data-record resources associated with this data set
+* _**module-filter**_: filter for applications associated with this data set
+
+---
+_Examples_
+
+##### Create data set
+
+{% include request_snippet.md file='api/data-record-minimal.sh' actions='POST' endpoint='/api/data-set' %}
+
+{% include code_snippet.md file='api/data-set-create.sh' language='shell' %}
+
+{% include response_snippet.md file='api/data-set-create-response.md' %}
 
 
 ### deployment
