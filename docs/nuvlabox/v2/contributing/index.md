@@ -1,7 +1,7 @@
 ---
 layout: nuvlabox
 title: Contributing
-nav_order: 6
+nav_order: 7
 parent: v2
 has_children: true
 redirect_from:

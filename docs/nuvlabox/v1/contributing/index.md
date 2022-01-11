@@ -1,7 +1,7 @@
 ---
 layout: nuvlabox
 title: Contributing
-nav_order: 6
+nav_order: 7
 parent: v1
 has_children: true
 permalink: /nuvlabox/nuvlabox-contributing
