@@ -90,3 +90,72 @@ Click on this actions and once you've enabled it, you'll see a new notification 
 
 ## Managing the NuvlaBox host via Playbooks
 
+The NuvlaBox Playbooks (aka the `nuvlabox-playbook` resource) is a new API resource which lets users define scripts to be executed in their NuvlaBox device through the new host-level management feature. As you might have noticed from the explanations above, the host-level management feature roughly translates into a system-wide cronjob that you must setup in your edge device. This cronjob consists of a single-line instruction which uses your NuvlaBox identity to ask [Nuvla.io](https://nuvla.io) to assemble all the playbooks associated with your NuvlaBox. The cronjob then runs them one by one, sending their respective output back to [Nuvla.io](https://nuvla.io).
+
+NuvlaBox Playbooks have the following structure:
+
+```json
+{
+  "name": str,                    # [optional] name of your playbook
+  "description": str,             # [optional] playbook description
+  "type": MANAGEMENT|EMERGENCY,   # type of playbook
+  "parent": nuvlabox/uuid,        # ID of the NuvlaBox where this playbook must run
+  "enabled": bool,                # whether the playbook should run or not
+  "run": str,                     # shell script to be executed on the edge device
+}
+```
+
+You can have **two** types of Playbooks:
+ - _MANAGEMENT_: these are playbooks that contains management scripts. When enabled, these playbooks are executed on every host-level management cycle. We recommend you use these playbooks for doing periodic maintenance and monitoring of your edge device (i.e. checking the health of certain OS services, installing/upgrading OS packages, etc.),
+ - _EMERGENCY_: these are **one-off** playbooks, that are only executed on-demand and should only be used to perform emergency repairs or recover from a disaster. Once enabled, these playbooks become available for execution on the edge device, and once they are requested by the edge device, they are automatically disabled by [Nuvla.io](https://nuvla.io) (thus their one-off nature).
+
+## Creating NuvlaBox Playbooks
+
+From [Nuvla.io](https://nuvla.io), navigate to your NuvlaBox page, and select the "Playbooks" tab:
+
+![pb-tab](/assets/img/playbooks-tab.png)
+
+To create a new playbook, click on the "plus" button:
+
+![pb-add](/assets/img/add-playbook.png)
+
+Once created, your playbooks will then appear in your NuvlaBox's Playbook tab:
+
+![pb-list](/assets/img/list-playbooks.png)
+
+And you can edit their scripts and enabled state directly from the NuvlaBox page.
+
+## Monitoring the NuvlaBox Playbooks's output
+
+Once created and enabled, your playbooks will become available for execution. Therefore, the next time your host-level management cycle occurs, the playbook is executed on the edge device and its output will automatically be sent to [Nuvla.io](https://nuvla.io), and will appear under your NuvlaBox page.
+
+## Enable an Emergency repair
+
+In the unlikely event your NuvlaBox becomes unresponsive or unreachable, you might want to run a recovery script. This is what Emergency Playbooks are for. To enable an emergency repair, you must first have created one or more playbooks of the type "EMERGENCY".
+
+Then, from your NuvlaBox page, click on the "Enable emergency playbooks" action (on the menu bar):
+
+![pb-enable-em](/assets/img/pb-enable-em.png)
+
+And choose the emergency playbook(s) you want to enable. 
+
+Then simply wait for the next host-level management cycle. Your emergency playbooks will be picked by your NuvlaBox edge device (instead of the regular "MANAGEMENT" ones), executed, and then disabled again.
+
+## Bonus Playbook tip
+
+As a user, you don't really need to use this NuvlaBox operation, but in case you're interested, you can inspect the actual scripts your host-level management cronjob is executing on every cycle, by calling the action "Assemble playbooks" from your NuvlaBox page:
+
+![assemble-pbs-button](/assets/img/assemble-playbooks-button.png)
+
+![assemble-pbs-output](/assets/img/assemble-playbooks-output.png)
+
+This way you can keep tabs on what your host-level management mechanism is doing, and you can even reproduce it manually in case you want to debug your own playbook scripts.
+
+**NOTE:** remember not to call this `assemble-playbooks` operation when you've enabled the emergency playbooks, as it will cause said playbooks to be disabled after the operation succeeds.
+
+
+
+
+
+
+
