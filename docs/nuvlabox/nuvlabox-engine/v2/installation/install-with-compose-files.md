@@ -8,6 +8,8 @@ grand_parent: v2
 
 # Install via Compose Files bundle
 
+The simplest way to install the NuvlaBox Engine software on an edge device is to follow this installation method.  If you are looking for an automated and/or scalable method, please visit the [USB Stick page](/nuvlabox/nuvlabox-engine/v2/installation/install-with-usb-stick/).
+
 1. login into [nuvla.io](https://nuvla.io)
 2. from the [edge panel](https://nuvla.io/ui/edge), add a new `nuvlabox`, and either
     1. download the compose files from Nuvla, or
@@ -40,15 +42,15 @@ In an edge environment, halting your devices is sometimes necessary. Halting **d
 
 ### Upgrade/Downgrade the NuvlaBox
 
-**NOTE**: automated migrations are not currently supported. If you must upgrade from a NuvlaBox Engine v1 to v2, or vice versa, please contact us.
+**NOTE**: automated migrations are not currently supported accros major versions (e.g. v1 to v2). If you must upgrade from a NuvlaBox Engine v1 to v2, or vice versa, please contact us.
 
 #### From Nuvla
 
-The NBE can be updated directly from Nuvla. On the user interface, in each NuvlaBox page, you'll find an action called "Update NuvlaBox" (as depicted below)
+The NBE can be updated directly from Nuvla. On the user interface, in each NuvlaBox panel, you'll find an action called "Update NuvlaBox" (as depicted below)
 
 ![nb-update-nuvla.png](/assets/img/nb-update-nuvla.png)
 
-By clicking on it, you can specify which version of the NuvlaBox Engine is the target for the release. Please note that this is an asynchronous action that can take a few minutes, depending on your edge device's network.
+By clicking on it, you can specify which version of the NuvlaBox Engine you want to upgrade/downgrade to. Please note that this is an asynchronous action that can take a few minutes, depending on your edge device's network.
 
 ---
 
@@ -85,7 +87,7 @@ vpn-client                                ./openvpn-client.sh      Up
 
   This is valid for any NuvlaBox Engine component
 
-- **Upgrade/Downgrade the entire NuvlaBox Engine installation**: let's say we want to upgrade our existing NuvlaBox Engine installation to the latest release in [GitHub](https://github.com/nuvlabox/deployment/releases). Then:
+- **Upgrade/Downgrade the entire NuvlaBox Engine installation**: let's say we want to upgrade your existing NuvlaBox Engine installation to the latest release in [GitHub](https://github.com/nuvlabox/deployment/releases). Then:
     1. halt the NuvlaBox, as explained [above](#halt-the-nuvlabox)
     2. backup the Compose files from the project folder you are in into a different folder (just in case you need to rollback)
     3. download the Compose files from the [target release in GitHub](https://github.com/nuvlabox/deployment/releases)
@@ -100,4 +102,4 @@ vpn-client                                ./openvpn-client.sh      Up
 
 To completely and **permanently** uninstall the NuvlaBox from your edge device, simply find your original compose files in the edge device, and run `docker-compose -p nuvlabox down -v`. The `-v` will remove the NuvlaBox local data volume, so all of its data will be lost. 
 
-To re-install a new NuvlaBox from scratch in the same edge device, you'll need to go through the installation steps from above. If you have the API Key/Secret from the NuvlaBox you've just deleted, then you also have the choice to recover it, even from a different device, via the configuration variables `NUVLABOX_API_KEY` and `NUVLABOX_API_SECRET`. See the [NuvlaBox Engine configuration](/nuvlabox/nuvlabox-engine/v2/configuration/) for more details.
+To re-install a new NuvlaBox from scratch in the same edge device, you'll need to go through the installation from the start of this page. If you have the API Key/Secret from the NuvlaBox you've just deleted, then you also have the choice to recover it, even from a different device, via the configuration variables `NUVLABOX_API_KEY` and `NUVLABOX_API_SECRET`. See the [NuvlaBox Engine configuration](/nuvlabox/nuvlabox-engine/v2/configuration/) for more details.

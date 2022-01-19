@@ -14,7 +14,7 @@ redirect_from:
 <details><summary><b>Failed to downgrade my NuvlaBox Engine to v1</b></summary>
 
 <div markdown="1">
-Automated migrations are not currently supported. So even if it looks like your NuvlaBox Engine downgrade finished successfully, you'll soon realize, from Nuvla, that your NuvlaBox is not healthy. If you must downgrade from a NuvlaBox Engine v2 to v1, please contact us.
+Automated migrations across major versions (e.g. v1 to v2) are not currently supported. So even if it looks like your NuvlaBox Engine downgrade finished successfully, you'll soon realize, from Nuvla, that your NuvlaBox is not healthy. If you must downgrade from a NuvlaBox Engine v2 to v1, please contact us.
 </div>
 
 </details>

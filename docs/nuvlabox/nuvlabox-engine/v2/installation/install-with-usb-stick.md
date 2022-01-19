@@ -8,7 +8,7 @@ grand_parent: v2
 
 # Install via USB stick
 
-If your are looking to streamline the installation of the NuvlaBox Engine in your edge devices, then this is the best choice for you.
+If your are looking to streamline the installation of the NuvlaBox Engine in your edge devices, then this is probably the best choice for you.
 
 The advantages of this installation method are:
 - **NO** need for an external display
@@ -68,7 +68,7 @@ Just follow these steps:
 
    ![nuvlabox-install-usb](/assets/img/nuvlabox-add-usb.png)
 
-   With this method, a new API key credential is generated for you, and embedded into your USB stick. You can choose for how long this credentials should be valid. By default, this value is set for 30 days. After that, the credential expires and the corresponding USB stick becomes invalid.
+   With this method, a new API key credential is generated for you, and embedded into your USB stick. You can choose for how long this credential should be valid for. By default, this value is set for 30 days. After that, the credential expires and the corresponding USB stick becomes invalid.
 
 3. click `create` and wait. A new API key credential will be created and you'll be given a "trigger" file to download
 
@@ -88,7 +88,7 @@ Just follow these steps:
 
           ![rpi-nb-start](/assets/img/rpi-nb-start.gif)
 
-        - **HEARTBEAT GREEN LED** for 10 sec. This means the NuvlaBox Engine installation process has **finished** successfully
+        - **HEARTBEAT GREEN LED** for 10 sec. This means the NuvlaBox Engine installation process has **finished successfully**
 
           ![rpi-nb-success](/assets/img/rpi-nb-success.gif)
 
@@ -104,6 +104,8 @@ Just follow these steps:
 It is also possible to use the USB stick method to upgrade your NuvlaBox Engine installation.
 
 The procedure is the same as described [above](#procedure). If in Nuvla, you select a different NuvlaBox Engine version than the one you have already installed in your devices, then, when you plug the USB stick into the device, the NuvlaBox Auto-installer will upgrade all the outdated NuvlaBox Engine components, according to your desired version.
+
+Note that you can also upgrade NuvlaBoxes directly from Nuvla.
 
 
 ### Overwrite an existing installation

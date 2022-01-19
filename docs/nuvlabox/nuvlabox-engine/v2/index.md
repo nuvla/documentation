@@ -15,7 +15,7 @@ all NuvlaBox Engine versions are supported.
 
 When installing the NBE, please make sure the target release is supported by the Nuvla instance being used ([Nuvla.io](https://nuvla.io) by default).
 
-NOTE: you can check Nuvla's version number on the page's footer, or at the "about" page (eg. [Nuvla.io current version](https://nuvla.io/ui/about))
+NOTE: you can check Nuvla's version number on the page's footer, or on the "about" page (e.g. [Nuvla.io current version](https://nuvla.io/ui/about))
 
 
 | NBE Release 	| Nuvla Release 	|

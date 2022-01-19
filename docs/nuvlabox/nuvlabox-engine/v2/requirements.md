@@ -32,6 +32,9 @@ In order to install the NBE and ensure its smooth execution over time, your devi
 - 1GB of RAM
 - 2GB of free disk space
 
+If you are looking at an application with constrained hardware, especially in terms of memory size, please get in touch. Some components in the [NuvlaBox architecture](/nuvlabox/nuvlabox-engine/v2/architecture/) are optional and can be removed to save memory.  Of course it's a tradeoff.
+
+An remember that you should have enough memory to host the apps that will be running on the edge device. 
 
 ## Software Requirements
 
