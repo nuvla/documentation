@@ -5,7 +5,6 @@ nav_order: 6
 description: "Manage the NuvlaBox Edge Device separately from the NuvlaBox Engine"
 parent: v2
 has_children: false
-old_version: true
 ---
 
 # NuvlaBox Edge Device Host Management
