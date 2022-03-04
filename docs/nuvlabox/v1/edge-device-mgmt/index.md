@@ -11,11 +11,9 @@ old_version: true
 # NuvlaBox Edge Device Host Management
 
 
-Despite being the heart of the NuvlaBox, the NuvlaBox Engine has some limitations when it comes to having full privileges and management power over the underlying edge device. This is because this software is being provided to you as a set of containers, and is thus functioning under the umbrella of an existing container orchestration engine like Docker or Kubernetes. 
+The NuvlaBox Engine is designed to be reliable and resilient. However, since it is itself running as containerised micro-services, it is dependent on the underlying container technology, including the container orchestration engine.  This is why we created the NuvlaBox Edge Device Host Management feature.  This optional feature runs on the host operating system and provides a last resort ability to intervene on the edge device in case of issues.  It can also be used to maintain the underlying operating system if required.
 
-Since these container orchestration engines are critical dependencies for the execution of the NuvlaBox Engine, you should be able to tightly monitor and manage them remotely. But how can you perform a disruptive maintenance action (like an update or service restart) on them without jeopardizing an existing installation of the NuvlaBox Engine? What about being able to recover your NuvlaBox Engine in the unlikely event of a disaster where you've completely lost visibility and/or access to your NuvlaBox?
-
-Enters the NuvlaBox Host-level Management feature - a new optional feature of the NuvlaBox, which can be enabled at any time, for any NuvlaBox, offering device management redundancy through an additional management channel for your NuvlaBox Edge Device, which exists and sits outside the working environment of the NuvlaBox Engine.
+The NuvlaBox Host-level Management feature, can be enabled at any time, for any NuvlaBox, offering device management redundancy through an additional management channel for your NuvlaBox Edge Device, which exists and sits outside the working environment of the NuvlaBox Engine.
 
 
 ## Enabling host-level management
@@ -28,7 +26,7 @@ After enabling it, you'll be given a single-line instruction that you must copy 
 
 1. enable host-level management and obtain the single-line instruction from [Nuvla.io](https://nuvla.io), either during or after the NuvlaBox creation (see the details down below) 
 2. copy the given instruction
-3. log into your edge device, either as `root` or as the user used for installing the NuvlaBox Engine
+3. log into your edge device, either as `root` or as the user used to install the NuvlaBox Engine
 4. type `crontab -e` and press enter (you might be asked to choose an editor - in this example, we use `vim`)
 5. scroll to the end of the window, press `a` (if using `vim` mode) and in a new line, paste the copied instruction. You'll end up with something similar to this:
     
@@ -61,7 +59,7 @@ After enabling it, you'll be given a single-line instruction that you must copy 
 
 And you're done. Once you're NuvlaBox Engine has been installed and your NuvlaBox is activated in [Nuvla.io](https://nuvla.io), your instruction will start successfully running periodically (every hour by default), executing whatever NuvlaBox Playbooks are associated with your NuvlaBox, and reporting the results back to [Nuvla.io](https://nuvla.io) and onto your NuvlaBox page.
 
-**NOTE:** please note that the single-line instruction you are given contains an API key with management access to your NuvlaBox, so please make sure you don't share this instruction with untrusted entities.
+**NOTE:** please note that the single-line instruction you are given contains an API key with management access to your NuvlaBox, so please make sure you don't share this instruction with untrusted parties.
 
 ### At NuvlaBox creation time 
 
@@ -78,7 +76,7 @@ From here, use the "Copy to clipboard" icon to copy your single-line instruction
 
 ### After the NuvlaBox has been created
 
-From [Nuvla.io](https://nuvla.io), navigate to your NuvlaBox page, and in the menu bar you'll find a new action called "Enable host level management":
+From [Nuvla.io](https://nuvla.io), navigate to your NuvlaBox page, and in the menu bar you'll find an action called "Enable host level management":
 
 ![enable-host-level-mgmt-nb](/assets/img/nb-enable-hlm.png)
 
@@ -91,7 +89,7 @@ Click on this actions and once you've enabled it, you'll see a new notification 
 
 ## Managing the NuvlaBox host via Playbooks
 
-The NuvlaBox Playbooks (aka the `nuvlabox-playbook` resource) is a new API resource which lets users define scripts to be executed in their NuvlaBox device through the new host-level management feature. As you might have noticed from the explanations above, the host-level management feature roughly translates into a system-wide cronjob that you must setup in your edge device. This cronjob consists of a single-line instruction which uses your NuvlaBox identity to ask [Nuvla.io](https://nuvla.io) to assemble all the playbooks associated with your NuvlaBox. The cronjob then runs them one by one, sending their respective output back to [Nuvla.io](https://nuvla.io).
+The NuvlaBox Playbooks (aka the `nuvlabox-playbook` resource) is an API resource which lets users define scripts to be executed in their NuvlaBox device through the host-level management feature. As you might have noticed from the explanations above, the host-level management feature roughly translates into a system-wide cronjob that you must setup in your edge device. This cronjob consists of a single-line instruction which uses your NuvlaBox identity to ask [Nuvla.io](https://nuvla.io) to assemble all the playbooks associated with your NuvlaBox. The cronjob then runs them one by one, sending their respective output back to [Nuvla.io](https://nuvla.io).
 
 NuvlaBox Playbooks have the following structure:
 
@@ -124,15 +122,15 @@ Once created, your playbooks will then appear in your NuvlaBox's Playbook tab:
 
 ![pb-list](/assets/img/list-playbooks.png)
 
-And you can edit their scripts and enabled state directly from the NuvlaBox page.
+And you can edit each script and enabled them directly from the NuvlaBox page.
 
 ## Monitoring the NuvlaBox Playbooks's output
 
-Once created and enabled, your playbooks will become available for execution. Therefore, the next time your host-level management cycle occurs, the playbook is executed on the edge device and its output will automatically be sent to [Nuvla.io](https://nuvla.io), and will appear under your NuvlaBox page.
+Once created and enabled, your playbooks will become available for execution. Therefore, the next time your host-level management cycle occurs, the playbook is executed on the edge device and its output will be automatically sent to [Nuvla.io](https://nuvla.io), and will appear under your NuvlaBox page.
 
 ## Enable an Emergency repair
 
-In the unlikely event your NuvlaBox becomes unresponsive or unreachable, you might want to run a recovery script. This is what Emergency Playbooks are for. To enable an emergency repair, you must first have created one or more playbooks of the type "EMERGENCY".
+In the unlikely event your NuvlaBox becomes unresponsive or unreachable, you might want to run a recovery script. This is what Emergency Playbooks are for. To enable an emergency repair, you must first have created one or more playbooks of type "EMERGENCY".
 
 Then, from your NuvlaBox page, click on the "Enable emergency playbooks" action (on the menu bar):
 
@@ -152,4 +150,4 @@ As a user, you don't really need to use this NuvlaBox operation, but in case you
 
 This way you can keep tabs on what your host-level management mechanism is doing, and you can even reproduce it manually in case you want to debug your own playbook scripts.
 
-**NOTE:** remember not to call this `assemble-playbooks` operation when you've enabled the emergency playbooks, as it will cause said playbooks to be disabled after the operation succeeds.
+**NOTE:** remember not to call this `assemble-playbooks` operation when you've enabled the emergency playbooks, as it will cause these playbooks to be disabled after the operation succeeds.
