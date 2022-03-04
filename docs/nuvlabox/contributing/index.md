@@ -17,6 +17,3 @@ If you'd like to participate in the development of the NuvlaBox, either by writi
 For each NuvlaBox component, you'll find a Contributing guide within the respective GitHub repository. Here's an example for a [generic Contributing guide](https://github.com/nuvlabox/agent/blob/master/CONTRIBUTING.md).
 
 ![for-contributors](/assets/img/uncle-sam.png){:.center-image }
-
-
-
