@@ -1,4 +1,4 @@
-curl -XPOST https://nuvla.io/api/session -H 'content-type:application/json' -b cookies -d '''
+curl -XPOST https://nuvla.io/api/session -H 'content-type:application/json' -c cookies -d '''
     {
       "template": {
         "href": "session-template/api-key",
