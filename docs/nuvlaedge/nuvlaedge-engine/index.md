@@ -1,9 +1,9 @@
 ---
 layout: nuvlabox
-title: NuvlaBox Engine
-nav_order: 1
+title: NuvlaEdge Engine
+nav_order: 2
 description: "Secure and intelligent edge computing solution"
-parent: NuvlaBox
+parent: NuvlaEdge
 has_children: true
 ---
 
