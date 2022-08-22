@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.side-bar, .site-footer { background-color: #24292e; color: #fff; }
+
+.side-bar a { color: #fff !important; }
+
+.site-title { background-color: #24292e; }
+
+a.site-title { color: #B00000 !important; }
+
+.navigation-list-link.active { color: gray !important; }
+
+.navigation-list-link, .navigation-list-child-list { color: #fff !important; }
+
+a { color: black; }
+
+@media (min-width: 46.25rem) { .site-title { border-bottom: 1px solid gray; } }
+::selection { background: gray !important; }
+
+@page { size: A4; counter-increment: page;
+  @top-left { content: "Nuvla documentation"; border-top: .12pt solid #666; width: 50%; color: gray; }
+  @bottom-right { content: "License: Apache 2.0"; border-top: .12pt solid #666; width: 50%; color: gray; }
+  @bottom-left { content: "Source: docs.nuvla.io"; border-top: .12pt solid #666; width: 50%; color: gray; }
+  @bottom-center { content: "Copyright © 2022 SixSq SA"; border-top: .12pt solid #666; border-left: .12pt; width: 50%; color: gray; } }
+.main-content { text-align: justify; }
+
+.center-image { margin: 0 auto; display: block; }
+
+.warning { background-color: #fffaf3; color: #573a08; box-shadow: 0 0 0 1px #c9ba9b inset,0 0 0 0 transparent; padding: 2rem; }
