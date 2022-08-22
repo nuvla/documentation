@@ -6,12 +6,10 @@ parent: Nuvla
 has_children: true
 ---
 
-# Nuvla - What is it?
+# Nuvla User Guide
 
-Nuvla is a secured edge-to-cloud (and back) management platform that enables near-data AI for a connected world.
+This guide is design for users to discover and better understand the Nuvla Platform and Marketplace.
 
-The container native platform supports all forms of infrastructure: public cloud, private cloud and bare metal infrastructures, as well as edge (with our NuvlaBox).
+This guide provides both introduction level information, practical tutorials and advanced information.
 
-This documentation is intended for the users of a Nuvla platform.
-
-The open and secure Nuvla® service by SixSq is a secure edge-to-cloud management platform which facilitates the implementation of operational edge-to-cloud solutions. The solution leverages near data processing, edge and cloud computing, as well as smart data management. It optimises the different skills required to realise real-life solutions, ensuring the project is put on a path towards success.
+We try to keep this guide as up-to-date as possible.  But if you see any issues, inconsistency or identify a potential improvement, don't be shy: [get in touch](https://sixsq.com/contact) or [propose a change](https://github.com/nuvla/documentation/tree/master/docs/nuvla/user-guide.md).

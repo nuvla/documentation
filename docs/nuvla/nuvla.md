@@ -2,23 +2,29 @@
 layout: page
 title: Nuvla
 nav_order: 2
-description: "Multi-cloud, hybrid-cloud and edge application management service"
+description: Nuvla B2B edge management platform as a service, that is&colon; future-proof, application-centric, cloud-neutral and hardware agnostic
 has_children: true
 permalink: /nuvla
 ---
 
 ![nuvla-logo](/assets/img/nuvla-logo.png){: .center-image }
 
-Nuvla is a secured edge-to-cloud (and back) management platform that enables near-data AI for a connected world.
+Nuvla B2B edge management platform as a service, that is: future-proof, application-centric, cloud-neutral and hardware agnostic.
 
-The container native platform supports all forms of infrastructure: public cloud, private cloud and bare metal infrastructures, as well as edge (with our NuvlaBox), as shown in the image below.
+The Nuvle Platform and Marketplace as a Service is available on: [Nuvla.io](https://nuvla.io).
 
-![Nuvla Architecture](/assets/img/nuvla-architecture.png)
+The container native platform supports all forms of infrastructures: devices, computers, servers and virtual machines running the [NuvleEdge](/nuvlaedge) software, as well as public, private and hybrid clouds, as shown in the image below.
 
-Figure 1: Nuvla® architecture
+![Nuvla Overview](/assets/img/nuvla-diagram.png)
+
+Figure 1: Nuvla® overview
 {: style="color:gray; text-align: center;"}
 
-This documentation is intended for the users of a Nuvla platform.
+This documentation is intended for the users of the Nuvla platform.
 
-The open and secure Nuvla® service by SixSq is a secure edge-to-cloud management platform which facilitates the implementation of operational edge-to-cloud solutions. The solution leverages near data processing, edge and cloud computing, as well as smart data management. It optimises the different skills required to realise real-life solutions, ensuring the project is put on a path towards success.
-
+The open and secure Nuvla platform by [SixSq](https://sixsq.com) is a secure edge-to-cloud management platform and a marketplace which facilitates the implementation of operational edge-to-cloud solutions. The solution leverages near data processing, edge and cloud computing, as well as smart data management. The one-stop solution ensures that user organisations are able to create a complete edge-to-cloud solution that is:
+ - Future proof
+ - Application centric
+ - Cloud neutral
+ - Hardware agnostic
+ - Container native
