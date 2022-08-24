@@ -47,7 +47,7 @@ In an edge environment, halting your devices is sometimes necessary. Halting **d
 
 #### From Nuvla
 
-The NBE can be updated directly from Nuvla. On the user interface, in each NuvlaEdge panel, you'll find an action called "Update NuvlaEdge" (as depicted below)
+The NEE can be updated directly from Nuvla. On the user interface, in each NuvlaEdge panel, you'll find an action called "Update NuvlaEdge" (as depicted below)
 
 ![nb-update-nuvla.png](/assets/img/nb-update-nuvla.png)
 
