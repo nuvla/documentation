@@ -314,6 +314,7 @@ margin-bottom: 1.5rem;
 }
 .main-content-wrap {
   padding: 2rem 2rem 200px 2rem;
+	min-height: calc(100vh - 60px);
 }
 @media (min-width: 50rem) {
   .main-content-wrap {
