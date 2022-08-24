@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Workflows for Applications on NuvlaBox
+title: Workflows for Applications on NuvlaEdge
 nav_order: 3
 parent: Main Workflows
 grand_parent: Nuvla
 has_children: false
 ---
 
-# Workflows for Applications on NuvlaBox
+# Workflows for Applications on NuvlaEdge
 
-The **Workflows for Applications on NuvlaBox** include the following workflows:
+The **Workflows for Applications on NuvlaEdge** include the following workflows:
 
 1. Application deployment
 2. Application update
@@ -19,14 +19,14 @@ The first two are triggered by the user, while the **Telemetry** workflow is aut
 
 ## Application Deployment
 
-The current deployment strategy is using a push mechanism. This means Nuvla issues remote commands on the NuvlaBox, using the appropriate container orchestration tools.
+The current deployment strategy is using a push mechanism. This means Nuvla issues remote commands on the NuvlaEdge, using the appropriate container orchestration tools.
 
 ![nuvlabox-app-deployment.png](/assets/img/nuvlabox-app-deployment.png)
 {: style="width: 50%;" class="center-image" :}
 
 **1. Launch action**
 
-Using Nuvla, the user selects an application to launch. The launch modal walks the user through several steps to ensure all required parameters are provided, as well as the target(s) NuvlaBox(es).
+Using Nuvla, the user selects an application to launch. The launch modal walks the user through several steps to ensure all required parameters are provided, as well as the target(s) NuvlaEdge(es).
 
 **2. Job scheduling**
 
@@ -34,13 +34,13 @@ Once the launch action is completed, a new deployment resources is created and a
 
 **3. Job execution**
 
-An available job executor then picks up the job and executes the deployment. Depending on whether the application is a simple Docker image, a Docker Compose or a Docker Swarm, the appropriate actions are taken to execute the deployment on the target NuvlaBox.
+An available job executor then picks up the job and executes the deployment. Depending on whether the application is a simple Docker image, a Docker Compose or a Docker Swarm, the appropriate actions are taken to execute the deployment on the target NuvlaEdge.
 
 **4. Deployment execution**
 
 **4a. Docker image(s) download(s)**
 
-On the NuvlaBox, the Docker software first downloads the required Docker images (unless they are already cached) from the appropriate Docker Registries, and caches them locally.
+On the NuvlaEdge, the Docker software first downloads the required Docker images (unless they are already cached) from the appropriate Docker Registries, and caches them locally.
 
 **4b. Container(s) creation**
 
@@ -48,17 +48,17 @@ The Docker container(s) is/are then created and configured by the appropriate Co
 
 **4c. Containers monitoring**
 
-From this point on, Nuvla pulls on a regular basis each NuvlaBox to retrieve its containers status. This is then stored in the corresponding deployment for users to view and manage the deployments.
+From this point on, Nuvla pulls on a regular basis each NuvlaEdge to retrieve its containers status. This is then stored in the corresponding deployment for users to view and manage the deployments.
 
 Users can also request Nuvla to pull Docker logs for any deployment, which are then streamed 200 lines at a time, to limit bandwidth.
 
 Once all containers have been deployed, the deployment state is set by Nuvla to *started*. The application is then fully deployed.
 
-If the user has configured an Open VPN access to the NuvlaBox, services exposing a local port mapped to the NuvlaBox will be running on the VPN IP range and reachable from customer's Open VPN client.
+If the user has configured an Open VPN access to the NuvlaEdge, services exposing a local port mapped to the NuvlaEdge will be running on the VPN IP range and reachable from customer's Open VPN client.
 
 ## Application Update
 
-Since the edge is in constant evolution, updating application deployments running in NuvlaBoxes is a regular event. We distinguish two main reasons for an update to take place:
+Since the edge is in constant evolution, updating application deployments running in NuvlaEdgees is a regular event. We distinguish two main reasons for an update to take place:
 
 1. Docker Image update
 2. Application definition update
@@ -92,7 +92,7 @@ Similarly to the [Docker Image Update](#image-docker-update) workflow, Clara mig
 
 ### Manual Update
 
-During development, it is often convenient to instruct a NuvlaBox to simply update a deployment by simply downloading Docker images if they have changed regardless of image versions. This can be done by simply forcing a update on a deployment.
+During development, it is often convenient to instruct a NuvlaEdge to simply update a deployment by simply downloading Docker images if they have changed regardless of image versions. This can be done by simply forcing a update on a deployment.
 
 ![nuvlabox-app-manual-update](/assets/img/nuvlabox-app-manual-update.png)
 {: style="width: 50%;" class="center-image" :}
@@ -109,13 +109,13 @@ Once the update action is confirmed, an update job is scheduled on the Nuvla job
 
 **3. Job execution**
 
-An available job executor then picks up the job and executes the update. Depending on whether the application is a simple Docker image, a Docker Compose, a Docker Swarm or Kubernetes, the appropriate actions are taken to execute the update on the target NuvlaBox.
+An available job executor then picks up the job and executes the update. Depending on whether the application is a simple Docker image, a Docker Compose, a Docker Swarm or Kubernetes, the appropriate actions are taken to execute the update on the target NuvlaEdge.
 
 **4. Manual update execution**
 
 **4a. Docker image(s) download(s)**
 
-On the NuvlaBox, the Docker software first looks for updated Docker images from the appropriate Docker Registries, and caches them locally.
+On the NuvlaEdge, the Docker software first looks for updated Docker images from the appropriate Docker Registries, and caches them locally.
 
 **4b. Container(s) restart**
 

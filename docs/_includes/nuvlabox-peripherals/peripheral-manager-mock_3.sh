@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# NAME: NuvlaBox Peripheral Manager Mock
+# NAME: NuvlaEdge Peripheral Manager Mock
 # DESCRIPTION: Mock peripheral manager for demonstration purposes only
 # ARGS: none
 
@@ -14,21 +14,21 @@ mock_peripheral_identifier="my-mock-peripheralXYZ"
 
 
 ####
-# NuvlaBox Agent API functions
+# NuvlaEdge Agent API functions
 # These are generic, so you can re-use them everywhere
 ####
 nuvlabox_add_peripheral() {
-  # Sends a POST request to the NuvlaBox Agent API, asking to register a new peripheral
+  # Sends a POST request to the NuvlaEdge Agent API, asking to register a new peripheral
   # $1 is the request payload, which must match the nuvlabox-peripheral resource JSON schema
 
   # Get the JSON payload
   payload="$1"
-  echo "INFO: registering new NuvlaBox peripheral - ${payload}"
+  echo "INFO: registering new NuvlaEdge peripheral - ${payload}"
 
   agent_api="http://agent/api/peripheral"
   headers="-H content-type:application/json -H accept:application/json"
 
-  # Make the request to the NuvlaBox Agent API
+  # Make the request to the NuvlaEdge Agent API
   response=$(curl -X POST ${agent_api} ${headers} -d "${payload}" --write-out "%{http_code}")
 
   # Extract the response and http code
@@ -44,17 +44,17 @@ nuvlabox_add_peripheral() {
 }
 
 nuvlabox_delete_peripheral() {
-  # Sends a DELETE request to the NuvlaBox Agent API, asking to delete a peripheral
+  # Sends a DELETE request to the NuvlaEdge Agent API, asking to delete a peripheral
   # $1 is the peripheral's local identifier, as passed in the original POST request
 
   # Get the identifier
   identifier="$1"
-  echo "INFO: deleting NuvlaBox peripheral ${identifier}"
+  echo "INFO: deleting NuvlaEdge peripheral ${identifier}"
 
   agent_api="http://agent/api/peripheral"
   headers="-H accept:application/json"
 
-  # Make the request to the NuvlaBox Agent API
+  # Make the request to the NuvlaEdge Agent API
   response=$(curl -X DELETE "${agent_api}/${identifier}" ${headers} --write-out "%{http_code}")
 
   # Extract the response and http code
@@ -69,5 +69,5 @@ nuvlabox_delete_peripheral() {
   fi
 }
 ####
-# End of NuvlaBox Agent API functions
+# End of NuvlaEdge Agent API functions
 ####

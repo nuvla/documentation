@@ -57,7 +57,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Nuvla.io: Edge as a Service": "//nuvla.io"
-  "NuvlaBox on GitHub": "//github.com/nuvlabox"
+  "NuvlaEdge on GitHub": "//github.com/nuvlabox"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false

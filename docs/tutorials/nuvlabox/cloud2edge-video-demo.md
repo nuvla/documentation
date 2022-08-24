@@ -14,13 +14,13 @@ has_children: false
 
 ## Scenario
 
-Let's setup a scenario for an edge device (NuvlaBox) with a USB camera attached, and a VM running in the cloud.
+Let's setup a scenario for an edge device (NuvlaEdge) with a USB camera attached, and a VM running in the cloud.
 
 We'll deploy, from Nuvla:
  - a message broker application to the cloud VM, and
- - a video analysis app to the NuvlaBox, that publishes notifications to the message broker running in the cloud.
+ - a video analysis app to the NuvlaEdge, that publishes notifications to the message broker running in the cloud.
  
-Finally, we can even install an app in our phone, to subscribe to the message broker running in the cloud, so that we receive the notifications from the NuvlaBox, no matter where we are.
+Finally, we can even install an app in our phone, to subscribe to the message broker running in the cloud, so that we receive the notifications from the NuvlaEdge, no matter where we are.
 
 This scenario is pictured in the image below.
 
@@ -76,36 +76,36 @@ You can run this demo by yourself. Simply go through the following steps:
     ![new-dep](/assets/img/new-deployment-card.png){:style="margin: auto; width: 18em;"}
  6. click on the card, and you'll see a detailed page with information about your deployment. Make note of the **URL** called "mqtt"
  
-### 4: Get the NuvlaBox into your edge device
+### 4: Get the NuvlaEdge into your edge device
 
  1. in [Nuvla.io](https://nuvla.io), go the *Edge* panel (left sidebar)
- 2. let's create a NuvlaBox. Click "*+add*"
+ 2. let's create a NuvlaEdge. Click "*+add*"
  3. fill in the form and click "*create*"
      
      ![new-nb](/assets/img/new-nb-modal.png)
- 4. you'll be given a **NuvlaBoxID**, please take note
+ 4. you'll be given a **NuvlaEdgeID**, please take note
  5. SSH into your edge device
     1. make sure you're logged in with a user that can [manage Docker](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user) - test it by running `docker ps`
- 6. setup the environment by running `export NUVLABOX_UUID=NuvlaBoxID` where `NuvlaBoxID` is the **NuvlaBoxID** from step 4.
- 7. download the [NuvlaBox Engine software installer](https://github.com/nuvlabox/deployment/releases). Run `wget https://github.com/nuvlabox/deployment/releases/download/1.3.1/docker-compose.yml`
+ 6. setup the environment by running `export NUVLABOX_UUID=NuvlaEdgeID` where `NuvlaEdgeID` is the **NuvlaEdgeID** from step 4.
+ 7. download the [NuvlaEdge Engine software installer](https://github.com/nuvlabox/deployment/releases). Run `wget https://github.com/nuvlabox/deployment/releases/download/1.3.1/docker-compose.yml`
  8. now just execute `docker-compose up -d`
-    1. it will just take a few seconds for you to see your NuvlaBox become green (online) in [Nuvla.io](https://nuvla.io). You can follow the installation and lifecycle process by running `docker-compose logs`
-    2. after a couple of minutes, you'll also see a new infrastructure (of the type NuvlaBox) and credential appear in [Nuvla.io](https://nuvla.io)
- 9. if not yet plugged in, plug your USB camera into the NuvlaBox (edge device)
-    1. in [Nuvla.io](https://nuvla.io), if you go to *Edge* and select your NuvlaBox, you'll see the USB camera automatically listed as a peripheral
+    1. it will just take a few seconds for you to see your NuvlaEdge become green (online) in [Nuvla.io](https://nuvla.io). You can follow the installation and lifecycle process by running `docker-compose logs`
+    2. after a couple of minutes, you'll also see a new infrastructure (of the type NuvlaEdge) and credential appear in [Nuvla.io](https://nuvla.io)
+ 9. if not yet plugged in, plug your USB camera into the NuvlaEdge (edge device)
+    1. in [Nuvla.io](https://nuvla.io), if you go to *Edge* and select your NuvlaEdge, you'll see the USB camera automatically listed as a peripheral
     
 ### 5: Deploy the AI app to the edge
 
  1. in [Nuvla.io](https://nuvla.io), go to the *App Store* and find the app called "Motion Detector to MQTT". Click "*launch*"
- 2. a panel with appear - select your NuvlaBox credential from there
+ 2. a panel with appear - select your NuvlaEdge credential from there
  3. click on the environment tab and paste the "mqtt" **URL** that you saved above
  
      ![env-var](/assets/img/env-modal.png)
  4. click "*launch*" and wait
  5. once the deployment is ready, you'll the the green button with the link to your Motion Detector endpoint - click on it
- 6. you'll be redirected to a new tab on your browser, pointing to your NuvlaBox via a SixSq VPN IP that has been assigned automatically to your NuvlaBox
-    1. PLEASE note that you'll only be able to access your NuvlaBox via this IP if you have a SixSq VPN client configuration running on your computer. If you don't have one, please drop us an email at [Support](mailto:support@sixsq.com)
-    2. if you don't want to use SixSq's VPN service, you can also access the Motion Detector endpoint directly via the NuvlaBox's IP (check `ifconfig` in your NuvlaBox to get the IP)
+ 6. you'll be redirected to a new tab on your browser, pointing to your NuvlaEdge via a SixSq VPN IP that has been assigned automatically to your NuvlaEdge
+    1. PLEASE note that you'll only be able to access your NuvlaEdge via this IP if you have a SixSq VPN client configuration running on your computer. If you don't have one, please drop us an email at [Support](mailto:support@sixsq.com)
+    2. if you don't want to use SixSq's VPN service, you can also access the Motion Detector endpoint directly via the NuvlaEdge's IP (check `ifconfig` in your NuvlaEdge to get the IP)
  7. you are now be able to see the video feed, coming from your webcam. If you move, you'll see some video processing happening
  8. connect to the MQTT broker running in your Docker Swarm cluster in the cloud, you'll get a notification every time there's movement! You can use whatever MQTT client you prefer (*mosquitto_sub* or even an Android/iPhone app)
     1. for example, if using *mosquitto_sub*, you can simply execute `mosquitto_sub -h URL.IP -p URL.PORT -t video_analysis/message`, where **URL.IP** and **URL.PORT** are the URL and port number taken from your "mqtt" **URL** in step 3. above
