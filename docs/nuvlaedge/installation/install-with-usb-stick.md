@@ -16,9 +16,9 @@ The advantages of this installation method are:
 - The same USB stick can be used **as many times** as needed
 - **NO** technical expertise required
 
-Unlike the Compose file bundle, the USB stick installation method does not require manual user intervention, and thus does not support manual configuration of the NBE environment variable. **NUVLABOX_UUID**, **NUVLA_ENDPOINT** and **NUVLA_ENDPOINT_INSECURE** are automatically defined for you by Nuvla, during the installation process.
+Unlike the Compose file bundle, the USB stick installation method does not require manual user intervention, and thus does not support manual configuration of the NEE environment variable. **NUVLABOX_UUID**, **NUVLA_ENDPOINT** and **NUVLA_ENDPOINT_INSECURE** are automatically defined for you by Nuvla, during the installation process.
 
-It is _not_ yet possible to define variables like **HOSTNAME** and **VPN_INTERFACE_NAME** with this installation method. All possible NBE configurations for this installation method are set from Nuvla, at the time of creation of the USB stick file.
+It is _not_ yet possible to define variables like **HOSTNAME** and **VPN_INTERFACE_NAME** with this installation method. All possible NEE configurations for this installation method are set from Nuvla, at the time of creation of the USB stick file.
 
 ### Additional requirements
 

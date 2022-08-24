@@ -10,7 +10,7 @@ redirect_from:
 
 # Requirements
 
-To ensure a smooth and fully functional installation of the NuvlaEdge Engine (**NBE**), please make sure you comply with the following system requirements.
+To ensure a smooth and fully functional installation of the NuvlaEdge Engine (**NEE**), please make sure you comply with the following system requirements.
 
 
 ## OS Requirements
@@ -27,7 +27,7 @@ Functionalities like the automatic discovery and categorization of peripherals a
 
 ## Hardware Requirements
 
-In order to install the NBE and ensure its smooth execution over time, your device should have at least:
+In order to install the NEE and ensure its smooth execution over time, your device should have at least:
 
 - 1GB of RAM
 - 2GB of free disk space
@@ -38,7 +38,7 @@ An remember that you should have enough memory to host the apps that will be run
 
 ## Software Requirements
 
-Before you can install the NBE, please make sure you have:
+Before you can install the NEE, please make sure you have:
 
 - [Docker Engine (version 18 or higher)](https://docs.docker.com/install/#supported-platforms), running in [Swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/)
 - [Docker Compose (version 1.27.4 or higher)](https://docs.docker.com/compose/install/)
@@ -48,7 +48,7 @@ Before you can install the NBE, please make sure you have:
 
 You need **an internet connection**.
 
-The NBE requires the following ports to be opened:
+The NEE requires the following ports to be opened:
 
 | Port 	| Reason 	|
 |-:	|-	|
