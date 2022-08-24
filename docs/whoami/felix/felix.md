@@ -17,7 +17,7 @@ permalink: /felix
 <span style="font-size:1em">&#128526;</span>
 
 
-He is contributing to the Nuvla and NuvlaBox code base.
+He is contributing to the Nuvla and NuvlaEdge code base.
 
 
 # Felix can...
@@ -26,7 +26,7 @@ He is contributing to the Nuvla and NuvlaBox code base.
 
 If you want to be a Felix, please follow our contribution guidelines. Each GitHub repository should have a contribution section, like these for example:
 
- - [NuvlaBox Agent](https://github.com/nuvlabox/agent#contributing)
+ - [NuvlaEdge Agent](https://github.com/nuvlabox/agent#contributing)
  - [Nuvla API Server](https://github.com/nuvla/api-server#contributing)
  - [Nuvla UI](https://github.com/nuvla/ui#contributing)
 

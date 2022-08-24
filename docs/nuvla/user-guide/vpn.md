@@ -9,11 +9,11 @@ permalink: /nuvla/vpn
 
 # Virtual Private Network (VPN)
 
-A key challenge in edge computing is external connectivity. This is required for Nuvla to manage the NuvlaBoxes and for users wanting to reach applications running on the NuvlaBoxes, or the NuvlaBox itself.
+A key challenge in edge computing is external connectivity. This is required for Nuvla to manage the NuvlaEdgees and for users wanting to reach applications running on the NuvlaEdgees, or the NuvlaEdge itself.
 
 For this, we use OpenVPN, an open source Virtual Private Network (VPN) solution.
 
-Nuvla.io allows users to create their own VPN client account.  The same feature is used when registering new NuvlaBoxes.
+Nuvla.io allows users to create their own VPN client account.  The same feature is used when registering new NuvlaEdgees.
 
 Since Nuvla will not keep any client secret, the OpenVPN configuration file generated during the creation of the client account must be saved on creation.  Since Nuvla does not keep this information, once this step is completed, the configuration file cannot be recreated.
 
@@ -21,7 +21,7 @@ This page provides instructions on how to configure an OpenVPN client on Windows
 
 ## Windows configuration
 
-To connect to the NuvlaBox VPN from Windows, please download and install [OpenVPN](https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.6-I602.exe) for Windows.
+To connect to the NuvlaEdge VPN from Windows, please download and install [OpenVPN](https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.6-I602.exe) for Windows.
 
 Then, save the OpenVPN configuration file (.conf) provided by Nuvla in the OpenVPN/config folder of your user directory (%USERPROFILE%/OpenVPN/config).
 

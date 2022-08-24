@@ -43,7 +43,7 @@ improvements planned in several areas:
    1. Infrastructure Support: support other popular container
       orchestration engines such as Kubernetes.
    
-   1. NuvlaBox: provide support for edge computing devices that can
+   1. NuvlaEdge: provide support for edge computing devices that can
       analyze data from sensors and control equipment intelligently.
 
 Again, your feedback on the above features or missing features will

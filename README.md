@@ -7,11 +7,11 @@ This repository contains the core documentation for the software.
 The resulting [Nuvla Software Documentation Website](https://docs.nuvla.io) is deployed as GitHub pages website.
 
 The code for the platform can be found in the other repositories within the [Nuvla](https://github.com/nuvla)
-and [NuvlaBox](https://github.com/nuvlabox) organisations on GitHub.
+and [NuvlaEdge](https://github.com/nuvlabox) organisations on GitHub.
 
 ## Copyright
 
-Copyright &copy; 2021, SixSq SA
+Copyright &copy; SixSq SA
 
 ## License
 

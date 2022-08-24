@@ -3,7 +3,7 @@ Container as a Service Infrastructures
 
 Container as a Service (CaaS) are used to host the Nuvla micro-services, but also receive user containers. We currently use Docker Swarm as our default CaaS.
 
-Docker Swarm is also integrated in the NuvlaBox, SixSq's edge software solution.
+Docker Swarm is also integrated in the NuvlaEdge, SixSq's edge software solution.
 
 Nuvla also supports an advanced data management feature. For this to work, the CaaS used When deploying containers must include an S3 service and a distributed file system.  To learn how to install and configure these services, please get in touch. 
 

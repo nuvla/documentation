@@ -17,7 +17,7 @@ This capability is only available to NVIDIA GPUs. While the Docker client is abl
 
 Let's say we have a Compose file-defined application to be deployed from Nuvla. Given the aforementioned Docker limitation, we need to manually select the GPU devices and libraries from the host, and pass them to the container via the Compose file.
 
-To know the correct devices and libraries, we can use the [GPU discovery tool](https://github.com/nuvlabox/peripheral-manager-gpu) installed with NuvlaBox.
+To know the correct devices and libraries, we can use the [GPU discovery tool](https://github.com/nuvlabox/peripheral-manager-gpu) installed with NuvlaEdge.
 
 ![gpuDemoSchema](/assets/img/gpu-demo-scheme.png){: :center}
 
@@ -32,14 +32,14 @@ We also need a camera connected through USB to the selected device.
 
 Finally, need a Nuvla account.
 
-### Install the NuvlaBox Engine on the NVIDIA Jetson Nano
+### Install the NuvlaEdge Engine on the NVIDIA Jetson Nano
 
-Follow the [NuvlaBox setup documentation](/nuvlabox/latest/nuvlabox-engine/quickstart) to connect your NVIDIA Jetson Nano to Nuvla. 
+Follow the [NuvlaEdge setup documentation](/nuvlabox/latest/nuvlabox-engine/quickstart) to connect your NVIDIA Jetson Nano to Nuvla. 
 
 ### Build the Application that uses GPU 
 
-To know which GPU to use, and its libraries, we make use of the NuvlaBox GPU Peripheral Manager, which can be deployed with NuvlaBox as an optional module. 
-In Nuvla, the NuvlaBox overview is similar to this: 
+To know which GPU to use, and its libraries, we make use of the NuvlaEdge GPU Peripheral Manager, which can be deployed with NuvlaEdge as an optional module. 
+In Nuvla, the NuvlaEdge overview is similar to this: 
 
 ![gpuDemo](/assets/img/peripheral-manager-gpu.png){: :center}
 
@@ -77,7 +77,7 @@ With this, you can create your own Nuvla app, by following [these steps](/nuvla/
 
 In Nuvla.io, go to the App Store and find the app called **"GPU Demo”**. We've pre-created one for your with the instructions from above. 
 
-Click **“launch”** and a deployment modal will appear - select your NuvlaBox credentials. 
+Click **“launch”** and a deployment modal will appear - select your NuvlaEdge credentials. 
 
 As we don't have environmental variables or files for this application, we can simply click **"Deploy"**.
 

@@ -14,7 +14,7 @@ permalink: /dave
 ![Dave](/assets/img/dave.png){:style="margin: auto; display: block; width: 7em"}
 
 
-This section of the documentation is for [Dave](/whoami#dave-the-administrator).  Here you will find instructions on how to setup your own Nuvla instance, manage Container-as-a-Service (CaaS) infrastructures and even install NuvlaBox devices at the edge.
+This section of the documentation is for [Dave](/whoami#dave-the-administrator).  Here you will find instructions on how to setup your own Nuvla instance, manage Container-as-a-Service (CaaS) infrastructures and even install NuvlaEdge devices at the edge.
 
 [Dave](/whoami#dave-the-administrator) is quite an hands-on guy and might even be administrating multiple services and infrastructures. 
 
@@ -26,7 +26,7 @@ This section of the documentation is for [Dave](/whoami#dave-the-administrator).
 #### [Populate Nuvla with Example Applications](/nuvla/installation/example-apps)
 #### [Fine tune a Swarm Cluster to host a production Nuvla Instance](/nuvla/installation/production#deploy-additional-caas-services)
 #### [Operate and maintain his own Nuvla instance](/nuvla/installation/operation-maintenance)
-#### [Deploy a NuvlaBox](/nuvlabox/latest)
+#### [Deploy a NuvlaEdge](/nuvlabox/latest)
 ---
 #### Embed the Nuvla UI into another web application 
 

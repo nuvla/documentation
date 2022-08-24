@@ -25,7 +25,7 @@ Alice primarily interacts with the Nuvla App Store, a library of private and pub
 
 Thousands of applications are literally at Alice’s fingertips in Nuvla, thanks to its full support of containers and access to container registries, such as Docker Hub. The fact that SixSq supports containers is extremely valuable for Alice. Indeed, this technology is very popular within the software community for packaging and distributing applications, meaning that most popular software solutions are now publicly available in this format. Should Alice not be able to find what she needs in the Nuvla App Store, she can ask [Clara](#clara-the -it-specialist) (we will introduce her in a moment), the IT specialist, for help (step 1 in [Figure 1](#nuvla-collaboration-framework)).
 
-Alice will also need the support from [Dave](#dave-the-operator) in order to have an infrastructure to deploy to (e.g. NuvlaBox for edge deployments or public/private cloud/infrastructure(s)).
+Alice will also need the support from [Dave](#dave-the-operator) in order to have an infrastructure to deploy to (e.g. NuvlaEdge for edge deployments or public/private cloud/infrastructure(s)).
 
 Alice can deploy any of the applications in the Nuvla library herself (step 4 and 5 in [Figure 1](#nuvla-collaboration-framework)), onto the edge-to-cloud architecture at any time and as often as needed. She can then process the data and carefully analyse the results, which is her key expertise. 
 
@@ -54,7 +54,7 @@ Now that [Alice](#alice-the-domain-specialist) and [Emma](#emma-the-data-expert)
 
 Using basic knowledge in scripting and container configuration, Clara can easily create components and stacks for [Alice](#alice-the-domain-specialist) within Nuvla (step 3 in [Figure 1](#nuvla-collaboration-framework)). Further, Clara can configure application deployment policies, so that Nuvla can match the right data with the right application.
 
-Nuvla works will virtually all public and private cloud solutions. Clara can therefore create a Container-as-a-Service environment in any public or private cloud, as well as at the edge on NuvlaBoxes, enabling the collection of data for near data processing, including machine learning models
+Nuvla works will virtually all public and private cloud solutions. Clara can therefore create a Container-as-a-Service environment in any public or private cloud, as well as at the edge on NuvlaEdgees, enabling the collection of data for near data processing, including machine learning models
 Nuvla deploys an end-to-end security strategy for all of its services, including the edge. Clara leverages this to provide [Alice](#alice-the-domain-specialist) and [Emma](#emma-the-data-expert) a secure environment minimising any security risk associated with handling data in an edge-to-cloud architecture.
 
 To get started as Clara, [go here](clara).
@@ -65,7 +65,7 @@ To get started as Clara, [go here](clara).
 
 Dave is a system administrator. His role is to operate the edge-to-cloud architecture so that it is always up to date and properly running.
 
-[Clara](#clara-the -it-specialist) puts together the IoT architecture using Nuvla and NuvlaBoxes for Dave to operate (see dotted blue line in [Figure 1](#nuvla-collaboration-framework)). Since the entire edge-to-cloud architecture is captured in Nuvla, the handover is simple and clear, ensuring straightforward monitoring and maintenance. 
+[Clara](#clara-the -it-specialist) puts together the IoT architecture using Nuvla and NuvlaEdgees for Dave to operate (see dotted blue line in [Figure 1](#nuvla-collaboration-framework)). Since the entire edge-to-cloud architecture is captured in Nuvla, the handover is simple and clear, ensuring straightforward monitoring and maintenance. 
 
 Thanks to the management tools that are part of Nuvla, Dave can properly operate the system with minimum effort. Using the monitoring tools of Nuvla, Dave can set up alerts that will notify him, his monitoring system or any colleagues in case of issues. With the application update feature of Nuvla, Dave can maintain and update the applications selected by [Alice](#alice-the-domain-specialist) to perform her work. This way, she is always sure to have the proper version in place. Using the security management features of Nuvla, Dave can also manage the certificates used, thus ensuring the security of the edge-to-cloud infrastructure.
 
