@@ -11,7 +11,7 @@ and [NuvlaEdge](https://github.com/nuvlabox) organisations on GitHub.
 
 ## Copyright
 
-Copyright &copy; 2021, SixSq SA
+Copyright &copy; SixSq SA
 
 ## License
 
