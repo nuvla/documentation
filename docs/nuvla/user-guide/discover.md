@@ -11,7 +11,7 @@ permalink: /nuvla/discover
 
 On the welcome page and in the menu bar on the left side of the page, you can see the main sections of the Nuvla web user interface.  These pages present the main features of the application:
 
-![Nuvla Welcome](/assets/img/welcome.png)
+![Nuvla Welcome](/assets/img/home.png)
 
  - **dashboard**: deployed applications
  - **apps**: defined, containerised applications

@@ -10,27 +10,26 @@ permalink: /nuvla/register
 Setup
 =====
 
-First thing first, you need a Nuvla account.  You'll then need access to credentials for the infrastructures you will be deploying your containerised applications to.
-
-> Note: In this documentation, we assume you will be using SixSq's managed Nuvla service running on [nuvla.io](https://nuvla.io). If you are using an on premise installation of Nuvla, or any other installation, just adjust these instructions.
+First thing first, you need a Nuvla account.
 
 ## Register
 
-To deploy applications through Nuvla, you need to sign-up. The standard registration process requires a valid email address and a valid password.
+To create an account, visit the [home page](https://nuvla.io/) with your browser. Click the "sign up" button on the right of the page.
 
-To create an account, visit the [home page](https://nuvla.io/) of the Nuvla service with your browser. Click the "sign up" button on the top right of the page.
+![Sign Up Page](/assets/img/sign-up.png)
 
-![Sign Up Menu Item](/assets/img/welcome.png)
+You can either sign-up using username/password or use an external single sign-on service (e.g. GitHub).  You will be able to active two-factor authentication once sign-in.
 
-This should bring up the "sign up" dialog, where you can enter your email address and a valid password.
+You can start your free trial right away, or do it later once sign-in.
 
-![Sign Up Dialog](/assets/img/sign-up-dialog.png)
-
-Fill in the fields and then click the "sign up" button.  This will send a confirmation message to the email address you provided.
+Fill in the fields and then click the "sign up" button.
 
 ![Sign Up Confirmation](/assets/img/sign-up-message.png)
 
+This will send a confirmation message to the email address you provided.
+
 ![Sign Up Message](/assets/img/sign-up-email.png)
+{: style="max-width: 500px;" :}
 
 Visit the link given in that email to finish the registration process. This will send you back to the Nuvla welcome page, so that you can log in with your new account.
 
@@ -38,28 +37,19 @@ Visit the link given in that email to finish the registration process. This will
 
 ## Login
 
-Once you've registered with the Nuvla, you can then log into the server.  From the welcome page, click the "login" button in the upper, righthand corner to bring up the login dialog.
+Once you've registered with the Nuvla, you can then log into the server.
 
-![Log In Dialog](/assets/img/log-in-dialog.png)
+![Sign In Page](/assets/img/sign-in.png)
 
-Fill in the form and click the "login" button.  This should take you back to the welcome page. Your email address should now be shown in the upper, righthand corner, indicating that you've logged into the server.
+Fill in the form and click the "Sign in" button.  This should take you to the home page.
 
-![Successful Log In](/assets/img/log-in-success.png)
+![Home page](/assets/img/home.png)
 
-## Credentials
 
-Deploying an application requires access to a "target" Docker Swarm cluster.  Further, if you deploy applications that use Nuvla's data management features, your target Swarm will also require an S3 (Minio) service.
+## Enable/disable Two-factor Authentication
 
-### Shared Credentials
+To increase security, we recommend you enable two-factor authentication.  Once signed-in, simply click on your email address or login name at the top right of the page.  This will show you the following dialog.  From there you can choose your two-factor authentication method and configure it.
 
-[Bob](/bob), the manager of your organisation in Nuvla will likely have created credentials that are available to you.
+![Two-factor authentication](/assets/img/two-factor.png)
 
-![Credential List](/assets/img/api-creds.png)
-
-To check which credentials you have access to, simply click on the "Credentials" button on the left bar menu.If you have credentials of types "infrastructure-service-swarm" and "infrastructure-service-minio", you're good to go.
-
-### Add Credentials
-
-If you do not have access to shared credentials, get in touch with the "Bob" of your organisation or create your own if you have deployed your own Docker Swarm cluster and optionally your MinIO service. To do that, simple click on the "add" button the the "Credentials" page.
-
-You can also get in touch with [SixSq's helpdesk](mailto:support@sixsq.com) to help you move forward if you get stuck.
+That's it! You're in... enjoy Nuvla.  And if you need a hand, don't hesitate to reach out using the blue widget on the bottom right of every page.  We will also send you a few emails, we hope will help you the most out of Nuvla.
