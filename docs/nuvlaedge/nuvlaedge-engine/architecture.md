@@ -36,3 +36,15 @@ The NEE has the concept of Peripheral Managers. These are **optional** micro-ser
 | MODBUS | Serial port discovery tool for PLC `modbus` connections |
 | NETWORK | Scans for devices connected to the same network (In the default gateway) of the device. The `network` peripheral is responsible for the discovery, categorization and management of all NuvlaEdge network peripherals. |
 | GPU | Allows applications to access the GPUs available in the device. |
+
+
+## Network Port Binding
+
+|     Port |    Usage    | Protocol | Description                                                                                                                 |
+|---------:|:-----------:|:--------:|-----------------------------------------------------------------------------------------------------------------------------|
+|  **443** |  Outbound   |   TCP    | Used by NEE to communicate with Nuvla via HTTPS (https://nuvla.io)                                                          | 
+| **1194** |  Outbound   |   UDP    | UDP connection to vpn.nuvlabox.com in case VPN is decided to be used for communication with the edge device managed by NEE. |
+| **3636** |  Internal   |    -     | This port is used by the `system-manager` to publish the internal NB dashboard                                              |
+| **5000** | VPN/Inbound |    -     | Used by the `compute-api` as the relay endpoint for Docker. Ingress must be allowed                                         |
+| **5080** |  Internal   |    -     | This port is used by the `agent` to provide the internal REST API for other NB components to speak with, internally         |
+
