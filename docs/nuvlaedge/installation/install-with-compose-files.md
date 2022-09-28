@@ -9,7 +9,7 @@ has_children: true
 
 # Install via Compose Files bundle
 
-The simplest way to install the NuvlaEdge Engine software on an edge device is to follow this installation method.  If you are looking for an automated and/or scalable method, please visit the [USB Stick page](/nuvlabox/nuvlabox-engine/v2/installation/install-with-usb-stick/).
+The simplest way to install the NuvlaEdge Engine software on an edge device is to follow this installation method.  If you are looking for an automated and/or scalable method, please visit the [USB Stick page](/nuvlaedge/nuvlaedge-engine/installation/install-with-usb-stick/).
 
 1. login into [nuvla.io](https://nuvla.io)
 2. from the [edge panel](https://nuvla.io/ui/edge), add a new `nuvlabox`, and either
@@ -103,4 +103,4 @@ vpn-client                                ./openvpn-client.sh      Up
 
 To completely and **permanently** uninstall the NuvlaEdge from your edge device, simply find your original compose files in the edge device, and run `docker-compose -p nuvlabox down -v`. The `-v` will remove the NuvlaEdge local data volume, so all of its data will be lost. 
 
-To re-install a new NuvlaEdge from scratch in the same edge device, you'll need to go through the installation from the start of this page. If you have the API Key/Secret from the NuvlaEdge you've just deleted, then you also have the choice to recover it, even from a different device, via the configuration variables `NUVLABOX_API_KEY` and `NUVLABOX_API_SECRET`. See the [NuvlaEdge Engine configuration](/nuvlabox/nuvlabox-engine/v2/configuration/) for more details.
+To re-install a new NuvlaEdge from scratch in the same edge device, you'll need to go through the installation from the start of this page. If you have the API Key/Secret from the NuvlaEdge you've just deleted, then you also have the choice to recover it, even from a different device, via the configuration variables `NUVLABOX_API_KEY` and `NUVLABOX_API_SECRET`. See the [NuvlaEdge Engine configuration](/nuvlaedge/nuvlaedge-engine/configuration/) for more details.

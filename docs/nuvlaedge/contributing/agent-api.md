@@ -11,7 +11,7 @@ Before you start contributing to the NuvlaEdge software stack, you must be acqua
 
 # The NuvlaEdge Engine Agent API
 
-As mentioned in the [NEE Architecture](/nuvlabox/v1/nuvlabox-engine/architecture), the NEE Agent is one of the most critical components of the NB. 
+As mentioned in the [NEE Architecture](/nuvlaedge/nuvlaedge-engine/architecture), the NEE Agent is one of the most critical components of the NB. 
 
 All outgoing communication to Nuvla pass through the `agent`. For that, it provides an internal REST API for other NEE micro-services to speak with when they need to reach out to Nuvla. 
 
