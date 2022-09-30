@@ -23,8 +23,8 @@ If your NuvlaEdge installation was successful, you should now see the following 
 
 So, **let's deploy a Nuvla App into your NuvlaEdge**:
 
- 1. login into [nuvla.io](https://nuvla.io) and go to the [App Store](https://nuvla.io/ui/apps)
- 
+ 1. login into [nuvla.io](https://nuvla.io) and go to the [Marketplace](https://nuvla.io/ui/apps)
+
     ![nuvla-app-store](/assets/img/app-store.png)
 
  2. find your desired application (let's say Nginx for example)
