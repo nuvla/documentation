@@ -7,28 +7,32 @@ nav_order: 5
 permalink: /nuvla/add-apps
 ---
 
-Before we start, there are a few terms that you need to get familiar with:
+[TODO]
 
- - **Docker application**, meant to be used for Docker Compose and Docker Swarm applications, and expecting a raw Compose file as the deployment recipe, and
+# Adding Applications
+
+Before we start, there are a couple of terms that you need to get familiar with:
+
+ - **Docker application**, meant to be used for Docker Compose and Docker Swarm applications, and expecting a Compose file as the deployment recipe, and
  - **Kubernetes application**, meant to be used for Kubernetes applications, and expecting a Manifest as the deployment recipe.
-
-# Adding Applications via the UI
 
 It all starts in the Apps page.
 
 ![app-store](/assets/img/nuvla-app-store.png)
 
-**If you don't have any projects**, then you'll need to create one. 
+First navigate to the "Navigation" tab [TODO].
+
+## Projects
+
+**If you don't have any projects**, then you'll need to create one. Projects are used to contain and organise apps.
 
  1. expand the "All projects" tab, and click "+add"
  
     ![add-project](/assets/img/add-new-project.png)
 
- 2. click on "Project" and choose a Name and Description for it. Then save.
+ 2. click on "Project" and choose a Name and Description for it.  The description can be defined using [markdown]()[TODO], which provides you with a great way to document your projects and apps using text, images, etc. Then save.
  
     ![create-project](/assets/img/create-project.png)
-
----
  
 Once inside your project, you'll see the button "+add". 
 
@@ -86,55 +90,4 @@ This is how it works...does your application:
 For more information about which options are Docker Compose and Swarm-specific, please consult the original [Compose reference documentation](https://docs.docker.com/compose/compose-file/#not-supported-for-docker-stack-deploy).
 
  
-# Adding Applications with the Python Library
-
-(coming soon...)
-
-# Enabling fast & dedicated monitoring for Application Deployments
-
-When you launch an application, Nuvla starts scheduling metric collection jobs for retrieving your deployment's state, parameters, etc.
-
-These jobs are scheduled at a well defined and short intervals. 
-
-However, if you need faster updates on your deployments (aka shorter response time), SixSq offers an additional sidekick container that you can adjoin to your application, which will push those deployment metrics to Nuvla much more regularly.
-
-Here's an example on how to do it:
-
- 1\. let's say you have a Docker Stack application...and this is your Compose file:
-  
-  ```yaml
-  version: '3'
-
-  services:
-    someservice:
-      image: someimage:tag
-      deploy:
-        replicas: 4
-  ```
-  
-  2\. to enable this fast and dedicated deployment monitoring, please add the `sixsq-deployment-monitor` service to your Compose file:
-  
-  ```yaml
-  version: '3'
-
-  services:
-    someservice:
-      image: someimage:tag
-      deploy:
-        replicas: 4
-        
-    sixsq-deployment-monitor:
-      image: nuvladev/job:multiarch
-      entrypoint: /app/job_deployment_state_push.py
-      deploy:
-        placement:
-          constraints:
-            - node.role == manager
-      environment:
-        - NUVLA_DEPLOYMENT_ID=$NUVLA_DEPLOYMENT_ID
-        - NUVLA_ENDPOINT=$NUVLA_ENDPOINT
-        - NUVLA_API_KEY=$NUVLA_API_KEY
-        - NUVLA_API_SECRET=$NUVLA_API_SECRET
-  ```
-  
-**NOTE:** if your application is Docker Compose compatible, then simply remove the entire `deploy` section from the `sixsq-deployment-monitor` service
+[TODO]: add license and pricing instructions (optional) 

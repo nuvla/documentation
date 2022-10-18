@@ -10,7 +10,7 @@ has_children: true
 
 The following example shows how to create and populate a `data-object` resource and the associated S3 object. 
 
-> **NOTE**: Not all imports are listed in the example and you must provide the correct endpoint and credentials. Also there are some variables set that correspond to external information that must be provided.
+> **NOTE:** Not all imports are listed in the example and you must provide the correct endpoint and credentials. Also there are some variables set that correspond to external information that must be provided.
 
 ```python
 import hashlib
@@ -113,7 +113,7 @@ To create a `data-record` resource via the Python API, use code
 similar to the following example. You must provide the correct
 endpoint, username, and password for your Nuvla server.
 
-> **NOTE**: Not all imports are listed in the example and you must
+> **NOTE:** Not all imports are listed in the example and you must
 > provide the correct endpoint and credentials. Also there are some
 > variables set that correspond to external information that must be
 > provided. The contents of the `data-record` will depend on your use
@@ -186,7 +186,7 @@ To create a `data-set` resource via the Python API, use code similar
 to the following example. You must provide the correct endpoint,
 username, and password for your Nuvla server.
 
-> **NOTE**: Not all imports are listed in the example.
+> **NOTE:** Not all imports are listed in the example.
 
 ```python
 from nuvla.api import Api as nuvla_Api
@@ -242,11 +242,11 @@ Nuvla Python API.
 
 {% include code_snippet.md file='/code-sample/create-data.py' language=python %}
 
-> **NOTE**: The process of creating an object will also create the S3
+> **NOTE:** The process of creating an object will also create the S3
 > bucket if it doesn't exist. Similarly, the S3 bucket will be removed
 > if the last object is removed from it.
 
-> **NOTE**: The visibility of the data objects and records is
+> **NOTE:** The visibility of the data objects and records is
 > determined by the ACL. Change the ACL to share data with other
 > users.
 
@@ -268,6 +268,6 @@ Once the data sets are created, they should be visible in the "data"
 section of the Nuvla UI. Check that they are visible and that they
 contain the objects that you expect. 
 
-> **NOTE**: The visibility of the data sets is determined by the
+> **NOTE:** The visibility of the data sets is determined by the
 > ACL. Change the ACL to share data with other users.
 

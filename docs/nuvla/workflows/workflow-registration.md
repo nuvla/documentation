@@ -13,7 +13,7 @@ This section describes the [NuvlaEdge](/nuvlaedge) registration and commissionin
 
 ![nuvlabox-registration.png](/assets/img/nuvlabox-registration.png)
 
-Note that all HTTPS requests during this workflow are performed by the NuvlaEdge, where all the information required by the NuvlaEdge is returned to the NuvlaEdge by Nuvla as responses to its requests. In other words, no incoming connection is required.
+> **NOTE:** All HTTPS requests during this workflow are performed by the NuvlaEdge, where all the information required by the NuvlaEdge is returned to the NuvlaEdge by Nuvla as responses to its requests. In other words, no incoming connection is required.
 
 **1. Installation of the Nuvlabox Engine software** 
 
@@ -33,7 +33,7 @@ A trigger installation script is embedded in the operating system of the edge de
 
 Depending on the installation process selected, either a NuvlaEdge record is created in Nuvla by the user (see step 1a above), or it is created automatically, via its API, using the automated method (see step 1b above).
 
-Note that additional users or groups can be added to the NuvlaEdge access control, such that they can access to the corresponding NuvlaEdgees.
+> **NOTE:** Additional users or groups can be added to the NuvlaEdge access control, such that they can access to the corresponding NuvlaEdgees.
 
 **2a. Manual activation**
 

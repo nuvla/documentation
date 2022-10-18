@@ -3,7 +3,7 @@ layout: page
 title: Launch Applications
 parent: User Guide
 grand_parent: Nuvla
-nav_order: 9
+nav_order: 4
 permalink: /nuvla/launch-app
 ---
 

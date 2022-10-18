@@ -9,4 +9,4 @@ redirect_from:
 - /tutorials/nuvlaedge-installation/
 ---
 
-The NuvlaEdge engine installation starts from Nuvla's [edge panel](https://nuvla.io/ui/edge). From there you can opt for one of two available installation methods: Compose Files bundle, or USB stick.
+The NuvlaEdge installation starts from Nuvla's [Edges panel](https://nuvla.io/edges). From there you can opt for one of two installation methods: Compose Files bundle, or USB stick.

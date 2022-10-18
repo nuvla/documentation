@@ -18,7 +18,7 @@ To create an account, visit the [home page](https://nuvla.io/) with your browser
 
 ![Sign Up Page](/assets/img/sign-up.png)
 
-You can either sign-up using username/password or use an external single sign-on service (e.g. GitHub).  You will be able to active two-factor authentication once sign-in.
+You can either sign-up using username/password or use an external single sign-on service (e.g. GitHub).  You will be able to activate two-factor authentication once sign-in.
 
 You can start your free trial right away, or do it later once sign-in.
 
@@ -33,11 +33,11 @@ This will send a confirmation message to the email address you provided.
 
 Visit the link given in that email to finish the registration process. This will send you back to the Nuvla welcome page, so that you can log in with your new account.
 
-> Note: the link provided by email can only be used once. If you use it again, you will receive an error message.
+> **NOTE:** the link provided by email can only be used once. If you use it again, you will receive an error message.
 
 ## Login
 
-Once you've registered with the Nuvla, you can then log into the server.
+Once you've registered with Nuvla, you can then log into the service.
 
 ![Sign In Page](/assets/img/sign-in.png)
 
@@ -48,8 +48,8 @@ Fill in the form and click the "Sign in" button.  This should take you to the ho
 
 ## Enable/disable Two-factor Authentication
 
-To increase security, we recommend you enable two-factor authentication.  Once signed-in, simply click on your email address or login name at the top right of the page.  This will show you the following dialog.  From there you can choose your two-factor authentication method and configure it.
+To increase security, we recommend you enable two-factor authentication.  Once signed-in, simply click on your email address or login name at the top right of the page.  Click [TODO] "Enable two-factor authentication". This will show you the following dialog.  From there you can choose your two-factor authentication method and configure it.
 
 ![Two-factor authentication](/assets/img/two-factor.png)
 
-That's it! You're in... enjoy Nuvla.  And if you need a hand, don't hesitate to reach out using the blue widget on the bottom right of every page.  We will also send you a few emails, we hope will help you the most out of Nuvla.
+That's it! You're in... enjoy Nuvla.  And if you need a hand, don't hesitate to reach out using the blue widget on the bottom right of every page.  We will also send you a few emails, to help you get the most out of Nuvla.

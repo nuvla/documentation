@@ -7,6 +7,8 @@ has_children: false
 grand_parent: NuvlaEdge
 ---
 
+[TODO]: Lionel/Nacho to check if this is still up to date.
+
 Building your own NuvlaEdge Peripheral Manager
 ========
 
@@ -25,13 +27,13 @@ Let's say you need a new NuvlaEdge Peripheral Manager for a specific peripheral 
  
  2. develop your own NuvlaEdge Peripheral Manager microservice
  
-If you go option 2., you should host your code in your own public/private repository, and then deploy alongside the NuvlaEdge Engine. 
+If you go option 2, you should host your code in your own public/private repository, and then deploy alongside the NuvlaEdge software. 
 
 We support community-built NuvlaEdge Peripheral Managers, so you can let us know about it and we can work together to make it official and available off the shelf from Nuvla!  
 
 ---
 
-Building a new NuvlaEdge Peripheral Manager is quite simple. We have built a transparent and generic REST API within the NuvlaEdge Engine core installation that allows you to register and manage your peripheral devices in the Nuvla-NuvlaEdge ecosystem without any in-depth knowledge nor code dependencies.
+Building a new NuvlaEdge Peripheral Manager is quite simple. We have built a transparent and generic REST API within the NuvlaEdge core installation that allows you to register and manage your peripheral devices in the Nuvla-NuvlaEdge ecosystem without any in-depth knowledge nor code dependencies.
 
 There are only **2 requirements** for having your microservice functioning correctly as a NuvlaEdge Peripheral Manager:
 
@@ -74,7 +76,7 @@ _peripheral-manager-mock.sh:_
 
 Our script needs to interact with the NuvlaEdge Agent API for managing the mock peripheral, so let's build a couple of functions to help us to that.
 
-**NOTE**: these two functions are generic, so in most cases you can literally copy and paste them into your own scripts.
+> **NOTE:** these two functions are generic, so in most cases you can literally copy and paste them into your own scripts.
 
 _peripheral-manager-mock.sh:_
 {% include code_snippet.md file='/nuvlabox-peripherals/peripheral-manager-mock_3.sh' language=shell %}
@@ -128,7 +130,7 @@ _peripheral-manager-mock.sh:_
 
 Now that we've built our custom NuvlaEdge Peripheral Manager for Mock peripherals (congrats), it's time to package our code.
 
-Let's build a Docker image that can be installed with the rest of the NuvlaEdge Engine component.
+Let's build a Docker image that can be installed with the rest of the NuvlaEdge component.
 
 We want it to be **small**. So let's use Alpine, install our dependencies(`jq` and `curl` for the NuvlaEdge Agent API functions, plus `inotify-tools` for watching the mock peripheral file), and copy our script into it.
 
@@ -164,7 +166,7 @@ docker buildx build --platform linux/arm/v6,linux/arm/v7,linux/amd64,linux/arm64
 ### Step 7
 
 
-We need a compose file to go alongside the other NuvlaEdge Engine compose files. Remember to use **your Docker image** from [Step 6](#step-6), and to bind mount (read-only) the host's _/dev_ directory.
+We need a compose file to go alongside the other NuvlaEdge compose files. Remember to use **your Docker image** from [Step 6](#step-6), and to bind mount (read-only) the host's _/dev_ directory.
 
 _docker-compose.mock.yml:_
 {% include code_snippet.md file='/nuvlabox-peripherals/docker-compose.mock.yml' language=yaml %}
@@ -174,7 +176,7 @@ _docker-compose.mock.yml:_
 
 Finally, we can launch the custom NuvlaEdge Peripheral Manager for Mock peripherals.
 
-Just add `-f docker-compose.mock.yml` to your NuvlaEdge Engine installation command (as described in [NuvlaEdge Installation](/nuvlaedge/installation/install-with-compose-files/) and that's it!
+Just add `-f docker-compose.mock.yml` to your NuvlaEdge installation command (as described in [NuvlaEdge Installation](/nuvlaedge/installation/install-with-compose-files/) and that's it!
 
-**NOTE**: if you want to deploy your custom NuvlaEdge Peripheral Manager after the NuvlaEdge Engine has been installed, then please make sure that your container runs within the same Docker network as the NuvlaEdge Agent. To do so, check in which Docker network your NuvlaEdge Agent is running, via `docker network ls` and `docker inspect <agent_container_id>`, and add that network to your peripheral manager container, via the Compose property `networks` (see [Docker Compose docs](https://docs.docker.com/compose/compose-file/#networks)).
+> **NOTE:** if you want to deploy your custom NuvlaEdge Peripheral Manager after the NuvlaEdge has been installed, then please make sure that your container runs within the same Docker network as the NuvlaEdge Agent. To do so, check in which Docker network your NuvlaEdge Agent is running, via `docker network ls` and `docker inspect <agent_container_id>`, and add that network to your peripheral manager container, via the Compose property `networks` (see [Docker Compose docs](https://docs.docker.com/compose/compose-file/#networks)).
 

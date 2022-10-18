@@ -7,15 +7,11 @@ nav_order: 8
 permalink: /nuvla/nuvlabox-remote-control
 ---
 
+[TODO]: review all actions available for a NE.
+
 # Controlling a NuvlaEdge remotely
 
-Apart from behaving like any other Nuvla Infrastructure Service, the NuvlaEdge also offers some additional capabilities for remote management, which are incorporated in Nuvla.
-
-When you deploy a new NuvlaEdge, a new Nuvla `api/nuvlabox/<uuid>` resource is automatically created for you.
-
-By navigating to this resource's API page, you'll be given a number of custom actions that can be issued directly from Nuvla, and sent to the NuvlaEdge.
-
-![nuvlabox-resource-api](/assets/img/nuvlabox-resource-api.png)
+NuvlaEdge can be remote controlled. By navigating to the detailed page of any given NuvlaEdge you have access to, you will be able to perform a number of actions. These are summarised here.
 
 ## Reboot the NuvlaEdge
 
