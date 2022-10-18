@@ -4,7 +4,6 @@ title: Customise Applications
 parent: User Guide
 grand_parent: Nuvla
 nav_order: 6
-permalink: /nuvla/customize-apps
 ---
 
 

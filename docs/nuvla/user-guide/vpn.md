@@ -4,7 +4,6 @@ title: Virtual Private Network (VPN)
 nav_order: 11
 parent: User Guide
 grand_parent: Nuvla
-permalink: /nuvla/vpn
 ---
 
 # Virtual Private Network (VPN)

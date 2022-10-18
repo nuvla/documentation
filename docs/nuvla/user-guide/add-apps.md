@@ -4,7 +4,6 @@ title: Add New Applications
 parent: User Guide
 grand_parent: Nuvla
 nav_order: 5
-permalink: /nuvla/add-apps
 ---
 
 Before we start, there are a few terms that you need to get familiar with:

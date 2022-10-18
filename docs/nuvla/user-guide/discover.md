@@ -4,7 +4,6 @@ title: Discover Nuvla
 nav_order: 3
 parent: User Guide
 grand_parent: Nuvla
-permalink: /nuvla/discover
 ---
 
 # Discover Nuvla

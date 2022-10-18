@@ -4,7 +4,6 @@ title: Manage Data
 parent: Advanced Usage
 grand_parent: Nuvla
 nav_order: 1
-permalink: /nuvla/advanced-usage/manage-data
 ---
 
 Managing Data
