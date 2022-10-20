@@ -21,9 +21,9 @@ This section of the documentation is for [Dave](/whoami#dave-the-administrator).
 
 # Dave can...
 
-#### [Install his own Nuvla instance](/nuvla/installation)
-#### [Create and Manage Infrastructures](/nuvla/infrastructures)
-#### [Populate Nuvla with Example Applications](/nuvla/installation/example-apps)
+#### Install his own Nuvla instance
+#### Create and Manage Infrastructures
+#### Populate Nuvla with Example Applications
 #### [Deploy a NuvlaEdge](/nuvlaedge/installation/install-with-compose-files)
 ---
 #### Embed the Nuvla UI into another web application 

@@ -29,8 +29,9 @@ Functionalities like the automatic discovery and categorization of peripherals a
 
 In order to install the NEE and ensure its smooth execution over time, your device should have at least:
 
-- 1GB of RAM
+- 512MB of RAM
 - 2GB of free disk space
+- Supported CPU architectures: AArch32, AArch64 and x86_64
 
 If you are looking at an application with constrained hardware, especially in terms of memory size, please get in touch. Some components in the [NuvlaEdge architecture](/nuvlaedge/nuvlaedge-engine/architecture/) are optional and can be removed to save memory.  Of course it's a tradeoff.
 
@@ -56,4 +57,18 @@ _Mandatory_:
 _Optional_:
 - 1194: **Outbound**: UDP connection to vpn.nuvlabox.com in case VPN is decided to be used for communication with the edge device managed by NEE.
 
-Extended port usage [here](/nuvlaedge/nuvlaedge-engine/architecture/#network-port-binding). 
+Extended port usage [here](/nuvlaedge/nuvlaedge-engine/architecture/#network-port-binding).
+
+## Engine memory footprint
+
+<style>
+tr:nth-child(even) {
+  color: #b00000!important;
+}
+</style>
+
+
+| Version | Avg. Memory (MB) |    Release     |
+|--------:|:----------------:|:--------------:|
+|   2.5.0 |       200        |  Pre-release   |
+|   2.1.1 |       260        | Latest release |
