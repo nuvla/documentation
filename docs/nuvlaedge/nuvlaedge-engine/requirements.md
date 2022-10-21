@@ -59,7 +59,7 @@ _Optional_:
 
 Extended port usage [here](/nuvlaedge/nuvlaedge-engine/architecture/#network-port-binding).
 
-## Engine memory footprint
+## NuvlaEdge Engine footprint
 
 <style>
 tr:nth-child(even) {
@@ -68,7 +68,7 @@ tr:nth-child(even) {
 </style>
 
 
-| Version | Avg. Memory (MB) |    Release     |
-|--------:|:----------------:|:--------------:|
-|   2.5.0 |       200        |  Pre-release   |
-|   2.1.1 |       260        | Latest release |
+| Version | Avg. Memory (MB) | Disk usage (MB) |    Release     |
+|--------:|:----------------:|:---------------:|:--------------:|
+|   2.5.0 |       200        |       350       |  Pre-release   |
+|   2.1.1 |       260        |       980       | Latest release |
