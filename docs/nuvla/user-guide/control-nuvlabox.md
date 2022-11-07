@@ -4,7 +4,6 @@ title: NuvlaEdge Remote Control
 parent: User Guide
 grand_parent: Nuvla
 nav_order: 8
-permalink: /nuvla/nuvlabox-remote-control
 ---
 
 [TODO]: review all actions available for a NE.

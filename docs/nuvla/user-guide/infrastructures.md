@@ -4,7 +4,6 @@ title: Manage Infrastructures
 parent: User Guide
 grand_parent: Nuvla
 nav_order: 7
-permalink: /nuvla/infrastructures
 ---
 
 # CaaS Infrastructures

@@ -4,7 +4,6 @@ title: Sign Up/In
 nav_order: 1
 parent: User Guide
 grand_parent: Nuvla
-permalink: /nuvla/register
 ---
 
 Setup
