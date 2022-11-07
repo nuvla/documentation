@@ -1,0 +1,28 @@
+name: Screenshotting
+
+on:
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: ./docs
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create new branch
+        run: git checkout -b screenshot-branch
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: npx playwright test
+      - name: Push to origin
+        run: git push --set-upstream origin screenshot-branch
