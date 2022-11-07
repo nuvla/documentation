@@ -11,7 +11,7 @@ TODO: check Nuvla links
 
 # Install via Compose Files bundle
 
-The simplest way to install the NuvlaEdge software on an edge device is to follow this installation method.  If you are looking for an automated and/or scalable method, please visit the [USB Stick page](/nuvlaedge/installation/install-with-usb-stick/).
+The simplest way to install the NuvlaEdge software on an edge device is to follow this installation method.  If you are looking for an automated and/or scalable method, please visit the [USB Stick page](/nuvlaedge/installation/install-with-usb-stick).
 
 1. login into [Nuvla](https://nuvla.io)
 2. from the [Edge panel](https://nuvla.io/edge), add a new `nuvlaedge`, and either

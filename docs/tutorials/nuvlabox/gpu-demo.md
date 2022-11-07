@@ -72,10 +72,10 @@ As you can see, since we can not use `--gpus` in a Compose file (yet), we need t
 tutorial we don't need to pass any libraries, as the container itself has the libraries we need, already compiled for this device. 
 
 With this, you can create your own Nuvla app, by following [these steps](/nuvla/add-apps).
- 
+
 ### Deploy the App into the NVIDIA Jetson Nano
 
-In Nuvla.io, go to the App Store and find the app called **"GPU Demo”**. We've pre-created one for your with the instructions from above. 
+In Nuvla.io, go to the Marketplace and find the app called **"GPU Demo”**. We've pre-created one for your with the instructions from above. 
 
 Click **“launch”** and a deployment modal will appear - select your NuvlaEdge credentials. 
 

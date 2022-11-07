@@ -21,4 +21,4 @@ cd example-ubuntu                                     # for example for Ubuntu
 python add-module.py
 ```
 
-You should now see the application in your Nuvla's App Store. 
+You should now see the application in your Nuvla's Marketplace.

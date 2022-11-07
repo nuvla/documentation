@@ -67,7 +67,7 @@ You can run this demo by yourself. Simply go through the following steps:
 
 ### 3: Launching your Message Broker
 
- 1. go to the Nuvla App Store (*Apps* on the left sidebar)
+ 1. go to the Nuvla Marketplace (*Apps* on the left sidebar)
  2. let's deploy an MQTT broker to your Swarm cluster...find the app "RabbitMQ"
  3. click "*launch*"
  4. select the credential you've created before, and click "*launch*"
@@ -96,7 +96,7 @@ You can run this demo by yourself. Simply go through the following steps:
     
 ### 5: Deploy the AI app to the edge
 
- 1. in [Nuvla.io](https://nuvla.io), go to the *App Store* and find the app called "Motion Detector to MQTT". Click "*launch*"
+ 1. in [Nuvla.io](https://nuvla.io), go to the *Marketplace* and find the app called "Motion Detector to MQTT". Click "*launch*"
  2. a panel with appear - select your NuvlaEdge credential from there
  3. click on the environment tab and paste the "mqtt" **URL** that you saved above
  
