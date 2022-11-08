@@ -4,16 +4,33 @@ on:
   push:
     branches: [issue_87]
   workflow_dispatch:
+    inputs:
+      USER_NAME_SECRET:
+        description: 'Username'
+        required: true
+      USER_PASSWORD:
+        description: 'Password'
+        required: true
 
 defaults:
   run:
     working-directory: ./screenshotting
 
 jobs:
-  test:
+  screenshot:
     timeout-minutes: 60
+    env:
+      USER_NAME_SECRET: ${{ github.event.inputs.USER_NAME_SECRET }}
+      USER_PASSWORD: ${{ github.event.inputs.USER_PASSWORD }}
     runs-on: ubuntu-latest
     steps:
+      - name: Testing masking
+        run: |
+          echo $USER_NAME_SECRET
+          echo $USER_PASSWORD
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%dT%Hh_%Mm')"
       - uses: actions/checkout@v3
       - name: Create new branch
         run: git checkout -b screenshot-branch
