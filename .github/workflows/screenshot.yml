@@ -29,12 +29,8 @@ jobs:
           INP_PASSWORD=$(jq -r '.inputs.user_password' $GITHUB_EVENT_PATH)
           echo ::add-mask::$INP_USER
           echo ::add-mask::$INP_PASSWORD
-          echo USER="$INP_USER" >> $GITHUB_ENV
+          echo USER_NAME="$INP_USER" >> $GITHUB_ENV
           echo PASSWORD="$INP_PASSWORD" >> $GITHUB_ENV
-      - name: Test masked
-        run: |
-          echo $USER
-          echo $PASSWORD
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%dT%Hh_%Mm')"
@@ -47,7 +43,10 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      - name: Run Playwright tests
+      - name: Run Playwright test
+        env:
+          USER_NAME: ${{ steps.add_mask.outputs.USER_NAME }}
+          PASSWORD: ${{ steps.add_mask.outputs.PASSWORD }}s
         run: npx playwright test
       - name: Commit and push to origin
         if: success()
