@@ -1,6 +1,8 @@
 name: Screenshotting
 
 on:
+  push:
+    branches: [issue_87]
   workflow_dispatch:
 
 defaults:
