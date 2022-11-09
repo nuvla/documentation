@@ -19,6 +19,8 @@ defaults:
 jobs:
   screenshot:
     timeout-minutes: 60
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -49,7 +51,7 @@ jobs:
           echo USER_NAME=${{ steps.add_mask.outputs.USER_NAME }} >> .env
           echo PASSWORD=${{ steps.add_mask.outputs.PASSWORD }} >> .env
           npx playwright test
-      - name: Commit and push to origin
+      - name: Commit, push to origin and create PR
         if: success()
         run: |
           git config user.name github-actions
@@ -57,3 +59,4 @@ jobs:
           git add ../docs/assets
           git commit -m'New screenshots taken on ${{ steps.date.outputs.date }}'
           git push --set-upstream origin screenshot-branch-${{ steps.date.outputs.date }}
+          gh pr create -B master -H screenshot-branch-${{ steps.date.outputs.date }} --title 'Merge screenshot-branch-${{ steps.date.outputs.date }} into master' --body 'Created by Github action'
