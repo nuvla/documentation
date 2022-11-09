@@ -44,10 +44,11 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright test
-        env:
-          USER_NAME: ${{ steps.add_mask.outputs.USER_NAME }}
-          PASSWORD: ${{ steps.add_mask.outputs.PASSWORD }}
-        run: USER_NAME=$USER_NAME PASSWORD=$PASSWORD npx playwright test
+        run: |
+          touch .env
+          echo USER_NAME=${{ steps.add_mask.outputs.USER_NAME }} >> .env
+          echo PASSWORD=${{ steps.add_mask.outputs.PASSWORD }} >> .env
+          npx playwright test
       - name: Commit and push to origin
         if: success()
         run: |
