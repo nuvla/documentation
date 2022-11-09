@@ -13,6 +13,29 @@ async function delay(ms = 5000) {
 }
 
 test('test', async ({ page }, { config }) => {
+  await page.route('api/session**', async (route) => {
+    const request = route.request();
+    // Fetch original response.
+    const response = await page.request.fetch(request);
+    // Add a prefix to the title.
+    let body = await response.json();
+    if (request.method() === 'GET') {
+      body.identifier = 'showing@nuvla-ui.io';
+    } else if (request.method() === 'PUT') {
+      body.resources[0].identifier = 'showing@nuvla-ui.io';
+    }
+    route.fulfill({
+      // Pass all fields from the response.
+      response,
+      // Override response body.
+      body: JSON.stringify(body),
+      // Force content type to be html.
+      headers: {
+        ...response.headers(),
+      },
+    });
+  });
+
   const { baseURL } = config.projects[0].use;
   // const browser = await chromium.launch();
   // const page = await browser.newPage();
@@ -33,6 +56,7 @@ test('test', async ({ page }, { config }) => {
   });
 
   // await page.routeFromHAR('./network.har', { notFound: 'fallback' });
+  await page.pause();
   await page.goto(baseURL);
   // hide re-frame-10x or local tests fail
   await page.evaluate(`window.localStorage.setItem('day8.re-frame-10x.show-panel', '"false"')`);
