@@ -46,8 +46,8 @@ jobs:
       - name: Run Playwright test
         env:
           USER_NAME: ${{ steps.add_mask.outputs.USER_NAME }}
-          PASSWORD: ${{ steps.add_mask.outputs.PASSWORD }}s
-        run: npx playwright test
+          PASSWORD: ${{ steps.add_mask.outputs.PASSWORD }}
+        run: USER_NAME=$USER_NAME PASSWORD=$PASSWORD npx playwright test
       - name: Commit and push to origin
         if: success()
         run: |
