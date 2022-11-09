@@ -52,5 +52,8 @@ jobs:
       - name: Commit and push to origin
         if: success()
         run: |
-          git commit -am'New screenshots taken on ${{ steps.date.outputs.date }}'
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add ../docs/assets
+          git commit -m'New screenshots taken on ${{ steps.date.outputs.date }}'
           git push --set-upstream origin screenshot-branch-${{ steps.date.outputs.date }}
