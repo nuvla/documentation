@@ -12,6 +12,7 @@ require('dotenv').config({ path: './.env.e2e' });
  */
 const config: PlaywrightTestConfig = {
   testDir: './tests',
+  globalSetup: './global-setup.js',
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {
@@ -37,6 +38,7 @@ const config: PlaywrightTestConfig = {
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://nuvla.io',
+    storageState: 'storageState.json',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
