@@ -85,6 +85,6 @@ test('test', async ({ page }, { config }) => {
       width: 1000,
       height: 400,
     },
-    path: '../docs/assets/img/add-new-project-new.png',
+    path: '../docs/assets/img/add-new-project.png',
   });
 });
