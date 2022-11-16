@@ -22,5 +22,5 @@ On the welcome page and in the menu bar on the left side of the page, you can se
 
 Nuvla has a rich and advanced security model, including who has access to what and with which rights. This is captured using what we call an Access Control List (ACL) mechanism.  As a result, users can share, or not, the different Nuvla resources with other users and groups.
 
-Alice will typically use the "apps" for simple deployments and the "data" section to select data to analyse and applications able to process the selected data. The "dashboard" is great to manage deployed applications. The
-"api" section is typically only be used by experts, such as [Felix](/felix).
+Domain specialists [like Alice](/alice) will typically use the "apps" for simple deployments and the "data" section to select data to analyze and applications able to process the selected data. The "dashboard" is great for managing deployed applications. The
+"API" section is typically only used by IT experts, such as [Clara](/clara) and [Felix](/felix).
