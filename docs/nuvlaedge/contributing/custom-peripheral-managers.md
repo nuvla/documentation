@@ -10,7 +10,7 @@ grand_parent: NuvlaEdge
 Building your own NuvlaEdge Peripheral Manager
 ========
 
-There is a set of natively supported peripheral managers that you can opt to add to your NuvlaEdge at installation time. Those are also open-source and can be found on GitHub [here](https://github.com/nuvlabox?q=peripheral-manager-).
+There is a set of natively supported peripheral managers that you can opt to add to your NuvlaEdge at installation time. Those are also open-source and can be found on GitHub [here](https://github.com/nuvlaedge?q=peripheral-manager-).
 
 NuvlaEdge Peripheral Managers are completely optional and should only be used if you'd like to have an automated mechanism to discover, register and manage peripheral devices that are attached to your NuvlaEdge. Once registered, these peripheral devices can be visualized, managed and sometimes even directly controlled from Nuvla (like USB webcams).
 
@@ -37,7 +37,7 @@ There are only **2 requirements** for having your microservice functioning corre
 
  a. _Your microservice needs to be on the same Docker network as the [NuvlaEdge Agent component](https://github.com/nuvlabox/agent). This is usually guaranteed when you deploy all components at once, as described in the [Installation Quickstart](/nuvlaedge/installation)_
  
- b. _Your code must manage the NuvlaEdge peripheral devices through the management interface provided by the NuvlaEdge Agent on port 80. The specification for this API can be found [here](https://github.com/nuvlabox/agent#manage-nuvlabox-peripherals)_
+ b. _Your code must manage the NuvlaEdge peripheral devices through the management interface provided by the NuvlaEdge Agent on port 80. The specification for this API can be found [here](https://github.com/nuvlaedge/agent#manage-nuvlaedge-peripherals)_
  
 
 Mocking a NuvlaEdge Peripheral Manager
@@ -128,9 +128,9 @@ _peripheral-manager-mock.sh:_
 
 Now that we've built our custom NuvlaEdge Peripheral Manager for Mock peripherals (congrats), it's time to package our code.
 
-Let's build a Docker image that can be installed with the rest of the NuvlaEdge Engine component.
+Let's build a Docker image that can be installed with the rest of the NuvlaEdge component.
 
-We want it to be **small**. So let's use Alpine, install our dependencies(`jq` and `curl` for the NuvlaEdge Agent API functions, plus `inotify-tools` for watching the mock peripheral file), and copy our script into it.
+We want it to be **small**. So let's use Alpine, install our dependencies (`jq` and `curl` for the NuvlaEdge Agent API functions, plus `inotify-tools` for watching the mock peripheral file), and copy our script into it.
 
 Build the following Dockerfile.
 
