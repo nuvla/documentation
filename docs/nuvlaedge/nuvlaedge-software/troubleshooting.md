@@ -2,20 +2,20 @@
 layout: nuvlabox
 title: Troubleshooting
 nav_order: 6
-parent: NuvlaEdge Engine
+parent: NuvlaEdge Software
 grand_parent: NuvlaEdge
 redirect_from:
  - /nuvlabox/latest/nuvlabox-engine/troubleshooting
+ - /nuvlaedge/nuvlaedge-engine/troubleshooting
 ---
 
 # Troubleshooting
 
 
-<details><summary><b>Failed to downgrade my NuvlaEdge Engine to v1</b></summary>
+<details><summary><b>Failed to downgrade my NuvlaEdge to v1</b></summary>
 
 <div markdown="1">
-Automated migrations across major versions (e.g. v1 to v2) are not currently supported. So even if it looks like your NuvlaEdge
-Engine downgrade finished successfully, you'll soon realize, from Nuvla, that your NuvlaEdge is not healthy. If you must downgrade from a NuvlaEdge Engine v2 to v1, please contact us.
+Automated migrations across major versions (e.g. v1 to v2) are not currently supported. So even if it looks like your NuvlaEdge downgrade finished successfully, you'll soon realize, from Nuvla, that your NuvlaEdge is not healthy. If you must downgrade from a NuvlaEdge v2 to v1, please contact us.
 </div>
 
 </details>
@@ -26,7 +26,7 @@ Engine downgrade finished successfully, you'll soon realize, from Nuvla, that yo
 <details><summary><b>ERROR: Get https://registry-1.docker.io/v2/: net/http: request canceled while waiting for connection</b></summary>
 
 <div markdown="1">
-If you are getting this error while installing the NuvlaEdge Engine:
+If you are getting this error while installing the NuvlaEdge:
 
 ```bash
 ERROR: Get https://registry-1.docker.io/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
