@@ -26,7 +26,7 @@ He is contributing to the Nuvla and NuvlaEdge code base.
 
 If you want to be a Felix, please follow our contribution guidelines. Each GitHub repository should have a contribution section, like these for example:
 
- - [NuvlaEdge Agent](https://github.com/nuvlabox/agent#contributing)
+ - [NuvlaEdge Agent](https://github.com/nuvlaedge/agent#contributing)
  - [Nuvla API Server](https://github.com/nuvla/api-server#contributing)
  - [Nuvla UI](https://github.com/nuvla/ui#contributing)
 

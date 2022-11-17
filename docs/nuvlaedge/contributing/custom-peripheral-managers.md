@@ -35,7 +35,7 @@ Building a new NuvlaEdge Peripheral Manager is quite simple. We have built a tra
 
 There are only **2 requirements** for having your microservice functioning correctly as a NuvlaEdge Peripheral Manager:
 
- a. _Your microservice needs to be on the same Docker network as the [NuvlaEdge Agent component](https://github.com/nuvlabox/agent). This is usually guaranteed when you deploy all components at once, as described in the [Installation Quickstart](/nuvlaedge/installation)_
+ a. _Your microservice needs to be on the same Docker network as the [NuvlaEdge Agent component](https://github.com/nuvlaedge/agent). This is usually guaranteed when you deploy all components at once, as described in the [Installation Quickstart](/nuvlaedge/installation)_
  
  b. _Your code must manage the NuvlaEdge peripheral devices through the management interface provided by the NuvlaEdge Agent on port 80. The specification for this API can be found [here](https://github.com/nuvlaedge/agent#manage-nuvlaedge-peripherals)_
  
