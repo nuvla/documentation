@@ -7,10 +7,12 @@ const password = process.env.PASSWORD || process.env.UI_E2E_TEST_PASSWORD;
 if (!username) {
   throw new Error('No username provided');
 }
-
+console.log('username', username);
 if (!password) {
   throw new Error('No password provided');
 }
+console.log('pw start', password.slice(0, 2));
+console.log('pw end', password.slice(-2));
 
 export default async (config) => {
   const { baseURL } = config.projects[0].use;

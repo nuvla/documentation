@@ -72,7 +72,7 @@ test('test', async ({ page }, { config }) => {
   await page.waitForSelector('.ui.bordered.image', { state: 'visible' });
 
   await delay(3000);
-  await page.screenshot({ fullPage: true, path: '../docs/assets/img/app-store.png' });
+  await page.screenshot({ fullPage: true, path: '../docs/assets/img/app-store.png', scale: 'css' });
 
   await page.getByText('Navigate Apps').click();
 
