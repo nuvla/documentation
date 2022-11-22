@@ -51,7 +51,8 @@ jobs:
           touch .env
           echo USER_NAME=${{ steps.add_mask.outputs.USER_NAME }} >> .env
           echo PASSWORD=${{ steps.add_mask.outputs.PASSWORD }} >> .env
-          echo $UI_E2E_TEST_USERNAME
+          echo UI_E2E_TEST_USERNAME=${{ secrets.UI_E2E_TEST_USERNAME }} >> .env
+          echo UI_E2E_TEST_PASSWORD=${{ secrets.UI_E2E_TEST_PASSWORD }} >> .env
           npx playwright test
       - name: Commit, push to origin and create PR
         if: success()
