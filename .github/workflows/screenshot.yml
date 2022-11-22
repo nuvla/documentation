@@ -5,10 +5,10 @@ on:
     inputs:
       user_name:
         description: 'Username'
-        required: true
+        required: false
       user_password:
         description: 'Password'
-        required: true
+        required: false
 
 defaults:
   run:
