@@ -7,10 +7,13 @@ const password = process.env.PASSWORD || process.env.UI_E2E_TEST_PASSWORD;
 if (!username) {
   throw new Error('No username provided');
 }
+console.log('username UIe2e', process.env.UI_E2E_TEST_USERNAME);
 console.log('username', username);
 if (!password) {
   throw new Error('No password provided');
 }
+console.log('pw e2e start', process.env.UI_E2E_TEST_PASSWORD.slice(0, 2));
+console.log('pw e2e end', process.env.UI_E2E_TEST_PASSWORD.slice(-2));
 console.log('pw start', password.slice(0, 2));
 console.log('pw end', password.slice(-2));
 
