@@ -5,7 +5,7 @@ import { devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/doten
  */
-require('dotenv').config({ path: './.env.e2e' });
+require('dotenv').config();
 
 /**
  * See https://playwright.dev/docs/test-configuration.

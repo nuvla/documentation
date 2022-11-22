@@ -5,3 +5,5 @@
 .bundle
 vendor
 docs/.jekyll-cache
+.env
+screenshotting/storageState.json
