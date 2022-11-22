@@ -5,11 +5,11 @@ const username = process.env.USER_NAME || process.env.UI_E2E_TEST_USERNAME;
 const password = process.env.PASSWORD || process.env.UI_E2E_TEST_PASSWORD;
 
 if (!username) {
-  throw new Error('Now username provided');
+  throw new Error('No username provided');
 }
 
 if (!password) {
-  throw new Error('Now password provided');
+  throw new Error('No password provided');
 }
 
 export default async (config) => {
