@@ -4,7 +4,7 @@ import { mockAppData } from './mockAppData';
 test.use({
   viewport: {
     height: 1200,
-    width: 1916,
+    width: 1500,
   },
 });
 
@@ -80,7 +80,7 @@ test('test', async ({ page }, { config }) => {
   await page.pause();
   await page.screenshot({
     clip: {
-      x: 460,
+      x: 260,
       y: 390,
       width: 1000,
       height: 400,
