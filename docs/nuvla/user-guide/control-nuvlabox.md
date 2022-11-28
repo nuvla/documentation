@@ -10,7 +10,7 @@ nav_order: 8
 
 # Controlling a NuvlaEdge remotely
 
-NuvlaEdge can be remote controlled. By navigating to the detailed page of any given NuvlaEdge you have access to, you will be able to perform a number of actions. These are summarised here.
+NuvlaEdge can be remotely controlled. By navigating to the detailed page of any given NuvlaEdge you have access to, you will be able to perform a number of actions. These are summarised here.
 
 ## Reboot the NuvlaEdge
 
@@ -24,7 +24,7 @@ After that, simply wait for a Nuvla notification stating whether the operation h
 
 ## Checking if the NuvlaEdge API is reachable
 
-There's a simple action that verifies if the NuvlaEdge control API can be reached from Nuvla. This operation helps evaluating whether the other control actions can be issued or not.
+There's a simple action that verifies if the NuvlaEdge control API can be reached from Nuvla. This operation helps evaluate whether the other control actions can be issued or not.
 
 ## Add an SSH key to the NuvlaEdge
 
@@ -87,4 +87,21 @@ To do so, use the following command;
 curl -XPOST -b <session_cookies> https://nuvla.io/api/nuvlabox/<uuid>/revoke-ssh-key -H content-type:application/json -d '{"credential": "credential/<uuid_ssh_cred>"}'
 ```
 
-Once this operation is completed, you'll no longer be able to login directly into that NuvlaEdge using the aforementioned SSH keypair. 
+Once this operation is completed, you'll no longer be able to login directly into that NuvlaEdge using the aforementioned SSH keypair.
+
+
+## NuvlaEdge Clustering
+Nuvla allows for multiple NuvlaEdge devices running *Swarm* mode to join together in a single cluster after install the NuvlaEdge. 
+
+[//]: # (TODO: Is VPN compulsory?)
+
+Nuvla provides four different cluster actions:
+    
+- **Join as worker**: the selected Edge joins an already existing cluster as a worker.
+- **Join as a manager**: the selected Edge joins an already existing cluster as a manager.
+- **Leave**: the selected Edge leaves the cluster
+- **Force new cluster**: Creates a new cluster with the current Edge as manager
+
+When an Edge is part of a cluster as a worker, its capabilities will be reduced. For example, the deployments will be launched via the corresponding manager(s) of that cluster. 
+
+Telemetry will still be reported for every one of the workers and managers independently. 

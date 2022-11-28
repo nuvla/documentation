@@ -35,7 +35,7 @@ The simplest way to install the NuvlaEdge software on an edge device is to follo
    1f0dc2873d34   nuvlaedge/peripheral-manager-usb:2.2.0         "peripheral-manager-…"   1 hours ago    Up 1 hour                                                           nuvlaedge_peripheral-manager-usb_1
    ```
 
-If this is not the case, please consult the [Troubleshooting page](/nuvlaedge/latest/nuvlaedge/troubleshooting), or get in touch. TODO: How?
+If this is not the case, please consult the [Troubleshooting page](/nuvlaedge/latest/nuvlaedge/troubleshooting), or get in touch via [email](mailto:support@sixsq.com) or using the built-in platform chat. TODO: How?
 
 ### Halt the NuvlaEdge
 
