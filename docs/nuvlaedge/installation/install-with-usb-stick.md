@@ -1,7 +1,7 @@
 ---
 layout: nuvlabox
 title: USB Stick
-nav_order: 2
+nav_order: 3
 parent: Installation
 grand_parent: NuvlaEdge
 ---
@@ -16,9 +16,9 @@ The advantages of this installation method are:
 - The same USB stick can be used **as many times** as needed
 - **NO** technical expertise required
 
-Unlike the Compose file bundle, the USB stick installation method does not require manual user intervention, and thus does not support manual configuration of the NE environment variable. **NUVLABOX_UUID**, **NUVLA_ENDPOINT** and **NUVLA_ENDPOINT_INSECURE** are automatically defined for you by Nuvla, during the installation process.
+Unlike the Compose file bundle, the USB stick installation method does not require manual user intervention, and thus does not support manual configuration of the NuvlaEdge environment variable. **NUVLABOX_UUID**, **NUVLA_ENDPOINT** and **NUVLA_ENDPOINT_INSECURE** are automatically defined for you by Nuvla, during the installation process.
 
-It is _not_ yet possible to define variables like **HOSTNAME** and **VPN_INTERFACE_NAME** with this installation method. All possible NE configurations for this installation method are set from Nuvla, at the time of creation of the USB stick file.
+It is _not_ yet possible to define variables like **HOSTNAME** and **VPN_INTERFACE_NAME** with this installation method. All possible NuvlaEdge configurations for this installation method are set from Nuvla, at the time of creation of the USB stick file.
 
 ### Additional requirements
 
@@ -84,15 +84,15 @@ Just follow these steps:
 
    It shouldn't take more than a few seconds for the process to start. Depending on your hardware, you might be able to get some external feedback on the progress of the installation. This feedback signal works for the following machine types:
     - `raspberrypi`:
-        - **CONSTANT GREEN LED** for 10 sec. This means the NuvlaEdge Engine installation process has **started** and you can safely remove your USB stick
+        - **CONSTANT GREEN LED** for 10 sec. This means the NuvlaEdge installation process has **started** and you can safely remove your USB stick
 
           ![rpi-nb-start](/assets/img/rpi-nb-start.gif)
 
-        - **HEARTBEAT GREEN LED** for 10 sec. This means the NuvlaEdge Engine installation process has **finished successfully**
+        - **HEARTBEAT GREEN LED** for 10 sec. This means the NuvlaEdge installation process has **finished successfully**
 
           ![rpi-nb-success](/assets/img/rpi-nb-success.gif)
 
-        - **PULSING GREEN LED** for 10 sec. This means the NuvlaEdge Engine installation process has **failed**
+        - **PULSING GREEN LED** for 10 sec. This means the NuvlaEdge installation process has **failed**
 
           ![rpi-nb-error](/assets/img/rpi-nb-error.gif)
 
@@ -118,6 +118,7 @@ It is also possible to use the USB stick method to completely delete and re-inst
 
 then the NuvlaEdge Auto-installer will completely remove the existing NuvlaEdge installation from your device, and install a fresh new one.
 
+
 ### Detailed configuration
 
-See the [NuvlaEdge configuration](/nuvlaedge/discover/configuration/) page for more details.
+See the [NuvlaEdge configuration](/nuvlaedge/nuvlaege-software/configuration/) page for more details.

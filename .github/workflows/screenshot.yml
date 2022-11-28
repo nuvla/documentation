@@ -1,0 +1,63 @@
+name: Screenshotting
+
+on:
+  workflow_dispatch:
+    inputs:
+      user_name:
+        description: 'Username'
+        required: false
+      user_password:
+        description: 'Password'
+        required: false
+
+defaults:
+  run:
+    working-directory: ./screenshotting
+
+jobs:
+  screenshot:
+    timeout-minutes: 60
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Masking inputs
+        id: add_mask
+        run: |
+          INP_USER=$(jq -r '.inputs.user_name' $GITHUB_EVENT_PATH)
+          INP_PASSWORD=$(jq -r '.inputs.user_password' $GITHUB_EVENT_PATH)
+          echo ::add-mask::$INP_USER
+          echo ::add-mask::$INP_PASSWORD
+          echo USER_NAME="$INP_USER" >> $GITHUB_ENV
+          echo PASSWORD="$INP_PASSWORD" >> $GITHUB_ENV
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%dT%Hh_%Mm')"
+      - name: Create new branch
+        run: git checkout -b screenshot-branch-${{ steps.date.outputs.date }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright test
+        env:
+          UI_E2E_TEST_USERNAME: ${{ secrets.UI_E2E_TEST_USERNAME }}
+          UI_E2E_TEST_PASSWORD: ${{ secrets.UI_E2E_TEST_PASSWORD }}
+        run: |
+          touch .env
+          echo USER_NAME=${{ steps.add_mask.outputs.USER_NAME }} >> .env
+          echo PASSWORD=${{ steps.add_mask.outputs.PASSWORD }} >> .env
+          npx playwright test
+      - name: Commit, push to origin and create PR
+        if: success()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add ../docs/assets
+          git commit -m'New screenshots taken on ${{ steps.date.outputs.date }}'
+          git push --set-upstream origin screenshot-branch-${{ steps.date.outputs.date }}
+          gh pr create -B master -H screenshot-branch-${{ steps.date.outputs.date }} --title 'Merge screenshot-branch-${{ steps.date.outputs.date }} into master' --body 'Created by Github action'

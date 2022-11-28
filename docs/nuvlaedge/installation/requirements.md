@@ -1,11 +1,17 @@
 ---
 layout: nuvlabox
 title: Requirements
+<<<<<<< HEAD:docs/nuvlaedge/nuvlaedge-engine/requirements.md
 nav_order: 2
 parent: Discover NuvlaEdge
+=======
+nav_order: 1
+parent: Installation
+>>>>>>> master:docs/nuvlaedge/installation/requirements.md
 grand_parent: NuvlaEdge
 redirect_from:
  - /nuvlabox/latest/nuvlabox-engine/requirements
+ - /nuvlaedge/nuvlaedge-engine/requirements
 ---
 
 # Requirements
@@ -27,20 +33,19 @@ Functionalities like the automatic discovery and categorization of peripherals a
 
 ## Hardware Requirements
 
-In order to install the NEE and ensure its smooth execution over time, your device should have at least:
+In order to install the NuvlaEdge and ensure its smooth execution over time, your device should have at least:
 
 - 512MB of RAM
 - 2GB of free disk space
 - Supported CPU architectures: AArch32, AArch64 and x86_64
 
-If you are looking at an application with constrained hardware, especially in terms of memory size, please get in touch. Some components in the [NuvlaEdge architecture](/nuvlaedge/discover/architecture/) are optional and can be removed to save memory.  Of course it's a tradeoff.
+If you are looking at an application with constrained hardware, especially in terms of memory size, please get in touch. Some components in the [NuvlaEdge architecture](/nuvlaedge/nuvlaedge-software/architecture/) are optional and can be removed to save memory.  Of course it's a tradeoff.
 
 An remember that you should leave enough memory to host the apps that will be running on the edge device. 
 
-
 ## Software Requirements
 
-Before you can install the NE, please make sure you have:
+Before you can install the NuvlaEdge, please make sure you have:
 
 - [Docker Engine (version 18 or higher)](https://docs.docker.com/install/#supported-platforms), running in [Swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/)
 - [Docker Compose (version 1.27.4 or higher)](https://docs.docker.com/compose/install/)
@@ -50,17 +55,17 @@ Before you can install the NE, please make sure you have:
 
 You need **an internet connection**.
 
-The NE requires the following ports to be opened:
+The NuvlaEdge requires the following ports to be opened:
 
 _Mandatory_:
-- 443: **Outbound**: Default HTTPS port. Used by NEE to communicate with Nuvla via HTTPS (https://nuvla.io). 
+- 443: **Outbound**: Default HTTPS port. Used by NuvlaEdge to communicate with Nuvla via HTTPS (https://nuvla.io). 
 
 _Optional_:
-- 1194: **Outbound**: UDP connection to [TODO: or vpn.nuvlaedge.com?] vpn.nuvlabox.com in case VPN is enabled for communication with the edge device managed by NE.
+- 1194: **Outbound**: UDP connection to vpn.nuvlaedge.com in case VPN is decided to be used for communication with the edge device managed by NuvlaEdge.
 
-Extended port usage [here](/nuvlaedge/nuvlaedge-engine/architecture/#network-port-binding).
+Extended port usage [here](/nuvlaedge/nuvlaedge-software/architecture/#network-port-binding).
 
-## NuvlaEdge Engine footprint
+## NuvlaEdge footprint
 
 <style>
 tr:nth-child(even) {

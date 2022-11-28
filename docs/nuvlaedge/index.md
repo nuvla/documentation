@@ -6,7 +6,7 @@ description: "Secure and intelligent edge computing solution"
 has_children: true
 ---
 
-![nuvlabox-logo](/assets/img/logo-nuvlaedge.png){: .center-image }
+![nuvlaedge-logo](/assets/img/logo-nuvlaedge.png){: .center-image }
 
 With NuvlaEdge (**NE**), you can transform most ARM and x86 hardware platforms into a smart edge device, managed by the Nuvla Platform as a Service.
 

@@ -2,10 +2,15 @@
 layout: nuvlabox
 title: Troubleshooting
 nav_order: 6
+<<<<<<< .merge_file_C0EvXH
 parent: Discover NuvlaEdge
+=======
+parent: NuvlaEdge Software
+>>>>>>> .merge_file_MRugZ5
 grand_parent: NuvlaEdge
 redirect_from:
  - /nuvlabox/latest/nuvlabox-engine/troubleshooting
+ - /nuvlaedge/nuvlaedge-engine/troubleshooting
 ---
 
 # Troubleshooting
@@ -14,7 +19,7 @@ redirect_from:
 <details><summary><b>Failed to downgrade my NuvlaEdge to v1</b></summary>
 
 <div markdown="1">
-Automated migrations across major versions (e.g. v1 to v2) are not currently supported. So even if it looks like your NuvlaEdge downgrade finished successfully, you'll soon realize, from Nuvla, that your NuvlaEdge is not healthy. If you must downgrade from a NuvlaEdge Engine v2 to v1, please contact us.
+Automated migrations across major versions (e.g. v1 to v2) are not currently supported. So even if it looks like your NuvlaEdge downgrade finished successfully, you'll soon realize, from Nuvla, that your NuvlaEdge is not healthy. If you must downgrade from a NuvlaEdge v2 to v1, please contact us.
 </div>
 
 </details>
