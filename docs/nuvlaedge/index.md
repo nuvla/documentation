@@ -4,6 +4,8 @@ title: NuvlaEdge
 nav_order: 3
 description: "Secure and intelligent edge computing solution"
 has_children: true
+redirect_from:
+- /nuvlabox
 ---
 
 
