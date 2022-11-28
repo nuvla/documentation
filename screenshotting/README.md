@@ -17,3 +17,12 @@ TODO: Save `UI_E2E_TEST_USERNAME` and `UI_E2E_TEST_PASSWORD` in Github repositor
 1. From root, `cd` into `screenshotting`
 2. `npm install`
 3. `npx playwright test`
+
+## Generate new script
+
+1. From root, `cd` into `screenshotting`
+2. `npm install`
+3. `npx run codegen`
+4. Click to the page you want to screenshot
+5. Copy the generated code into new file
+5. Add code to screenshot page you are interested in
