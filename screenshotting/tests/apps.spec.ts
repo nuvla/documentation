@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mockAppData } from './mockAppData';
+import { login } from '../global-setup';
 
 test.use({
   viewport: {
@@ -12,9 +13,12 @@ async function delay(ms = 5000) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-test('test', async ({ page }, { config }) => {
-
+test('test', async ({}, { config }) => {
   const { baseURL } = config.projects[0].use;
+
+  const { page, browser } = await login(baseURL, config);
+
+  // await page.pause();
 
   // Setup...
   await page.route('api/session**', async (route) => {
@@ -25,8 +29,8 @@ test('test', async ({ page }, { config }) => {
     let body = await response.json();
     if (request.method() === 'GET') {
       body.identifier = 'alice@nuvla.io';
-    } else if (request.method() === 'PUT') {
-//      body.resources[0].identifier = 'showing@nuvla-ui.io';
+    } else if (request.method() === 'PUT' && body.resources[0]?.identifier) {
+      body.resources[0].identifier = 'showing@nuvla-ui.io';
     }
     route.fulfill({
       // Pass all fields from the response.
@@ -63,8 +67,6 @@ test('test', async ({ page }, { config }) => {
   await page.evaluate(`window.localStorage.setItem('day8.re-frame-10x.show-panel', '"false"')`);
   await page.goto(baseURL);
 
-  // await page.pause();
-
   //*********
   // Start
   //*********
@@ -73,28 +75,6 @@ test('test', async ({ page }, { config }) => {
   await page.goto(baseURL);
   await expect(page).toHaveURL('https://nuvla.io/ui/welcome');
   await page.screenshot({ fullPage: false, path: '../docs/assets/img/home.png', scale: 'css' });
-
-  // Do these at the end since we're logging out'
-  // Sign-in page
-  const defaultViewport = page.viewportSize();
-  page.setViewportSize({
-    height: 800,
-    width: 1500,
-  });
-  await page.goto(baseURL);
-  await page.getByText('logout').click();
-  await page.waitForURL('https://nuvla.io/ui/sign-in');
-  await page.screenshot({ fullPage: true, path: '../docs/assets/img/sign-in.png', scale: 'css' });
-
-  // Sign-up page
-  await page.goto(baseURL + "/ui/sign-up");
-  await page.waitForURL('https://nuvla.io/ui/sign-up');
-  await delay(1000); // otherwise the left buttons don't all display
-  await page.pause();
-  await page.screenshot({ fullPage: true, path: '../docs/assets/img/sign-up.png', scale: 'css' });
-  //page.setViewportSize(defaultViewport);
-
-  
 
   // // From this point, we have auto-generated code...
   // await page.goto(baseURL);
@@ -129,8 +109,7 @@ test('test', async ({ page }, { config }) => {
   //   },
   //   path: '../docs/assets/img/add-new-project.png',
   // });
-  
-  // Start another screenshot...
-  
-});
 
+  // Start another screenshot...
+  await browser.close();
+});
