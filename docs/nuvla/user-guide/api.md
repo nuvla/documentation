@@ -835,6 +835,6 @@ _Examples_
 {% include response_snippet.md file='api/voucher-response.md' %}
 
 
-# Python API
+# Python API library
 
-(coming soon...)
+The Python library is available via PyPi https://pypi.org/project/nuvla-api/ with `pip install nuvla-api`. The source code can be found on GitHub https://github.com/nuvla/python-library. See https://github.com/nuvla/python-library/tree/master/code/examples for examples of the usage of the library.
