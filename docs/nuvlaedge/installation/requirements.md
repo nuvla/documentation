@@ -11,12 +11,12 @@ redirect_from:
 
 # Requirements
 
-To ensure a smooth and fully functional installation of the NuvlaEdge, please make sure you comply with the following system requirements.
+To ensure a smooth and fully functional installation of the NuvlaEdge (**NE**), please make sure you comply with the following system requirements.
 
 
 ## OS Requirements
 
-The NuvlaEdge is compliant with any OS that officially and fully supports Docker. We recommend one of the following:
+The NuvlaEdge software is compliant with any OS that officially and fully supports Docker. We recommend one of the following:
 - Ubuntu
 - CentOS
 - Debian (and Debian variants like Raspbian and Raspberry Pi OS)
@@ -36,7 +36,7 @@ In order to install the NuvlaEdge and ensure its smooth execution over time, you
 
 If you are looking at an application with constrained hardware, especially in terms of memory size, please get in touch. Some components in the [NuvlaEdge architecture](/nuvlaedge/nuvlaedge-software/architecture/) are optional and can be removed to save memory.  Of course it's a tradeoff.
 
-An remember that you should have enough memory to host the apps that will be running on the edge device. 
+An remember that you should leave enough memory to host the apps that will be running on the edge device. 
 
 ## Software Requirements
 

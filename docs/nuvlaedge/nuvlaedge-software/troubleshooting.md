@@ -2,7 +2,11 @@
 layout: nuvlabox
 title: Troubleshooting
 nav_order: 6
+<<<<<<< .merge_file_C0EvXH
+parent: Discover NuvlaEdge
+=======
 parent: NuvlaEdge Software
+>>>>>>> .merge_file_MRugZ5
 grand_parent: NuvlaEdge
 redirect_from:
  - /nuvlabox/latest/nuvlabox-engine/troubleshooting

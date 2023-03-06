@@ -4,17 +4,22 @@ title: Compose Files
 nav_order: 2
 parent: Installation
 grand_parent: NuvlaEdge
-has_children: true
+has_children: false
 ---
+
+TODO: check Nuvla links
 
 # Install via Compose Files bundle
 
-The simplest way to install the NuvlaEdge Engine software on an edge device is to follow this installation method.  If you are looking for an automated and/or scalable method, please visit the [USB Stick page](/nuvlaedge/installation/install-with-usb-stick).
+The simplest way to install the NuvlaEdge software on an edge device is to follow this installation method.  If you are looking for an automated and/or scalable method, please visit the [USB Stick page](/nuvlaedge/installation/install-with-usb-stick).
 
-1. login into [nuvla.io](https://nuvla.io)
-2. from the [edge panel](https://nuvla.io/ui/edge), add a new `nuvlaedge` and download the compose files from Nuvla
-3. copy the given `docker-compose -p nuvlaedge ...` command from Nuvla, and on your device, in the same folder as the compose files from step 2, paste and run the command
-4. after a few seconds, you should see your new NuvlaEdge edge device becoming <span style="color:green">green</span> in [Nuvla](https://nuvla.io/ui/edge), and if you run `docker ps` in your device, you should find (amongst others) something like:
+1. login into [Nuvla](https://nuvla.io)
+2. from the [Edge panel](https://nuvla.io/ui/edges), add a new `nuvlaedge`, and either
+    1. download the compose files from Nuvla, or
+    2. copy the NuvlaEdge UUID, and on your device, run `export NUVLABOX_UUID=<UUID you copied>` and download the compose files from [here](https://github.com/nuvlaedge/deployment/releases)
+3. copy the given `docker-compose -p nuvlabox ...` command from Nuvla, and on your device, in the same folder as the compose files from step 2., paste and run the command
+4. after a few seconds, you should see your new NuvlaEdge device becoming <span style="color:green">green</span> in [Nuvla](https://nuvla.io/ui/edges), and if you run `docker ps` in your device, you should find (amongst others) something like:
+
    ```bash
    CONTAINER ID   IMAGE                                          COMMAND                  CREATED        STATUS                  PORTS                                       NAMES
    ca2e99365e74   nuvlaedge/agent:2.9.4                          "./agent_main.py"        1 hours ago    Up 1 hour (healthy)     127.0.0.1:5080->80/tcp                      nuvlaedge_agent_1
@@ -30,7 +35,7 @@ The simplest way to install the NuvlaEdge Engine software on an edge device is t
    1f0dc2873d34   nuvlaedge/peripheral-manager-usb:2.2.0         "peripheral-manager-…"   1 hours ago    Up 1 hour                                                           nuvlaedge_peripheral-manager-usb_1
    ```
 
-If this is not the case, please consult the [Troubleshooting page](/nuvlabox/latest/nuvlabox-engine/troubleshooting).
+If this is not the case, please consult the [Troubleshooting page](/nuvlaedge/latest/nuvlaedge/troubleshooting), or get in touch via [email](mailto:support@sixsq.com) or using the built-in platform chat. TODO: How?
 
 ### Halt the NuvlaEdge
 
@@ -41,9 +46,9 @@ In an edge environment, halting your devices is sometimes necessary. Halting **d
 **When manually halting** the NuvlaEdge, you **must** find (or re-download) the original compose files in your edge device, and run `docker-compose -p nuvlaedge <compose files> down`. Then **to resume**, simply run `docker-compose -p nuvlabox <compose files> up -d`. Please note that `<compose files>` must correspond to the list of compose files you have used during the first installation. In our case, looking at the `docker ps` output from above, `<compose files>` should be replaced by `-f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml` (e.g. to halt the NuvlaEdge we'd then run `docker-compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml down`)
 
 
-### Upgrade/Downgrade the NuvlaEdge
+### Upgrade/Downgrade NuvlaEdge
 
-**NOTE**: automated migrations are not currently supported accros major versions (e.g. v1 to v2). If you must upgrade from a NuvlaEdge Engine v1 to v2, or vice versa, please contact us.
+> **NOTE:** automated migrations are not currently supported accros major versions (e.g. v1 to v2). If you must upgrade from NuvlaEdge v1 to v2, or vice versa, please contact us.
 
 #### From Nuvla
 
@@ -99,8 +104,10 @@ vpn-client                                ./openvpn-client.sh      Up
 
 ### Uninstall the NuvlaEdge
 
-**NOTE**: this action is permanent, **unless** you keep a copy of the NuvlaEdge's API Key/Secret credential. This credential can be found at `/var/lib/docker/volumes/nuvlaedge_nuvlabox-db/_data/.activated`.
+> **NOTE:** this action is permanent, **unless** you kept a copy of the NuvlaEdge's API Key/Secret credential. This credential can be found at `/var/lib/docker/volumes/nuvlabox_nuvlabox-db/_data/.activated`. 
 
 To completely and **permanently** uninstall the NuvlaEdge from your edge device, simply find your original compose files in the edge device, and run `docker-compose -p nuvlaedge down -v`. The `-v` will remove the NuvlaEdge local data volume, so all of its data will be lost.
+
+### Detailed configuration
 
 To re-install a new NuvlaEdge from scratch in the same edge device, you'll need to go through the installation from the start of this page. If you have the API Key/Secret from the NuvlaEdge you've just deleted, then you also have the choice to recover it, even from a different device, via the configuration variables `NUVLABOX_API_KEY` and `NUVLABOX_API_SECRET`. See the [NuvlaEdge configuration](/nuvlaedge/nuvlaedge-software/configuration/) for more details.

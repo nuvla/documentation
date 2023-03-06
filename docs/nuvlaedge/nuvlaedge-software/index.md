@@ -14,4 +14,4 @@ The NuvlaEdge software provides the foundation services, which in turn ensure a 
 
 The NuvlaEdge is implemented as a set of loosely coupled, open-source and containerised micro-services. You can find NuvlaEdge's source code in [NuvlaEdge's GitHub organisation](https://github.com/nuvlaedge).
 
-You can find all releases of the NuvlaEdge at [https://github.com/nuvlaedge/deployment](https://github.com/nuvlaedge/deployment).
+The details of all the [releases](https://github.com/nuvlaedge/deployment) of the NuvlaEdge software is also available online.

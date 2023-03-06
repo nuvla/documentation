@@ -27,7 +27,7 @@ The plugin needs the configuration variables: `REGISTRY`, `NOTARY` and `NOTARY_R
  
 You can either install the plugin from source, or from Docker Hub.
 
-**NOTE:** please note that the plugin is **architecture specific**. Therefore, from hereon, <YOUR_CPU_ARCH> is the target device's CPU architecture.
+> **NOTE:** please note that the plugin is **architecture specific**. Therefore, from hereon, <YOUR_CPU_ARCH> is the target device's CPU architecture.
 
 
 ### From source
@@ -56,7 +56,7 @@ To get and install the plugin, simply run:
 
 `docker plugin install sixsq/img-authz-plugin:<YOUR_CPU_ARCH> REGISTRY=<registry> NOTARY=<notary-server> NOTARY_ROOT_CA='''<raw-ca-cert>'''`
 
-NOTE: you'll be prompted with some special access requests for the plugin (like access to the host network). Please reply `y` otherwise the plugin will not function correctly. If you'd like to avoid being prompted, you can run the command from above with `--grant-all-permissions`.
+> **NOTE:** you'll be prompted with some special access requests for the plugin (like access to the host network). Please reply `y` otherwise the plugin will not function correctly. If you'd like to avoid being prompted, you can run the command from above with `--grant-all-permissions`.
 
 
 Add the following JSON key value to `/etc/docker/daemon.json`:
@@ -89,7 +89,7 @@ If you're using a private Docker registry with self-signed TLS certificates, **p
 
 To do this, please follow the steps [here](https://docs.docker.com/registry/insecure/#use-self-signed-certificates).
 
-**NOTE:** using insecure Docker registries (without TLS) is not recommended and thus not covered by this plugin. Use it at your own risk.
+> **NOTE:** using insecure Docker registries (without TLS) is not recommended and thus not covered by this plugin. Use it at your own risk.
 
 ## Plugin logs
 

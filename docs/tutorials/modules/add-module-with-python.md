@@ -64,7 +64,7 @@ application services.  For the Jupyter Notebook, the value is:
 "urls": [["jupyter", "http://${hostname}:${tcp.8888}/?token=${jupyter-token}"]],
 ```
 
-Note the syntax for referencing the values of output parameters. The
+> **NOTE:** The syntax for referencing the values of output parameters. The
 use of output parameter values allows the developer to specify the
 URLs independently of a particular deployment.
 

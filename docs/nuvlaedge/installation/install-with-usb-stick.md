@@ -8,7 +8,7 @@ grand_parent: NuvlaEdge
 
 # Install via USB stick
 
-If you are looking to streamline the installation of the NuvlaEdge in your edge devices, then this is probably the best choice for you.
+If you are looking to streamline and automate the installation of the NuvlaEdge in your edge devices, then this is probably the best choice for you.
 
 The advantages of this installation method are:
 - **NO** need for an external display
@@ -55,7 +55,7 @@ This installation method requires a specific NuvlaEdge plugin to be installed in
         sudo sh .howToInstall
         ```
 
-You can now automate the installation of the NuvlaEdge into your fleet of edge devices.
+You can now automate the installation of the NuvlaEdge software into your fleet of edge devices.
 
 ### Procedure
 
@@ -64,7 +64,7 @@ If the OS of your edge device meets the [requirements](#additional-requirements)
 Just follow these steps:
 
 1. go to [Nuvla](https://nuvla.io) and login
-2. on the NuvlaEdge tab, click `+add` and select the **USB stick** installation method
+2. on the Edges page, click `+add` and select the **USB stick** installation method
 
    ![nuvlabox-install-usb](/assets/img/nuvlabox-add-usb.png)
 
@@ -74,13 +74,13 @@ Just follow these steps:
 
    ![nuvlabox-add-usb-trigger](/assets/img/nuvlabox-add-usb-trigger.png)
 
-4. download the Trigger file, and copy it into your USB stick. You can place it anywhere within.
+4. download the trigger file, and copy it into your USB stick. You can place it anywhere within.
 
-   **IMPORTANT:** make your USB stick's filesystem is formatted as one of the following: _vfat, ext2, ext3, ext4, hfsplus_ or _ntfs_.
+   **IMPORTANT:** make sure your USB stick's filesystem is formatted as one of the following: _vfat, ext2, ext3, ext4, hfsplus_ or _ntfs_.
 
 5. plug your USB stick into your edge device.
 
-6. the NuvlaEdge Auto-installer plugin that is installed in your device's OS will automatically be triggered by the USB stick, and kickstart the installation of the NuvlaEdge. At this stage, all you need to do is wait...
+6. the NuvlaEdge Auto-installer plugin that is installed in your device's OS will automatically be triggered by the USB stick, and kickstart the installation of the NuvlaEdge software. At this stage, all you need to do is wait...
 
    It shouldn't take more than a few seconds for the process to start. Depending on your hardware, you might be able to get some external feedback on the progress of the installation. This feedback signal works for the following machine types:
     - `raspberrypi`:
@@ -96,16 +96,16 @@ Just follow these steps:
 
           ![rpi-nb-error](/assets/img/rpi-nb-error.gif)
 
-7. go back to the NuvlaEdge tab in [Nuvla](https://nuvla.io) and your new NuvlaEdge resource will appear.
+7. go back to the Edges page in [Nuvla](https://nuvla.io) and your new NuvlaEdge resource will appear.
 
 
-### Upgrade the NuvlaEdge
+### Upgrade NuvlaEdge
 
 It is also possible to use the USB stick method to upgrade your NuvlaEdge installation.
 
 The procedure is the same as described [above](#procedure). If in Nuvla, you select a different NuvlaEdge version than the one you have already installed in your devices, then, when you plug the USB stick into the device, the NuvlaEdge Auto-installer will upgrade all the outdated NuvlaEdge components, according to your desired version.
 
-Note that you can also upgrade NuvlaEdgees directly from Nuvla.
+> **NOTE:** You can also upgrade NuvlaEdges directly from Nuvla.
 
 
 ### Overwrite an existing installation
@@ -117,3 +117,8 @@ It is also possible to use the USB stick method to completely delete and re-inst
 - your NuvlaEdge resource does not exist anymore in [Nuvla](https://nuvla.io/ui/edge),
 
 then the NuvlaEdge Auto-installer will completely remove the existing NuvlaEdge installation from your device, and install a fresh new one.
+
+
+### Detailed configuration
+
+See the [NuvlaEdge configuration](/nuvlaedge/nuvlaege-software/configuration/) page for more details.

@@ -6,6 +6,8 @@ parent: Nuvla
 has_children: true
 ---
 
+[TODO] consider integrating the 'workflow' section into the main user guide.
+
 # Nuvla User Guide
 
 This guide is design for users to discover and better understand the Nuvla Platform and Marketplace.

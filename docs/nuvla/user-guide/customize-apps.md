@@ -6,6 +6,7 @@ grand_parent: Nuvla
 nav_order: 6
 ---
 
+[TODO]: review thoroughly (by dev)
 
 # Customise Applications
 
@@ -46,21 +47,21 @@ server to update the deployment state (e.g. to provide output
 parameter values) and to access information contained in the
 deployment (e.g. detailed information about requested data objects).
 
-> NOTE: The API key/secret pair is a unique credential generated for
+> **NOTE:** The API key/secret pair is a unique credential generated for
 > each deployment. This allows the deployment to access the Nuvla
-> server with the rights of the user. This credential is independent
+> service with the rights of the user. This credential is independent
 > of the user's other credentials and can be revoked at any time. The
 > credential is always deleted when the deployment terminates.
 
 ### Docker API
 
 Nuvla extracts certain information from the deployment and passes this
-information to Docker via is API when starting the container.
+information to Docker via its API when starting the container.
 
 An important class of parameters extracted from the Nuvla application
 definition is the set of ports exposed by the container. These ports
 are mapped dynamically by Docker to ephemeral ports. The actual port
-used can be discovered by through the output parameters. For example,
+used can be discovered using the output parameters. For example,
 if the tcp port 80 is exposed by the container, the actual port used
 will be in the "tcp.80" output parameter. These parameters are useful
 when defining the URL of the deployed service.
@@ -77,20 +78,11 @@ Very frequently a running container must pass some information back
 to the user. A container generating a random password or token for
 accessing services within a container is a typical example. 
 
-To do this, you can provide a list of output parameters when you
-define an application. Values for these output parameters can then be
-set by the container when it runs. Setting the values of output
-parameters can be done most easily via the Nuvla Python API. See below
-for details.
+To do this, you can provide a list of output parameters when you define an application. Values for these output parameters can then be set by the container when it runs. Setting the values of output parameters can be done most easily via the Nuvla Python client API. See below for details.
 
 ## Uploading Containers
 
-Nuvla can use any image that has been uploaded to any open Docker
-repository. (Repositories that require credentials are not yet
-supported.) The easiest to use is Docker Hub.  If you have an account
-on Docker Hub, you can create an organization to hold your
-"repositories", each of which holds multiple tagged versions of an
-image.
+Nuvla can use any image that has been uploaded to any Docker repository. By default, Nuvla expects Docker Hub.  If you have an account on Docker Hub, you can create an organization to hold your "repositories", each of which holds multiple tagged versions of an image.
 
 The process is straightforward:
 
@@ -99,14 +91,20 @@ The process is straightforward:
  1. Tag for image with `docker tag`, providing a tag name.
  1. Upload the image with `docker push`.
 
-At this point, the image will be visible in the Docker Hub and can
-then be used from Nuvla.
+At this point, the image will be visible in the Docker Hub and can then be used from Nuvla.  
 
-To use this API you must ensure that your customized image contains
-Python (2.7+ or 3.x). You can then install the Nuvla Python API with
+[TODO]: check this
+
+If your Docker image is protected by a username/password, just create a Docker Registry credential and reference these credentials in the app. Nuvla will then use these credentials on behalf of the user when deploying the protected Docker images.
+
+[TODO]: is this still true/needed?
+
+To use this API you must ensure that your customized image contains Python (2.7+ or 3.x). You can then install the Nuvla Python API with
 the command `pip install nuvla-api`.
 
 ## Customized Jupyter Notebook
+
+[TODO]: where is this previous demonstration?
 
 The Jupyter notebook previously demonstrated contains the following
 customizations:
@@ -122,7 +120,7 @@ customizations:
 We will show how each of these customizations are accomplished in the
 `Dockerfile` and in a Python script added to the container.
 
-The `Dockerfile` used to generate this the customized Jupyter Notebook
+The `Dockerfile` used to generate the customized Jupyter Notebook
 is duplicated below:
 
 {% include code_snippet.md file='code-sample/dockerfile-jupyter' language=docker %}
@@ -194,7 +192,7 @@ In all cases, you'll need to perform the following tasks:
 
  1. Upload the image to a public repository.
 
- 1. Create a module within Nuvla that references your modified
+ 1. Create an app within Nuvla that references your modified
     container, adding output parameter definitions when appropriate.
 
  1. Launch the application through Nuvla and verify that the service

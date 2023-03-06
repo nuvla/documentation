@@ -7,4 +7,6 @@ description: "Secure and intelligent edge computing solution"
 has_children: true
 ---
 
-Lore ipsim
+# NuvlaEdge advanced features
+
+This page contains advanced and beta features.
