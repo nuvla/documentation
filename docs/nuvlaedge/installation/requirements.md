@@ -1,13 +1,8 @@
 ---
 layout: nuvlabox
 title: Requirements
-<<<<<<< HEAD:docs/nuvlaedge/nuvlaedge-engine/requirements.md
-nav_order: 2
-parent: Discover NuvlaEdge
-=======
 nav_order: 1
 parent: Installation
->>>>>>> master:docs/nuvlaedge/installation/requirements.md
 grand_parent: NuvlaEdge
 redirect_from:
  - /nuvlabox/latest/nuvlabox-engine/requirements
