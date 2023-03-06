@@ -29,18 +29,20 @@ test('test', async ({ page, browser }, { config }) => {
   // Start
   //*********
 
-  // Welcome
+  // Welcome (unauthenticated)
   await page.goto(baseURL);
-
-  // Do these at the end since we're logging out'
-  // Sign-in page
   const defaultViewport = page.viewportSize();
   page.setViewportSize({
     height: 800,
     width: 1500,
   });
+  await delay(1000);
+  await page.screenshot({ fullPage: true, path: '../docs/assets/img/home-unauthenticated.png', scale: 'css' });
+
+  // Sign-in page
   const signInUrl = baseURL + '/ui/sign-in';
   await page.goto(signInUrl);
+  await delay(1000);
   await page.waitForURL(signInUrl);
   await page.screenshot({ fullPage: true, path: '../docs/assets/img/sign-in.png', scale: 'css' });
 

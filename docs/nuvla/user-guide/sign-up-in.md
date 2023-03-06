@@ -15,9 +15,11 @@ First thing first, you need a Nuvla account.
 
 To create an account, visit the [home page](https://nuvla.io/) with your browser. Click the "sign up" button on the right of the page.
 
-![Sign Up Page](/assets/img/sign-up.png)
+![Sign Up Page](/assets/img/home-unauthenticated.png)
 
 You can either sign-up using username/password or use an external single sign-on service (e.g. GitHub).  You will be able to activate two-factor authentication once sign-in.
+
+![Sign Up Page](/assets/img/sign-up.png)
 
 You can start your free trial right away, or do it later once sign-in.
 

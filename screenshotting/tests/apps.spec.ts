@@ -73,7 +73,8 @@ test('test', async ({}, { config }) => {
 
   // Welcome
   await page.goto(baseURL);
-  await expect(page).toHaveURL('https://nuvla.io/ui/welcome');
+  await expect(page).toHaveURL('https://nuvla.io/ui/');
+  await delay(3000);
   await page.screenshot({ fullPage: false, path: '../docs/assets/img/home.png', scale: 'css' });
 
   // // From this point, we have auto-generated code...
