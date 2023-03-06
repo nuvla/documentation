@@ -87,7 +87,7 @@ You can run this demo by yourself. Simply go through the following steps:
  5. SSH into your edge device
     1. make sure you're logged in with a user that can [manage Docker](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user) - test it by running `docker ps`
  6. setup the environment by running `export NUVLABOX_UUID=NuvlaEdgeID` where `NuvlaEdgeID` is the **NuvlaEdgeID** from step 4.
- 7. download the [NuvlaEdge Engine software installer](https://github.com/nuvlabox/deployment/releases). Run `wget https://github.com/nuvlabox/deployment/releases/download/1.3.1/docker-compose.yml`
+ 7. download the [NuvlaEdge Engine software installer](https://github.com/nuvlaedge/deployment/releases). Run `wget https://github.com/nuvlaedge/deployment/releases/download/1.3.1/docker-compose.yml`
  8. now just execute `docker-compose up -d`
     1. it will just take a few seconds for you to see your NuvlaEdge become green (online) in [Nuvla.io](https://nuvla.io). You can follow the installation and lifecycle process by running `docker-compose logs`
     2. after a couple of minutes, you'll also see a new infrastructure (of the type NuvlaEdge) and credential appear in [Nuvla.io](https://nuvla.io)

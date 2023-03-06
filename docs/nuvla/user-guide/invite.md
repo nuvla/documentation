@@ -8,7 +8,9 @@ nav_order: 4
 
 # Inviting Users
 
-The process is simple. Once logged-in, click on the *Invite User* from the top right dropdown menu. 
+TODO: do we still allow that?  Or only via groups?
+
+To invite users, the process is simple. Once logged-in, click on the *Invite User* from the top right dropdown menu. 
 
 ![Invite user menu](/assets/img/invite-user-menu.png)
 

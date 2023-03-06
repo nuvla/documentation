@@ -7,21 +7,21 @@ has_children: false
 grand_parent: NuvlaEdge
 ---
 
-Before you start contributing to the NuvlaEdge software stack, you must be acquainted not only with the NB and NEE architectures and features, but also with the internal functionalities offered specifically for allowing the interaction between NEE micro-services.
+Before you start contributing to the NuvlaEdge software stack, you must be acquainted not only with the NuvlaEdge architectures and features, but also with the internal functionalities offered specifically for allowing the interaction between NuvlaEdge micro-services.
 
-# The NuvlaEdge Engine Agent API
+# The NuvlaEdge Agent API
 
-As mentioned in the [NEE Architecture](/nuvlaedge/nuvlaedge-engine/architecture), the NEE Agent is one of the most critical components of the NB. 
+As mentioned in the [NuvlaEdge Architecture](/nuvlaedge/nuvlaedge-software/architecture), the NuvlaEdge Agent is one of the most critical components. 
 
-All outgoing communication to Nuvla pass through the `agent`. For that, it provides an internal REST API for other NEE micro-services to speak with when they need to reach out to Nuvla. 
+All outgoing communication to Nuvla pass through the `agent`. For that, it provides an internal REST API for other NuvlaEdge micro-services to speak with when they need to reach out to Nuvla. 
 
-This ensures that whatever new micro-services are added to the NB, they won't need to manipulate Nuvla credentials in order to reach out to Nuvla. Instead, the `agent` will validate and broker their requests, sanitizing whatever information is being passed.
+This ensures that whatever new micro-services are added to the NuvlaEdge, they won't need to manipulate Nuvla credentials in order to reach out to Nuvla. Instead, the `agent` will validate and broker their requests, sanitizing whatever information is being passed.
 
-So in short, if you are building a new component that will run alongside the NEE as a micro-service, and you need to interact with Nuvla, you need to use the NEE Agent API as follows:
+So in short, if you are building a new component that will run alongside the NuvlaEdge as a micro-service, and you need to interact with Nuvla, you need to use the NuvlaEdge Agent API as follows:
 
 ## REST API
 
-The NEE Agent API can only be reached from inside the NuvlaEdge!
+The NuvlaEdge Agent API can only be reached from inside the NuvlaEdge!
 
  - If your micro-service is **running on the same local Docker network** as the `agent` (typically this network is called `nuvlabox_default`, otherwise you can double check its name by running `docker network ls`), then you can reach the API at `http://agent/api`
 

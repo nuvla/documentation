@@ -8,9 +8,9 @@ nav_order: 7
 
 # CaaS Infrastructures
 
-Container as a Service (CaaS) are used to both host the Nuvla micro-services and host the user deployed containerised applications.  For this, we currently use Docker Swarm as our default CaaS.
+Container as a Service (CaaS) running in the cloud can be used by Nuvla to deploy applications.
 
-If you already have a Docker Swarm cluster, you can simply use it to host the Nuvla micro-services and/or [register it to host user container applications](#add-caas-or-other-infrastructure-services).
+If you already have a Kubernetes or Docker Swarm cluster, you can simply [register it to host user container applications](#add-caas-or-other-infrastructure-services).
 
 If you do not have a CaaS yet, simply follow [these instructions](#container-as-a-service-infrastructures).
 

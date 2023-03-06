@@ -80,7 +80,9 @@ The following shows an example of the ACL for the session resource collection:
 }
 ```
 
-There are only two rights: query and add.  The add right governs who can add new resources to the collection. The query right governs who can search the collection. **Note that the content of any search respects the ACLs of the individual resources.**
+There are only two rights: query and add.  The add right governs who can add new resources to the collection. The query right governs who can search the collection. 
+
+> **NOTE:** The content of any search respects the ACLs of the individual resources.
 
 As these ACLs are specified by the developer, it only makes sense to include the special groups in these ACLs. 
 

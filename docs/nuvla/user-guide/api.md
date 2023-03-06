@@ -363,7 +363,7 @@ how to create unique key prefixes.
 This example showcases the openness of the data record schema giving users an
 ability to define custom attributes of any type for their data records.
 
-**NOTE:** once a value of a certain type for an attribute was provided, it will
+> **NOTE:** once a value of a certain type for an attribute was provided, it will
 not be possible to change the type of the value. E.g.: after the integer value
 was used `{"life:meaning": 42}` it will not be possible to provide any other
 type (like string, boolean etc.). The workaround is to create a differently named
@@ -390,7 +390,7 @@ can be used
 
 {% include response_snippet.md file='api/data-record-geo-search-response.md' %}
 
-**NOTE:** The POLYGON in the query must be closed (i.e., its last point must be
+> **NOTE:** The POLYGON in the query must be closed (i.e., its last point must be
 equal to the first one). The POLYGON must contain minimum three points. 
 
 Coordinates for geometry points can be 2D (x, y) or 3D (x, y, z), which
@@ -449,7 +449,7 @@ Required attributes
 * _**key**_: a unique name of attribute within prefix namespace
 * _**subtype**_: subtype of resource (keyword consisting of lowercased words separated by dashes)
 
-**NOTE:** It is strongly recommended providing a `data-record-key` resource for
+> **NOTE:** It is strongly recommended providing a `data-record-key` resource for
 each domain-specific (namespaced) attribute of the `data-record`.
 The `data-record-key` resources provide semantic information about the attributes
 to help humans provide the right information.
@@ -532,7 +532,8 @@ the URL of the S3 `infrastructure-service` behind the provided S3 `credential`.
 
 Provided the user file is named `ABC-123.config` and contains text data, the
 uploading of the file using the S3 one-time pre-signed upload URL will look as follows.
-Note: this is the direct upload of the file to the S3 using the one-time
+
+> **NOTE:** this is the direct upload of the file to the S3 using the one-time
 pre-signed URL obtained in the previous step.
 
 {% include code_snippet.md file='api/data-object-upload.sh' language='shell' %}
@@ -579,7 +580,7 @@ file using the S3 one-time pre-signed download URL will look as follows.
 
 {% include response_snippet.md file='api/data-object-download-response.md' %}
 
-Note: this is the direct download of the file from the S3 using the one-time
+> **NOTE:** this is the direct download of the file from the S3 using the one-time
 pre-signed URL obtained in the previous step.
 
 #### Deleting
@@ -736,7 +737,7 @@ _Examples_
 
 The `session` resource allows you to use your credentials for authenticating with Nuvla.
 
-**NOTE:** for later usage, we store the authenticated session in a file called _cookies_
+> **NOTE:** for later usage, we store the authenticated session in a file called _cookies_
 
 ---
 _Examples_
@@ -784,7 +785,7 @@ and the group name is `acme`).
 
 {% include response_snippet.md file='api/session-switch-group-response.md' %}
 
-**NOTE:** `-b cookies` contains the current session token and `-c cookies` is
+> **NOTE:** `-b cookies` contains the current session token and `-c cookies` is
 the resulting updated session token containing `group/acme` as the active claim.
 
 
@@ -835,6 +836,6 @@ _Examples_
 {% include response_snippet.md file='api/voucher-response.md' %}
 
 
-# Python API
+# Python API library
 
-(coming soon...)
+The Python library is available via PyPi https://pypi.org/project/nuvla-api/ with `pip install nuvla-api`. The source code can be found on GitHub https://github.com/nuvla/python-library. See https://github.com/nuvla/python-library/tree/master/code/examples for examples of the usage of the library.

@@ -1,17 +1,15 @@
+[TODO]: this must be updated following the (not so new) CaaS deployment feature for Swarm and K8S
+
 Container as a Service Infrastructures
 ============================
 
-Container as a Service (CaaS) are used to host the Nuvla micro-services, but also receive user containers. We currently use Docker Swarm as our default CaaS.
+Container as a Service (CaaS) can be used to deploy apps. We support both Docker Swarm and Kubernetes.
 
-Docker Swarm is also integrated in the NuvlaEdge, SixSq's edge software solution.
-
-Nuvla also supports an advanced data management feature. For this to work, the CaaS used When deploying containers must include an S3 service and a distributed file system.  To learn how to install and configure these services, please get in touch. 
-
-Before starting, review the entire installation procedure.  The [nuvla/deployment](https://github.com/nuvla/deployment) GitHub repository contains a [Swarm folder](https://github.com/nuvla/deployment/tree/master/swarm) with Swarm related files that will help you deploy and configure your Docker Swarm cluster.  You may need to customise the provided scripts, configurations, and Docker Compose files for your deployment.
+Nuvla also supports an advanced data management feature. For this to work, the CaaS used when deploying containers must include an S3 service and a distributed file system.  To learn how to install and configure these services, please get in touch. 
 
 ## Docker Swarm Cluster
 
-Docker Swarm clusters provide the computational platforms that Nuvla uses to deploy container-based applications, including Nuvla itself.
+Docker Swarm clusters provide the computational platforms that Nuvla uses to deploy container-based applications.
 
 A number of methods can be used to deploy a Docker Swarm cluster.  See the [Docker Swarm documentation](https://docs.docker.com/engine/swarm/) for an overview of Docker Swarm and how to deploy it.
 
