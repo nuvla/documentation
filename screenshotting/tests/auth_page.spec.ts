@@ -37,7 +37,7 @@ test('test', async ({ page, browser }, { config }) => {
     width: 1500,
   });
   await delay(1000);
-  await page.screenshot({ fullPage: true, path: '../docs/assets/img/home-unauthenticated.png', scale: 'css' });
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/home-unauthenticated.png', scale: 'css' });
 
   // Sign-in page
   const signInUrl = baseURL + '/ui/sign-in';

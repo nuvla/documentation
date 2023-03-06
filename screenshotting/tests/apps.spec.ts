@@ -13,6 +13,8 @@ async function delay(ms = 5000) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+const username = 'alice@nuvla-ui.io';
+
 test('test', async ({}, { config }) => {
   const { baseURL } = config.projects[0].use;
 
@@ -30,7 +32,7 @@ test('test', async ({}, { config }) => {
     if (request.method() === 'GET') {
       body.identifier = 'alice@nuvla.io';
     } else if (request.method() === 'PUT' && body.resources[0]?.identifier) {
-      body.resources[0].identifier = 'showing@nuvla-ui.io';
+      body.resources[0].identifier = username;
     }
     route.fulfill({
       // Pass all fields from the response.
@@ -76,6 +78,13 @@ test('test', async ({}, { config }) => {
   await expect(page).toHaveURL('https://nuvla.io/ui/');
   await delay(3000);
   await page.screenshot({ fullPage: false, path: '../docs/assets/img/home.png', scale: 'css' });
+
+  // Enable two-factor authentication
+  await page.getByText(username).click();
+  await page.getByText('Enable two-factor authentication').click();
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/two-factor.png', scale: 'css' });
+
+
 
   // // From this point, we have auto-generated code...
   // await page.goto(baseURL);
