@@ -73,53 +73,16 @@ test('test', async ({}, { config }) => {
   // Start
   //*********
 
-  // Welcome
-  await page.goto(baseURL);
-  await expect(page).toHaveURL('https://nuvla.io/ui/');
-  await delay(3000);
-  await page.screenshot({ fullPage: false, path: '../docs/assets/img/home.png', scale: 'css' });
-
-  // Enable two-factor authentication
-  await page.getByText(username).click();
-  await page.getByText('Enable two-factor authentication').click();
-  await page.screenshot({ fullPage: false, path: '../docs/assets/img/two-factor.png', scale: 'css' });
-
-
-
-  // // From this point, we have auto-generated code...
+  // // Welcome
   // await page.goto(baseURL);
-  // await expect(page).toHaveURL('https://nuvla.io/ui/welcome');
-  // await page.getByRole('link', { name: 'apps' }).click();
-  //
-  // // Example...
-  // await page.getByRole('link', { name: 'Nginx Nginx (pronounced "engine-x") is an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server (orig… launch' }).click();
-  // await page.waitForURL('https://nuvla.io/ui/apps/examples/nginx');
-  // await page.locator('a:has-text("Pricing")').click();
-  // // Don't forget this :-)
-  // await page.screenshot({ fullPage: true, path: '../docs/assets/img/toto.png', scale: 'css' });
-  //
-  // // App Store...
-  // await page.getByRole('link', { name: 'apps' }).click();
-  // await expect(page).toHaveURL('https://nuvla.io/ui/apps');
-  // await page.waitForSelector('.ui.bordered.image', { state: 'visible' });
-  //
+  // await expect(page).toHaveURL('https://nuvla.io/ui/');
   // await delay(3000);
-  // await page.screenshot({ fullPage: true, path: '../docs/assets/img/app-store.png', scale: 'css' });
+  // await page.screenshot({ fullPage: false, path: '../docs/assets/img/home.png', scale: 'css' });
   //
-  // await page.getByText('Navigate Apps').click();
-  //
-  // await page.getByText('Add').click();
-  // await page.pause();
-  // await page.screenshot({
-  //   clip: {
-  //     x: 260,
-  //     y: 390,
-  //     width: 1000,
-  //     height: 400,
-  //   },
-  //   path: '../docs/assets/img/add-new-project.png',
-  // });
+  // // Enable two-factor authentication
+  // await page.getByText(username).click();
+  // await page.getByText('Enable two-factor authentication').click();
+  // await page.screenshot({ fullPage: false, path: '../docs/assets/img/two-factor.png', scale: 'css' });
 
-  // Start another screenshot...
   await browser.close();
 });
