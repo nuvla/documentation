@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Edge2Cloud Video AI
-nav_order: 1
+nav_order: 2
 parent: Tutorials
 has_children: false
 ---

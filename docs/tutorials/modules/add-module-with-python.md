@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Add modules with Python
-nav_order: 2
+nav_order: 4
 parent: Tutorials
 has_children: true
 ---

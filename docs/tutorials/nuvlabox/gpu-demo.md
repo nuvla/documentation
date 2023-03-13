@@ -1,7 +1,7 @@
 ---
 layout: page
 title: GPU App at the Edge
-nav_order: 1
+nav_order: 3
 parent: Tutorials
 has_children: false
 ---

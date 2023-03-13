@@ -1,12 +1,10 @@
 ---
 layout: page
 title: User Guide
-nav_order: 2
+nav_order: 1
 parent: Nuvla
 has_children: true
 ---
-
-[TODO] consider integrating the 'workflow' section into the main user guide.
 
 # Nuvla User Guide
 
