@@ -7,7 +7,7 @@ has_children: true
 permalink: /nuvla
 ---
 
-![nuvla-logo](/assets/img/nuvla-logo.png){: .center-image }
+![nuvla-logo](/assets/img/logo-nuvla.png){: .center-image }
 
 The Nuvla B2B edge management platform is: future-proof, application-centric, cloud-neutral and hardware agnostic.
 
