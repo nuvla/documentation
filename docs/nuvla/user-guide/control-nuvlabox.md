@@ -6,8 +6,6 @@ grand_parent: Nuvla
 nav_order: 8
 ---
 
-[TODO]: review all actions available for a NE.
-
 # Controlling a NuvlaEdge remotely
 
 NuvlaEdge can be remotely controlled. By navigating to the detailed page of any given NuvlaEdge you have access to, you will be able to perform a number of actions. These are summarised here.
@@ -92,8 +90,6 @@ Once this operation is completed, you'll no longer be able to login directly int
 
 ## NuvlaEdge Clustering
 Nuvla allows for multiple NuvlaEdge devices running *Swarm* mode to join together in a single cluster after install the NuvlaEdge. 
-
-[//]: # (TODO: Is VPN compulsory?)
 
 Nuvla provides four different cluster actions:
     

@@ -15,9 +15,11 @@ Before we start, there are a couple of terms that you need to get familiar with:
 
 It all starts in the Apps page.
 
-![app-store](/assets/img/nuvla-app-store.png)
+![app-store](/assets/img/nuvla-app-marketplace.png)
 
-First navigate to the "Navigation" tab [TODO].
+First navigate to the "Navigate Apps" tab.
+
+![app-store](/assets/img/nuvla-app-navigate.png)
 
 ## Projects
 
@@ -27,7 +29,7 @@ First navigate to the "Navigation" tab [TODO].
  
     ![add-project](/assets/img/add-new-project.png)
 
- 2. click on "Project" and choose a Name and Description for it.  The description can be defined using [markdown]()[TODO], which provides you with a great way to document your projects and apps using text, images, etc. Then save.
+ 2. click on "Project" and choose a Name and Description for it.  The description can be defined using *markdown*, which provides you with a great way to document your projects and apps using text, images, etc. Then save.
  
     ![create-project](/assets/img/create-project.png)
  
@@ -50,16 +52,25 @@ For most fields, you'll find help text to help you configure you Application pro
 ![edit-app](/assets/img/edit-app.png)
 
 Quick explanation of most relevant Component fields:
- - **URLs**, **Output Parameters** and **Data Binding**: exactly the same as for [Components](#components)
+ - **Private registries**: in case your Docker image is located in a private registry, make sure you select it here
+ - **URLs**: URLs to help you access the Component after it has been launched, remotely. These URLs can contain variables that are dynamically substituted once your deployment has been started. Things like:
+    - `${hostname}` for getting the endpoint where your Component has been started
+    - `${portProtocol.containerPort}` for getting the published destination port corresponding to your port mapping
+    - `${envVar}` for getting any environment you might have defined above
+    - `${outputParameter}` to map to any of the available output parameters that are dynamically filled it after launching your Component
+ - **Output Parameters**: allows you to add custom output parameters that your container can push back to Nuvla, and thus be used as any other deployment output parameter, like the ones used in your URL above 
+ - **Data Binding**: to bind your Component to a Data set. See [Managing Data](/nuvla/advanced-usage/manage-data) for more info.
  - **Files**: you can create secrets and configuration files to be used by the containers in your application. This is where you defined those. Make sure the file name matches the one referenced from within the Compose file/Manifest
- - **Environment Variables**: exactly the same as for [Components](#components). However, these variables can also be used from within your Compose file/Manifest. Example: if you define a new env var called `myVar`, you can use it in you Compose file like this:
+ - **Environment Variables**: same as for setting [environment variables for a Docker container](https://docs.docker.com/engine/reference/commandline/run/#env), here you can define environment variable to be passed to your container. **In addition**, you can also define a default value and tell whether the variable is mandatory for launching the Component. When launching the Component, you'll also be able to edit this.  However, these variables can also be used from within your Compose file/Manifest. Example: if you define a new env var called `myVar`, you can use it in you Compose file like this:
  
     ```yaml
     environment:
       - ENV_FROM_NUVLA=$myVar
     ```
+
  - **Kubernetes manifest**: the raw [Kubernetes manifest](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/) representing your application resources
  - **Docker compose**: the raw YAML [Compose file](https://docs.docker.com/compose/compose-file/) representing your Docker application resources
+
  
 ### Docker subtype compatibility: Docker Compose vs Swarm?
 
@@ -84,7 +95,18 @@ This is how it works...does your application:
  
     ![comp-dc](/assets/img/comp-none.png)
  
-For more information about which options are Docker Compose and Swarm-specific, please consult the original [Compose reference documentation](https://docs.docker.com/compose/compose-file/#not-supported-for-docker-stack-deploy).
+For more information about which options are Docker Compose and Swarm-specific, please consult the original [Compose reference documentation](https://docs.docker.com/compose/compose-file).
 
  
-[TODO]: add license and pricing instructions (optional) 
+### Preparing the app for Marketplace publishing
+
+To publish an app on the marketplace such that you can sell it, you will need to provide the following:
+
+ 1. End User License Agreement (EULA)
+ 1. Pricing
+
+Once this information is provided, once your app is published, users will be able to purchase it.
+
+> **NOTE:** SixSq provides a [generic app EULA](https://sixsq.com/legal/generic-apps-license.html).  Fee free to use it if you do not have yet your own and if it fulfils your requirements.
+
+> **NOTE:** in order to be able to receive payments, you need to register as an app vendor.  Please get in touch if you are a new app vendor.

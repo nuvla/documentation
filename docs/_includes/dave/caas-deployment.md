@@ -1,5 +1,3 @@
-[TODO]: this must be updated following the (not so new) CaaS deployment feature for Swarm and K8S
-
 Container as a Service Infrastructures
 ============================
 

@@ -1,9 +1,8 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: Architecture
-nav_order: 1
-parent: NuvlaEdge Software
-grand_parent: NuvlaEdge
+nav_order: 2
+parent: NuvlaEdge
 redirect_from:
  - /nuvlaedge/latest/nuvlaedge-engine/architecture
  - /nuvlaedge/nuvlaedge-engine/architecture
@@ -48,4 +47,3 @@ The NuvlaEdge has the concept of Peripheral Managers. These are **optional** mic
 | **3636** |  Internal   |    -     | This port is used by the `system-manager` to publish the internal NB dashboard                                                     |
 | **5000** | VPN/Inbound |    -     | Used by the `compute-api` as the relay endpoint for Docker. Ingress must be allowed                                                |
 | **5080** |  Internal   |    -     | This port is used by the `agent` to provide the internal REST API for other NB components to speak with, internally                |
-

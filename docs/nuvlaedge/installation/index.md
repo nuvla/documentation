@@ -1,7 +1,7 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: Installation
-nav_order: 2
+nav_order: 1
 parent: NuvlaEdge
 has_children: true
 redirect_from:

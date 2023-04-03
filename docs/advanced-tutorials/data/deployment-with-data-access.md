@@ -2,14 +2,14 @@
 layout: page
 title: Deployment with Data Access
 nav_order: 3
-parent: Tutorials
-has_children: true
+parent: Advanced Tutorials
+has_children: false
 ---
 
-# End-user deployment with data access ([Alice](/alice))
+# End-user deployment with data access
 
 A common use case is to select some data objects/records and then to
-launch an application to analyze those data. An example application
+launch an application to analyse those data. An example application
 launches a Jupyter Notebook and shows that the selected data is
 visible in the Notebook.
 
@@ -45,5 +45,3 @@ left-hand corner of the application card. You can completely remove
 the deployment by disabling the "active only?" toggle and then
 clicking on the trash icon in the upper, left-hand corner of the
 application card. 
-
-

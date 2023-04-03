@@ -71,16 +71,14 @@ test('test', async ({}, { config }) => {
   // Start
   //*********
 
-  // // Welcome
-  // await page.goto(baseURL);
-  // await expect(page).toHaveURL('https://nuvla.io/ui/');
-  // await delay(3000);
-  // await page.screenshot({ fullPage: false, path: '../docs/assets/img/home.png', scale: 'css' });
-  //
-  // // Enable two-factor authentication
-  // await page.getByText(username).click();
-  // await page.getByText('Enable two-factor authentication').click();
-  // await page.screenshot({ fullPage: false, path: '../docs/assets/img/two-factor.png', scale: 'css' });
+  await page.goto("https://nuvla.io/ui/apps");
+  await delay(1000);
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/nuvla-app-marketplace.png', scale: 'css' });
+
+  await page.goto("https://nuvla.io/ui/apps?apps-store-tab=navigate");
+  await delay(1000);
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/nuvla-app-navigate.png', scale: 'css' });
+
 
   await browser.close();
 });

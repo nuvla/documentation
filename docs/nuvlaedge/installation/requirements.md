@@ -1,5 +1,5 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: Requirements
 nav_order: 1
 parent: Installation
@@ -34,7 +34,7 @@ In order to install the NuvlaEdge and ensure its smooth execution over time, you
 - 2GB of free disk space
 - Supported CPU architectures: AArch32, AArch64 and x86_64
 
-If you are looking at an application with constrained hardware, especially in terms of memory size, please get in touch. Some components in the [NuvlaEdge architecture](/nuvlaedge/nuvlaedge-software/architecture/) are optional and can be removed to save memory.  Of course it's a tradeoff.
+If you are looking at an application with constrained hardware, especially in terms of memory size, please get in touch. Some components in the [NuvlaEdge architecture](/nuvlaedge/architecture/) are optional and can be removed to save memory.  Of course it's a tradeoff.
 
 An remember that you should leave enough memory to host the apps that will be running on the edge device. 
 
@@ -42,7 +42,7 @@ An remember that you should leave enough memory to host the apps that will be ru
 
 Before you can install the NuvlaEdge, please make sure you have:
 
-- [Docker Engine (version 18 or higher)](https://docs.docker.com/install/#supported-platforms), running in [Swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/)
+- [Docker Engine (version 18 or higher)](https://docs.docker.com/install)
 - [Docker Compose (version 1.27.4 or higher)](https://docs.docker.com/compose/install/)
 
 
@@ -58,7 +58,7 @@ _Mandatory_:
 _Optional_:
 - 1194: **Outbound**: UDP connection to vpn.nuvlaedge.com in case VPN is decided to be used for communication with the edge device managed by NuvlaEdge.
 
-Extended port usage [here](/nuvlaedge/nuvlaedge-software/architecture/#network-port-binding).
+Extended port usage [here](/nuvlaedge/architecture/#network-port-binding).
 
 ## NuvlaEdge footprint
 

@@ -2,8 +2,8 @@
 layout: page
 title: Manage Data via the API
 nav_order: 2
-parent: Tutorials
-has_children: true
+parent: Advanced Tutorials
+has_children: false
 ---
 
 # Managing Data-Object Resources with the API
@@ -206,7 +206,7 @@ print("data-set id: %s\n" % data_set_id)
 
 ---
 
-# Demonstration: Managing data as [Emma](/emma)
+# Demonstration: Managing data
 
 ## Data Objects/Records
 

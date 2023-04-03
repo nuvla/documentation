@@ -1,7 +1,5 @@
 # Add CaaS or Other Infrastructure Services
 
-[TODO]: check/test
-
 Adding to (or registering with) Nuvla existing CaaS (or other infrastructure services) is simple. First, on the *Cloud* page, click the *add* button.
 
 ![Add CaaS](/assets/img/dave-add-caas-1.png)

@@ -61,7 +61,7 @@ redirect_from:
       + [Create a user with an email and a password](#create-a-user-with-an-email-and-a-password)
     + [voucher](#voucher)
       + [Create a new voucher](#create-a-new-voucher)
-- [Python API](#python-api)
+- [Python API](#python-api-library)
 
 
 # REST API

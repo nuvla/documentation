@@ -2,11 +2,11 @@
 layout: page
 title: GPU App at the Edge
 nav_order: 3
-parent: Tutorials
+parent: Advanced Tutorials
 has_children: false
 ---
 
-# Demo: AI accelaration using GPU, on an NVIDIA Jetson Nano
+# Demo: AI acceleration using GPU, on an NVIDIA Jetson Nano
 
 ## Scenario
 
@@ -34,7 +34,7 @@ Finally, need a Nuvla account.
 
 ### Install the NuvlaEdge Engine on the NVIDIA Jetson Nano
 
-Follow the [NuvlaEdge setup documentation](/nuvlabox/latest/nuvlabox-engine/quickstart) to connect your NVIDIA Jetson Nano to Nuvla. 
+Follow the [NuvlaEdge setup documentation](/nuvlaedge/installation) to connect your NVIDIA Jetson Nano to Nuvla. 
 
 ### Build the Application that uses GPU 
 
@@ -71,7 +71,7 @@ services:
 As you can see, since we can not use `--gpus` in a Compose file (yet), we need to define the different host `devices` to be mapped into the container, alongside a mount for the folders where the GPU drivers and libraries are located, on the host - for this
 tutorial we don't need to pass any libraries, as the container itself has the libraries we need, already compiled for this device. 
 
-With this, you can create your own Nuvla app, by following [these steps](/nuvla/add-apps).
+With this, you can create your own Nuvla app, by following [these steps](/nuvla/user-guide/add-apps).
 
 ### Deploy the App into the NVIDIA Jetson Nano
 

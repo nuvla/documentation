@@ -1,5 +1,5 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: Before Starting
 nav_order: 1
 parent: Contributing
@@ -11,7 +11,7 @@ Before you start contributing to the NuvlaEdge software stack, you must be acqua
 
 # The NuvlaEdge Agent API
 
-As mentioned in the [NuvlaEdge Architecture](/nuvlaedge/nuvlaedge-software/architecture), the NuvlaEdge Agent is one of the most critical components. 
+As mentioned in the [NuvlaEdge Architecture](/nuvlaedge/architecture), the NuvlaEdge Agent is one of the most critical components. 
 
 All outgoing communication to Nuvla pass through the `agent`. For that, it provides an internal REST API for other NuvlaEdge micro-services to speak with when they need to reach out to Nuvla. 
 

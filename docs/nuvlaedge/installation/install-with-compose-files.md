@@ -1,13 +1,11 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: Compose Files
 nav_order: 2
 parent: Installation
 grand_parent: NuvlaEdge
 has_children: false
 ---
-
-TODO: check Nuvla links
 
 # Install via Compose Files bundle
 
@@ -35,7 +33,7 @@ The simplest way to install the NuvlaEdge software on an edge device is to follo
    1f0dc2873d34   nuvlaedge/peripheral-manager-usb:2.2.0         "peripheral-manager-…"   1 hours ago    Up 1 hour                                                           nuvlaedge_peripheral-manager-usb_1
    ```
 
-If this is not the case, please consult the [Troubleshooting page](/nuvlaedge/latest/nuvlaedge/troubleshooting), or get in touch via [email](mailto:support@sixsq.com) or using the built-in platform chat. TODO: How?
+If this is not the case get in touch via [email](mailto:support@sixsq.com) or using the built-in platform chat.
 
 ### Halt the NuvlaEdge
 
@@ -110,4 +108,4 @@ To completely and **permanently** uninstall the NuvlaEdge from your edge device,
 
 ### Detailed configuration
 
-To re-install a new NuvlaEdge from scratch in the same edge device, you'll need to go through the installation from the start of this page. If you have the API Key/Secret from the NuvlaEdge you've just deleted, then you also have the choice to recover it, even from a different device, via the configuration variables `NUVLABOX_API_KEY` and `NUVLABOX_API_SECRET`. See the [NuvlaEdge configuration](/nuvlaedge/nuvlaedge-software/configuration/) for more details.
+To re-install a new NuvlaEdge from scratch in the same edge device, you'll need to go through the installation from the start of this page. If you have the API Key/Secret from the NuvlaEdge you've just deleted, then you also have the choice to recover it, even from a different device, via the configuration variables `NUVLABOX_API_KEY` and `NUVLABOX_API_SECRET`. See the [NuvlaEdge configuration](/nuvlaedge/configuration/) for more details.

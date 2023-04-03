@@ -1,5 +1,5 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: USB Stick
 nav_order: 3
 parent: Installation
@@ -121,4 +121,4 @@ then the NuvlaEdge Auto-installer will completely remove the existing NuvlaEdge 
 
 ### Detailed configuration
 
-See the [NuvlaEdge configuration](/nuvlaedge/nuvlaege-software/configuration/) page for more details.
+See the [NuvlaEdge configuration](/nuvlaedge/configuration/) page for more details.

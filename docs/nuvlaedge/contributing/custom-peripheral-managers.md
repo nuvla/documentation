@@ -1,13 +1,11 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: Custom Peripheral Managers
 nav_order: 2
 parent: Contributing
 has_children: false
 grand_parent: NuvlaEdge
 ---
-
-[TODO]: Lionel/Nacho to check if this is still up to date.
 
 Building your own NuvlaEdge Peripheral Manager
 ========
@@ -178,5 +176,5 @@ Finally, we can launch the custom NuvlaEdge Peripheral Manager for Mock peripher
 
 Just add `-f docker-compose.mock.yml` to your NuvlaEdge installation command (as described in [NuvlaEdge Installation](/nuvlaedge/installation/install-with-compose-files/) and that's it!
 
-> **NOTE:** if you want to deploy your custom NuvlaEdge Peripheral Manager after the NuvlaEdge has been installed, then please make sure that your container runs within the same Docker network as the NuvlaEdge Agent. To do so, check in which Docker network your NuvlaEdge Agent is running, via `docker network ls` and `docker inspect <agent_container_id>`, and add that network to your peripheral manager container, via the Compose property `networks` (see [Docker Compose docs](https://docs.docker.com/compose/compose-file/#networks)).
+> **NOTE:** if you want to deploy your custom NuvlaEdge Peripheral Manager after the NuvlaEdge has been installed, then please make sure that your container runs within the same Docker network as the NuvlaEdge Agent. To do so, check in which Docker network your NuvlaEdge Agent is running, via `docker network ls` and `docker inspect <agent_container_id>`, and add that network to your peripheral manager container, via the Compose property `networks` (see [Docker Compose docs](https://docs.docker.com/compose/compose-file/06-networks/)).
 

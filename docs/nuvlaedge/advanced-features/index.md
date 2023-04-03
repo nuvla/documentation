@@ -1,5 +1,5 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: Advanced Features
 parent: NuvlaEdge
 nav_order: 3

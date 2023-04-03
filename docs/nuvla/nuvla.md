@@ -13,7 +13,7 @@ The Nuvla B2B edge management platform is: future-proof, application-centric, cl
 
 The Nuvla Platform and Marketplace is available as a Service at [Nuvla.io](https://nuvla.io).
 
-The container-native platform supports all forms of infrastructures: devices, computers, servers and virtual machines running the [NuvleEdge](/nuvlaedge) software, as well as public, private and hybrid clouds, as shown in the image below.
+The container-native platform supports all forms of infrastructures: devices, computers, servers and virtual machines running the [NuvlaEdge](/nuvlaedge) software, as well as public, private and hybrid clouds, as shown in the image below.
 
 ![Nuvla Overview](/assets/img/nuvla-diagram.png)
 

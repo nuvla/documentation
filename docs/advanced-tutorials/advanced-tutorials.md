@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tutorials
+title: Advanced Tutorials
 nav_order: 6
 has_children: true
 permalink: /tutorials

@@ -2,11 +2,11 @@
 layout: page
 title: Edge2Cloud Video AI
 nav_order: 2
-parent: Tutorials
+parent: Advanced Tutorials
 has_children: false
 ---
 
-# Demo: person detection system at the edge, with notifications to the cloud ([Clara](/clara) and [Dave](/dave))
+# Demo: person detection system at the edge, with notifications to the cloud
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yYJ6laT_6M4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -34,7 +34,7 @@ You can run this demo by yourself. Simply go through the following steps:
 ### 1: You'll need
 
  - one or more Linux VMs, with a public IP, running Docker in Swarm mode
- - an [edge device](/nuvlabox/latest/nuvlabox-engine/requirements) (RaspberryPi, Laptop, etc.) with Docker and Docker Compose installed, and Swarm mode enabled
+ - an [edge device](/nuvlaedge/installation/requirements) (RaspberryPi, Laptop, etc.) with Docker and Docker Compose installed, and Swarm mode enabled
  - an internet connection
  - a [Nuvla.io](https://nuvla.io) account
  - one USB webcam

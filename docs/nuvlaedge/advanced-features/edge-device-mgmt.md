@@ -1,5 +1,5 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: Host Management
 nav_order: 6
 description: "Manage the NuvlaEdge Device separately from the NuvlaEdge Engine"

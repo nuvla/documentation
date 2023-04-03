@@ -18,7 +18,7 @@ associated issues.
 
 In Nuvla, the application definition page for apps to be deployed on
 Docker infrastructures supports `devices` option, as in
-[Docker compose](https://docs.docker.com/compose/compose-file/#devices). Use
+[Docker compose](https://docs.docker.com/compose/compose-file/05-services/#devices). Use
 this option to add a host device to the container
 
 ```

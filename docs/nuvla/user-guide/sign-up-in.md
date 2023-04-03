@@ -49,7 +49,7 @@ Fill in the form and click the "Sign in" button.  This should take you to the ho
 
 ## Enable/disable Two-factor Authentication
 
-To increase security, we recommend you enable two-factor authentication.  Once signed-in, simply click on your email address or login name at the top right of the page.  Click [TODO] "Enable two-factor authentication". This will show you the following dialog.  From there you can choose your two-factor authentication method and configure it.
+To increase security, we recommend you enable two-factor authentication.  Once signed-in, simply click on your email address or login name at the top right of the page.  Click "Enable two-factor authentication". This will show you the following dialog.  From there you can choose your two-factor authentication method and configure it.
 
 ![Two-factor authentication](/assets/img/two-factor.png)
 

@@ -2,11 +2,11 @@
 layout: page
 title: Add modules with Python
 nav_order: 4
-parent: Tutorials
-has_children: true
+parent: Advanced Tutorials
+has_children: false
 ---
 
-# Adding Applications with the Python Library ([Clara](/clara))
+# Adding Applications with the Python Library
 
 ## Adding new module
 

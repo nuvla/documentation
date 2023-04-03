@@ -9,7 +9,4 @@ permalink: /nuvla/groups
 
 # Manage Groups
 
-[TODO]
-
-...
-
+Groups are well supported in Nuvla. The documentation is coming soon...

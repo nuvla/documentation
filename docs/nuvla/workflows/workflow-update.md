@@ -58,37 +58,37 @@ If the user has configured an Open VPN access to the NuvlaEdge, services exposin
 
 ## Application Update
 
-Since the edge is in constant evolution, updating application deployments running in NuvlaEdgees is a regular event. We distinguish two main reasons for an update to take place:
+Since the edge is in constant evolution, updating application deployments running in NuvlaEdges is a regular event. We distinguish two main reasons for an update to take place:
 
 1. Docker Image update
 2. Application definition update
 3. Manual update
 
-To better describe the update feature, we will use our personae, mainly [Alice](/alice) and [Clara](/clara). The idea is for Clara to integrate, test and eventually publish apps such that Alice can deploy them. The update feature is therefore there to ensure the appropriate communication between both Clara and Alice.
+To better describe the update feature, we will distinguish between a standard user of Nuvla and an app vendor or developer. The idea is for app vendor or developer to integrate, test and eventually publish apps such that users can deploy them. The update feature is therefore there to ensure the appropriate communication between both app vendor or developer and users.
 
-On the one hand, Clara wants to be able to modify its application definitions in Nuvla, without disrupting Alice's work. Meanwhile, Alice wants to ensure she gets notified when Clara publishes new versions of applications Alice has deployed, such that she can, if she wants, keep her fleet of edge devices and its running applications up-to-date.
+On the one hand, app vendor or developer want to be able to modify its application definitions in Nuvla, without disrupting users's work. Meanwhile, users wants to ensure she gets notified when app vendor or developer publishes new versions of applications users have deployed, such that they can, if they want, keep their fleet of edge devices and its running applications up-to-date.
 
 It is with this important relationship in mind that we have created the update feature this workflow describes.
 
 ### Docker Image Update
 
-Clara will regularly upload new Docker images to her preferred Docker registry.  While she can tag these images as she wants, we recommend versioning Docker images, following a semantic version standard, such as: v1.2.3-4.
+App vendor or developer will regularly upload new Docker images to her preferred Docker registry.  While they can tag these images as they want, we recommend versioning Docker images, following a semantic version standard, such as: v1.2.3-4.
 
-For quick development turn around, it is convenient to use floating tags, such as `latest`. Once a new image is uploaded, Clara can simply deploy this image using Nuvla, or if she has already deployed this image, she can simply trigger a [Manual Update](#manual-update).
+For quick development turn around, it is convenient to use floating tags, such as `latest`. Once a new image is uploaded, users can simply deploy the image using Nuvla, or if they have already deployed the image, they can simply trigger a [Manual Update](#manual-update).
 
 ![nuvla-app-tag-latest-version.png](/assets/img/nuvla-app-tag-latest-version.png)
 
-Once Clara has settled on an image version that she wants Alice to use, she then tags this image in her Docker registry and update the application definition with the corresponding image version 
+Once app vendor or developer have settled on an image version that they wants users to use, they then tag the image in their Docker registry and update the app definition with the corresponding image version 
 
 ![nuvla-app-tag-semantic-version.png](/assets/img/nuvla-app-tag-semantic-version.png)
 
-Or the compose file if she is using a multi docker image application definition.
+Or the compose file if they are using a multi docker image application definition.
 
-Once this is done and Clara is satisfied that this application definition is good to go, she publishes the application. This will tag this version of the application definition as published.  This will trigger an automatic update in Nuvla, such that all Alices having deployed a previous version of this application will be notified that this update is available. The notification will include a link to the application in Nuvla, from which Alice will be able to update her deployments.
+Once this is done and app vendor or developer are satisfied that the application definition is good to go, they publish the application. This will tag the version of the application definition as published.  This will trigger an automatic update in Nuvla, such that all users having deployed a previous version of this application will be notified that this update is available. The notification will include a link to the application in Nuvla, from which users will be able to update their deployments. (soon)
 
 ### Application definition update
 
-Similarly to the [Docker Image Update](#image-docker-update) workflow, Clara might also simply decide to change an application definition in Nuvla. For example, she might want to change the Docker compose file or Kubernetes manifest, or the default values of environment variables, or expose different URLs. The same process as the [Docker Image Update](#image-docker-update) workflow is recommended where Clara works on her own until she is satisfied that the application definition (aka module) is ready for production. At this time, she publishes the application definition, triggering the notification to Alices that a new version as available for application deployments she has running.
+Similarly to the [Docker Image Update](#docker-image-update) workflow, app vendor or developer might also simply decide to change an application definition in Nuvla. For example, they might want to change the Docker compose file or Kubernetes manifest, or the default values of environment variables, or expose different URLs. The same process as the [Docker Image Update](#docker-image-update) workflow is recommended where app vendor or developer work on their own until they are satisfied that the application definition is ready for production. At this time, they publishes the application definition, triggering the notification to users that a new version as available for application deployments they have running. (soon)
 
 ### Manual Update
 

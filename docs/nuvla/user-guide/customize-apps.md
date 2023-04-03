@@ -6,8 +6,6 @@ grand_parent: Nuvla
 nav_order: 6
 ---
 
-[TODO]: review thoroughly (by dev)
-
 # Customise Applications
 
 Although standard, unmodified containers can be deployed through
@@ -16,13 +14,13 @@ parameters cannot be provided and information generated within the
 container (such as passwords) cannot be recovered.
 
 Because of these limitations, most containers used from Nuvla have
-been customized. The good news is that customizing images is easy,
+been customised. The good news is that customising images is easy,
 especially as Docker allows you to build directly from existing
 containers.
 
-## Contextualization
+## Contextualisation
 
-Nuvla provides contextualization information to deployed containers in
+Nuvla provides contextualisation information to deployed containers in
 two ways: through environmental variables and via the standard Docker
 API.
 
@@ -82,7 +80,7 @@ To do this, you can provide a list of output parameters when you define an appli
 
 ## Uploading Containers
 
-Nuvla can use any image that has been uploaded to any Docker repository. By default, Nuvla expects Docker Hub.  If you have an account on Docker Hub, you can create an organization to hold your "repositories", each of which holds multiple tagged versions of an image.
+Nuvla can use any image that has been uploaded to any Docker repository. By default, Nuvla expects Docker Hub.  If you have an account on Docker Hub, you can create an organisation to hold your "repositories", each of which holds multiple tagged versions of an image.
 
 The process is straightforward:
 
@@ -93,21 +91,15 @@ The process is straightforward:
 
 At this point, the image will be visible in the Docker Hub and can then be used from Nuvla.  
 
-[TODO]: check this
-
 If your Docker image is protected by a username/password, just create a Docker Registry credential and reference these credentials in the app. Nuvla will then use these credentials on behalf of the user when deploying the protected Docker images.
 
-[TODO]: is this still true/needed?
-
-To use this API you must ensure that your customized image contains Python (2.7+ or 3.x). You can then install the Nuvla Python API with
+To use this API you must ensure that your customised image contains Python (2.7+ or 3.x). You can then install the Nuvla Python API with
 the command `pip install nuvla-api`.
 
-## Customized Jupyter Notebook
+## Customised Jupyter Notebook
 
-[TODO]: where is this previous demonstration?
-
-The Jupyter notebook previously demonstrated contains the following
-customizations:
+The Jupyter notebook demo contains the following
+customisations:
 
  1. Installation of Python, `pip`, and the Nuvla Python API.
  
@@ -117,10 +109,10 @@ customizations:
  1. Generating a token to protect the deployed notebook and passing
     this information back to the user through an output parameter.
 
-We will show how each of these customizations are accomplished in the
+We will show how each of these customisations are accomplished in the
 `Dockerfile` and in a Python script added to the container.
 
-The `Dockerfile` used to generate the customized Jupyter Notebook
+The `Dockerfile` used to generate the customised Jupyter Notebook
 is duplicated below:
 
 {% include code_snippet.md file='code-sample/dockerfile-jupyter' language=docker %}
@@ -129,7 +121,7 @@ This `Dockerfile` is short and straightforward. It:
 
  - Installs Python, `pip`, and the Nuvla Python API,
 
- - Adds a Python script (`link-data.py`) that organizes the referenced
+ - Adds a Python script (`link-data.py`) that organises the referenced
    data objects, and
 
  - Adds a script (`start-service.sh`) that replaces the entry point of
@@ -152,16 +144,16 @@ below:
 
 The first part of the script simply includes the Nuvla Python API and
 a few other dependencies, ensures that the expected environmental
-variables are set, and then initializes the Nuvla Python client. This
-is standard boilerplate code that can be duplicated for any customized
+variables are set, and then initialises the Nuvla Python client. This
+is standard boilerplate code that can be duplicated for any customised
 image.
 
 The second section reads the data object metadata and provides links
 to the directory where the Jupyter Notebook expects to find files for
-analysis. Additionally, the code organizes the links into a hierarchy
-based on the metadata; this organization is a more logical
-organization of these files for users in this scientific domain.
-Other domains will have their own metadata and will want to organize
+analysis. Additionally, the code organises the links into a hierarchy
+based on the metadata; this organisation is a more logical
+organisation of these files for users in this scientific domain.
+Other domains will have their own metadata and will want to organise
 their files differently.
 
 The last section generates a random access token, saves this in a file
@@ -171,9 +163,9 @@ any output parameters that you define for your containers.
 
 ## Hands On Exercises
 
-Choose an image to customize via output parameters and/or access to
+Choose an image to customise via output parameters and/or access to
 data managed through Nuvla. Use the Jupyter Notebook example as a
-guideline for performing this customization.
+guideline for performing this customisation.
 
 You might consider using one of the following images:
 

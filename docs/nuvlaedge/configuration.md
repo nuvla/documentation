@@ -1,9 +1,8 @@
 ---
-layout: nuvlabox
+layout: nuvlaedge
 title: Configuration
 nav_order: 3
-parent: NuvlaEdge Software
-grand_parent: NuvlaEdge
+parent: NuvlaEdge
 redirect_from:
  - /nuvlaedge/installation/configuration
  - /nuvlaedge/nuvlaedge-engine/configuration
@@ -12,8 +11,8 @@ redirect_from:
 Configuration
 ========
 
-When installing the NE, there are a number of environment variables which can be set in order to customize the NuvlaEdge software. 
-Once installed, the NE's configuration can only be changed through an update on full re-installation of the NE. This can be done locally, or via Nuvla [TODO: is this true? Yes if we understand re-installation as calling docker-compose up again].
+When installing the NuvlaEdge, there are a number of environment variables which can be set in order to customise the NuvlaEdge software. 
+Once installed, the NE's configuration can only be changed through an update on full re-installation of the NE. This can be done locally, or via Nuvla (by re-installing and calling docker-compose up again).
 
 
 # Environment Variables
@@ -34,7 +33,7 @@ When installing the NE, you can customize it via environment variables.
 - **NUVLABOX_LOG_LEVEL**: *(since v2.2.0)* allows selecting the log verbosity level of the Agent service in the NuvlaEdge. The value can be an integer or a string contained in the following [table](https://docs.python.org/3/library/logging.html#levels). If not specified, the Agent service would set INFO as default value.
 - **HOME**: defaults to your system user's HOME path. It is used for SSH key management. You should not edit this variable;
 - **VPN_INTERFACE_NAME**: the NuvlaEdge will have its own VPN client. By default, it will create a new network interface called **_vpn_**. If this conflicts with your existing network configuration, then please run `export VPN_INTERFACE_NAME=<your_new_vpn_interface_name>` before launching the NuvlaEdge;
-- **EXCLUDED_MONITORS**: starting on NuvlaEdge version 2.4.0 it is possible to suppress some telemetry monitors from running ([TODO: can't find this:] Refer to the list bellow). Monitors must be specified as a comma separated list, e.g: `export EXCLUDED_MONITORS=geolocation,power`. **NOTE:** be aware that removing monitors will limit Nuvla functionality to display data and configure notifications. 
+- **EXCLUDED_MONITORS**: starting on NuvlaEdge version 2.4.0 it is possible to suppress some telemetry monitors from running. Monitors must be specified as a comma separated list, e.g: `export EXCLUDED_MONITORS=geolocation,power`. **NOTE:** be aware that removing monitors will limit Nuvla's ability to display data and configure notifications. 
     - "container_stats"
     - "geolocation"
     - "power"
