@@ -1,7 +1,7 @@
 // global-setup.js
 const { chromium, expect } = require('@playwright/test');
 
-const username =
+export const username =
   process.env.USER_NAME !== 'null' && process.env.USER_NAME ? process.env.USER_NAME : process.env.UI_E2E_TEST_USERNAME;
 const password =
   process.env.PASSWORD && process.env.PASSWORD !== 'null' ? process.env.PASSWORD : process.env.UI_E2E_TEST_PASSWORD;

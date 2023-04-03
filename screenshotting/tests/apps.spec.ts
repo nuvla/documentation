@@ -13,14 +13,12 @@ async function delay(ms = 5000) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const username = 'alice@nuvla-ui.io';
+const username = 'alice@nuvla.io';
 
 test('test', async ({}, { config }) => {
   const { baseURL } = config.projects[0].use;
 
   const { page, browser } = await login(baseURL, config);
-
-  // await page.pause();
 
   // Setup...
   await page.route('api/session**', async (route) => {

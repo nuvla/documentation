@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mockAppData } from './mockAppData';
-import { login } from '../global-setup';
+import { login, username } from '../global-setup';
 
 test.use({
   viewport: {
@@ -12,8 +12,6 @@ test.use({
 async function delay(ms = 5000) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
-const username = 'alice@nuvla-ui.io';
 
 test('test', async ({}, { config }) => {
   const { baseURL } = config.projects[0].use;
