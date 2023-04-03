@@ -6,8 +6,6 @@ grand_parent: Nuvla
 nav_order: 5
 ---
 
-[TODO]
-
 # Adding Applications
 
 Before we start, there are a couple of terms that you need to get familiar with:
