@@ -1,6 +1,9 @@
 // global-setup.js
 const { chromium, expect } = require('@playwright/test');
 
+export const display_username_alice = "alice@nuvla.io";
+export const display_username_clara = "clara@nuvla.io";
+
 export const username =
   process.env.USER_NAME !== 'null' && process.env.USER_NAME ? process.env.USER_NAME : process.env.UI_E2E_TEST_USERNAME;
 const password =
@@ -52,4 +55,31 @@ export async function login(baseURL, config) {
     console.log(err.message);
   });
   return { page, browser };
+}
+
+export async function setup_user(page, username) {
+
+  // Setup...
+  await page.route('api/session**', async (route) => {
+    const request = route.request();
+    // Fetch original response.
+    const response = await page.request.fetch(request);
+    // Add a prefix to the title.
+    let body = await response.json();
+    if (request.method() === 'GET') {
+      body.identifier = username;
+    } else if (request.method() === 'PUT' && body.resources[0]?.identifier) {
+      body.resources[0].identifier = username;
+    }
+    route.fulfill({
+      // Pass all fields from the response.
+      response,
+      // Override response body.
+      body: JSON.stringify(body),
+      // Force content type to be html.
+      headers: {
+        ...response.headers(),
+      },
+    });
+  });
 }

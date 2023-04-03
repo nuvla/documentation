@@ -50,7 +50,7 @@ test('test', async ({ page, browser }, { config }) => {
   const signUpUrl = baseURL + '/ui/sign-up';
   await page.goto(signUpUrl);
   await page.waitForURL(signUpUrl);
-  await delay(1000); // otherwise the left buttons don't all display
+  await delay(5000); // otherwise the left buttons don't all display
   await page.pause();
   await page.screenshot({ fullPage: true, path: '../docs/assets/img/sign-up.png', scale: 'css' });
 

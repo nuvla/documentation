@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mockAppData } from './mockAppData';
-import { login } from '../global-setup';
+import { login, setup_user, username, display_username_clara } from '../global-setup';
 
 test.use({
   viewport: {
@@ -13,36 +13,11 @@ async function delay(ms = 5000) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const username = 'alice@nuvla.io';
-
 test('test', async ({}, { config }) => {
   const { baseURL } = config.projects[0].use;
 
   const { page, browser } = await login(baseURL, config);
-
-  // Setup...
-  await page.route('api/session**', async (route) => {
-    const request = route.request();
-    // Fetch original response.
-    const response = await page.request.fetch(request);
-    // Add a prefix to the title.
-    let body = await response.json();
-    if (request.method() === 'GET') {
-      body.identifier = 'alice@nuvla.io';
-    } else if (request.method() === 'PUT' && body.resources[0]?.identifier) {
-      body.resources[0].identifier = username;
-    }
-    route.fulfill({
-      // Pass all fields from the response.
-      response,
-      // Override response body.
-      body: JSON.stringify(body),
-      // Force content type to be html.
-      headers: {
-        ...response.headers(),
-      },
-    });
-  });
+  await setup_user(page, display_username_clara);
 
   // App...
   await page.route('api/module', (route) => {
