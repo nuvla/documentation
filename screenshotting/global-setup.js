@@ -1,8 +1,8 @@
 // global-setup.js
 const { chromium, expect } = require('@playwright/test');
 
-export const display_username_alice = "alice@nuvla.io";
-export const display_username_clara = "clara@nuvla.io";
+export const displayUsernameAlice = "alice@nuvla.io";
+export const displayUsernameClara = "clara@nuvla.io";
 
 export const username =
   process.env.USER_NAME !== 'null' && process.env.USER_NAME ? process.env.USER_NAME : process.env.UI_E2E_TEST_USERNAME;
@@ -57,7 +57,7 @@ export async function login(baseURL, config) {
   return { page, browser };
 }
 
-export async function setup_user(page, username) {
+export async function setupUser(page, username) {
 
   // Setup...
   await page.route('api/session**', async (route) => {
@@ -83,3 +83,7 @@ export async function setup_user(page, username) {
     });
   });
 }
+
+// Styling '3px solid red'
+
+export const cssStyles = { inputHighlight: '3px solid red' };

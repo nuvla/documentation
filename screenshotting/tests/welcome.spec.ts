@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mockAppData } from './mockAppData';
-import { login, setup_user, username, display_username_alice } from '../global-setup';
+import { login, setupUser, username, displayUsernameAlice } from '../global-setup';
 
 test.use({
   viewport: {
@@ -17,7 +17,7 @@ test('test', async ({}, { config }) => {
   const { baseURL } = config.projects[0].use;
 
   const { page, browser } = await login(baseURL, config);
-  await setup_user(page, display_username_alice);
+  await setupUser(page, displayUsernameAlice);
 
   // If running in headed breakpoints here (can then continue manually)
   // Go to Nuvla.io
@@ -37,7 +37,7 @@ test('test', async ({}, { config }) => {
   await page.screenshot({ fullPage: false, path: '../docs/assets/img/home.png', scale: 'css' });
 
   // Enable two-factor authentication
-  await page.getByText(display_username_alice).click();
+  await page.getByText(displayUsernameAlice).click();
   await page.getByText('Enable two-factor authentication').click();
   await page.screenshot({ fullPage: false, path: '../docs/assets/img/two-factor.png', scale: 'css' });
 

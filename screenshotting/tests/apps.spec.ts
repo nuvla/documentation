@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mockAppData } from './mockAppData';
-import { login, setup_user, username, display_username_clara } from '../global-setup';
+import { login, setupUser, username, displayUsernameClara } from '../global-setup';
 
 test.use({
   viewport: {
@@ -17,7 +17,7 @@ test('test', async ({}, { config }) => {
   const { baseURL } = config.projects[0].use;
 
   const { page, browser } = await login(baseURL, config);
-  await setup_user(page, display_username_clara);
+  await setupUser(page, displayUsernameClara);
 
   // App...
   await page.route('api/module', (route) => {
@@ -53,7 +53,6 @@ test('test', async ({}, { config }) => {
   await page.goto("https://nuvla.io/ui/apps?apps-store-tab=navigate");
   await delay(1000);
   await page.screenshot({ fullPage: false, path: '../docs/assets/img/nuvla-app-navigate.png', scale: 'css' });
-
 
   await browser.close();
 });
