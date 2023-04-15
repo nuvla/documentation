@@ -12,10 +12,12 @@ On the welcome page and in the menu bar on the left side of the page, you can se
 
 ![Nuvla Welcome](/assets/img/home.png)
 
- - **Dashboard**: overview of your edge devices and deployments (aka running apps).
+ - **Dashboard**: overview of your edge devices and deployments (aka running apps). Here's an example of the dashboard page:
+ 
+![Nuvla Dashboard](/assets/img/nuvla-dashboard.png)
  - **Apps**: registered, containerised applications. You can also register your own apps here. 
  - **Deployments**: running apps (aka instance of an app running at the edge or in the cloud).
- - **Edges**: your cockpit to manage your edge devices (aka simgle board computers, servers and virtual machines running the NuvlaEdge software).
+ - **Edges**: your cockpit to manage your edge devices (aka single board computers, servers and virtual machines running the NuvlaEdge software).
  - **Credentials**: view and manage all your credentials in one place.
  - **Notifications**: let Nuvla notify you of significant events. Here you can set this up.
  - **Data**: view data produced by your apps, defined data sets and start apps to process selected data.
