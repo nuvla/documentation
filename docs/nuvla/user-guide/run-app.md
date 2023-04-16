@@ -38,4 +38,4 @@ So, **let's deploy a Nuvla App into your NuvlaEdge**:
  
  6. and if the app is a paying app, you will also have to accept the fees (this Nginx example application doesn't)
  
- 7. click `deploy`, and you'll be redirected to your dashboard, where you can follow the state of your deployment 
+ 7. click `deploy`, and you'll be redirected to the page of the new deployment, where you can follow the state of your deployment, and interact with it. 
