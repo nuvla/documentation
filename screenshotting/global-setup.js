@@ -84,6 +84,38 @@ export async function setupUser(page, username) {
   });
 }
 
-// Styling '3px solid red'
+export async function mockAppResponse(page, mockedData) {
+  await mockResponse(page, mockedData, 'api/module');
+}
 
-export const cssStyles = { inputHighlight: '3px solid red' };
+export async function mockLaunchDialogResponses(page, infrastructureServicesData, credentialsData, credentialDetailData, checkData, jobData) {
+  await mockResponse(page, infrastructureServicesData, 'api/infrastructure-service');
+  await mockResponse(page, credentialsData, 'api/credential');
+  await mockResponse(page, credentialDetailData, 'api/credential/166a6bad-e74d-4013-b865-68c18ea431cf');
+  await mockResponse(page, checkData, 'api/credential/166a6bad-e74d-4013-b865-68c18ea431cf/check');
+  await mockResponse(page, jobData, 'api/job/347e5e65-5ec0-48c9-b589-9353aa1e24fa')
+}
+
+async function mockResponse(page, data, resourcePath) {
+
+  await page.route(resourcePath, (route) => {
+    let payload = route.request().postDataJSON();
+    route.fulfill({
+      status: 200,
+      body: JSON.stringify(data),
+    });
+  });
+}
+
+export async function prepPage(page, url){
+  // If running in headed breakpoints here (can then continue manually)
+  // Go to Nuvla.io
+  await page.goto(url);
+  // hide re-frame-10x or local tests fail
+  await page.evaluate(`window.localStorage.setItem('day8.re-frame-10x.show-panel', '"false"')`);
+  await page.goto(url);
+}
+
+// CSS styling
+//export const cssStyles = { 'inputHighlight': '3px solid red' };
+export const cssStyles = '3px solid red';

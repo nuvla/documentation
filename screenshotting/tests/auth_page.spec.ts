@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mockAppData } from './mockAppData';
-import { login } from '../global-setup';
+import { login, prepPage } from '../global-setup';
 
 test.use({
   viewport: {
@@ -15,15 +15,7 @@ async function delay(ms = 5000) {
 
 test('test', async ({ page, browser }, { config }) => {
   const { baseURL = 'https://nuvla.io' } = config.projects[0].use || {};
-
-  // If running in headed breakpoints here (can then continue manually)
-  // await page.pause()
-
-  // Go to Nuvla.io
-  await page.goto(baseURL);
-  // hide re-frame-10x or local tests fail
-  await page.evaluate(`window.localStorage.setItem('day8.re-frame-10x.show-panel', '"false"')`);
-  await page.goto(baseURL);
+  await prepPage(page, baseURL)
 
   //*********
   // Start

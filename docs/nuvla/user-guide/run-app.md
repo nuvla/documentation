@@ -8,27 +8,34 @@ nav_order: 4
 
 # Deploy an app
 
-To deploy an app, you need to have a NuvlaEdge or a cloud endpoint.
+Let's deploy a simple app. You always deploy an app on a NuvlaEdge or in the cloud.  We'll assume here that you want to deploy an app at the edge.
 
-If your NuvlaEdge installation was successful, you should now see the following in Nuvla:
+For this, you need access to a NuvlaEdge.  If you don't have one available yet, you can [create a new NuvlaEdge here](/nuvlaedge/installation/).
 
- - from the [Edge panel](https://nuvla.io/ui/edge), your NuvlaEdge is <span style="color:green">online</span>
- - in the [Infrastructures panel](https://nuvla.io/ui/infrastructures) you'll now see a new Docker Swarm infrastructure, named after your NuvlaEdge
-   - in the [Credentials panel](https://nuvla.io/ui/credentials) you'll find the credentials for this infrastructure
+Make sure you have at least one online NuvlaEdge. You can do that on the [Edges page](https://nuvla.io/ui/edges) by looking for an <span style="color:green">online</span> NuvlaEdge.  
 
 ---
 
 So, **let's deploy a Nuvla App into your NuvlaEdge**:
 
- 1. login into [nuvla.io](https://nuvla.io) and go to the [Marketplace](https://nuvla.io/ui/apps)
+ 1. login into [Nuvla](https://nuvla.io) and go to the [All Apps](https://nuvla.io/ui/apps?apps-store-tab=allapps) tab of the Apps page
 
-    ![nuvla-app-store](/assets/img/app-store.png)
+    ![nuvla-app-store](/assets/img/nuvla-app-all.png)
 
  2. find your desired application (let's say Nginx for example)
- 3. after making sure that App is compatible with your NuvlaEdge's architecture, click `launch`
+
+    ![nuvla-app-nginx](/assets/img/nuvla-app-nginx.png)
+
+ 3. select a NuvlaEdge to deploy this app to. Notice that Nuvla will automatically check the availability of the NuvlaEdge and that you have the right credentials
   
-    ![nuvla-launch-app](/assets/img/launch-app.png)
+    ![nuvla-launch-app](/assets/img/nuvla-app-nginx-select-destination.png)
  
- 4. select the right Credential for the NuvlaEdge infrastructure you're deploying to
- 5. if applicable, define any environment variables, configuration files and/or other runtime parameters that might be required by your app
- 6. click `launch`, and you'll be redirected to your dashboard, where you can follow the state of your deployment 
+ 4. If the app has an End-User License Agreement (EULA), read it and if you accept it, tick the accept box
+  
+    ![nuvla-launch-app](/assets/img/nuvla-app-nginx-accept-eula.png)
+ 
+ 5. if applicable, define any environment variables, configuration files and/or other runtime parameters that might be required by your app (this NGINX example application doesn't)
+ 
+ 6. and if the app is a paying app, you will also have to accept the fees (this Nginx example application doesn't)
+ 
+ 7. click `deploy`, and you'll be redirected to your dashboard, where you can follow the state of your deployment 
