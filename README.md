@@ -18,7 +18,7 @@ To run the documentation locally, do the following (assuming you are on a Mac):
 
 1. Install Jekyll: [https://jekyllrb.com/docs/installation/macos/#install-ruby](https://jekyllrb.com/docs/installation/macos/#install-ruby)
 2. Run this command in this directory: `bundle exec jekyll serve -wl`
-3. Point your browser to: http://localhost:4000
+3. Point your browser to: [http://localhost:4000](http://localhost:4000)
 
 The local website should be automagically reloading when you save files.  Happy documenting!
 
