@@ -10,7 +10,7 @@ has_children: false
 # Dockerd resource usage limitations
 
 In Docker environments, the most reliable way of limiting resource usage is by encapsulating 
-the Docker daemon and assigning all the containers to a pre-defined resource slice
+the Docker daemon and assigning all the containers to a pre-defined resource slice.
 
 Requirements:
 
