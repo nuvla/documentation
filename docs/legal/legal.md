@@ -10,15 +10,12 @@ nav_order: 11
 
 Copyright &copy; SixSq SA.
 
-## License
+## Licenses
 
-The Nuvla software is available under the [Apache 2.0
-License](http://www.apache.org/licenses/LICENSE-2.0).
+The NuvlaEdge software is available under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
+
+The Nuvla software is partly open source under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0), and partly under proprietary license by SixSq SA.
 
 ## Trademarks
 
-Nuvla&reg; is a registered trademark in Switzerland and other
-countries.  The "Nuvla" trademark can be used only to identify
-unmodified versions of the Nuvla code. Services running the Nuvla
-software cannot be identified with the Nuvla trademark, except with
-the express written consent of SixSq SA.
+Nuvla&reg; and NuvlaEdge&reg; are registered trademarks in Switzerland and other countries.  Services running the Nuvla software cannot be identified with the Nuvla trademark, except with the express written consent of SixSq SA.
