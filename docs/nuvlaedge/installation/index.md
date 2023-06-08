@@ -9,4 +9,8 @@ redirect_from:
 - /tutorials/nuvlaedge-installation
 ---
 
-The NuvlaEdge installation starts from Nuvla's [edge panel](https://nuvla.io/ui/edge). From there you can opt for one of two available installation methods: Compose Files bundle, or USB stick.
+The NuvlaEdge installation starts from
+Nuvla's [edge panel](https://nuvla.io/ui/edge). From there you can opt for the
+following available installation methods
+* on edge device with Docker: Compose Files bundle, or USB stick
+* on edge device with Kubernetes: Helm chart
