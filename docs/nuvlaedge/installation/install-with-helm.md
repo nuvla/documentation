@@ -13,11 +13,16 @@ The simplest way to install the NuvlaEdge software on an edge device running
 Kubernetes distribution is to follow this installation method. 
 
 1. Login into [Nuvla](https://nuvla.io).
-2. From the [Edge panel](https://nuvla.io/ui/edges), use `+Add` to add new NuvlaEdge.
+2. From the [Edge panel](https://nuvla.io/ui/edges), use `+Add` to add new
+   NuvlaEdge.
 3. Select Kubernetes as installation method.
-4. Copy `helm` commands. They must be run on the Kubernetes master node of the edge device.
+4. Copy `helm` commands. They must be run on the Kubernetes master node of the
+   edge device.
 5. SSH to the edge device, paste and run the `helm` commands.
-6. Follow instructions printed out by the `helm install` command.
+6. Follow instructions printed out by the `helm install` command. **NOTE:**
+   The instructions might ask you to run `kubectl` command. On `k0s` you might
+   need to prepend `k0s` to the command like so `k0s kubectl ...` (if `kubectl`
+   is not installed separately).
 7. After a few seconds, you should see your new NuvlaEdge device
    becoming <span style="color:green">green</span>
    in [Nuvla](https://nuvla.io/ui/edges).
@@ -71,6 +76,8 @@ alongside your device's Kubernetes service, so you don't need to do anything.
 > versions (e.g. v1 to v2). If you must upgrade from NuvlaEdge v1 to v2, or 
 > vice versa, please contact us.
 
+<!-- FIXME: management actions on K8s-based edge not implemented yet. 
+
 #### From Nuvla
 
 The NuvlaEdge can be updated directly from Nuvla. On the user interface, in each
@@ -83,7 +90,7 @@ By clicking on it, you can specify which version of the NuvlaEdge you want to
 upgrade/downgrade to. Please note that this is an asynchronous action that can
 take a few minutes, depending on your edge device's network.
 
----
+-->
 
 #### Manually
 

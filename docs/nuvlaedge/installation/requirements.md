@@ -57,15 +57,44 @@ deployment tools.
 
 For Docker-based edge device use:
   - [Docker Engine (version 18 or higher)](https://docs.docker.com/engine/install/),
-  - `docker` CLI with `compose` command. Typically installed along with Docker Engine.
+  - `docker` CLI with `compose` command. Typically, installed along with Docker Engine.
 
 For Kubernetes-based edge device:
-- one of the Kubernetes compliant distributions like [k3s](https://k3s.io/),
-  [k0s](https://k0sproject.io/) and Container
-  Runtime [CRI](https://kubernetes.io/docs/concepts/architecture/cri/)
+- one of the Kubernetes distributions e.g., [k3s](https://k3s.io/),
+  [k0s](https://k0sproject.io/), [k8s](https://kubernetes.io/docs/setup/production-environment/) 
+  and Container Runtime [CRI](https://kubernetes.io/docs/concepts/architecture/cri/)
   ([containerd](https://containerd.io/), [CRI-O](https://cri-o.io/) etc.)
   recommended by the selected Kubernetes distribution.
 - [Helm](https://helm.sh/docs/intro/install/)
+
+### Prerequisites when running on k8s distribution
+
+1. When [k8s](https://kubernetes.io/docs/setup/production-environment/) 
+   distribution of Kubernetes is used, please ensure NuvlaEdge runs on
+   a control-plane node. For that before the installation ensure the
+   selected control-plane node is schedulable (i.e., it needs to be untainted).
+
+2. To collect telemetry data of the containers running on the Kubernetes
+   cluster, NuvlaEdge
+   requires [kubernetes metrics server](https://github.com/kubernetes-sigs/metrics-server)
+   up and running. While e.g., `k3s` or `k0s` distributions provide the _metrics
+   server_ by default, this is not the case for `k8s`. Please install the _metrics
+   server_ following the requirements and procedure provided
+   [here](https://github.com/kubernetes-sigs/metrics-server). In case you do not
+   want to use `--kubelet-insecure-tls` for communication from the _metrics
+   server_ to _kubelet_, you can follow the steps below to provide a valid cert for
+   _kubelet_.
+
+```shell
+# Provide the API server cert/key to the kubelet configuration so that the correct 
+# CA and SANs are present in the server cert/key:
+
+cd /var/lib/kubelet/
+mv kubelet.crt kubelet.crt.bak
+mv kubelet.key kubelet.key.bak
+ln -s /etc/kubernetes/pki/apiserver.crt kubelet.crt
+ln -s /etc/kubernetes/pki/apiserver.key kubelet.key
+```
 
 ## Network Requirements
 
