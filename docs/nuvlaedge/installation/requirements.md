@@ -61,9 +61,11 @@ For Docker-based edge device use:
 
 For Kubernetes-based edge device:
 - one of the Kubernetes distributions (e.g. [k3s](https://k3s.io/),
-  [k0s](https://k0sproject.io/), [k8s](https://kubernetes.io/docs/setup/production-environment/))
-  and a Container Runtime Interface [CRI](https://kubernetes.io/docs/concepts/architecture/cri/) (e.g.
-  ([containerd](https://containerd.io/), [CRI-O](https://cri-o.io/))
+  [k0s](https://k0sproject.io/)
+  , [k8s](https://kubernetes.io/docs/setup/production-environment/))
+  and a container runtime implementing the
+  Kubernetes [CRI](https://kubernetes.io/docs/concepts/architecture/cri/)
+  (e.g. [containerd](https://containerd.io/), [CRI-O](https://cri-o.io/))
   recommended by the selected Kubernetes distribution.
 - [Helm](https://helm.sh/docs/intro/install/)
 
