@@ -10,16 +10,15 @@ has_children: false
 # Install via Helm
 
 The simplest way to install the NuvlaEdge software on an edge device running
-Kubernetes distribution is to follow this installation method. 
+a Kubernetes distribution is to follow this installation method. 
 
 1. Login into [Nuvla](https://nuvla.io).
-2. From the [Edge panel](https://nuvla.io/ui/edges), use `+Add` to add new
+2. From the [Edge panel](https://nuvla.io/ui/edges), use `+Add` to add a new
    NuvlaEdge.
 3. Select Kubernetes as installation method.
-4. Copy `helm` commands. They must be run on the Kubernetes master node of the
-   edge device.
-5. SSH to the edge device, paste and run the `helm` commands.
-6. Follow instructions printed out by the `helm install` command. **NOTE:**
+4. Copy the `helm` commands.
+5. SSH to the edge device (**NOTE:** this must be the Kubernetes master node), paste and run the `helm` commands.
+6. Follow the instructions printed out by the `helm install` command. **NOTE:**
    The instructions might ask you to run `kubectl` command. On `k0s` you might
    need to prepend `k0s` to the command like so `k0s kubectl ...` (if `kubectl`
    is not installed separately).
@@ -32,7 +31,7 @@ using the built-in platform chat.
 
 After following the above instructions, the NuvlaEdge components should be
 running in `nuvlabox-<uuid_of_your_nuvlaedge>` namespace. To check that, run
-`kubectl` command using `nuvlabox-<uuid_of_your_nuvlaedge>` as namespace:
+the `kubectl` command using `nuvlabox-<uuid_of_your_nuvlaedge>` as namespace:
 
 ```shell
 $ kubectl -n nuvlabox-24930029-8684-4594-923f-8da49543027e get all
@@ -67,7 +66,7 @@ In an edge environment, stopping your devices is sometimes necessary. Stopping
 the device **does not mean** you will delete the NuvlaEdge nor its local data,
 but rather stop its services temporarily.
 
-**When rebooting** your edge device, the NuvlaEdge will resume by itself,
+**When rebooting** your edge device, the NuvlaEdge software will resume by itself,
 alongside your device's Kubernetes service, so you don't need to do anything.
 
 ### Upgrade/Downgrade NuvlaEdge
@@ -94,7 +93,7 @@ take a few minutes, depending on your edge device's network.
 
 #### Manually
 
-You can SSH into your edge device, and run 
+You can SSH into your edge device, and run:
 
 ```bash
 # Update NuvlaEdge Helm repo
@@ -117,7 +116,7 @@ then you should see the currently deployed release by running:
 helm list
 ```
 
-You should get something like this, which shows the currently deployed chart version.
+You should get something like this, which shows the currently deployed chart version:
 
 ```
 NAME                                            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
@@ -126,13 +125,13 @@ nuvlabox-24930029-8684-4594-923f-8da49543027e   default         1               
 
 - **Upgrade/Downgrade the entire NuvlaEdge installation** 
 
-To upgrade to the latest version run
+To upgrade to the latest version run:
 
 ```shell
 helm upgrade nuvlabox-<uuid_of_your_nuvlaedge> nuvlaedge/nuvlaedge
 ```
 
-To upgrade to a specific version run
+To upgrade to a specific version run:
 
 ```shell
 helm upgrade nuvlabox-<uuid_of_your_nuvlaedge> nuvlaedge/nuvlaedge --version 2.8.3

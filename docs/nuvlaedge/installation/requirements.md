@@ -11,8 +11,8 @@ redirect_from:
 
 # Requirements
 
-To ensure a smooth and fully functional installation of the NuvlaEdge (**NE**),
-please make sure you comply with the following system requirements.
+To ensure a smooth and fully functional installation of the NuvlaEdge (**NE**)
+software, please make sure you comply with the following system requirements.
 
 
 ## OS Requirements
@@ -51,7 +51,7 @@ be running on the edge device.
 
 ## Software Requirements
 
-Before you can install the NuvlaEdge, please make sure you have Container
+Before you can install NuvlaEdge, please make sure you have a Container
 Orchestration Engine (COE) installed along with the COE specific application
 deployment tools.
 
@@ -60,24 +60,24 @@ For Docker-based edge device use:
   - `docker` CLI with `compose` command. Typically, installed along with Docker Engine.
 
 For Kubernetes-based edge device:
-- one of the Kubernetes distributions e.g., [k3s](https://k3s.io/),
-  [k0s](https://k0sproject.io/), [k8s](https://kubernetes.io/docs/setup/production-environment/) 
-  and Container Runtime [CRI](https://kubernetes.io/docs/concepts/architecture/cri/)
-  ([containerd](https://containerd.io/), [CRI-O](https://cri-o.io/) etc.)
+- one of the Kubernetes distributions (e.g. [k3s](https://k3s.io/),
+  [k0s](https://k0sproject.io/), [k8s](https://kubernetes.io/docs/setup/production-environment/))
+  and a Container Runtime Interface [CRI](https://kubernetes.io/docs/concepts/architecture/cri/) (e.g.
+  ([containerd](https://containerd.io/), [CRI-O](https://cri-o.io/))
   recommended by the selected Kubernetes distribution.
 - [Helm](https://helm.sh/docs/intro/install/)
 
 ### Prerequisites when running on k8s distribution
 
-1. When [k8s](https://kubernetes.io/docs/setup/production-environment/) 
+1. When the [k8s](https://kubernetes.io/docs/setup/production-environment/) 
    distribution of Kubernetes is used, please ensure NuvlaEdge runs on
-   a control-plane node. For that before the installation ensure the
-   selected control-plane node is schedulable (i.e., it needs to be untainted).
+   a control-plane node. Therefore, before the installation ensure the
+   selected control-plane node is schedulable (i.e. it needs to be untainted).
 
 2. To collect telemetry data of the containers running on the Kubernetes
    cluster, NuvlaEdge
    requires [kubernetes metrics server](https://github.com/kubernetes-sigs/metrics-server)
-   up and running. While e.g., `k3s` or `k0s` distributions provide the _metrics
+   up and running. While `k3s` or `k0s` distributions provide the _metrics
    server_ by default, this is not the case for `k8s`. Please install the _metrics
    server_ following the requirements and procedure provided
    [here](https://github.com/kubernetes-sigs/metrics-server). In case you do not
@@ -100,7 +100,7 @@ ln -s /etc/kubernetes/pki/apiserver.key kubelet.key
 
 You need **an internet connection**.
 
-The NuvlaEdge requires the following ports to be opened:
+The NuvlaEdge software requires the following ports to be opened on the host:
 
 _Mandatory_:
 - 443: **Outbound**: Default HTTPS port. Used by NuvlaEdge to communicate with 
