@@ -106,6 +106,6 @@ vpn-client                                ./openvpn-client.sh      Up
 
 To completely and **permanently** uninstall the NuvlaEdge from your edge device, simply find your original compose files in the edge device, and run `docker-compose -p nuvlaedge down -v`. The `-v` will remove the NuvlaEdge local data volume, so all of its data will be lost.
 
-### Detailed configuration
+### Re-installing
 
 To re-install a new NuvlaEdge from scratch in the same edge device, you'll need to go through the installation from the start of this page. If you have the API Key/Secret from the NuvlaEdge you've just deleted, then you also have the choice to recover it, even from a different device, via the configuration variables `NUVLABOX_API_KEY` and `NUVLABOX_API_SECRET`. See the [NuvlaEdge configuration](/nuvlaedge/configuration/) for more details.

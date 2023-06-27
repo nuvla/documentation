@@ -53,4 +53,4 @@ To increase security, we recommend you enable two-factor authentication.  Once s
 
 ![Two-factor authentication](/assets/img/two-factor.png)
 
-That's it! You're in... enjoy Nuvla.  And if you need a hand, don't hesitate to reach out using the blue widget on the bottom right of every page.  We will also send you a few emails, to help you get the most out of Nuvla.
+That's it! You're in... enjoy Nuvla.  And if you need a hand, don't hesitate to reach out using the built-in platform chat on the bottom right of every page.  We will also send you a few emails, to help you get the most out of Nuvla.
