@@ -11,7 +11,7 @@ redirect_from:
 Architecture
 ========
 
-![nuvlabox-os-arch-detail](/assets/img/nuvlaedge-engine-arch-v1.png)
+![nuvlabox-os-arch-detail](/assets/img/nuvlaedge-arch-v2.png)
 
 ## Base components
 
