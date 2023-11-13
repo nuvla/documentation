@@ -15,22 +15,20 @@ The simplest way to install the NuvlaEdge software on an edge device is to follo
 2. from the [Edge panel](https://nuvla.io/ui/edges), add a new `nuvlaedge`, and either
     1. download the compose files from Nuvla, or
     2. copy the NuvlaEdge UUID, and on your device, run `export NUVLABOX_UUID=<UUID you copied>` and download the compose files from [here](https://github.com/nuvlaedge/deployment/releases)
-3. copy the given `docker-compose -p nuvlabox ...` command from Nuvla, and on your device, in the same folder as the compose files from step 2., paste and run the command
+3. copy the given `docker compose -p nuvlabox ...` command from Nuvla, and on your device, in the same folder as the compose files from step 2., paste and run the command
 4. after a few seconds, you should see your new NuvlaEdge device becoming <span style="color:green">green</span> in [Nuvla](https://nuvla.io/ui/edges), and if you run `docker ps` in your device, you should find (amongst others) something like:
 
    ```bash
-   CONTAINER ID   IMAGE                                          COMMAND                  CREATED        STATUS                  PORTS                                       NAMES
-   ca2e99365e74   nuvlaedge/agent:2.9.4                          "./agent_main.py"        1 hours ago    Up 1 hour (healthy)     127.0.0.1:5080->80/tcp                      nuvlaedge_agent_1
-   57eec0498ee1   nuvla/job-lite:3.2.2                           "/app/pause.py"          1 hours ago    Up 1 hour (Paused)                                                  nuvlaedge-job-engine-lite
-   45658f5996fd   eclipse-mosquitto:1.6.12                       "sh -c 'sleep 10 && …"   1 hours ago    Up 1 hour               1883/tcp                                    data-gateway.1.x9k0ap8usf0uvpbv4qqhef9fi
-   897236624fc8   nuvlaedge/vpn-client:1.2.0                     "./openvpn-client.sh"    1 hours ago    Up 1 hour                                                           vpn-client
-   d83eb7cd754e   nuvlaedge/security:2.2.0                       "./security-entrypoi…"   1 hours ago    Up 1 hour                                                           nuvlaedge_security_1
-   402e7edf6e57   nuvlaedge/system-manager:2.5.0                 "./manager_main.py"      1 hours ago    Up 1 hour (healthy)     127.0.0.1:3636->3636/tcp                    nuvlaedge_system-manager_1
-   029550de24e0   nuvlaedge/on-stop:1.2.0                        "./on_stop_main.py p…"   1 hours ago    Up 1 hour (Paused)                                                  nuvlaedge-on-stop
-   cee1671055f0   nuvlaedge/compute-api:1.3.0                    "./api.sh"               1 hours ago    Up 1 hour (healthy)     0.0.0.0:5000->5000/tcp, :::5000->5000/tcp   compute-api
-   7204699d1a6a   nuvlaedge/peripheral-manager-network:1.3.0     "python network_mana…"   1 hours ago    Up 1 hour                                                           nuvlaedge_peripheral-manager-network_1
-   1f4a82e6d4d8   nuvlaedge/peripheral-manager-bluetooth:1.3.0   "python -u bluetooth…"   1 hours ago    Up 1 hour                                                           nuvlaedge_peripheral-manager-bluetooth_1
-   1f0dc2873d34   nuvlaedge/peripheral-manager-usb:2.2.0         "peripheral-manager-…"   1 hours ago    Up 1 hour                                                           nuvlaedge_peripheral-manager-usb_1
+   CONTAINER ID   IMAGE                              COMMAND                  CREATED      STATUS                  PORTS      NAMES
+   4308186a6975   sixsq/nuvlaedge:2.12.3             "agent"                  1 hour ago   Up 1 hour                          nuvlaedge-agent
+   632bd8f7191b   sixsq/nuvlaedge:2.12.3             "system-manager"         1 hour ago   Up 1 hour                          nuvlaedge-system-manager
+   2981d948fd62   sixsq/nuvlaedge:2.12.3             "openvpn-client"         1 hour ago   Up 1 hour                          nuvlaedge-vpn-client
+   294da55d367d   sixsq/nuvlaedge:2.12.3             "usb"                    1 hour ago   Up 1 hour                          nuvlaedge-peripheral-usb
+   6b85e0c0bdd2   sixsq/nuvlaedge:2.12.3             "network"                1 hour ago   Up 1 hour                          nuvlaedge-peripheral-network
+   8905c79ec261   sixsq/nuvlaedge:2.12.3             "bluetooth"              1 hour ago   Up 1 hour                          nuvlaedge-peripheral-bluetooth
+   13c02629896c   sixsq/nuvlaedge:2.12.3             "security-entrypoint"    1 hour ago   Up 1 hour                          nuvlaedge-security
+   c3224bdeb164   sixsq/nuvlaedge:2.12.3             "on-stop"                1 hour ago   Exited (0) 1 hour ago              nuvlaedge-on-stop
+   df87a0524c38   eclipse-mosquitto:2.0.15-openssl   "/docker-entrypoint.…"   1 hour ago   Up 1 hour               1883/tcp   data-gateway
    ```
 
 If this is not the case get in touch via [email](mailto:support@sixsq.com) or using the built-in platform chat.
@@ -41,7 +39,7 @@ In an edge environment, halting your devices is sometimes necessary. Halting **d
 
 **When rebooting** your edge device, the NuvlaEdge will resume by itself, alongside your device's Docker service, so you don't need to do anything.
 
-**When manually halting** the NuvlaEdge, you **must** find (or re-download) the original compose files in your edge device, and run `docker-compose -p nuvlaedge <compose files> down`. Then **to resume**, simply run `docker-compose -p nuvlabox <compose files> up -d`. Please note that `<compose files>` must correspond to the list of compose files you have used during the first installation. In our case, looking at the `docker ps` output from above, `<compose files>` should be replaced by `-f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml` (e.g. to halt the NuvlaEdge we'd then run `docker-compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml down`)
+**When manually halting** the NuvlaEdge, you **must** find (or re-download) the original compose files in your edge device, and run `docker compose -p nuvlaedge <compose files> down`. Then **to resume**, simply run `docker compose -p nuvlabox <compose files> up -d`. Please note that `<compose files>` must correspond to the list of compose files you have used during the first installation. In our case, looking at the `docker ps` output from above, `<compose files>` should be replaced by `-f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml` (e.g. to halt the NuvlaEdge we'd then run `docker compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml down`)
 
 
 ### Upgrade/Downgrade NuvlaEdge
@@ -65,29 +63,24 @@ You can also SSH into your edge device, and find the original project folder whe
 If you've initially installed the NuvlaEdge according to the instructions above, then you should see all of its components by running:
 
 ```bash
-$ docker-compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml ps
+$ docker compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml ps
 ```
 
 You should get something like this:
 
 ```
-                 Name                            Command              State                        Ports                  
---------------------------------------------------------------------------------------------------------------------------
-compute-api                               ./api.sh                 Up (healthy)   0.0.0.0:5000->5000/tcp,:::5000->5000/tcp
-deployment_agent_1                        ./app.py                 Up (healthy)   127.0.0.1:5080->80/tcp                  
-deployment_peripheral-manager-network_1   python manager.py        Up                                                     
-deployment_peripheral-manager-usb_1       peripheral-manager-usb   Up                                                     
-deployment_security_1                     ./app.py                 Up                                                     
-deployment_system-manager_1               ./run.py                 Up (healthy)   127.0.0.1:3636->3636/tcp                
-nuvlabox-job-engine-lite                  /app/pause.py            Paused                                                 
-nuvlabox-on-stop                          ./run.py pause           Paused                                                 
-vpn-client                                ./openvpn-client.sh      Up       
+NAME                             IMAGE                    COMMAND                 SERVICE                        STATUS
+nuvlaedge-agent                  sixsq/nuvlaedge:2.12.3   "agent"                 agent                          Up
+nuvlaedge-system-manager         sixsq/nuvlaedge:2.12.3   "system-manager"        system-manager                 Up
+nuvlaedge-peripheral-usb         sixsq/nuvlaedge:2.12.3   "usb"                   peripheral-manager-usb         Up
+nuvlaedge-peripheral-network     sixsq/nuvlaedge:2.12.3   "network"               peripheral-manager-network     Up
+nuvlaedge-vpn-client             sixsq/nuvlaedge:2.12.3   "openvpn-client"        vpn-client                     Up
 ```
 
 - **Cherry picking a NuvlaEdge component to be upgraded/downgraded:** let's say, as an example, that we want to upgrade the NuvlaEdge's Agent component. Then:
     1. open the `docker-compose.yml` file and find the `agent` service
     2. replace the corresponding Docker image tag (nuvlaedge/agent:X.Y.Z) with the target version number. Save the file
-    4. execute `docker-compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml up -d agent`
+    4. execute `docker compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml up -d agent`
 
   This is valid for any NuvlaEdge component.
 
@@ -95,16 +88,16 @@ vpn-client                                ./openvpn-client.sh      Up
     1. halt the NuvlaEdge, as explained [above](#halt-the-nuvlaedge)
     2. backup the Compose files from the project folder you are in into a different folder (just in case you need to rollback)
     3. download the Compose files from the [target release in GitHub](https://github.com/nuvlaedge/deployment/releases)
-    4. resume the NuvlaEdge installation by running `docker-compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml up -d`
-       1. if your goal is also to add a new peripheral manager to the existing NuvlaEdge, then simply add its compose file to this command. For example, to also start managing Bluetooth peripherals, run `docker-compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml -f docker-compose.bluetooth.yml up -d`
-       2. if your goal is also to remove an existing peripheral manager from the NuvlaEdge installation, then remove its compose file from this command, and add `--remove-orphans`. For example, to also stop managing Network peripherals, run `docker-compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml up -d --remove-orphans`
+    4. resume the NuvlaEdge installation by running `docker compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml up -d`
+       1. if your goal is also to add a new peripheral manager to the existing NuvlaEdge, then simply add its compose file to this command. For example, to also start managing Bluetooth peripherals, run `docker compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml -f docker-compose.network.yml -f docker-compose.bluetooth.yml up -d`
+       2. if your goal is also to remove an existing peripheral manager from the NuvlaEdge installation, then remove its compose file from this command, and add `--remove-orphans`. For example, to also stop managing Network peripherals, run `docker compose -p nuvlaedge -f docker-compose.yml -f docker-compose.usb.yml up -d --remove-orphans`
        
 
 ### Uninstall the NuvlaEdge
 
 > **NOTE:** this action is permanent, **unless** you kept a copy of the NuvlaEdge's API Key/Secret credential. This credential can be found at `/var/lib/docker/volumes/nuvlabox_nuvlabox-db/_data/.activated`. 
 
-To completely and **permanently** uninstall the NuvlaEdge from your edge device, simply find your original compose files in the edge device, and run `docker-compose -p nuvlaedge down -v`. The `-v` will remove the NuvlaEdge local data volume, so all of its data will be lost.
+To completely and **permanently** uninstall the NuvlaEdge from your edge device, simply find your original compose files in the edge device, and run `docker compose -p nuvlaedge down -v`. The `-v` will remove the NuvlaEdge local data volume, so all of its data will be lost.
 
 ### Re-installing
 
