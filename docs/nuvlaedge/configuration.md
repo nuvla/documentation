@@ -12,7 +12,7 @@ Configuration
 ========
 
 When installing the NuvlaEdge, there are a number of environment variables which can be set in order to customise the NuvlaEdge software. 
-Once installed, the NE's configuration can only be changed through an update on full re-installation of the NE. This can be done locally, or via Nuvla (by re-installing and calling docker-compose up again).
+Once installed, the NE's configuration can only be changed through an update on full re-installation of the NE. This can be done locally, or via Nuvla (by re-installing and calling docker compose up again).
 
 
 # Environment Variables
