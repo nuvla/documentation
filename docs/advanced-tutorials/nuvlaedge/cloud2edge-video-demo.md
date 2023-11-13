@@ -46,13 +46,13 @@ You can run this demo by yourself. Simply go through the following steps:
  2. To secure the connection with Nuvla, we need to set/get some TLS credentials for your Docker socket in that cluster. Check `systemctl status docker` and see if there are any `--tls*` arguments in the `dockerd` process 
     1. **IF YOU HAVE THOSE**, then please make note of **CERT** (as *--tlscert*), **KEY** (as *--tlskey*) and **CA** (as *--tlscacert*). Also make a note of the TCP **PORT** being used (by default it should be 2376)
     2. **IF YOU DON'T HAVE TLS SETUP**, then please:
-        1. run `docker run -d --rm -p 5000:5000 -v /var/run/docker.sock:/var/run/docker.sock -e HOST=${HOSTNAME} --name nb-compute-api nuvlabox/compute-api:0.2.5`
-        2. Wait about 60sec, or until the command `docker logs nb-compute-api` shows:
-        > *mode of '/opt/nuvlabox/cert.pem' changed to 0444 (r--r--r--)*
+        1. run `docker run -d --rm -p 5000:5000 -v /var/run/docker.sock:/var/run/docker.sock -e HOST=${HOSTNAME} --name ne-compute-api --entrypoint api sixsq/nuvlaedge:2.12.2`
+        2. Wait about 60sec, or until the command `docker logs ne-compute-api` shows:
+        > *mode of '/opt/nuvlaedge/cert.pem' changed to 0444 (r--r--r--)*
         3. take note of:
-        > **CERT**  - from `docker exec nb-compute-api cat /srv/nuvlabox/shared/cert.pem` <br>
-        > **KEY** - from `docker exec nb-compute-api cat /srv/nuvlabox/shared/key.pem` <br> 
-        > **CA** - from `docker exec nb-compute-api cat /srv/nuvlabox/shared/ca.pem`
+        > **CERT**  - from `docker exec ne-compute-api cat /srv/nuvlaedge/shared/cert.pem` <br>
+        > **KEY** - from `docker exec ne-compute-api cat /srv/nuvlaedge/shared/key.pem` <br> 
+        > **CA** - from `docker exec ne-compute-api cat /srv/nuvlaedge/shared/ca.pem`
         4. also take note of **PORT**=5000
  3. go to [Nuvla.io](https://nuvla.io), login, and select *Infrastructures*, on the left sidebar
  4. click "*+add*" (top left), and select Swarm
@@ -86,10 +86,10 @@ You can run this demo by yourself. Simply go through the following steps:
  4. you'll be given a **NuvlaEdgeID**, please take note
  5. SSH into your edge device
     1. make sure you're logged in with a user that can [manage Docker](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user) - test it by running `docker ps`
- 6. setup the environment by running `export NUVLABOX_UUID=NuvlaEdgeID` where `NuvlaEdgeID` is the **NuvlaEdgeID** from step 4.
- 7. download the [NuvlaEdge Engine software installer](https://github.com/nuvlaedge/deployment/releases). Run `wget https://github.com/nuvlaedge/deployment/releases/download/1.3.1/docker-compose.yml`
- 8. now just execute `docker-compose up -d`
-    1. it will just take a few seconds for you to see your NuvlaEdge become green (online) in [Nuvla.io](https://nuvla.io). You can follow the installation and lifecycle process by running `docker-compose logs`
+ 6. setup the environment by running `export NUVLAEDGE_UUID=NuvlaEdgeID` where `NuvlaEdgeID` is the **NuvlaEdgeID** from step 4.
+ 7. download the [NuvlaEdge Engine software installer](https://github.com/nuvlaedge/deployment/releases). Run `wget https://github.com/nuvlaedge/deployment/releases/download/2.12.2/docker-compose.yml`
+ 8. now just execute `docker compose up -d`
+    1. it will just take a few seconds for you to see your NuvlaEdge become green (online) in [Nuvla.io](https://nuvla.io). You can follow the installation and lifecycle process by running `docker compose logs`
     2. after a couple of minutes, you'll also see a new infrastructure (of the type NuvlaEdge) and credential appear in [Nuvla.io](https://nuvla.io)
  9. if not yet plugged in, plug your USB camera into the NuvlaEdge (edge device)
     1. in [Nuvla.io](https://nuvla.io), if you go to *Edge* and select your NuvlaEdge, you'll see the USB camera automatically listed as a peripheral
