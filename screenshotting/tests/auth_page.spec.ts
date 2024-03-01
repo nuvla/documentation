@@ -43,7 +43,6 @@ test('test', async ({ page, browser }, { config }) => {
   await page.goto(signUpUrl);
   await page.waitForURL(signUpUrl);
   await delay(5000); // otherwise the left buttons don't all display
-  await page.pause();
   await page.screenshot({ fullPage: true, path: '../docs/assets/img/sign-up.png', scale: 'css' });
 
   // Redirect to sign-in page after signing up, showing Success message:

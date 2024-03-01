@@ -116,6 +116,88 @@ export async function prepPage(page, url){
   await page.goto(url);
 }
 
-// CSS styling
-//export const cssStyles = { 'inputHighlight': '3px solid red' };
-export const cssStyles = '3px solid red';
+export async function highlightElement(page, path, useFirst = true) {
+  let e = await page.locator(path);
+  if (useFirst === true) {
+    e = e.first();
+  } else {
+    e = e.last();
+  }
+  await e.evaluate(e => e.style.border = '3px solid red');
+}
+
+async function delay(ms = 5000) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+export async function setName(page, prefix, name = 'my new static deployment group') {
+  await page.click('#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > i');
+  await page.fill('#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > span > div > input[type="text"]', name);
+  let set_name_button_el = '#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > span > div > button'
+  await page.locator(set_name_button_el).evaluate(e => e.style.border = '3px solid red');
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-set-name.png', scale: 'css' });
+  await page.locator(set_name_button_el).evaluate(e => e.style.border = '0px solid red');
+  await page.click(set_name_button_el);
+  
+  return;
+}
+
+export async function selectApp(page, prefix) {
+  // Add apps
+  let add_app_el = '#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div';
+  await page.locator(add_app_el).evaluate(e => e.style.border = '3px solid red');
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-from-edges-add-app.png', scale: 'css' });
+
+  // App selection
+  await page.click(add_app_el);
+  await delay(1000);
+  await page.locator('body > div.ui.page.modals.dimmer.transition.visible.active > div > div.content > div > div:nth-child(1) > div').evaluate(e => e.style.border = '3px solid red');
+  let select_app_el = 'a[href^="/ui/apps/tho-docker-apps-project/speedtestplotter"] > button'
+  await page.locator(select_app_el).evaluate(e => e.style.border = '3px solid red');
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-select-app.png', scale: 'css' });
+  await page.locator(select_app_el).evaluate(e => e.style.border = '0px solid red');
+  
+  // Completed deployment group
+  await page.click(select_app_el);
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/dg-static-with-app.png', scale: 'css' });
+  
+  // Save
+  let save_button_el = '#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(2) > div.ui.sticky > div > div:nth-child(1)';
+  await page.locator(save_button_el).evaluate(e => e.style.border = '3px solid red');  
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-highlight-save-button.png', scale: 'css' });
+  await page.locator(save_button_el).evaluate(e => e.style.border = '0px solid red');  
+
+  await page.click(save_button_el);
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-saved.png', scale: 'css' });
+
+  // Apps tab
+  let apps_tab_el = '#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(4) > div.ui.pointing.secondary.uix-tab-nav.menu > a:nth-child(2)';
+  await page.locator(apps_tab_el).evaluate(e => e.style.border = '3px solid red');
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-highlight-apps-tab.png', scale: 'css' });
+  await page.locator(apps_tab_el).evaluate(e => e.style.border = '0px solid red');
+  await page.click(apps_tab_el);
+  await delay(1000);
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-apps-tab.png', scale: 'css' });
+  
+  return;
+}
+
+export async function startDeploymentGroup(page, prefix) {
+  // Start
+  let overview_tab_el = '#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(4) > div.ui.pointing.secondary.uix-tab-nav.menu > a:nth-child(1)';
+  await page.click(overview_tab_el);
+  let start_button_el = '#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(3) > div.ui.sticky > div > a.item.primary-menu-item'
+  await page.locator(start_button_el).evaluate(e => e.style.border = '3px solid red');  
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-highlight-start-button.png', scale: 'css' });
+  await page.locator(start_button_el).evaluate(e => e.style.border = '0px solid red');  
+  await page.click(start_button_el);
+  await delay(1000);
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-start.png', scale: 'css' });
+                                  
+  let confirmation_checkbox_el = 'body > div.ui.page.modals.dimmer.transition.visible.active > div > div.content > div > div.ui.error.message > div.content > div';
+  await page.click(confirmation_checkbox_el);
+  let modal_start_button_el = 'body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > div > button';
+  await page.click(modal_start_button_el);
+  let modal_start_button_2_el = 'body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > div > button.ui.active.negative.button';
+  await page.click(modal_start_button_2_el);
+}
