@@ -3019,7 +3019,7 @@ export const mockAllAppsData = {
 };
 
 export const mockNavigateAppsData = {
-  "count" : 15,
+  "count" : 17,
   "acl" : {
     "query" : [ "group/nuvla-user" ],
     "add" : [ "group/nuvla-user" ]
@@ -3027,17 +3027,95 @@ export const mockNavigateAppsData = {
   "resource-type" : "module-collection",
   "id" : "module",
   "resources" : [ {
-    "description" : "AI video analysis at the Edge with report to Cloud demo",
-    "path" : "ai-edge-to-cloud-demo",
-    "updated" : "2019-06-27T11:49:07.467Z",
-    "name" : "AI Edge to Cloud demo",
-    "created" : "2019-06-27T11:42:19.997Z",
+    "description" : "# C2RO\u2122\n\nC2RO\u2122 is all about helping businesses understand human behavior in the physical world. \nOur products are the cornerstone of data-driven decision-making toward operational \nefficiency, physical transformation, and the safe and immersive environments of the future. \n \nSomething that we are proud sets us apart in the industry is our commitment to biometric-\nfree solutions and our compliance with the strictest data privacy regulations, including \nEurope\u2019s GDPR and North America\u2019s PIPEDA. This gives our customers and partners the \nconfidence to use our solutions knowing they are safe and do not pose a risk to their \ncustomers. \n \nFinally, we are continuously raising the bar on data accuracy in the field of AI and traffic \nanalysis systems. Our customers know that C2RO\u2122 will always stand by its data and they \ncan trust the decisions that rely on that data every day.  \n \nFor more information, please visit \n[www.c2ro.com](www.c2ro.com)",
+    "path" : "c2ro",
+    "updated" : "2022-06-20T09:30:40.798Z",
+    "name" : "C2RO",
+    "created" : "2022-06-08T14:43:33.636Z",
     "parent-path" : "",
-    "id" : "module/7beb6bcb-2622-4f82-81dc-86d77c94a501",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
+    "created-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
+    "id" : "module/384bd870-2546-4a61-a430-431ce0096290",
     "resource-type" : "module",
     "acl" : {
       "edit-data" : [ "group/nuvla-admin" ],
-      "owners" : [ "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "owners" : [ "group/c2ro-vendor", "group/sixsq-vendor" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/c2ro.webp",
+    "subtype" : "project"
+  }, {
+    "description" : "# AI EdgeLabs\n\nSimilar to our parent company, Scalarr, our solution at its core has a straightforward vision: to ensure security to the newest technologies. \nIn the specific case of AI EdgeLabs, the solution was born out of the knowledge we earned from witnessing firsthand how clients were getting constantly attacked across their organization\u2019s Edge and IoT infrastructures, mostly due to lax security measures, outdated or unpatched systems, and a rising number of sophisticated cyber security attacks, to name a few. \n \nWith a diverse workforce based out of Ukraine, USA, Mexico, Poland, Israel, and Canada, AI EdgeLabs was founded and is run by security professionals that value humanity, safety, and favorable living conditions for every individual including social, economic, health, and any other factor that plays a part in human wellbeing. \n \nWe are the proud recipients of several acknowledgements, cementing our place as the industry\u2019s most accurate solution in the market and culminating in being named one of Forbes\u2019 Top 30 Best Ukrainian Startups in 2021.\n\n[edgelabs.ai](https://edgelabs.ai/)",
+    "path" : "ai-edgelabs",
+    "updated" : "2022-06-20T09:31:39.952Z",
+    "name" : "AI EdgeLabs",
+    "created" : "2022-06-08T15:47:06.020Z",
+    "parent-path" : "",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
+    "created-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
+    "id" : "module/c0eee4d5-afba-4477-ac38-c1b3d2eca79c",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "group/ai-edgelabs-vendor", "group/sixsq-vendor" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/ai_edgelabs.webp",
+    "subtype" : "project"
+  }, {
+    "description" : "# Cybus\n\nThe software company Cybus enables industrial manufacturers to efficiently connect and automate their production. \n\nIts software \u201CCybus Connectware\u201D leverages real-time data from the production environment irrespective of its vendors or applications. \n\nAs a result, factories achieve sustainable competitive advantages such as increased efficiency and quality of the production processes. \n\nAt the same time, the integrated security solution of the cloud-independent software maintains absolute data sovereignty. \n\nCybus Connectware is used as the central infrastructure component of the Smart Factory architecture by European medium-sized businesses up to the automotive industry. \n\nMore details at [www.cybus.io](https://www.cybus.io).",
+    "path" : "cybus",
+    "updated" : "2022-06-20T09:32:14.671Z",
+    "name" : "Cybus",
+    "created" : "2022-06-08T15:20:13.956Z",
+    "parent-path" : "",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
+    "created-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
+    "id" : "module/4edd3a6e-39a3-45a2-87c4-547adcfb91a6",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "group/cybus-vendor", "group/sixsq-vendor" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/cybus.png",
+    "subtype" : "project"
+  }, {
+    "description" : "Varnish is an HTTP accelerator designed for content-heavy dynamic web sites as well as APIs.",
+    "path" : "varnish",
+    "updated" : "2022-11-24T09:49:14.678Z",
+    "name" : "Varnish",
+    "created" : "2022-09-05T12:09:27.683Z",
+    "parent-path" : "",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
+    "created-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
+    "id" : "module/830d977b-bf1f-416f-87fe-e3a25474c7b9",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "group/sixsq-vendor", "group/varnish-vendor" ],
       "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
       "delete" : [ "group/nuvla-admin" ],
       "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
@@ -3046,7 +3124,159 @@ export const mockNavigateAppsData = {
       "manage" : [ "group/nuvla-admin" ],
       "edit-meta" : [ "group/nuvla-admin" ]
     },
-    "logo-url" : "https://crosser.io/media/1365/crosser-edge-analyticsicon.svg",
+    "logo-url" : "https://www.varnish-software.com/wp-content/uploads/VS-logo-2020-140x60-1.svg",
+    "subtype" : "project"
+  }, {
+    "description" : "Monitor and Predict network low latency in real-time. LatenceTech offers an innovative way to continuously track, predict and evaluate  latency-optimized 5G and Private LTE Networks in support of time-critical innovations.\n\nOur solution is based on three main components:\n\n- **Analyzer**: a self-contained real-time analytics platform\n- **QoS Agent**: a measurement probe based on multiple protocols\n- **Reflector**: an end-target for the QoS Agent\n\nA minumum of one QoSAgent and one Reflector is required to measure an end-to-end link between a connected application and the target server on the internet. The QoSAgent is normally positionned close to the connected application. Similarly, the Reflector is normally positioned close to the server. Several QosAgents and Reflectors can be deployed to measure different segments of the 5G or PrivateLTE network.\n\nFor more details, please refer to [docs.latence.ca](https://docs.latence.ca)\n\nRefer to link for details in the [End User License Agreement EULA](https://www.latencetech.com/eula)\n\n&copy; LatenceTech Technologies Inc., 2022",
+    "path" : "latencetech",
+    "updated" : "2023-01-12T13:53:25.985Z",
+    "name" : "LatenceTech",
+    "created" : "2022-09-15T09:25:47.256Z",
+    "parent-path" : "",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
+    "created-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
+    "id" : "module/8e15c48a-c488-491a-a002-652d082578f0",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "group/latencetech-vendor", "group/sixsq-vendor" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "logo-url" : "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/fktgj3vzrfxkpgsr1grt",
+    "subtype" : "project"
+  }, {
+    "path" : "apps-sets",
+    "updated" : "2023-08-23T08:25:01.876Z",
+    "name" : "apps-sets",
+    "created" : "2023-08-23T08:25:01.876Z",
+    "parent-path" : "",
+    "created-by" : "internal",
+    "id" : "module/4bdeebe3-cc61-4a65-929d-02c7d8961ef3",
+    "resource-type" : "module",
+    "subtype" : "project"
+  }, {
+    "description" : "mebster's root project",
+    "path" : "mebster",
+    "updated" : "2019-08-15T12:37:50.546Z",
+    "name" : "mebster",
+    "created" : "2019-07-29T17:14:34.543Z",
+    "parent-path" : "",
+    "data-accept-content-types" : [ ],
+    "id" : "module/04c601c4-5d1f-47eb-8690-65d1f0ec2581",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "view-acl" : [ "group/nuvla-admin" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "operations" : [ {
+      "rel" : "edit",
+      "href" : "module/04c601c4-5d1f-47eb-8690-65d1f0ec2581"
+    }, {
+      "rel" : "delete",
+      "href" : "module/04c601c4-5d1f-47eb-8690-65d1f0ec2581"
+    }, {
+      "rel" : "delete-version",
+      "href" : "module/04c601c4-5d1f-47eb-8690-65d1f0ec2581/delete-version"
+    } ],
+    "logo-url" : "/ui/images/noimage.png",
+    "subtype" : "project"
+  }, {
+    "description" : "# Example apps\n\nAs creators of Nuvla.io, we have created a set of example apps to show you what's possible with the platform.\n\nWe also use these apps in our traning material and the [Youtube Classroom chanel](https://www.youtube.com/watch?v=s0NQjTgmaU0&list=PLY20wTTKSDHa-bTvE-hRtAXafrNNkQYru). Feel free to reuse these apps as you feel like. They are all released under a permissive license.\n\nWe also release these apps such that you can learn from them. So please have a look and give us feedback. We're here to help and learn.   \n\n\u00A9 2021, SixSq S\u00E0rl",
+    "path" : "examples",
+    "updated" : "2024-02-27T09:58:37.022Z",
+    "name" : "Examples",
+    "created" : "2019-06-25T13:40:06.197Z",
+    "parent-path" : "",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
+    "id" : "module/19422abe-9fbb-40ba-8656-439806253c78",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "owners" : [ "group/sixsq-devs", "group/sixsq-vendor" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "delete" : [ "group/nuvla-admin", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "edit-acl" : [ "group/nuvla-admin", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "manage" : [ "group/nuvla-admin", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "edit-meta" : [ "group/nuvla-admin", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ]
+    },
+    "operations" : [ {
+      "rel" : "edit",
+      "href" : "module/19422abe-9fbb-40ba-8656-439806253c78"
+    }, {
+      "rel" : "delete",
+      "href" : "module/19422abe-9fbb-40ba-8656-439806253c78"
+    }, {
+      "rel" : "delete-version",
+      "href" : "module/19422abe-9fbb-40ba-8656-439806253c78/delete-version"
+    } ],
+    "logo-url" : "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL3dlYi5yZXNvdXJjZS5vcmcvY2MvIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgd2lkdGg9IjYwMCIKICAgaGVpZ2h0PSI2MDAiCiAgIGlkPSJzdmcyIgogICBzb2RpcG9kaTp2ZXJzaW9uPSIwLjMyIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ1LjEiCiAgIHNvZGlwb2RpOmRvY25hbWU9IkV4YW1wbGUuc3ZnIgogICBpbmtzY2FwZTpvdXRwdXRfZXh0ZW5zaW9uPSJvcmcuaW5rc2NhcGUub3V0cHV0LnN2Zy5pbmtzY2FwZSIKICAgc29kaXBvZGk6ZG9jYmFzZT0iL2hvbWUvZ21heHdlbGwiCiAgIHZlcnNpb249IjEuMCI+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhOSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjYyMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjgxNCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwLjAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAuMCIKICAgICBvYmplY3R0b2xlcmFuY2U9IjEwLjAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBpZD0iYmFzZSIKICAgICB3aWR0aD0iNjAwcHgiCiAgICAgaGVpZ2h0PSI2MDBweCIKICAgICBpbmtzY2FwZTp6b29tPSIwLjM1OTc0MDU4IgogICAgIGlua3NjYXBlOmN4PSI1MCIKICAgICBpbmtzY2FwZTpjeT0iNTE5LjA0OTY2IgogICAgIGlua3NjYXBlOndpbmRvdy14PSI0ODMiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjEwMSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmcyIiAvPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMxNiIgLz4KICA8ZwogICAgIGlkPSJnMjE2MSIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCg2LjM5NTEzNTQsMCwwLDYuMzk1MTM1NCwtMjIuNjI2MjQ2LC03LjEwODI1MDkpIj4KICAgIDxwYXRoCiAgICAgICBub2RldHlwZXM9ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjYyIKICAgICAgIGlkPSJmbG93Um9vdDE4ODIiCiAgICAgICBkPSJNIDM2LjAwOTc2Niw5LjI1MDUwODMgQyAzNy43MzkyOTUsOS40MjExMjczIDM4LjMwNTg3OSwxMS40NzA2OTcgMzguMDUyNTgxLDEyLjkzNTA0OSBDIDM3LjM0NjI2NiwxNi4xNTM4OTkgMzYuMzE2ODIxLDE5LjUxNDY2IDM1LjQ0NTQwNSwyMi43MTc3MDEgQyAzNi4wOTE2NjYsMjQuODEyMjI0IDMxLjcxMjI4NCwyNC4wMDg4NzcgMzMuMjE5OTMyLDIyLjMxNTQ1OSBDIDM0LjgxNzA0MSwxOC40MTEyMDIgMzYuMDExNDA0LDEzLjQ5ODMzNiAzNi4wMDk3NjYsOS4yNTA1MDgzIHogTSAzNi4wMDk3NjYsMi45OTI2OTU4IEMgMzguMjEwMzExLDEuMjI0MjA4OCA0MC45OTYyNjgsOS4xNzI3NTcgMzMuOTExNTcxLDYuMTUzNDg0NyBDIDMzLjg4NDYxOSw1Ljc2MDMwMTkgMzYuMDk2Mjg5LDMuMzg2OTQ0NyAzNi4wMDk3NjYsMi45OTI2OTU4IHogTSA0MS4zNzEwOTQsMTUuODcxNjAxIEMgNDEuMzcxMDk0LDEzLjY2NDU3IDQxLjM3MTA5NCwxMS40NTc1MzkgNDEuMzcxMDk0LDkuMjUwNTA4IEMgNDMuMTgwNjIxLDkuNDI1NzM4NyA0My45NjMwMTQsMTEuNzA0NTU5IDQzLjI4NjEzNywxMy4yMTU1MTcgQyA0Mi44NTkwODQsMTUuMDU5NzkyIDQyLjkzOTI0MSwxNy4zOTk2IDQ0LjYwMTQ4NywxOC42MjUzMzUgQyA0Ni43MTA1NDQsMTkuNjgzNDc3IDQ5LjM4Nzc0LDE3LjM1MzExMiA0OC44MDMyNjgsMTUuMTE4NDM3IEMgNDguOTMxOTYsMTMuNDA2NTM4IDQ4LjIzNjI5MiwxMS42MTM4NDggNDguOTY4ODYyLDkuOTY5MDQxNSBDIDUxLjA1NTA5Nyw5LjY1MDAzNTcgNTEuNTAwNjc3LDEyLjQ4NzE1NSA1MC41NDQ5ODUsMTMuODQ0NzQ3IEMgNTAuMDcwMDIzLDE1LjMwOTcwOCA1MC44NTc0NTIsMTYuNzgxODk4IDUwLjY3MjM0NCwxOC4yMzk0MzIgQyA1MC4yNzk2MTUsMTkuOTQwNTYgNDguNDE4NDA0LDIwLjAwMDIzIDQ3LjAyMjUsMjAuMDcxODY4IEMgNDUuNDc4NDg5LDIwLjM4MTk0IDQzLjUxNjgzNSwyMC43OTEzNjggNDIuMzYxOTQ3LDE5LjM4ODc0IEMgNDEuNTIyNTE0LDE4LjQ0NDA4OSA0MS4yMTEyNzQsMTcuMTA3NjcxIDQxLjM3MTA5NCwxNS44NzE2MDEgeiBNIDYxLjIyNDYwOSw5LjU3Mjc3MzkgQyA2MC40MTk3OCwxMS41NTc1NTIgNTguMTAwODA0LDEwLjIzNTYxNiA1Ni42Mjc2NywxMC41NzE1NTEgQyA1My44MzY4NjIsMTQuMzkzNjExIDYwLjkyMDAzOCwxMy41MTM2NjcgNjEuODA4NSwxNy4wMTE2NDggQyA2MS44NTYxMywxOC45MzM3NDcgNjAuMDI4MzU5LDIwLjU4NzM4OSA1OC4xMjkwOTEsMjAuNDQzMzEyIEMgNTYuOTA0NDg3LDIwLjYwNzIyOSA1NC42MDkyMDQsMjAuOTgyMzkzIDU0LjQxNzg3OSwxOS4yNjc2MjIgQyA1NS4yODA2MDksMTcuNTA4MjY5IDU3LjMzNjM1OSwxOS41Mjg4MDMgNTguNjMzMTExLDE4Ljg0NjMgQyA2MC40MDMxNDEsMTcuOTkwODEgNTkuNDAyMjMyLDE1LjU1NTMyNSA1Ny43Mjg3ODEsMTUuMzIxNDc1IEMgNTYuNTUwMTE1LDE0Ljk4MTM1IDU1LjA5MTgxMywxNS4yMjU0MzkgNTQuMjU0NzQ3LDE0LjExMjc2NCBDIDUzLjAxNzY2OSwxMi44ODExNjcgNTMuMzkyMTMyLDEwLjczMzE0OCA1NC43MzY3MTksOS43NDEzMjUyIEMgNTYuNjE5MTcyLDguMzMwNzM5NiA1OS4xNzAzMjYsOC45NTM1MDY3IDYxLjIyNDYwOSw5LjU3Mjc3MzkgeiBNIDY2LjQ1ODk4NCw2LjE0NTAzOTYgQyA2NS4zNjgxMjYsNy42MzMzMzM0IDY3LjM0ODkzNiw5Ljk1MzE1NzQgNjguOTg3MjI5LDkuMDk0ODk3OSBDIDY5Ljk3ODEzMywxMS4wNDI1MDMgNjYuNTI0NjQxLDEwLjc3NzkzMSA2Ni40NzM0OTUsMTIuNDMwOTkyIEMgNjQuNDQzNjA1LDE2LjEwMTgxNCA2OC40ODI3MywxOC42MjM0MjYgNjcuNTcxNjU3LDIwLjQxNzUyOCBDIDY1LjQ0MDg1OCwyMC4yNjE1NSA2NC4zMjQzMDcsMTcuODQ0NDUyIDY0LjU3NzQzMywxNS45MTkzNTcgQyA2NC43MDg0NywxNC40MDg1ODYgNjUuMDU1MTA3LDEyLjc5MzYxIDY0LjMyMjk2MSwxMS4zNzM5NDEgQyA2My43ODY0MjIsOS41NDc1MTkyIDY0LjE1MDQxOSw3LjE0NTI2NTUgNjUuOTU0MjMzLDYuMTU1MjQ3NyBMIDY2LjIwNjA0Myw2LjEyMDMzMjMgTCA2Ni40NTg5ODQsNi4xNDUwMzk2IEwgNjYuNDU4OTg0LDYuMTQ1MDM5NiB6ICIgLz4KICAgIDxwYXRoCiAgICAgICBub2RldHlwZXM9ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjIgogICAgICAgaWQ9ImZsb3dSb290MTg5MCIKICAgICAgIGQ9Ik0gMTAuODY3MTg4LDQ0Ljg3Nzk1MyBDIDYuMjgxMjYxOCw0Mi4xMjQ4NDkgNS4yMjA1OTE0LDUyLjM2NjI2OCAxMC40MDkyMTUsNDkuODkyNDMxIEMgMTIuMzg5Mzg1LDQ5LjI5NTU2OCAxNC45ODgwNDUsNDMuOTEyNjU4IDEwLjg2NzE4OCw0NC44Nzc5NTMgeiBNIDE1LjE2Nzk2OSw0My45ODczMjggQyAxNC45MTk4MjYsNDYuMzM3MjQgMTYuNjE3NzU2LDUyLjU1NDIwMiAxMi4yOTg3MzQsNTAuNTM2OTE4IEMgOS44MDQxMTQyLDUyLjMxMjkxNiA2LjA1ODA4NTUsNTIuOTU4Njc0IDQuNTAyMzEyMyw0OS41ODMzODYgQyAyLjYzNTA0NTQsNDUuMjU3MzIyIDcuMzAzMzEwMyw0Mi4yOTg3MTIgMTEuMDQ2NDQzLDQzLjM2MTA1OSBDIDE1LjI0NzE4NSw0MS4zMjA3ODYgOS40OTMwMjg2LDM4LjMzODI2NCA3LjEwNjg3OTIsNDAuMzIyMTM4IEMgMy40Mzc0NDIxLDQwLjAxMzg4IDcuNDA2NDA3LDM3LjIwMTQwNyA5LjM0OTUwODcsMzcuOTYyOTEyIEMgMTIuNDQyMTIsMzcuODc3Nzg4IDE1LjU1NjUzNCw0MC4zODAxMzEgMTUuMTcxNzUxLDQzLjY0ODkxMiBMIDE1LjE2OTYzOCw0My44Mzc5NyBMIDE1LjE2Nzk2OSw0My45ODczMjggeiBNIDMwLjUzMTI1LDQzLjU1MzczNCBDIDI5LjYzODc5NCw0NS45MTE1NTggMzIuNDk0NjcsNTAuNDYzODcyIDI4Ljc3OTk5OSw1MS4wNzA5NDQgQyAyNi44ODgwODgsNDcuNzAyMzA2IDMwLjkzMTYyMSw0MS4xOTAyNTcgMjUuNTgzNjUsNDAuMDQ2MTQ3IEMgMjAuNzM5MzEsNDAuMzEyNzk4IDIxLjI1MjE5NCw0NS45MTA4NzEgMjIuMDAxNDM5LDQ5LjE1NDA2NiBDIDIxLjg0MjUzLDUxLjgyODMwOSAxOC43OTA1NzcsNTEuMzkyNTYgMTkuNTg1NTg1LDQ4LjY3MzczOCBDIDE5Ljg1MTgyOSw0NS42OTM4NjQgMTguMjg1MzMyLDM5LjYzMDMwMSAyMC45ODY5ODMsMzguNzAyOTExIEMgMjMuNTA4NDYxLDQwLjgwODg5IDI1Ljc2MTg0NywzNS43MzE5MDYgMjguNDUyNDU5LDM4LjY4NjIyNiBDIDI5LjkyMTQ1NCwzOS43OTMxOTQgMzAuODI3NjE4LDQxLjcwOTk5MiAzMC41MzEyNSw0My41NTM3MzQgeiBNIDM4LjgwNyw0OS43NzAyMjMgQyA0Mi4zNjkwMzQsNTAuNzY4OTc0IDQ0LjUyMzM0NCw0Ni4zMjg2ODggNDMuNzAwNTIxLDQzLjM1ODk4MyBDIDQwLjQwMjc3NSwzNS41NDY0NTMgMzIuNDkxMTk5LDQ0LjM0NDEzMSAzOC44MDcsNDkuNzcwMjIzIHogTSAzOS45NDE0MDYsMzguMDM0MjAzIEMgNTIuMDg1ODcyLDM5LjcwNTY0MiA0My4yMDQ4NTQsNTkuMDk4MzQyIDM0LjY4ODcyMiw0OC42NDI5NjggQyAzMi41OTE4ODYsNDQuNzc4MDMxIDM0LjM4MzEwOSwzOC40NDAxMzIgMzkuMjkxMzY5LDM4LjA1MTgyNyBMIDM5Ljk0MTQwNiwzOC4wMzQyMDMgTCAzOS45NDE0MDYsMzguMDM0MjAzIHogTSA1MS42NjAxNTYsMzQuNjI0MDQ2IEMgNDkuODE1OTc4LDM3Ljg1MDU4MyA1NC43ODk0NTksMzguNjY2MjIyIDU1LjgzNDM3LDM5LjIzNTY2IEMgNTQuMTQwNzQ2LDQwLjcxNTczMyA1MC4wOTMwNjEsNDAuMTIxNTggNTEuNTYyNDYxLDQzLjc2MjEyIEMgNTEuMDA0MDk2LDQ2Ljk4MDUyMyA1Mi40ODY4NDcsNTAuMDM3NzIzIDU1LjY3MDYxNCw1MC41NDU5NSBDIDUzLjU0Nzc4OCw1My43ODI2MTYgNDguNDE3OTMsNTAuMDM1NDk1IDQ5LjM0OTk3Myw0Ni41MTk2OTIgQyA1MC4zMzk4NzcsNDMuNjg2NDcxIDQ4Ljc4MTMxLDQwLjY3MTE2NiA0OC40NjcyNTYsMzguNDgzNTcgQyA1MS4wOTk5MjYsMzcuNDEzNTk5IDQ3Ljg4NjUxMiwzMy4zMjI4MyA1MS42NjAxNTYsMzQuNjI0MDQ2IHogTSA2OS44NTkzNzUsNDMuNTUzNzM0IEMgNjguOTY2OTE4LDQ1LjkxMTU1NyA3MS44MjI3OTQsNTAuNDYzODcyIDY4LjEwODEyNCw1MS4wNzA5NDQgQyA2Ni4yMTYyMTQsNDcuNzAyMzA2IDcwLjI1OTc0Niw0MS4xOTAyNTYgNjQuOTExNzc1LDQwLjA0NjE0NSBDIDYwLjIyMjQxOCw0MC4yODU5MDQgNjAuNDM5MTk0LDQ1Ljc1NzcyOCA2MS4zNjc5NDIsNDguOTUzNjgzIEMgNjAuNzA1NDQ4LDUzLjA2NDg1NSA1Ny43ODg2MjYsNDkuOTAwMTM0IDU4LjgzODM3OSw0Ny4yODk3MzggQyA1OC45Njk3MDksNDMuMzgxMTc0IDU5LjAwNjQzNywzOS40NTUwODcgNTguNjA3NDA0LDM1LjU2NTcxNCBDIDU5LjM1NjAyNSwzMS42MzI0MTMgNjIuMzY4MjY5LDM0LjY4MDEzIDYxLjAxMzUyLDM3LjE5NDMxNiBDIDYwLjM4NDE3LDM5LjMwMjUzOCA2MS40NjkwODcsNDAuNjUzNDc2IDYyLjk5NjI0OCwzOC40NzQ4MjkgQyA2Ni4yMDIwODksMzYuODI2MTU0IDcwLjg2MzI2OSwzOS44MjY0NTEgNjkuODU5Mzc1LDQzLjU1MzczNCB6IE0gODUuNDEwMTU2LDQ0LjM3NDA0NiBDIDgzLjI0NDg0OSw0Ny45MDU1MzMgNzYuNDQ3MDg1LDQyLjQ1NjM0NCA3NS45NzYwMTMsNDcuNDQ0MDUyIEMgNzYuOTEzNTQxLDUxLjcyNDU0OCA4My4yNzUzMjQsNDguNzI2MTk2IDg0LjM5MzYzOSw1MC4xMzM3NzMgQyA4Mi4xMDk4NTUsNTMuNTI1MTIzIDc2LjQyMTMzOSw1MS44NjAxMTEgNzQuMjg1MzM1LDQ5LjAxMzM2IEMgNzEuMjU4MjQ3LDQ0LjcyOTk4NCA3NC42MTQwMTMsMzcuMTY2NTE2IDgwLjI1NDI4OSwzNy45Njc1NiBDIDgzLjI4Njk1OCwzOC4yODQ0OTUgODUuODMzOTE0LDQxLjMxMDc0NSA4NS40MTAxNTYsNDQuMzc0MDQ2IHogTSA4My4yNTM5MDYsNDMuNzQxMjM0IEMgODQuNDMxMzE5LDM5LjAzOTYxNCA3NC41OTQ4MTIsMzguNjg3MzI1IDc2LjI5MTg4Niw0My4zMzUyMjYgQyA3OC4yODQ3ODMsNDQuNzk2MDQ4IDgxLjAzMjg1Niw0My4wOTA5NDMgODMuMjUzOTA2LDQzLjc0MTIzNCB6IE0gOTYuNTU0Njg4LDQwLjM2NjIzNCBDIDkzLjI5MDYxMiwzOC42ODgyIDkwLjYyMjIxNyw0Mi41MTk2MzUgOTAuNzI4NTIyLDQ1LjQ5MjY2NSBDIDkwLjg4MTkyNSw0Ny4zMzM2NzYgOTIuMzMwMjg2LDUyLjE0NDQ2NSA4OS4wMjg3NTEsNTAuOTA1OTg4IEMgODguOTU2NzMsNDYuNzYzOTYzIDg4LjM1MzMxMiw0Mi40NDcyMDcgODkuMzE3MjEsMzguMzM2NjQzIEMgOTEuMDQwNDcxLDM4LjUwMzQzNyA5Mi4yMDc1MTQsNDAuNjY4MTgxIDkzLjQyMTQ2OCwzOC4yMDgyOTggQyA5NC45MDI0NzgsMzcuNDQ5NzMgOTcuNjkwOTQ0LDM4LjI2MzY2OCA5Ni41NTQ2ODgsNDAuMzY2MjM0IHogIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOiNmZjAwMDAiCiAgICAgICBub2RldHlwZXM9ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjIgogICAgICAgaWQ9ImZsb3dSb290MTg5OCIKICAgICAgIGQ9Ik0gMTcuMDI2MzI3LDYzLjc4OTg0NyBDIDAuNzUwNjM3Niw2NC4wNTg0NjkgMTMuODgyNzksNjYuMzg3MTU0IDEzLjExMzg4Myw2OS4zMjMyNTggQyA4LjA0NzI0MTcsNzAuMjg3MDkzIDMuNTkzNjI4NSw2My41NjU3MTQgNi44MDkwNDUxLDU5LjM3MDU0OCBDIDguNzU5MTU1Myw1NS43MTc3OTEgMTUuMjY5OTIyLDU1LjE5ODM2MSAxNi45MDIwNjgsNTkuMzkzMjYxIEMgMTcuNTMyNTgxLDYwLjc1ODk0NyAxNy42MjgyMzcsNjIuMzk2NTg5IDE3LjAyNjMyNyw2My43ODk4NDcgeiBNIDE1LjMwNjQ2Myw2Mi42NTYxMDkgQyAxOC44NTI1NjYsNTguNzEzNzczIDcuNjU0MzU4NCw1Ni42MDkxNDMgMTAuNzY1ODAzLDYxLjMwNDc0MiBDIDEyLjEyNDc4OSw2Mi4yMTc3MTUgMTMuOTYxMzU5LDYxLjcwNTM0MiAxNS4zMDY0NjMsNjIuNjU2MTA5IHogTSAzMS4zMDc5MzEsNjIuMzkxMzgzIEMgMjcuMTMwNTE4LDYzLjUyNDAyNiAyNC42Njk4NjMsNjguNjYzMDA0IDI3LjQ3MDcxNyw3Mi4yMjk0NzIgQyAyNS45NDY2NTcsNzQuMDUyMzE2IDI0LjI1MzY5Nyw3MS4wNzYyMzcgMjQuODU3MjgxLDY5LjYzNjkwOSBDIDIzLjczNzQ0NCw2Ny4wMzg0MjggMTcuMzk5ODYyLDcyLjI1NDI0NiAxOS4zODY2MzYsNjguODg4NjU3IEMgMjMuMTU5NzE5LDY3LjU1MTE5MyAyMi4zOTg0OTYsNjMuNzExMzAxIDIyLjA2MDY3LDYwLjg0ODY3MSBDIDI0LjA2NDA4NSw2MC4zNzUyOTQgMjQuMzcwMzc2LDY1Ljc3MjY4OSAyNy4xNjc5MTgsNjMuMzI2MDQ4IEMgMjguMzUwMTI2LDYyLjU0NjM2OSAyOS45MjczNjIsNjEuMDY3NTMxIDMxLjMwNzkzMSw2Mi4zOTEzODMgeiBNIDM3LjY2ODc1LDcwLjU5ODYyMyBDIDMzLjQ2NzMxNCw2Ni42MjI2NCAzMi41MTcwNjQsNzcuOTcyNzIzIDM3LjMwNjI2LDc0LjQ2NjYzNiBDIDM4Ljc0MjUyMyw3My44NTM2MDggNDAuNTU5MDQsNzAuMzg5MzIgMzcuNjY4NzUsNzAuNTk4NjIzIHogTSA0MS42NzczMjEsNzAuOTczMTMxIEMgNDIuMzQwNjY5LDc1LjMwODE4MiAzNi45MjYxNTcsNzguMzYxMjU3IDMzLjMzMTkyMSw3Ni4yMjMxNTUgQyAyOS40MzQzNSw3NC44OTM5ODggMzAuNjE4Njk4LDY3LjY3NzIzMiAzNS4wMDM4MDYsNjguNTY3ODg1IEMgMzcuMTM3MzkzLDcwLjU5Mjg1NCA0Mi4xNDAyNjUsNjcuMDAyMjIxIDM3LjY1NjE5Miw2Ni4yOTAwMDcgQyAzNS4yNDIyMzMsNjUuOTE0MjE0IDM1LjE2NjUwMyw2Mi42NDA3NTcgMzguMDM2OTU0LDYzLjkyNjQwNCBDIDQwLjg0NzkyMyw2NC43NDQ5MjYgNDMuMjI3ODM4LDY4LjEyNDczNSA0MS42NzczMjEsNzAuOTczMTMxIHogTSA2Mi4zNzkwOTksNzYuNjQ3MDc5IEMgNjIuMDA3NDA0LDc4LjU2MDQxNyA2MS4xNjE0MzcsODQuMDM0NTM1IDU4Ljg5MDU2NSw4Mi4wMTAwMTkgQyA1OS43Njk2NzksNzkuMDM5OTU4IDYyLjUzNjM4Miw3Mi4yMjkxMTUgNTYuOTQ3ODk5LDcyLjc2NTc4OSBDIDUzLjc5MDQxNiw3My41NzA4NjMgNTQuOTA4MjU3LDgwLjk2ODM4OCA1MS41MjkyODYsNzkuNDk2ODU5IEMgNTEuNzA3ODMxLDc2LjU1OTgxNyA1NS44NTgxMjUsNzEuODk2ODM3IDUwLjgzMjEsNzAuNjc4NTA0IEMgNDUuODk4MTEzLDY5LjkwNzgxOCA0Ny40ODU5NDQsNzUuNzM1ODI0IDQ1LjI4Njg4Myw3OC4wMzQ3MDMgQyA0Mi45MTYzOTMsNzYuMzMzMzk2IDQ1LjQ3MDgyMyw3MS42NDcxNTUgNDYuNjI0MTI0LDY5LjQxNDczNSBDIDUwLjkxOTUwNyw2Ny45MDY0ODYgNjMuNjE4NTM0LDcwLjg3ODcwNCA2Mi4zNzkwOTksNzYuNjQ3MDc5IHogTSA2Ni40MjY0NDcsODMuODQ5MDUgQyA2Ny42MTYzOTgsODUuNzc3NTkxIDYyLjExNDYyNCw5NC40OTI2OTggNjIuMzUxMTI0LDkwLjMxNzExIEMgNjMuNzkxNjg0LDg2LjU4MTk2MSA2NS43MzAzNzYsNzguMDAwNjM2IDY3LjM5MTg5MSw3NC44NTU3NSBDIDcxLjAyNzgxNSw3My43ODExNzUgNzYuMzgzMDY3LDc1LjM1MDI4OSA3Ni41OTE5NzIsNzkuNzUxODk4IEMgNzcuMDQ4NTQ1LDgzLjc5MzA0OCA3My4wNjY4MDMsODguNDI5OTQ1IDY4Ljg0MjE4Nyw4Ni43NjU5MzYgQyA2Ny42MjQzODYsODYuMjgyMDM0IDY2LjU2NzQxLDg1LjE5NTEzMiA2Ni40MjY0NDcsODMuODQ5MDUgeiBNIDc0LjA4NjU2OSw4MS44MDM0MzUgQyA3Ni44NTE4OTMsNzguMDUwNTI0IDY5LjI2NDQwMiw3NC4zMTAyNTYgNjcuNTYwNzM0LDc4LjM3ODE5MSBDIDY1Ljg5MzQwMiw4MC41OTQwOTkgNjcuMjU1NzE5LDgzLjc3NTc0NiA2OS43MDA1NTUsODQuNzE4NTU4IEMgNzIuMDI4NzA4LDg1LjkwMjIyNCA3My42ODg2MzksODMuODg4NjYyIDc0LjA4NjU2OSw4MS44MDM0MzUgeiBNIDgyLjMxODc5OSw3My4xMjQ1NzcgQyA4NC4zMDUyMyw3NS40ODcwNTkgODEuNjU1MDE1LDg4LjQ0ODA4NiA3OC4yNDcxODMsODcuMjc1NzM2IEMgNzguOTkxOTM1LDgyLjM4NzgyOCA4MS4yOTEwMjksNzcuOTQ5Mzk0IDgyLjMxODc5OSw3My4xMjQ1NzcgeiBNIDk1LjAwMTk4NSw4Ny42ODQ2OTUgQyA3OC43MjYyOTgsODcuOTUzMzE5IDkxLjg1ODQ0OSw5MC4yODE5OTkgOTEuMDg5NTQyLDkzLjIxODEwNyBDIDg2LjAyMjksOTQuMTgxOTQgODEuNTY5Mjg3LDg3LjQ2MDU2MiA4NC43ODQ3MDEsODMuMjY1Mzk0IEMgODYuNzM0ODE0LDc5LjYxMjYzNyA5My4yNDU1ODIsNzkuMDkzMjEgOTQuODc3NzI5LDgzLjI4ODExIEMgOTUuNTA4MjQ1LDg0LjY1Mzc5NiA5NS42MDM4OTIsODYuMjkxNDM4IDk1LjAwMTk4NSw4Ny42ODQ2OTUgeiBNIDkzLjI4MjEyMiw4Ni41NTA5NTcgQyA5Ni44MjgyMjMsODIuNjA4NjIxIDg1LjYzMDAxNyw4MC41MDM5OTMgODguNzQxNDYxLDg1LjE5OTU5MiBDIDkwLjEwMDQ0Nyw4Ni4xMTI1NjUgOTEuOTM3MDE4LDg1LjYwMDE5MiA5My4yODIxMjIsODYuNTUwOTU3IHogIiAvPgogIDwvZz4KPC9zdmc+Cg==",
+    "subtype" : "project"
+  }, {
+    "description" : "Accelerate problem resolution and optimize network and infrastructure performance, customer and employee experience \u2013 whether onsite or remote. You\u2019re 30 minutes away from total visibility across your SaaS and web apps, hybrid cloud and connectivity.",
+    "path" : "kadiska",
+    "updated" : "2022-09-13T17:42:38.867Z",
+    "name" : "Kadiska",
+    "created" : "2022-06-24T13:13:47.936Z",
+    "parent-path" : "",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
+    "created-by" : "user/cfcd12a3-c51c-4086-898e-9e1b8229804f",
+    "id" : "module/383ded80-dc22-4598-99ea-5fc8dbbf002d",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "group/kadiska-vendor", "group/sixsq-vendor", "user/cfcd12a3-c51c-4086-898e-9e1b8229804f" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "logo-url" : "https://kadiska.com/wp-content/uploads/2022/05/Kadiska-Main-Logo-use-on-White-Background.png",
+    "subtype" : "project"
+  }, {
+    "description" : "Keysight provides tomorrow\u2019s test technologies today",
+    "path" : "keysight",
+    "updated" : "2022-09-14T08:07:54.652Z",
+    "name" : "Keysight",
+    "created" : "2022-09-14T07:28:48.917Z",
+    "parent-path" : "",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
+    "created-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
+    "id" : "module/eb67d4ce-e018-49c7-9bc4-f37d469888d7",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "group/keysight-vendor" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "logo-url" : "https://www.keysight.com/content/dam/keysight/en/img/gnav/keysight-logo.svg",
     "subtype" : "project"
   }, {
     "description" : "Active objects across the network",
@@ -3072,40 +3302,6 @@ export const mockNavigateAppsData = {
       "edit-meta" : [ "group/nuvla-admin" ]
     },
     "logo-url" : "https://www.bsc.es/sites/default/files/public/styles/bscw2_-_simple_crop_style/public/bscw2/content/software-app/logo/logo_dataclay_web_bsc.jpg",
-    "subtype" : "project"
-  }, {
-    "description" : "# Example apps\n\nAs creators of Nuvla.io, we have created a set of example apps to show you what's possible with the platform.\n\nWe also use these apps in our traning material and the [Youtube Classroom chanel](https://www.youtube.com/watch?v=s0NQjTgmaU0&list=PLY20wTTKSDHa-bTvE-hRtAXafrNNkQYru). Feel free to reuse these apps as you feel like. They are all released under a permissive license.\n\nWe also release these apps such that you can learn from them. So please have a look and give us feedback. We're here to help and learn.   \n\n\u00A9 2021, SixSq S\u00E0rl",
-    "path" : "examples",
-    "updated" : "2021-05-01T07:11:20.299Z",
-    "name" : "Examples",
-    "created" : "2019-06-25T13:40:06.197Z",
-    "parent-path" : "",
-    "data-accept-content-types" : [ ],
-    "updated-by" : "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
-    "id" : "module/19422abe-9fbb-40ba-8656-439806253c78",
-    "resource-type" : "module",
-    "acl" : {
-      "edit-data" : [ "group/nuvla-admin" ],
-      "owners" : [ "group/sixsq-devs", "group/sixsq-vendor" ],
-      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "delete" : [ "group/nuvla-admin" ],
-      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "edit-acl" : [ "group/nuvla-admin" ],
-      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "manage" : [ "group/nuvla-admin" ],
-      "edit-meta" : [ "group/nuvla-admin" ]
-    },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/19422abe-9fbb-40ba-8656-439806253c78"
-    }, {
-      "rel" : "delete",
-      "href" : "module/19422abe-9fbb-40ba-8656-439806253c78"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/19422abe-9fbb-40ba-8656-439806253c78/delete-version"
-    } ],
-    "logo-url" : "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL3dlYi5yZXNvdXJjZS5vcmcvY2MvIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgd2lkdGg9IjYwMCIKICAgaGVpZ2h0PSI2MDAiCiAgIGlkPSJzdmcyIgogICBzb2RpcG9kaTp2ZXJzaW9uPSIwLjMyIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ1LjEiCiAgIHNvZGlwb2RpOmRvY25hbWU9IkV4YW1wbGUuc3ZnIgogICBpbmtzY2FwZTpvdXRwdXRfZXh0ZW5zaW9uPSJvcmcuaW5rc2NhcGUub3V0cHV0LnN2Zy5pbmtzY2FwZSIKICAgc29kaXBvZGk6ZG9jYmFzZT0iL2hvbWUvZ21heHdlbGwiCiAgIHZlcnNpb249IjEuMCI+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhOSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjYyMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjgxNCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwLjAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAuMCIKICAgICBvYmplY3R0b2xlcmFuY2U9IjEwLjAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBpZD0iYmFzZSIKICAgICB3aWR0aD0iNjAwcHgiCiAgICAgaGVpZ2h0PSI2MDBweCIKICAgICBpbmtzY2FwZTp6b29tPSIwLjM1OTc0MDU4IgogICAgIGlua3NjYXBlOmN4PSI1MCIKICAgICBpbmtzY2FwZTpjeT0iNTE5LjA0OTY2IgogICAgIGlua3NjYXBlOndpbmRvdy14PSI0ODMiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjEwMSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmcyIiAvPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMxNiIgLz4KICA8ZwogICAgIGlkPSJnMjE2MSIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCg2LjM5NTEzNTQsMCwwLDYuMzk1MTM1NCwtMjIuNjI2MjQ2LC03LjEwODI1MDkpIj4KICAgIDxwYXRoCiAgICAgICBub2RldHlwZXM9ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjYyIKICAgICAgIGlkPSJmbG93Um9vdDE4ODIiCiAgICAgICBkPSJNIDM2LjAwOTc2Niw5LjI1MDUwODMgQyAzNy43MzkyOTUsOS40MjExMjczIDM4LjMwNTg3OSwxMS40NzA2OTcgMzguMDUyNTgxLDEyLjkzNTA0OSBDIDM3LjM0NjI2NiwxNi4xNTM4OTkgMzYuMzE2ODIxLDE5LjUxNDY2IDM1LjQ0NTQwNSwyMi43MTc3MDEgQyAzNi4wOTE2NjYsMjQuODEyMjI0IDMxLjcxMjI4NCwyNC4wMDg4NzcgMzMuMjE5OTMyLDIyLjMxNTQ1OSBDIDM0LjgxNzA0MSwxOC40MTEyMDIgMzYuMDExNDA0LDEzLjQ5ODMzNiAzNi4wMDk3NjYsOS4yNTA1MDgzIHogTSAzNi4wMDk3NjYsMi45OTI2OTU4IEMgMzguMjEwMzExLDEuMjI0MjA4OCA0MC45OTYyNjgsOS4xNzI3NTcgMzMuOTExNTcxLDYuMTUzNDg0NyBDIDMzLjg4NDYxOSw1Ljc2MDMwMTkgMzYuMDk2Mjg5LDMuMzg2OTQ0NyAzNi4wMDk3NjYsMi45OTI2OTU4IHogTSA0MS4zNzEwOTQsMTUuODcxNjAxIEMgNDEuMzcxMDk0LDEzLjY2NDU3IDQxLjM3MTA5NCwxMS40NTc1MzkgNDEuMzcxMDk0LDkuMjUwNTA4IEMgNDMuMTgwNjIxLDkuNDI1NzM4NyA0My45NjMwMTQsMTEuNzA0NTU5IDQzLjI4NjEzNywxMy4yMTU1MTcgQyA0Mi44NTkwODQsMTUuMDU5NzkyIDQyLjkzOTI0MSwxNy4zOTk2IDQ0LjYwMTQ4NywxOC42MjUzMzUgQyA0Ni43MTA1NDQsMTkuNjgzNDc3IDQ5LjM4Nzc0LDE3LjM1MzExMiA0OC44MDMyNjgsMTUuMTE4NDM3IEMgNDguOTMxOTYsMTMuNDA2NTM4IDQ4LjIzNjI5MiwxMS42MTM4NDggNDguOTY4ODYyLDkuOTY5MDQxNSBDIDUxLjA1NTA5Nyw5LjY1MDAzNTcgNTEuNTAwNjc3LDEyLjQ4NzE1NSA1MC41NDQ5ODUsMTMuODQ0NzQ3IEMgNTAuMDcwMDIzLDE1LjMwOTcwOCA1MC44NTc0NTIsMTYuNzgxODk4IDUwLjY3MjM0NCwxOC4yMzk0MzIgQyA1MC4yNzk2MTUsMTkuOTQwNTYgNDguNDE4NDA0LDIwLjAwMDIzIDQ3LjAyMjUsMjAuMDcxODY4IEMgNDUuNDc4NDg5LDIwLjM4MTk0IDQzLjUxNjgzNSwyMC43OTEzNjggNDIuMzYxOTQ3LDE5LjM4ODc0IEMgNDEuNTIyNTE0LDE4LjQ0NDA4OSA0MS4yMTEyNzQsMTcuMTA3NjcxIDQxLjM3MTA5NCwxNS44NzE2MDEgeiBNIDYxLjIyNDYwOSw5LjU3Mjc3MzkgQyA2MC40MTk3OCwxMS41NTc1NTIgNTguMTAwODA0LDEwLjIzNTYxNiA1Ni42Mjc2NywxMC41NzE1NTEgQyA1My44MzY4NjIsMTQuMzkzNjExIDYwLjkyMDAzOCwxMy41MTM2NjcgNjEuODA4NSwxNy4wMTE2NDggQyA2MS44NTYxMywxOC45MzM3NDcgNjAuMDI4MzU5LDIwLjU4NzM4OSA1OC4xMjkwOTEsMjAuNDQzMzEyIEMgNTYuOTA0NDg3LDIwLjYwNzIyOSA1NC42MDkyMDQsMjAuOTgyMzkzIDU0LjQxNzg3OSwxOS4yNjc2MjIgQyA1NS4yODA2MDksMTcuNTA4MjY5IDU3LjMzNjM1OSwxOS41Mjg4MDMgNTguNjMzMTExLDE4Ljg0NjMgQyA2MC40MDMxNDEsMTcuOTkwODEgNTkuNDAyMjMyLDE1LjU1NTMyNSA1Ny43Mjg3ODEsMTUuMzIxNDc1IEMgNTYuNTUwMTE1LDE0Ljk4MTM1IDU1LjA5MTgxMywxNS4yMjU0MzkgNTQuMjU0NzQ3LDE0LjExMjc2NCBDIDUzLjAxNzY2OSwxMi44ODExNjcgNTMuMzkyMTMyLDEwLjczMzE0OCA1NC43MzY3MTksOS43NDEzMjUyIEMgNTYuNjE5MTcyLDguMzMwNzM5NiA1OS4xNzAzMjYsOC45NTM1MDY3IDYxLjIyNDYwOSw5LjU3Mjc3MzkgeiBNIDY2LjQ1ODk4NCw2LjE0NTAzOTYgQyA2NS4zNjgxMjYsNy42MzMzMzM0IDY3LjM0ODkzNiw5Ljk1MzE1NzQgNjguOTg3MjI5LDkuMDk0ODk3OSBDIDY5Ljk3ODEzMywxMS4wNDI1MDMgNjYuNTI0NjQxLDEwLjc3NzkzMSA2Ni40NzM0OTUsMTIuNDMwOTkyIEMgNjQuNDQzNjA1LDE2LjEwMTgxNCA2OC40ODI3MywxOC42MjM0MjYgNjcuNTcxNjU3LDIwLjQxNzUyOCBDIDY1LjQ0MDg1OCwyMC4yNjE1NSA2NC4zMjQzMDcsMTcuODQ0NDUyIDY0LjU3NzQzMywxNS45MTkzNTcgQyA2NC43MDg0NywxNC40MDg1ODYgNjUuMDU1MTA3LDEyLjc5MzYxIDY0LjMyMjk2MSwxMS4zNzM5NDEgQyA2My43ODY0MjIsOS41NDc1MTkyIDY0LjE1MDQxOSw3LjE0NTI2NTUgNjUuOTU0MjMzLDYuMTU1MjQ3NyBMIDY2LjIwNjA0Myw2LjEyMDMzMjMgTCA2Ni40NTg5ODQsNi4xNDUwMzk2IEwgNjYuNDU4OTg0LDYuMTQ1MDM5NiB6ICIgLz4KICAgIDxwYXRoCiAgICAgICBub2RldHlwZXM9ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjIgogICAgICAgaWQ9ImZsb3dSb290MTg5MCIKICAgICAgIGQ9Ik0gMTAuODY3MTg4LDQ0Ljg3Nzk1MyBDIDYuMjgxMjYxOCw0Mi4xMjQ4NDkgNS4yMjA1OTE0LDUyLjM2NjI2OCAxMC40MDkyMTUsNDkuODkyNDMxIEMgMTIuMzg5Mzg1LDQ5LjI5NTU2OCAxNC45ODgwNDUsNDMuOTEyNjU4IDEwLjg2NzE4OCw0NC44Nzc5NTMgeiBNIDE1LjE2Nzk2OSw0My45ODczMjggQyAxNC45MTk4MjYsNDYuMzM3MjQgMTYuNjE3NzU2LDUyLjU1NDIwMiAxMi4yOTg3MzQsNTAuNTM2OTE4IEMgOS44MDQxMTQyLDUyLjMxMjkxNiA2LjA1ODA4NTUsNTIuOTU4Njc0IDQuNTAyMzEyMyw0OS41ODMzODYgQyAyLjYzNTA0NTQsNDUuMjU3MzIyIDcuMzAzMzEwMyw0Mi4yOTg3MTIgMTEuMDQ2NDQzLDQzLjM2MTA1OSBDIDE1LjI0NzE4NSw0MS4zMjA3ODYgOS40OTMwMjg2LDM4LjMzODI2NCA3LjEwNjg3OTIsNDAuMzIyMTM4IEMgMy40Mzc0NDIxLDQwLjAxMzg4IDcuNDA2NDA3LDM3LjIwMTQwNyA5LjM0OTUwODcsMzcuOTYyOTEyIEMgMTIuNDQyMTIsMzcuODc3Nzg4IDE1LjU1NjUzNCw0MC4zODAxMzEgMTUuMTcxNzUxLDQzLjY0ODkxMiBMIDE1LjE2OTYzOCw0My44Mzc5NyBMIDE1LjE2Nzk2OSw0My45ODczMjggeiBNIDMwLjUzMTI1LDQzLjU1MzczNCBDIDI5LjYzODc5NCw0NS45MTE1NTggMzIuNDk0NjcsNTAuNDYzODcyIDI4Ljc3OTk5OSw1MS4wNzA5NDQgQyAyNi44ODgwODgsNDcuNzAyMzA2IDMwLjkzMTYyMSw0MS4xOTAyNTcgMjUuNTgzNjUsNDAuMDQ2MTQ3IEMgMjAuNzM5MzEsNDAuMzEyNzk4IDIxLjI1MjE5NCw0NS45MTA4NzEgMjIuMDAxNDM5LDQ5LjE1NDA2NiBDIDIxLjg0MjUzLDUxLjgyODMwOSAxOC43OTA1NzcsNTEuMzkyNTYgMTkuNTg1NTg1LDQ4LjY3MzczOCBDIDE5Ljg1MTgyOSw0NS42OTM4NjQgMTguMjg1MzMyLDM5LjYzMDMwMSAyMC45ODY5ODMsMzguNzAyOTExIEMgMjMuNTA4NDYxLDQwLjgwODg5IDI1Ljc2MTg0NywzNS43MzE5MDYgMjguNDUyNDU5LDM4LjY4NjIyNiBDIDI5LjkyMTQ1NCwzOS43OTMxOTQgMzAuODI3NjE4LDQxLjcwOTk5MiAzMC41MzEyNSw0My41NTM3MzQgeiBNIDM4LjgwNyw0OS43NzAyMjMgQyA0Mi4zNjkwMzQsNTAuNzY4OTc0IDQ0LjUyMzM0NCw0Ni4zMjg2ODggNDMuNzAwNTIxLDQzLjM1ODk4MyBDIDQwLjQwMjc3NSwzNS41NDY0NTMgMzIuNDkxMTk5LDQ0LjM0NDEzMSAzOC44MDcsNDkuNzcwMjIzIHogTSAzOS45NDE0MDYsMzguMDM0MjAzIEMgNTIuMDg1ODcyLDM5LjcwNTY0MiA0My4yMDQ4NTQsNTkuMDk4MzQyIDM0LjY4ODcyMiw0OC42NDI5NjggQyAzMi41OTE4ODYsNDQuNzc4MDMxIDM0LjM4MzEwOSwzOC40NDAxMzIgMzkuMjkxMzY5LDM4LjA1MTgyNyBMIDM5Ljk0MTQwNiwzOC4wMzQyMDMgTCAzOS45NDE0MDYsMzguMDM0MjAzIHogTSA1MS42NjAxNTYsMzQuNjI0MDQ2IEMgNDkuODE1OTc4LDM3Ljg1MDU4MyA1NC43ODk0NTksMzguNjY2MjIyIDU1LjgzNDM3LDM5LjIzNTY2IEMgNTQuMTQwNzQ2LDQwLjcxNTczMyA1MC4wOTMwNjEsNDAuMTIxNTggNTEuNTYyNDYxLDQzLjc2MjEyIEMgNTEuMDA0MDk2LDQ2Ljk4MDUyMyA1Mi40ODY4NDcsNTAuMDM3NzIzIDU1LjY3MDYxNCw1MC41NDU5NSBDIDUzLjU0Nzc4OCw1My43ODI2MTYgNDguNDE3OTMsNTAuMDM1NDk1IDQ5LjM0OTk3Myw0Ni41MTk2OTIgQyA1MC4zMzk4NzcsNDMuNjg2NDcxIDQ4Ljc4MTMxLDQwLjY3MTE2NiA0OC40NjcyNTYsMzguNDgzNTcgQyA1MS4wOTk5MjYsMzcuNDEzNTk5IDQ3Ljg4NjUxMiwzMy4zMjI4MyA1MS42NjAxNTYsMzQuNjI0MDQ2IHogTSA2OS44NTkzNzUsNDMuNTUzNzM0IEMgNjguOTY2OTE4LDQ1LjkxMTU1NyA3MS44MjI3OTQsNTAuNDYzODcyIDY4LjEwODEyNCw1MS4wNzA5NDQgQyA2Ni4yMTYyMTQsNDcuNzAyMzA2IDcwLjI1OTc0Niw0MS4xOTAyNTYgNjQuOTExNzc1LDQwLjA0NjE0NSBDIDYwLjIyMjQxOCw0MC4yODU5MDQgNjAuNDM5MTk0LDQ1Ljc1NzcyOCA2MS4zNjc5NDIsNDguOTUzNjgzIEMgNjAuNzA1NDQ4LDUzLjA2NDg1NSA1Ny43ODg2MjYsNDkuOTAwMTM0IDU4LjgzODM3OSw0Ny4yODk3MzggQyA1OC45Njk3MDksNDMuMzgxMTc0IDU5LjAwNjQzNywzOS40NTUwODcgNTguNjA3NDA0LDM1LjU2NTcxNCBDIDU5LjM1NjAyNSwzMS42MzI0MTMgNjIuMzY4MjY5LDM0LjY4MDEzIDYxLjAxMzUyLDM3LjE5NDMxNiBDIDYwLjM4NDE3LDM5LjMwMjUzOCA2MS40NjkwODcsNDAuNjUzNDc2IDYyLjk5NjI0OCwzOC40NzQ4MjkgQyA2Ni4yMDIwODksMzYuODI2MTU0IDcwLjg2MzI2OSwzOS44MjY0NTEgNjkuODU5Mzc1LDQzLjU1MzczNCB6IE0gODUuNDEwMTU2LDQ0LjM3NDA0NiBDIDgzLjI0NDg0OSw0Ny45MDU1MzMgNzYuNDQ3MDg1LDQyLjQ1NjM0NCA3NS45NzYwMTMsNDcuNDQ0MDUyIEMgNzYuOTEzNTQxLDUxLjcyNDU0OCA4My4yNzUzMjQsNDguNzI2MTk2IDg0LjM5MzYzOSw1MC4xMzM3NzMgQyA4Mi4xMDk4NTUsNTMuNTI1MTIzIDc2LjQyMTMzOSw1MS44NjAxMTEgNzQuMjg1MzM1LDQ5LjAxMzM2IEMgNzEuMjU4MjQ3LDQ0LjcyOTk4NCA3NC42MTQwMTMsMzcuMTY2NTE2IDgwLjI1NDI4OSwzNy45Njc1NiBDIDgzLjI4Njk1OCwzOC4yODQ0OTUgODUuODMzOTE0LDQxLjMxMDc0NSA4NS40MTAxNTYsNDQuMzc0MDQ2IHogTSA4My4yNTM5MDYsNDMuNzQxMjM0IEMgODQuNDMxMzE5LDM5LjAzOTYxNCA3NC41OTQ4MTIsMzguNjg3MzI1IDc2LjI5MTg4Niw0My4zMzUyMjYgQyA3OC4yODQ3ODMsNDQuNzk2MDQ4IDgxLjAzMjg1Niw0My4wOTA5NDMgODMuMjUzOTA2LDQzLjc0MTIzNCB6IE0gOTYuNTU0Njg4LDQwLjM2NjIzNCBDIDkzLjI5MDYxMiwzOC42ODgyIDkwLjYyMjIxNyw0Mi41MTk2MzUgOTAuNzI4NTIyLDQ1LjQ5MjY2NSBDIDkwLjg4MTkyNSw0Ny4zMzM2NzYgOTIuMzMwMjg2LDUyLjE0NDQ2NSA4OS4wMjg3NTEsNTAuOTA1OTg4IEMgODguOTU2NzMsNDYuNzYzOTYzIDg4LjM1MzMxMiw0Mi40NDcyMDcgODkuMzE3MjEsMzguMzM2NjQzIEMgOTEuMDQwNDcxLDM4LjUwMzQzNyA5Mi4yMDc1MTQsNDAuNjY4MTgxIDkzLjQyMTQ2OCwzOC4yMDgyOTggQyA5NC45MDI0NzgsMzcuNDQ5NzMgOTcuNjkwOTQ0LDM4LjI2MzY2OCA5Ni41NTQ2ODgsNDAuMzY2MjM0IHogIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOiNmZjAwMDAiCiAgICAgICBub2RldHlwZXM9ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjIgogICAgICAgaWQ9ImZsb3dSb290MTg5OCIKICAgICAgIGQ9Ik0gMTcuMDI2MzI3LDYzLjc4OTg0NyBDIDAuNzUwNjM3Niw2NC4wNTg0NjkgMTMuODgyNzksNjYuMzg3MTU0IDEzLjExMzg4Myw2OS4zMjMyNTggQyA4LjA0NzI0MTcsNzAuMjg3MDkzIDMuNTkzNjI4NSw2My41NjU3MTQgNi44MDkwNDUxLDU5LjM3MDU0OCBDIDguNzU5MTU1Myw1NS43MTc3OTEgMTUuMjY5OTIyLDU1LjE5ODM2MSAxNi45MDIwNjgsNTkuMzkzMjYxIEMgMTcuNTMyNTgxLDYwLjc1ODk0NyAxNy42MjgyMzcsNjIuMzk2NTg5IDE3LjAyNjMyNyw2My43ODk4NDcgeiBNIDE1LjMwNjQ2Myw2Mi42NTYxMDkgQyAxOC44NTI1NjYsNTguNzEzNzczIDcuNjU0MzU4NCw1Ni42MDkxNDMgMTAuNzY1ODAzLDYxLjMwNDc0MiBDIDEyLjEyNDc4OSw2Mi4yMTc3MTUgMTMuOTYxMzU5LDYxLjcwNTM0MiAxNS4zMDY0NjMsNjIuNjU2MTA5IHogTSAzMS4zMDc5MzEsNjIuMzkxMzgzIEMgMjcuMTMwNTE4LDYzLjUyNDAyNiAyNC42Njk4NjMsNjguNjYzMDA0IDI3LjQ3MDcxNyw3Mi4yMjk0NzIgQyAyNS45NDY2NTcsNzQuMDUyMzE2IDI0LjI1MzY5Nyw3MS4wNzYyMzcgMjQuODU3MjgxLDY5LjYzNjkwOSBDIDIzLjczNzQ0NCw2Ny4wMzg0MjggMTcuMzk5ODYyLDcyLjI1NDI0NiAxOS4zODY2MzYsNjguODg4NjU3IEMgMjMuMTU5NzE5LDY3LjU1MTE5MyAyMi4zOTg0OTYsNjMuNzExMzAxIDIyLjA2MDY3LDYwLjg0ODY3MSBDIDI0LjA2NDA4NSw2MC4zNzUyOTQgMjQuMzcwMzc2LDY1Ljc3MjY4OSAyNy4xNjc5MTgsNjMuMzI2MDQ4IEMgMjguMzUwMTI2LDYyLjU0NjM2OSAyOS45MjczNjIsNjEuMDY3NTMxIDMxLjMwNzkzMSw2Mi4zOTEzODMgeiBNIDM3LjY2ODc1LDcwLjU5ODYyMyBDIDMzLjQ2NzMxNCw2Ni42MjI2NCAzMi41MTcwNjQsNzcuOTcyNzIzIDM3LjMwNjI2LDc0LjQ2NjYzNiBDIDM4Ljc0MjUyMyw3My44NTM2MDggNDAuNTU5MDQsNzAuMzg5MzIgMzcuNjY4NzUsNzAuNTk4NjIzIHogTSA0MS42NzczMjEsNzAuOTczMTMxIEMgNDIuMzQwNjY5LDc1LjMwODE4MiAzNi45MjYxNTcsNzguMzYxMjU3IDMzLjMzMTkyMSw3Ni4yMjMxNTUgQyAyOS40MzQzNSw3NC44OTM5ODggMzAuNjE4Njk4LDY3LjY3NzIzMiAzNS4wMDM4MDYsNjguNTY3ODg1IEMgMzcuMTM3MzkzLDcwLjU5Mjg1NCA0Mi4xNDAyNjUsNjcuMDAyMjIxIDM3LjY1NjE5Miw2Ni4yOTAwMDcgQyAzNS4yNDIyMzMsNjUuOTE0MjE0IDM1LjE2NjUwMyw2Mi42NDA3NTcgMzguMDM2OTU0LDYzLjkyNjQwNCBDIDQwLjg0NzkyMyw2NC43NDQ5MjYgNDMuMjI3ODM4LDY4LjEyNDczNSA0MS42NzczMjEsNzAuOTczMTMxIHogTSA2Mi4zNzkwOTksNzYuNjQ3MDc5IEMgNjIuMDA3NDA0LDc4LjU2MDQxNyA2MS4xNjE0MzcsODQuMDM0NTM1IDU4Ljg5MDU2NSw4Mi4wMTAwMTkgQyA1OS43Njk2NzksNzkuMDM5OTU4IDYyLjUzNjM4Miw3Mi4yMjkxMTUgNTYuOTQ3ODk5LDcyLjc2NTc4OSBDIDUzLjc5MDQxNiw3My41NzA4NjMgNTQuOTA4MjU3LDgwLjk2ODM4OCA1MS41MjkyODYsNzkuNDk2ODU5IEMgNTEuNzA3ODMxLDc2LjU1OTgxNyA1NS44NTgxMjUsNzEuODk2ODM3IDUwLjgzMjEsNzAuNjc4NTA0IEMgNDUuODk4MTEzLDY5LjkwNzgxOCA0Ny40ODU5NDQsNzUuNzM1ODI0IDQ1LjI4Njg4Myw3OC4wMzQ3MDMgQyA0Mi45MTYzOTMsNzYuMzMzMzk2IDQ1LjQ3MDgyMyw3MS42NDcxNTUgNDYuNjI0MTI0LDY5LjQxNDczNSBDIDUwLjkxOTUwNyw2Ny45MDY0ODYgNjMuNjE4NTM0LDcwLjg3ODcwNCA2Mi4zNzkwOTksNzYuNjQ3MDc5IHogTSA2Ni40MjY0NDcsODMuODQ5MDUgQyA2Ny42MTYzOTgsODUuNzc3NTkxIDYyLjExNDYyNCw5NC40OTI2OTggNjIuMzUxMTI0LDkwLjMxNzExIEMgNjMuNzkxNjg0LDg2LjU4MTk2MSA2NS43MzAzNzYsNzguMDAwNjM2IDY3LjM5MTg5MSw3NC44NTU3NSBDIDcxLjAyNzgxNSw3My43ODExNzUgNzYuMzgzMDY3LDc1LjM1MDI4OSA3Ni41OTE5NzIsNzkuNzUxODk4IEMgNzcuMDQ4NTQ1LDgzLjc5MzA0OCA3My4wNjY4MDMsODguNDI5OTQ1IDY4Ljg0MjE4Nyw4Ni43NjU5MzYgQyA2Ny42MjQzODYsODYuMjgyMDM0IDY2LjU2NzQxLDg1LjE5NTEzMiA2Ni40MjY0NDcsODMuODQ5MDUgeiBNIDc0LjA4NjU2OSw4MS44MDM0MzUgQyA3Ni44NTE4OTMsNzguMDUwNTI0IDY5LjI2NDQwMiw3NC4zMTAyNTYgNjcuNTYwNzM0LDc4LjM3ODE5MSBDIDY1Ljg5MzQwMiw4MC41OTQwOTkgNjcuMjU1NzE5LDgzLjc3NTc0NiA2OS43MDA1NTUsODQuNzE4NTU4IEMgNzIuMDI4NzA4LDg1LjkwMjIyNCA3My42ODg2MzksODMuODg4NjYyIDc0LjA4NjU2OSw4MS44MDM0MzUgeiBNIDgyLjMxODc5OSw3My4xMjQ1NzcgQyA4NC4zMDUyMyw3NS40ODcwNTkgODEuNjU1MDE1LDg4LjQ0ODA4NiA3OC4yNDcxODMsODcuMjc1NzM2IEMgNzguOTkxOTM1LDgyLjM4NzgyOCA4MS4yOTEwMjksNzcuOTQ5Mzk0IDgyLjMxODc5OSw3My4xMjQ1NzcgeiBNIDk1LjAwMTk4NSw4Ny42ODQ2OTUgQyA3OC43MjYyOTgsODcuOTUzMzE5IDkxLjg1ODQ0OSw5MC4yODE5OTkgOTEuMDg5NTQyLDkzLjIxODEwNyBDIDg2LjAyMjksOTQuMTgxOTQgODEuNTY5Mjg3LDg3LjQ2MDU2MiA4NC43ODQ3MDEsODMuMjY1Mzk0IEMgODYuNzM0ODE0LDc5LjYxMjYzNyA5My4yNDU1ODIsNzkuMDkzMjEgOTQuODc3NzI5LDgzLjI4ODExIEMgOTUuNTA4MjQ1LDg0LjY1Mzc5NiA5NS42MDM4OTIsODYuMjkxNDM4IDk1LjAwMTk4NSw4Ny42ODQ2OTUgeiBNIDkzLjI4MjEyMiw4Ni41NTA5NTcgQyA5Ni44MjgyMjMsODIuNjA4NjIxIDg1LjYzMDAxNyw4MC41MDM5OTMgODguNzQxNDYxLDg1LjE5OTU5MiBDIDkwLjEwMDQ0Nyw4Ni4xMTI1NjUgOTEuOTM3MDE4LDg1LjYwMDE5MiA5My4yODIxMjIsODYuNTUwOTU3IHogIiAvPgogIDwvZz4KPC9zdmc+Cg==",
     "subtype" : "project"
   }, {
     "description" : "# Klepsydra\n\nWhile hardware and sensors have hugely evolved for embedded systems for robotics, aerospace and space, embedded software engineering has remain the same. However, the software industry has undergone a revolution in sectors like finance and technology.\n\nKlepsydra is addressed to entrepreneurs who want to go further stand out from the vast majority. That is why Klepsydra capacitates those who want to make a difference.\n\nOur philosophy is to bring embedded software engineering up to speed in order to build advanced autonomous applications in a more efficient and reliable manner.\n\n\u00A9 2021, [Klepsydra Technologies GmbH](https://klepsydra.com)",
@@ -3144,7 +3340,53 @@ export const mockNavigateAppsData = {
     "created-by" : "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
     "id" : "module/8c146a34-42e4-4e83-9e37-8ab2c1f97b7c",
     "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "group/bytelake" ],
+      "view-acl" : [ "group/nuvla-admin", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user", "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
     "logo-url" : "https://www.bytelake.com/en/wp-content/uploads/2017/01/byteLAKE-logo.png",
+    "subtype" : "project"
+  }, {
+    "description" : "# SmartConnect - Intelligence at Work\n\nLet our Smart Services\u2122 help Implement your IOT Solutions Quickly and Cost Effectively\n\nCapture and Intelligently Leverage data from the \u2018edge\u2019\nOptimize Performance, Operations, Resources, Profits and Customer Satisfaction Seamlessly Access Data from any Sensor or Legacy Equipment \n\nFacilitate Advanced Analytics and Enhance Business Results\n\n(No Programming or Development Required)\n\nCopyright \u00A9 [Smart Connect Technologies, Inc.](https://smartconnectinc.com)",
+    "path" : "smartconnect",
+    "updated" : "2021-05-13T16:36:05.731Z",
+    "name" : "SmartConnect",
+    "created" : "2021-05-13T14:25:38.453Z",
+    "parent-path" : "",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
+    "created-by" : "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
+    "id" : "module/575570c1-bf2d-4336-84ff-2c6350044f54",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "view-acl" : [ "group/nuvla-admin" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "operations" : [ {
+      "rel" : "edit",
+      "href" : "module/575570c1-bf2d-4336-84ff-2c6350044f54"
+    }, {
+      "rel" : "delete",
+      "href" : "module/575570c1-bf2d-4336-84ff-2c6350044f54"
+    }, {
+      "rel" : "delete-version",
+      "href" : "module/575570c1-bf2d-4336-84ff-2c6350044f54/delete-version"
+    } ],
+    "logo-url" : "https://smartconnectinc.com/wp-content/uploads/2016/12/SmartConnect_Logo_Pantone_tagSM.png",
     "subtype" : "project"
   }, {
     "description" : "# Example applications by SixSq\n\nAs creators of Nuvla.io, we created these example applications to help you better leverage the platform.  We also use these applications in our training material and our [Youtube Classroom channel](https://www.youtube.com/watch?v=s0NQjTgmaU0&list=PLY20wTTKSDHa-bTvE-hRtAXafrNNkQYru). We hope you will find them useful. Feel free to reuse them as you wish.\n\n\u00A9 2021, [SixSq S\u00E0rl](https://sixsq.com)",
@@ -3169,52 +3411,7 @@ export const mockNavigateAppsData = {
       "manage" : [ "group/nuvla-admin", "group/sixsq-devs" ],
       "edit-meta" : [ "group/nuvla-admin", "group/sixsq-devs" ]
     },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/a9a03493-bfca-4db0-8864-caa7bd8757b6"
-    }, {
-      "rel" : "delete",
-      "href" : "module/a9a03493-bfca-4db0-8864-caa7bd8757b6"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/a9a03493-bfca-4db0-8864-caa7bd8757b6/delete-version"
-    } ],
     "logo-url" : "https://sixsq.com/img/logo/logo_sixsq.png",
-    "subtype" : "project"
-  }, {
-    "description" : "# C2RO\u2122\n\nC2RO\u2122 is all about helping businesses understand human behavior in the physical world. \nOur products are the cornerstone of data-driven decision-making toward operational \nefficiency, physical transformation, and the safe and immersive environments of the future. \n \nSomething that we are proud sets us apart in the industry is our commitment to biometric-\nfree solutions and our compliance with the strictest data privacy regulations, including \nEurope\u2019s GDPR and North America\u2019s PIPEDA. This gives our customers and partners the \nconfidence to use our solutions knowing they are safe and do not pose a risk to their \ncustomers. \n \nFinally, we are continuously raising the bar on data accuracy in the field of AI and traffic \nanalysis systems. Our customers know that C2RO\u2122 will always stand by its data and they \ncan trust the decisions that rely on that data every day.  \n \nFor more information, please visit \n[www.c2ro.com](www.c2ro.com)",
-    "path" : "c2ro",
-    "updated" : "2022-06-20T09:30:40.798Z",
-    "name" : "C2RO",
-    "created" : "2022-06-08T14:43:33.636Z",
-    "parent-path" : "",
-    "data-accept-content-types" : [ ],
-    "updated-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
-    "created-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
-    "id" : "module/384bd870-2546-4a61-a430-431ce0096290",
-    "resource-type" : "module",
-    "acl" : {
-      "edit-data" : [ "group/nuvla-admin" ],
-      "owners" : [ "group/c2ro-vendor", "group/sixsq-vendor" ],
-      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
-      "delete" : [ "group/nuvla-admin" ],
-      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
-      "edit-acl" : [ "group/nuvla-admin" ],
-      "view-data" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
-      "manage" : [ "group/nuvla-admin" ],
-      "edit-meta" : [ "group/nuvla-admin" ]
-    },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/384bd870-2546-4a61-a430-431ce0096290"
-    }, {
-      "rel" : "delete",
-      "href" : "module/384bd870-2546-4a61-a430-431ce0096290"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/384bd870-2546-4a61-a430-431ce0096290/delete-version"
-    } ],
-    "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/c2ro.webp",
     "subtype" : "project"
   }, {
     "description" : "# ClearBlade\n\nClearBlade is the industry-leading Edge Computing software company that enables enterprises to rapidly engineer and run secure, real-time, scalable IoT applications. \n\nHeadquartered in Austin, Texas, ClearBlade is an award-winning, fully scalable, secure, flexible, and autonomous IoT edge platform that enables companies to ingest, analyze, \nadapt and act on any data in real-time and at extreme scale. \n\nClearBlade provides a consistent platform across the edge, cloud, and on-premise environments. \n\nFor more information, please visit [www.clearblade.com](https://www.clearblade.com)",
@@ -3239,217 +3436,7 @@ export const mockNavigateAppsData = {
       "manage" : [ "group/nuvla-admin" ],
       "edit-meta" : [ "group/nuvla-admin" ]
     },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/7aaa77ce-1d95-4b57-b4a4-431b769cf038"
-    }, {
-      "rel" : "delete",
-      "href" : "module/7aaa77ce-1d95-4b57-b4a4-431b769cf038"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/7aaa77ce-1d95-4b57-b4a4-431b769cf038/delete-version"
-    } ],
     "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/clearblade.webp",
-    "subtype" : "project"
-  }, {
-    "description" : "# AI EdgeLabs\n\nSimilar to our parent company, Scalarr, our solution at its core has a straightforward vision: to ensure security to the newest technologies. \nIn the specific case of AI EdgeLabs, the solution was born out of the knowledge we earned from witnessing firsthand how clients were getting constantly attacked across their organization\u2019s Edge and IoT infrastructures, mostly due to lax security measures, outdated or unpatched systems, and a rising number of sophisticated cyber security attacks, to name a few. \n \nWith a diverse workforce based out of Ukraine, USA, Mexico, Poland, Israel, and Canada, AI EdgeLabs was founded and is run by security professionals that value humanity, safety, and favorable living conditions for every individual including social, economic, health, and any other factor that plays a part in human wellbeing. \n \nWe are the proud recipients of several acknowledgements, cementing our place as the industry\u2019s most accurate solution in the market and culminating in being named one of Forbes\u2019 Top 30 Best Ukrainian Startups in 2021.\n\n[edgelabs.ai](https://edgelabs.ai/)",
-    "path" : "ai-edgelabs",
-    "updated" : "2022-06-20T09:31:39.952Z",
-    "name" : "AI EdgeLabs",
-    "created" : "2022-06-08T15:47:06.020Z",
-    "parent-path" : "",
-    "data-accept-content-types" : [ ],
-    "updated-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
-    "created-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
-    "id" : "module/c0eee4d5-afba-4477-ac38-c1b3d2eca79c",
-    "resource-type" : "module",
-    "acl" : {
-      "edit-data" : [ "group/nuvla-admin" ],
-      "owners" : [ "group/ai-edgelabs-vendor", "group/sixsq-vendor" ],
-      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
-      "delete" : [ "group/nuvla-admin" ],
-      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
-      "edit-acl" : [ "group/nuvla-admin" ],
-      "view-data" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
-      "manage" : [ "group/nuvla-admin" ],
-      "edit-meta" : [ "group/nuvla-admin" ]
-    },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/c0eee4d5-afba-4477-ac38-c1b3d2eca79c"
-    }, {
-      "rel" : "delete",
-      "href" : "module/c0eee4d5-afba-4477-ac38-c1b3d2eca79c"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/c0eee4d5-afba-4477-ac38-c1b3d2eca79c/delete-version"
-    } ],
-    "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/ai_edgelabs.webp",
-    "subtype" : "project"
-  }, {
-    "description" : "# Cybus\n\nThe software company Cybus enables industrial manufacturers to efficiently connect and automate their production. \n\nIts software \u201CCybus Connectware\u201D leverages real-time data from the production environment irrespective of its vendors or applications. \n\nAs a result, factories achieve sustainable competitive advantages such as increased efficiency and quality of the production processes. \n\nAt the same time, the integrated security solution of the cloud-independent software maintains absolute data sovereignty. \n\nCybus Connectware is used as the central infrastructure component of the Smart Factory architecture by European medium-sized businesses up to the automotive industry. \n\nMore details at [www.cybus.io](https://www.cybus.io).",
-    "path" : "cybus",
-    "updated" : "2022-06-20T09:32:14.671Z",
-    "name" : "Cybus",
-    "created" : "2022-06-08T15:20:13.956Z",
-    "parent-path" : "",
-    "data-accept-content-types" : [ ],
-    "updated-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
-    "created-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
-    "id" : "module/4edd3a6e-39a3-45a2-87c4-547adcfb91a6",
-    "resource-type" : "module",
-    "acl" : {
-      "edit-data" : [ "group/nuvla-admin" ],
-      "owners" : [ "group/cybus-vendor", "group/sixsq-vendor" ],
-      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
-      "delete" : [ "group/nuvla-admin" ],
-      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
-      "edit-acl" : [ "group/nuvla-admin" ],
-      "view-data" : [ "group/nuvla-admin", "group/nuvla-user", "group/the-edge-event" ],
-      "manage" : [ "group/nuvla-admin" ],
-      "edit-meta" : [ "group/nuvla-admin" ]
-    },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/4edd3a6e-39a3-45a2-87c4-547adcfb91a6"
-    }, {
-      "rel" : "delete",
-      "href" : "module/4edd3a6e-39a3-45a2-87c4-547adcfb91a6"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/4edd3a6e-39a3-45a2-87c4-547adcfb91a6/delete-version"
-    } ],
-    "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/cybus.png",
-    "subtype" : "project"
-  }, {
-    "description" : "Accelerate problem resolution and optimize network and infrastructure performance, customer and employee experience \u2013 whether onsite or remote. You\u2019re 30 minutes away from total visibility across your SaaS and web apps, hybrid cloud and connectivity.",
-    "path" : "kadiska",
-    "updated" : "2022-09-13T17:42:38.867Z",
-    "name" : "Kadiska",
-    "created" : "2022-06-24T13:13:47.936Z",
-    "parent-path" : "",
-    "data-accept-content-types" : [ ],
-    "updated-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
-    "created-by" : "user/cfcd12a3-c51c-4086-898e-9e1b8229804f",
-    "id" : "module/383ded80-dc22-4598-99ea-5fc8dbbf002d",
-    "resource-type" : "module",
-    "acl" : {
-      "edit-data" : [ "group/nuvla-admin" ],
-      "owners" : [ "group/kadiska-vendor", "group/sixsq-vendor", "user/cfcd12a3-c51c-4086-898e-9e1b8229804f" ],
-      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "delete" : [ "group/nuvla-admin" ],
-      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "edit-acl" : [ "group/nuvla-admin" ],
-      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "manage" : [ "group/nuvla-admin" ],
-      "edit-meta" : [ "group/nuvla-admin" ]
-    },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/383ded80-dc22-4598-99ea-5fc8dbbf002d"
-    }, {
-      "rel" : "delete",
-      "href" : "module/383ded80-dc22-4598-99ea-5fc8dbbf002d"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/383ded80-dc22-4598-99ea-5fc8dbbf002d/delete-version"
-    } ],
-    "logo-url" : "https://kadiska.com/wp-content/uploads/2022/05/Kadiska-Main-Logo-use-on-White-Background.png",
-    "subtype" : "project"
-  }, {
-    "description" : "Keysight provides tomorrow\u2019s test technologies today",
-    "path" : "keysight",
-    "updated" : "2022-09-14T08:07:54.652Z",
-    "name" : "Keysight",
-    "created" : "2022-09-14T07:28:48.917Z",
-    "parent-path" : "",
-    "data-accept-content-types" : [ ],
-    "updated-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
-    "created-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
-    "id" : "module/eb67d4ce-e018-49c7-9bc4-f37d469888d7",
-    "resource-type" : "module",
-    "acl" : {
-      "edit-data" : [ "group/nuvla-admin" ],
-      "owners" : [ "group/keysight-vendor" ],
-      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "delete" : [ "group/nuvla-admin" ],
-      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "edit-acl" : [ "group/nuvla-admin" ],
-      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "manage" : [ "group/nuvla-admin" ],
-      "edit-meta" : [ "group/nuvla-admin" ]
-    },
-    "logo-url" : "https://www.keysight.com/content/dam/keysight/en/img/gnav/keysight-logo.svg",
-    "subtype" : "project"
-  }, {
-    "description" : "Varnish is an HTTP accelerator designed for content-heavy dynamic web sites as well as APIs.",
-    "path" : "varnish",
-    "updated" : "2022-11-24T09:49:14.678Z",
-    "name" : "Varnish",
-    "created" : "2022-09-05T12:09:27.683Z",
-    "parent-path" : "",
-    "data-accept-content-types" : [ ],
-    "updated-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
-    "created-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
-    "id" : "module/830d977b-bf1f-416f-87fe-e3a25474c7b9",
-    "resource-type" : "module",
-    "acl" : {
-      "edit-data" : [ "group/nuvla-admin" ],
-      "owners" : [ "group/sixsq-vendor", "group/varnish-vendor" ],
-      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "delete" : [ "group/nuvla-admin" ],
-      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "edit-acl" : [ "group/nuvla-admin" ],
-      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "manage" : [ "group/nuvla-admin" ],
-      "edit-meta" : [ "group/nuvla-admin" ]
-    },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/830d977b-bf1f-416f-87fe-e3a25474c7b9"
-    }, {
-      "rel" : "delete",
-      "href" : "module/830d977b-bf1f-416f-87fe-e3a25474c7b9"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/830d977b-bf1f-416f-87fe-e3a25474c7b9/delete-version"
-    } ],
-    "logo-url" : "https://www.varnish-software.com/wp-content/uploads/VS-logo-2020-140x60-1.svg",
-    "subtype" : "project"
-  }, {
-    "description" : "Monitor and Predict network low latency in real-time. LatenceTech offers an innovative way to continuously track, predict and evaluate  latency-optimized 5G and Private LTE Networks in support of time-critical innovations.\n\nOur solution is based on three main components:\n\n- **Analyzer**: a self-contained real-time analytics platform\n- **QoS Agent**: a measurement probe based on multiple protocols\n- **Reflector**: an end-target for the QoS Agent\n\nA minumum of one QoSAgent and one Reflector is required to measure an end-to-end link between a connected application and the target server on the internet. The QoSAgent is normally positionned close to the connected application. Similarly, the Reflector is normally positioned close to the server. Several QosAgents and Reflectors can be deployed to measure different segments of the 5G or PrivateLTE network.\n\nFor more details, please refer to [docs.latence.ca](https://docs.latence.ca)\n\nRefer to link for details in the [End User License Agreement EULA](https://www.latencetech.com/eula)\n\n&copy; LatenceTech Technologies Inc., 2022",
-    "path" : "latencetech",
-    "updated" : "2023-01-12T13:53:25.985Z",
-    "name" : "LatenceTech",
-    "created" : "2022-09-15T09:25:47.256Z",
-    "parent-path" : "",
-    "data-accept-content-types" : [ ],
-    "updated-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
-    "created-by" : "user/a56bfe85-44e2-4545-8e05-0d80eda4a2b0",
-    "id" : "module/8e15c48a-c488-491a-a002-652d082578f0",
-    "resource-type" : "module",
-    "acl" : {
-      "edit-data" : [ "group/nuvla-admin" ],
-      "owners" : [ "group/latencetech-vendor", "group/sixsq-vendor" ],
-      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "delete" : [ "group/nuvla-admin" ],
-      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "edit-acl" : [ "group/nuvla-admin" ],
-      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
-      "manage" : [ "group/nuvla-admin" ],
-      "edit-meta" : [ "group/nuvla-admin" ]
-    },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/8e15c48a-c488-491a-a002-652d082578f0"
-    }, {
-      "rel" : "delete",
-      "href" : "module/8e15c48a-c488-491a-a002-652d082578f0"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/8e15c48a-c488-491a-a002-652d082578f0/delete-version"
-    } ],
-    "logo-url" : "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/fktgj3vzrfxkpgsr1grt",
     "subtype" : "project"
   }, {
     "description" : "AI-based quality audit and process control made easy across use cases\n\nMore details at [www.relimetrics.com](https://www.relimetrics.com/).",
@@ -3474,16 +3461,6 @@ export const mockNavigateAppsData = {
       "manage" : [ "group/nuvla-admin" ],
       "edit-meta" : [ "group/nuvla-admin" ]
     },
-    "operations" : [ {
-      "rel" : "edit",
-      "href" : "module/93b4ae91-a452-4316-97f3-5833733e8195"
-    }, {
-      "rel" : "delete",
-      "href" : "module/93b4ae91-a452-4316-97f3-5833733e8195"
-    }, {
-      "rel" : "delete-version",
-      "href" : "module/93b4ae91-a452-4316-97f3-5833733e8195/delete-version"
-    } ],
     "logo-url" : "https://i.ytimg.com/vi/q1ZyiezByGE/maxresdefault.jpg",
     "subtype" : "project"
   } ],
@@ -3804,4 +3781,545 @@ export const mockLaunchDialogJob = {
           "href": "credential/166a6bad-e74d-4013-b865-68c18ea431cf"
       }
   ]
+}
+
+export const mockExampleProject = {
+  "count": 1,
+  "acl": {
+      "query": [
+          "group/nuvla-user"
+      ],
+      "add": [
+          "group/nuvla-user"
+      ]
+  },
+  "resource-type": "module-collection",
+  "id": "module",
+  "resources": [
+      {
+          "description": "# Example apps\n\nAs creators of Nuvla.io, we have created a set of example apps to show you what's possible with the platform.\n\nWe also use these apps in our traning material and the [Youtube Classroom chanel](https://www.youtube.com/watch?v=s0NQjTgmaU0&list=PLY20wTTKSDHa-bTvE-hRtAXafrNNkQYru). Feel free to reuse these apps as you feel like. They are all released under a permissive license.\n\nWe also release these apps such that you can learn from them. So please have a look and give us feedback. We're here to help and learn.   \n\n© 2021, SixSq Sàrl",
+          "path": "examples",
+          "updated": "2021-05-01T07:11:20.299Z",
+          "name": "Examples",
+          "created": "2019-06-25T13:40:06.197Z",
+          "parent-path": "",
+          "data-accept-content-types": [],
+          "updated-by": "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
+          "id": "module/19422abe-9fbb-40ba-8656-439806253c78",
+          "resource-type": "module",
+          "acl": {
+              "edit-data": [
+                  "group/nuvla-admin",
+                  "group/nuvla-user"
+              ],
+              "owners": [
+                  "group/sixsq-devs",
+                  "group/sixsq-vendor"
+              ],
+              "view-acl": [
+                  "group/nuvla-admin",
+                  "group/nuvla-user"
+              ],
+              "delete": [
+                  "group/nuvla-admin"
+              ],
+              "view-meta": [
+                  "group/nuvla-admin",
+                  "group/nuvla-user"
+              ],
+              "edit-acl": [
+                  "group/nuvla-admin"
+              ],
+              "view-data": [
+                  "group/nuvla-admin",
+                  "group/nuvla-user"
+              ],
+              "manage": [
+                  "group/nuvla-admin"
+              ],
+              "edit-meta": [
+                  "group/nuvla-admin"
+              ]
+          },
+          "logo-url": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL3dlYi5yZXNvdXJjZS5vcmcvY2MvIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgd2lkdGg9IjYwMCIKICAgaGVpZ2h0PSI2MDAiCiAgIGlkPSJzdmcyIgogICBzb2RpcG9kaTp2ZXJzaW9uPSIwLjMyIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ1LjEiCiAgIHNvZGlwb2RpOmRvY25hbWU9IkV4YW1wbGUuc3ZnIgogICBpbmtzY2FwZTpvdXRwdXRfZXh0ZW5zaW9uPSJvcmcuaW5rc2NhcGUub3V0cHV0LnN2Zy5pbmtzY2FwZSIKICAgc29kaXBvZGk6ZG9jYmFzZT0iL2hvbWUvZ21heHdlbGwiCiAgIHZlcnNpb249IjEuMCI+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhOSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjYyMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjgxNCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwLjAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAuMCIKICAgICBvYmplY3R0b2xlcmFuY2U9IjEwLjAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBpZD0iYmFzZSIKICAgICB3aWR0aD0iNjAwcHgiCiAgICAgaGVpZ2h0PSI2MDBweCIKICAgICBpbmtzY2FwZTp6b29tPSIwLjM1OTc0MDU4IgogICAgIGlua3NjYXBlOmN4PSI1MCIKICAgICBpbmtzY2FwZTpjeT0iNTE5LjA0OTY2IgogICAgIGlua3NjYXBlOndpbmRvdy14PSI0ODMiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjEwMSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmcyIiAvPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMxNiIgLz4KICA8ZwogICAgIGlkPSJnMjE2MSIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCg2LjM5NTEzNTQsMCwwLDYuMzk1MTM1NCwtMjIuNjI2MjQ2LC03LjEwODI1MDkpIj4KICAgIDxwYXRoCiAgICAgICBub2RldHlwZXM9ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjYyIKICAgICAgIGlkPSJmbG93Um9vdDE4ODIiCiAgICAgICBkPSJNIDM2LjAwOTc2Niw5LjI1MDUwODMgQyAzNy43MzkyOTUsOS40MjExMjczIDM4LjMwNTg3OSwxMS40NzA2OTcgMzguMDUyNTgxLDEyLjkzNTA0OSBDIDM3LjM0NjI2NiwxNi4xNTM4OTkgMzYuMzE2ODIxLDE5LjUxNDY2IDM1LjQ0NTQwNSwyMi43MTc3MDEgQyAzNi4wOTE2NjYsMjQuODEyMjI0IDMxLjcxMjI4NCwyNC4wMDg4NzcgMzMuMjE5OTMyLDIyLjMxNTQ1OSBDIDM0LjgxNzA0MSwxOC40MTEyMDIgMzYuMDExNDA0LDEzLjQ5ODMzNiAzNi4wMDk3NjYsOS4yNTA1MDgzIHogTSAzNi4wMDk3NjYsMi45OTI2OTU4IEMgMzguMjEwMzExLDEuMjI0MjA4OCA0MC45OTYyNjgsOS4xNzI3NTcgMzMuOTExNTcxLDYuMTUzNDg0NyBDIDMzLjg4NDYxOSw1Ljc2MDMwMTkgMzYuMDk2Mjg5LDMuMzg2OTQ0NyAzNi4wMDk3NjYsMi45OTI2OTU4IHogTSA0MS4zNzEwOTQsMTUuODcxNjAxIEMgNDEuMzcxMDk0LDEzLjY2NDU3IDQxLjM3MTA5NCwxMS40NTc1MzkgNDEuMzcxMDk0LDkuMjUwNTA4IEMgNDMuMTgwNjIxLDkuNDI1NzM4NyA0My45NjMwMTQsMTEuNzA0NTU5IDQzLjI4NjEzNywxMy4yMTU1MTcgQyA0Mi44NTkwODQsMTUuMDU5NzkyIDQyLjkzOTI0MSwxNy4zOTk2IDQ0LjYwMTQ4NywxOC42MjUzMzUgQyA0Ni43MTA1NDQsMTkuNjgzNDc3IDQ5LjM4Nzc0LDE3LjM1MzExMiA0OC44MDMyNjgsMTUuMTE4NDM3IEMgNDguOTMxOTYsMTMuNDA2NTM4IDQ4LjIzNjI5MiwxMS42MTM4NDggNDguOTY4ODYyLDkuOTY5MDQxNSBDIDUxLjA1NTA5Nyw5LjY1MDAzNTcgNTEuNTAwNjc3LDEyLjQ4NzE1NSA1MC41NDQ5ODUsMTMuODQ0NzQ3IEMgNTAuMDcwMDIzLDE1LjMwOTcwOCA1MC44NTc0NTIsMTYuNzgxODk4IDUwLjY3MjM0NCwxOC4yMzk0MzIgQyA1MC4yNzk2MTUsMTkuOTQwNTYgNDguNDE4NDA0LDIwLjAwMDIzIDQ3LjAyMjUsMjAuMDcxODY4IEMgNDUuNDc4NDg5LDIwLjM4MTk0IDQzLjUxNjgzNSwyMC43OTEzNjggNDIuMzYxOTQ3LDE5LjM4ODc0IEMgNDEuNTIyNTE0LDE4LjQ0NDA4OSA0MS4yMTEyNzQsMTcuMTA3NjcxIDQxLjM3MTA5NCwxNS44NzE2MDEgeiBNIDYxLjIyNDYwOSw5LjU3Mjc3MzkgQyA2MC40MTk3OCwxMS41NTc1NTIgNTguMTAwODA0LDEwLjIzNTYxNiA1Ni42Mjc2NywxMC41NzE1NTEgQyA1My44MzY4NjIsMTQuMzkzNjExIDYwLjkyMDAzOCwxMy41MTM2NjcgNjEuODA4NSwxNy4wMTE2NDggQyA2MS44NTYxMywxOC45MzM3NDcgNjAuMDI4MzU5LDIwLjU4NzM4OSA1OC4xMjkwOTEsMjAuNDQzMzEyIEMgNTYuOTA0NDg3LDIwLjYwNzIyOSA1NC42MDkyMDQsMjAuOTgyMzkzIDU0LjQxNzg3OSwxOS4yNjc2MjIgQyA1NS4yODA2MDksMTcuNTA4MjY5IDU3LjMzNjM1OSwxOS41Mjg4MDMgNTguNjMzMTExLDE4Ljg0NjMgQyA2MC40MDMxNDEsMTcuOTkwODEgNTkuNDAyMjMyLDE1LjU1NTMyNSA1Ny43Mjg3ODEsMTUuMzIxNDc1IEMgNTYuNTUwMTE1LDE0Ljk4MTM1IDU1LjA5MTgxMywxNS4yMjU0MzkgNTQuMjU0NzQ3LDE0LjExMjc2NCBDIDUzLjAxNzY2OSwxMi44ODExNjcgNTMuMzkyMTMyLDEwLjczMzE0OCA1NC43MzY3MTksOS43NDEzMjUyIEMgNTYuNjE5MTcyLDguMzMwNzM5NiA1OS4xNzAzMjYsOC45NTM1MDY3IDYxLjIyNDYwOSw5LjU3Mjc3MzkgeiBNIDY2LjQ1ODk4NCw2LjE0NTAzOTYgQyA2NS4zNjgxMjYsNy42MzMzMzM0IDY3LjM0ODkzNiw5Ljk1MzE1NzQgNjguOTg3MjI5LDkuMDk0ODk3OSBDIDY5Ljk3ODEzMywxMS4wNDI1MDMgNjYuNTI0NjQxLDEwLjc3NzkzMSA2Ni40NzM0OTUsMTIuNDMwOTkyIEMgNjQuNDQzNjA1LDE2LjEwMTgxNCA2OC40ODI3MywxOC42MjM0MjYgNjcuNTcxNjU3LDIwLjQxNzUyOCBDIDY1LjQ0MDg1OCwyMC4yNjE1NSA2NC4zMjQzMDcsMTcuODQ0NDUyIDY0LjU3NzQzMywxNS45MTkzNTcgQyA2NC43MDg0NywxNC40MDg1ODYgNjUuMDU1MTA3LDEyLjc5MzYxIDY0LjMyMjk2MSwxMS4zNzM5NDEgQyA2My43ODY0MjIsOS41NDc1MTkyIDY0LjE1MDQxOSw3LjE0NTI2NTUgNjUuOTU0MjMzLDYuMTU1MjQ3NyBMIDY2LjIwNjA0Myw2LjEyMDMzMjMgTCA2Ni40NTg5ODQsNi4xNDUwMzk2IEwgNjYuNDU4OTg0LDYuMTQ1MDM5NiB6ICIgLz4KICAgIDxwYXRoCiAgICAgICBub2RldHlwZXM9ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjIgogICAgICAgaWQ9ImZsb3dSb290MTg5MCIKICAgICAgIGQ9Ik0gMTAuODY3MTg4LDQ0Ljg3Nzk1MyBDIDYuMjgxMjYxOCw0Mi4xMjQ4NDkgNS4yMjA1OTE0LDUyLjM2NjI2OCAxMC40MDkyMTUsNDkuODkyNDMxIEMgMTIuMzg5Mzg1LDQ5LjI5NTU2OCAxNC45ODgwNDUsNDMuOTEyNjU4IDEwLjg2NzE4OCw0NC44Nzc5NTMgeiBNIDE1LjE2Nzk2OSw0My45ODczMjggQyAxNC45MTk4MjYsNDYuMzM3MjQgMTYuNjE3NzU2LDUyLjU1NDIwMiAxMi4yOTg3MzQsNTAuNTM2OTE4IEMgOS44MDQxMTQyLDUyLjMxMjkxNiA2LjA1ODA4NTUsNTIuOTU4Njc0IDQuNTAyMzEyMyw0OS41ODMzODYgQyAyLjYzNTA0NTQsNDUuMjU3MzIyIDcuMzAzMzEwMyw0Mi4yOTg3MTIgMTEuMDQ2NDQzLDQzLjM2MTA1OSBDIDE1LjI0NzE4NSw0MS4zMjA3ODYgOS40OTMwMjg2LDM4LjMzODI2NCA3LjEwNjg3OTIsNDAuMzIyMTM4IEMgMy40Mzc0NDIxLDQwLjAxMzg4IDcuNDA2NDA3LDM3LjIwMTQwNyA5LjM0OTUwODcsMzcuOTYyOTEyIEMgMTIuNDQyMTIsMzcuODc3Nzg4IDE1LjU1NjUzNCw0MC4zODAxMzEgMTUuMTcxNzUxLDQzLjY0ODkxMiBMIDE1LjE2OTYzOCw0My44Mzc5NyBMIDE1LjE2Nzk2OSw0My45ODczMjggeiBNIDMwLjUzMTI1LDQzLjU1MzczNCBDIDI5LjYzODc5NCw0NS45MTE1NTggMzIuNDk0NjcsNTAuNDYzODcyIDI4Ljc3OTk5OSw1MS4wNzA5NDQgQyAyNi44ODgwODgsNDcuNzAyMzA2IDMwLjkzMTYyMSw0MS4xOTAyNTcgMjUuNTgzNjUsNDAuMDQ2MTQ3IEMgMjAuNzM5MzEsNDAuMzEyNzk4IDIxLjI1MjE5NCw0NS45MTA4NzEgMjIuMDAxNDM5LDQ5LjE1NDA2NiBDIDIxLjg0MjUzLDUxLjgyODMwOSAxOC43OTA1NzcsNTEuMzkyNTYgMTkuNTg1NTg1LDQ4LjY3MzczOCBDIDE5Ljg1MTgyOSw0NS42OTM4NjQgMTguMjg1MzMyLDM5LjYzMDMwMSAyMC45ODY5ODMsMzguNzAyOTExIEMgMjMuNTA4NDYxLDQwLjgwODg5IDI1Ljc2MTg0NywzNS43MzE5MDYgMjguNDUyNDU5LDM4LjY4NjIyNiBDIDI5LjkyMTQ1NCwzOS43OTMxOTQgMzAuODI3NjE4LDQxLjcwOTk5MiAzMC41MzEyNSw0My41NTM3MzQgeiBNIDM4LjgwNyw0OS43NzAyMjMgQyA0Mi4zNjkwMzQsNTAuNzY4OTc0IDQ0LjUyMzM0NCw0Ni4zMjg2ODggNDMuNzAwNTIxLDQzLjM1ODk4MyBDIDQwLjQwMjc3NSwzNS41NDY0NTMgMzIuNDkxMTk5LDQ0LjM0NDEzMSAzOC44MDcsNDkuNzcwMjIzIHogTSAzOS45NDE0MDYsMzguMDM0MjAzIEMgNTIuMDg1ODcyLDM5LjcwNTY0MiA0My4yMDQ4NTQsNTkuMDk4MzQyIDM0LjY4ODcyMiw0OC42NDI5NjggQyAzMi41OTE4ODYsNDQuNzc4MDMxIDM0LjM4MzEwOSwzOC40NDAxMzIgMzkuMjkxMzY5LDM4LjA1MTgyNyBMIDM5Ljk0MTQwNiwzOC4wMzQyMDMgTCAzOS45NDE0MDYsMzguMDM0MjAzIHogTSA1MS42NjAxNTYsMzQuNjI0MDQ2IEMgNDkuODE1OTc4LDM3Ljg1MDU4MyA1NC43ODk0NTksMzguNjY2MjIyIDU1LjgzNDM3LDM5LjIzNTY2IEMgNTQuMTQwNzQ2LDQwLjcxNTczMyA1MC4wOTMwNjEsNDAuMTIxNTggNTEuNTYyNDYxLDQzLjc2MjEyIEMgNTEuMDA0MDk2LDQ2Ljk4MDUyMyA1Mi40ODY4NDcsNTAuMDM3NzIzIDU1LjY3MDYxNCw1MC41NDU5NSBDIDUzLjU0Nzc4OCw1My43ODI2MTYgNDguNDE3OTMsNTAuMDM1NDk1IDQ5LjM0OTk3Myw0Ni41MTk2OTIgQyA1MC4zMzk4NzcsNDMuNjg2NDcxIDQ4Ljc4MTMxLDQwLjY3MTE2NiA0OC40NjcyNTYsMzguNDgzNTcgQyA1MS4wOTk5MjYsMzcuNDEzNTk5IDQ3Ljg4NjUxMiwzMy4zMjI4MyA1MS42NjAxNTYsMzQuNjI0MDQ2IHogTSA2OS44NTkzNzUsNDMuNTUzNzM0IEMgNjguOTY2OTE4LDQ1LjkxMTU1NyA3MS44MjI3OTQsNTAuNDYzODcyIDY4LjEwODEyNCw1MS4wNzA5NDQgQyA2Ni4yMTYyMTQsNDcuNzAyMzA2IDcwLjI1OTc0Niw0MS4xOTAyNTYgNjQuOTExNzc1LDQwLjA0NjE0NSBDIDYwLjIyMjQxOCw0MC4yODU5MDQgNjAuNDM5MTk0LDQ1Ljc1NzcyOCA2MS4zNjc5NDIsNDguOTUzNjgzIEMgNjAuNzA1NDQ4LDUzLjA2NDg1NSA1Ny43ODg2MjYsNDkuOTAwMTM0IDU4LjgzODM3OSw0Ny4yODk3MzggQyA1OC45Njk3MDksNDMuMzgxMTc0IDU5LjAwNjQzNywzOS40NTUwODcgNTguNjA3NDA0LDM1LjU2NTcxNCBDIDU5LjM1NjAyNSwzMS42MzI0MTMgNjIuMzY4MjY5LDM0LjY4MDEzIDYxLjAxMzUyLDM3LjE5NDMxNiBDIDYwLjM4NDE3LDM5LjMwMjUzOCA2MS40NjkwODcsNDAuNjUzNDc2IDYyLjk5NjI0OCwzOC40NzQ4MjkgQyA2Ni4yMDIwODksMzYuODI2MTU0IDcwLjg2MzI2OSwzOS44MjY0NTEgNjkuODU5Mzc1LDQzLjU1MzczNCB6IE0gODUuNDEwMTU2LDQ0LjM3NDA0NiBDIDgzLjI0NDg0OSw0Ny45MDU1MzMgNzYuNDQ3MDg1LDQyLjQ1NjM0NCA3NS45NzYwMTMsNDcuNDQ0MDUyIEMgNzYuOTEzNTQxLDUxLjcyNDU0OCA4My4yNzUzMjQsNDguNzI2MTk2IDg0LjM5MzYzOSw1MC4xMzM3NzMgQyA4Mi4xMDk4NTUsNTMuNTI1MTIzIDc2LjQyMTMzOSw1MS44NjAxMTEgNzQuMjg1MzM1LDQ5LjAxMzM2IEMgNzEuMjU4MjQ3LDQ0LjcyOTk4NCA3NC42MTQwMTMsMzcuMTY2NTE2IDgwLjI1NDI4OSwzNy45Njc1NiBDIDgzLjI4Njk1OCwzOC4yODQ0OTUgODUuODMzOTE0LDQxLjMxMDc0NSA4NS40MTAxNTYsNDQuMzc0MDQ2IHogTSA4My4yNTM5MDYsNDMuNzQxMjM0IEMgODQuNDMxMzE5LDM5LjAzOTYxNCA3NC41OTQ4MTIsMzguNjg3MzI1IDc2LjI5MTg4Niw0My4zMzUyMjYgQyA3OC4yODQ3ODMsNDQuNzk2MDQ4IDgxLjAzMjg1Niw0My4wOTA5NDMgODMuMjUzOTA2LDQzLjc0MTIzNCB6IE0gOTYuNTU0Njg4LDQwLjM2NjIzNCBDIDkzLjI5MDYxMiwzOC42ODgyIDkwLjYyMjIxNyw0Mi41MTk2MzUgOTAuNzI4NTIyLDQ1LjQ5MjY2NSBDIDkwLjg4MTkyNSw0Ny4zMzM2NzYgOTIuMzMwMjg2LDUyLjE0NDQ2NSA4OS4wMjg3NTEsNTAuOTA1OTg4IEMgODguOTU2NzMsNDYuNzYzOTYzIDg4LjM1MzMxMiw0Mi40NDcyMDcgODkuMzE3MjEsMzguMzM2NjQzIEMgOTEuMDQwNDcxLDM4LjUwMzQzNyA5Mi4yMDc1MTQsNDAuNjY4MTgxIDkzLjQyMTQ2OCwzOC4yMDgyOTggQyA5NC45MDI0NzgsMzcuNDQ5NzMgOTcuNjkwOTQ0LDM4LjI2MzY2OCA5Ni41NTQ2ODgsNDAuMzY2MjM0IHogIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOiNmZjAwMDAiCiAgICAgICBub2RldHlwZXM9ImNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjIgogICAgICAgaWQ9ImZsb3dSb290MTg5OCIKICAgICAgIGQ9Ik0gMTcuMDI2MzI3LDYzLjc4OTg0NyBDIDAuNzUwNjM3Niw2NC4wNTg0NjkgMTMuODgyNzksNjYuMzg3MTU0IDEzLjExMzg4Myw2OS4zMjMyNTggQyA4LjA0NzI0MTcsNzAuMjg3MDkzIDMuNTkzNjI4NSw2My41NjU3MTQgNi44MDkwNDUxLDU5LjM3MDU0OCBDIDguNzU5MTU1Myw1NS43MTc3OTEgMTUuMjY5OTIyLDU1LjE5ODM2MSAxNi45MDIwNjgsNTkuMzkzMjYxIEMgMTcuNTMyNTgxLDYwLjc1ODk0NyAxNy42MjgyMzcsNjIuMzk2NTg5IDE3LjAyNjMyNyw2My43ODk4NDcgeiBNIDE1LjMwNjQ2Myw2Mi42NTYxMDkgQyAxOC44NTI1NjYsNTguNzEzNzczIDcuNjU0MzU4NCw1Ni42MDkxNDMgMTAuNzY1ODAzLDYxLjMwNDc0MiBDIDEyLjEyNDc4OSw2Mi4yMTc3MTUgMTMuOTYxMzU5LDYxLjcwNTM0MiAxNS4zMDY0NjMsNjIuNjU2MTA5IHogTSAzMS4zMDc5MzEsNjIuMzkxMzgzIEMgMjcuMTMwNTE4LDYzLjUyNDAyNiAyNC42Njk4NjMsNjguNjYzMDA0IDI3LjQ3MDcxNyw3Mi4yMjk0NzIgQyAyNS45NDY2NTcsNzQuMDUyMzE2IDI0LjI1MzY5Nyw3MS4wNzYyMzcgMjQuODU3MjgxLDY5LjYzNjkwOSBDIDIzLjczNzQ0NCw2Ny4wMzg0MjggMTcuMzk5ODYyLDcyLjI1NDI0NiAxOS4zODY2MzYsNjguODg4NjU3IEMgMjMuMTU5NzE5LDY3LjU1MTE5MyAyMi4zOTg0OTYsNjMuNzExMzAxIDIyLjA2MDY3LDYwLjg0ODY3MSBDIDI0LjA2NDA4NSw2MC4zNzUyOTQgMjQuMzcwMzc2LDY1Ljc3MjY4OSAyNy4xNjc5MTgsNjMuMzI2MDQ4IEMgMjguMzUwMTI2LDYyLjU0NjM2OSAyOS45MjczNjIsNjEuMDY3NTMxIDMxLjMwNzkzMSw2Mi4zOTEzODMgeiBNIDM3LjY2ODc1LDcwLjU5ODYyMyBDIDMzLjQ2NzMxNCw2Ni42MjI2NCAzMi41MTcwNjQsNzcuOTcyNzIzIDM3LjMwNjI2LDc0LjQ2NjYzNiBDIDM4Ljc0MjUyMyw3My44NTM2MDggNDAuNTU5MDQsNzAuMzg5MzIgMzcuNjY4NzUsNzAuNTk4NjIzIHogTSA0MS42NzczMjEsNzAuOTczMTMxIEMgNDIuMzQwNjY5LDc1LjMwODE4MiAzNi45MjYxNTcsNzguMzYxMjU3IDMzLjMzMTkyMSw3Ni4yMjMxNTUgQyAyOS40MzQzNSw3NC44OTM5ODggMzAuNjE4Njk4LDY3LjY3NzIzMiAzNS4wMDM4MDYsNjguNTY3ODg1IEMgMzcuMTM3MzkzLDcwLjU5Mjg1NCA0Mi4xNDAyNjUsNjcuMDAyMjIxIDM3LjY1NjE5Miw2Ni4yOTAwMDcgQyAzNS4yNDIyMzMsNjUuOTE0MjE0IDM1LjE2NjUwMyw2Mi42NDA3NTcgMzguMDM2OTU0LDYzLjkyNjQwNCBDIDQwLjg0NzkyMyw2NC43NDQ5MjYgNDMuMjI3ODM4LDY4LjEyNDczNSA0MS42NzczMjEsNzAuOTczMTMxIHogTSA2Mi4zNzkwOTksNzYuNjQ3MDc5IEMgNjIuMDA3NDA0LDc4LjU2MDQxNyA2MS4xNjE0MzcsODQuMDM0NTM1IDU4Ljg5MDU2NSw4Mi4wMTAwMTkgQyA1OS43Njk2NzksNzkuMDM5OTU4IDYyLjUzNjM4Miw3Mi4yMjkxMTUgNTYuOTQ3ODk5LDcyLjc2NTc4OSBDIDUzLjc5MDQxNiw3My41NzA4NjMgNTQuOTA4MjU3LDgwLjk2ODM4OCA1MS41MjkyODYsNzkuNDk2ODU5IEMgNTEuNzA3ODMxLDc2LjU1OTgxNyA1NS44NTgxMjUsNzEuODk2ODM3IDUwLjgzMjEsNzAuNjc4NTA0IEMgNDUuODk4MTEzLDY5LjkwNzgxOCA0Ny40ODU5NDQsNzUuNzM1ODI0IDQ1LjI4Njg4Myw3OC4wMzQ3MDMgQyA0Mi45MTYzOTMsNzYuMzMzMzk2IDQ1LjQ3MDgyMyw3MS42NDcxNTUgNDYuNjI0MTI0LDY5LjQxNDczNSBDIDUwLjkxOTUwNyw2Ny45MDY0ODYgNjMuNjE4NTM0LDcwLjg3ODcwNCA2Mi4zNzkwOTksNzYuNjQ3MDc5IHogTSA2Ni40MjY0NDcsODMuODQ5MDUgQyA2Ny42MTYzOTgsODUuNzc3NTkxIDYyLjExNDYyNCw5NC40OTI2OTggNjIuMzUxMTI0LDkwLjMxNzExIEMgNjMuNzkxNjg0LDg2LjU4MTk2MSA2NS43MzAzNzYsNzguMDAwNjM2IDY3LjM5MTg5MSw3NC44NTU3NSBDIDcxLjAyNzgxNSw3My43ODExNzUgNzYuMzgzMDY3LDc1LjM1MDI4OSA3Ni41OTE5NzIsNzkuNzUxODk4IEMgNzcuMDQ4NTQ1LDgzLjc5MzA0OCA3My4wNjY4MDMsODguNDI5OTQ1IDY4Ljg0MjE4Nyw4Ni43NjU5MzYgQyA2Ny42MjQzODYsODYuMjgyMDM0IDY2LjU2NzQxLDg1LjE5NTEzMiA2Ni40MjY0NDcsODMuODQ5MDUgeiBNIDc0LjA4NjU2OSw4MS44MDM0MzUgQyA3Ni44NTE4OTMsNzguMDUwNTI0IDY5LjI2NDQwMiw3NC4zMTAyNTYgNjcuNTYwNzM0LDc4LjM3ODE5MSBDIDY1Ljg5MzQwMiw4MC41OTQwOTkgNjcuMjU1NzE5LDgzLjc3NTc0NiA2OS43MDA1NTUsODQuNzE4NTU4IEMgNzIuMDI4NzA4LDg1LjkwMjIyNCA3My42ODg2MzksODMuODg4NjYyIDc0LjA4NjU2OSw4MS44MDM0MzUgeiBNIDgyLjMxODc5OSw3My4xMjQ1NzcgQyA4NC4zMDUyMyw3NS40ODcwNTkgODEuNjU1MDE1LDg4LjQ0ODA4NiA3OC4yNDcxODMsODcuMjc1NzM2IEMgNzguOTkxOTM1LDgyLjM4NzgyOCA4MS4yOTEwMjksNzcuOTQ5Mzk0IDgyLjMxODc5OSw3My4xMjQ1NzcgeiBNIDk1LjAwMTk4NSw4Ny42ODQ2OTUgQyA3OC43MjYyOTgsODcuOTUzMzE5IDkxLjg1ODQ0OSw5MC4yODE5OTkgOTEuMDg5NTQyLDkzLjIxODEwNyBDIDg2LjAyMjksOTQuMTgxOTQgODEuNTY5Mjg3LDg3LjQ2MDU2MiA4NC43ODQ3MDEsODMuMjY1Mzk0IEMgODYuNzM0ODE0LDc5LjYxMjYzNyA5My4yNDU1ODIsNzkuMDkzMjEgOTQuODc3NzI5LDgzLjI4ODExIEMgOTUuNTA4MjQ1LDg0LjY1Mzc5NiA5NS42MDM4OTIsODYuMjkxNDM4IDk1LjAwMTk4NSw4Ny42ODQ2OTUgeiBNIDkzLjI4MjEyMiw4Ni41NTA5NTcgQyA5Ni44MjgyMjMsODIuNjA4NjIxIDg1LjYzMDAxNyw4MC41MDM5OTMgODguNzQxNDYxLDg1LjE5OTU5MiBDIDkwLjEwMDQ0Nyw4Ni4xMTI1NjUgOTEuOTM3MDE4LDg1LjYwMDE5MiA5My4yODIxMjIsODYuNTUwOTU3IHogIiAvPgogIDwvZz4KPC9zdmc+Cg==",
+          "subtype": "project"
+      }
+  ],
+  "operations": [
+      {
+          "rel": "add",
+          "href": "module"
+      }
+  ]
+}
+
+export const mockExampleProjectChildren = {
+  "count" : 13,
+  "acl" : {
+    "query" : [ "group/nuvla-user" ],
+    "add" : [ "group/nuvla-user" ]
+  },
+  "resource-type" : "module-collection",
+  "id" : "module",
+  "resources" : [ {
+    "description" : "example CentOS 7 image allowing access via SSH public/private key pair",
+    "path" : "examples/centos",
+    "updated" : "2019-06-25T14:01:42.843Z",
+    "name" : "CentOS SSHD",
+    "created" : "2019-06-25T13:37:44.459Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "id" : "module/9a4abc71-acce-4d31-b3b8-e1492b60fdb1",
+    "resource-type" : "module",
+    "logo-url" : "https://nuv.la/images/modules-logos/centos.svg",
+    "versions" : [ {
+      "href" : "module-component/6dc7e53c-d157-4d1e-bb41-1644515ebe8b",
+      "author" : "sixsq",
+      "commit" : "initial commit"
+    }, {
+      "href" : "module-component/3fb33710-3019-4685-9ff2-debc05730cb7",
+      "author" : "super",
+      "commit" : "make public"
+    } ],
+    "subtype" : "component"
+  }, {
+    "description" : "RStudio deployment with generated password",
+    "path" : "examples/rstudio",
+    "updated" : "2019-06-25T14:02:36.618Z",
+    "name" : "RStudio",
+    "created" : "2019-06-25T13:38:59.074Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "id" : "module/db498fe4-ea7e-4ee1-8ec6-88921c1c95cc",
+    "resource-type" : "module",
+    "logo-url" : "https://nuv.la/images/modules-logos/rstudio.png",
+    "versions" : [ {
+      "href" : "module-component/ce9972fb-c2c8-42cb-a822-88c56c5f69cf",
+      "author" : "sixsq",
+      "commit" : "initial commit"
+    }, {
+      "href" : "module-component/dd50c2f9-16f2-45dc-aa20-982223aad232",
+      "author" : "super",
+      "commit" : "make public"
+    } ],
+    "subtype" : "component"
+  }, {
+    "valid" : true,
+    "description" : "Object detection application based on TensorFlow",
+    "path" : "examples/object-detection",
+    "compatibility" : "docker-compose",
+    "updated" : "2020-04-15T07:51:22.397Z",
+    "name" : "Object Detection",
+    "created" : "2020-04-15T07:51:20.640Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "id" : "module/93329494-90da-4407-852a-057cc96c8c1b",
+    "validation-message" : "Docker-compose valid.",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "user/474c3638-c8d2-4ffc-b717-38e5070ae418" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "manage" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "operations" : [ {
+      "rel" : "unpublish",
+      "href" : "module/93329494-90da-4407-852a-057cc96c8c1b/unpublish"
+    }, {
+      "rel" : "publish",
+      "href" : "module/93329494-90da-4407-852a-057cc96c8c1b/publish"
+    }, {
+      "rel" : "validate-docker-compose",
+      "href" : "module/93329494-90da-4407-852a-057cc96c8c1b/validate-docker-compose"
+    } ],
+    "logo-url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/957px-Tensorflow_logo.svg.png",
+    "versions" : [ {
+      "href" : "module-application/2131df1f-63f9-4170-9810-e3d988887379",
+      "author" : "super",
+      "commit" : "initialize app"
+    } ],
+    "subtype" : "application"
+  }, {
+    "valid" : true,
+    "description" : "Serial device to Telnet server proxy (RFC 2217)",
+    "path" : "examples/serial-device-to-telnet-server",
+    "compatibility" : "docker-compose",
+    "updated" : "2020-05-16T00:22:00.400Z",
+    "name" : "Serial device to Telnet server",
+    "created" : "2020-05-16T00:21:57.453Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "id" : "module/c2104630-7922-4f84-a2b0-e7885184f412",
+    "validation-message" : "Docker-compose valid.",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/serial_port_world.svg",
+    "versions" : [ {
+      "href" : "module-application/56641601-2362-40d0-928a-1906a179245e",
+      "author" : "lionel@sixsq.com",
+      "commit" : "First version"
+    } ],
+    "subtype" : "application"
+  }, {
+    "valid" : true,
+    "description" : "To proxy (forward) a TCP connection",
+    "path" : "examples/tcpip-proxy-application",
+    "compatibility" : "swarm",
+    "updated" : "2021-05-06T22:52:10.538Z",
+    "name" : "TCP/IP Proxy application",
+    "created" : "2020-02-28T11:41:08.439Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "group/nuvla-admin",
+    "id" : "module/aa274556-9e73-4281-9fed-9246e9460dec",
+    "validation-message" : "Docker-compose valid.",
+    "resource-type" : "module",
+    "logo-url" : "https://www.freeiconspng.com/uploads/load-balancer-icon-1.png",
+    "versions" : [ {
+      "href" : "module-application/a6219609-780b-433d-9fe5-f679151f0e1e",
+      "author" : "lionel@sixsq.com",
+      "commit" : "First version"
+    }, {
+      "href" : "module-application/b6f57e15-07f6-44f4-8e58-8437bc98d9b1",
+      "author" : "lionel@sixsq.com",
+      "commit" : "added link url"
+    }, {
+      "href" : "module-application/387930f9-530b-4aa9-afb8-569d634c49aa",
+      "author" : "lionel@sixsq.com",
+      "commit" : "Use sixsq/socat:latest"
+    } ],
+    "subtype" : "application"
+  }, {
+    "description" : "Ubuntu 18.04 image allowing access via SSH public/private key pair",
+    "path" : "examples/ubuntu",
+    "updated" : "2021-05-08T21:59:27.438Z",
+    "name" : "Ubuntu SSHD",
+    "created" : "2019-06-25T13:36:09.943Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
+    "id" : "module/552e1b8d-acc9-4183-b83d-e63925da46f2",
+    "resource-type" : "module",
+    "acl" : {
+      "view-data" : [ "group/nuvla-user" ],
+      "view-meta" : [ "group/nuvla-user" ],
+      "view-acl" : [ "group/nuvla-user" ],
+      "owners" : [ "group/nuvla-admin" ]
+    },
+    "logo-url" : "https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png",
+    "versions" : [ {
+      "href" : "module-component/9740d5e8-f1dd-4432-9cea-89d46943cd11",
+      "author" : "sixsq",
+      "commit" : "initial commit"
+    }, {
+      "href" : "module-component/4493e8b9-1680-406d-a274-448a11562b71",
+      "author" : "super",
+      "commit" : "make public",
+      "published" : false
+    } ],
+    "published" : false,
+    "subtype" : "component"
+  }, {
+    "description" : "New Application k8s for testing...",
+    "path" : "examples/new-application-k8s",
+    "tags" : [ "tag1", "tag 2 with a very long name", "and another", "yet another" ],
+    "updated" : "2021-09-29T11:09:31.149Z",
+    "name" : "New Application k8s",
+    "created" : "2021-08-19T12:32:09.601Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
+    "created-by" : "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
+    "id" : "module/75c3ed50-8076-4f22-a654-c99083c93db7",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "view-acl" : [ "group/nuvla-admin" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "operations" : [ {
+      "rel" : "edit",
+      "href" : "module/75c3ed50-8076-4f22-a654-c99083c93db7"
+    }, {
+      "rel" : "delete",
+      "href" : "module/75c3ed50-8076-4f22-a654-c99083c93db7"
+    }, {
+      "rel" : "publish",
+      "href" : "module/75c3ed50-8076-4f22-a654-c99083c93db7/publish"
+    }, {
+      "rel" : "unpublish",
+      "href" : "module/75c3ed50-8076-4f22-a654-c99083c93db7/unpublish"
+    }, {
+      "rel" : "delete-version",
+      "href" : "module/75c3ed50-8076-4f22-a654-c99083c93db7/delete-version"
+    } ],
+    "logo-url" : "/ui/images/noimage.png",
+    "versions" : [ {
+      "href" : "module-application/605cebdd-af07-49aa-bce3-290d639f7fe6",
+      "author" : "meb@sixsq.com",
+      "commit" : "no commit message"
+    }, {
+      "href" : "module-application/d2a54907-bee9-4515-afc0-18ebb5c74a4c",
+      "author" : "meb@sixsq.com",
+      "commit" : "no commit message"
+    }, {
+      "href" : "module-application/67e9e2af-f0f7-491c-a3c4-7c8242cb4f18",
+      "author" : "Mebster",
+      "commit" : "commit message"
+    }, {
+      "href" : "module-application/09305c70-4e61-40bb-9ad3-0d5d8a000411",
+      "author" : "Mebster",
+      "commit" : "commit message"
+    } ],
+    "subtype" : "application_kubernetes"
+  }, {
+    "description" : "# Description\n\nJupyter Notebook deployment with generated access token.\n\nThe application contains ESA's SNAP libraries for EO processing and analysis, and automatically attaches a volume to the host's `/eodata` path, where EO data should automatically be mounted by the underlying cloud provider. If the cloud provider mounts EO data in this path, then you'll be also able to find this data, through the Jupyter Notebook, at `/eodata`.\n\n# Requirements\n\nPlease note that when deploying this app through Nuvla.io, you should already have an existing infrastructure service that meets the following requirements:\n\n - EO data must be mounted on the host at `/eodata`\n - Host must have port range 30000-32767 open for ingress\n - Host must be running with Docker Swarm mode enabled\n\nIf you don't yet have an infrastructure service, then please create one first (see more at https://docs.nuvla.io/nuvla/infrastructures) and then launch this resource on it.\n \n# Notes\n\nPlease **note** that from the Jupyter Notebook, the `/eodata` files are mounted in read-only mode!\n\n",
+    "path" : "examples/jupytereo-with-snap",
+    "license" : {
+      "url" : "https://opensource.org/licenses/GPL-3.0",
+      "name" : "GPL 3",
+      "description" : "GNU General Public License version 3"
+    },
+    "updated" : "2022-02-21T16:12:38.450Z",
+    "name" : "Jupyter-EO with SNAP ",
+    "created" : "2021-11-26T08:39:07.928Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/ef5cddf8-5d70-4c29-89ff-079ef7f90976",
+    "created-by" : "user/ef5cddf8-5d70-4c29-89ff-079ef7f90976",
+    "id" : "module/7a30359d-71b6-4f7b-b27b-f4a35fea5bc7",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "group/sixsq-devs", "user/ef5cddf8-5d70-4c29-89ff-079ef7f90976" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "logo-url" : "https://i.ibb.co/Twch5jL/Untitled.png",
+    "versions" : [ {
+      "href" : "module-component/4f7b3b26-672c-4e73-a555-c66e6b16fdca",
+      "author" : "super",
+      "commit" : "make public"
+    }, {
+      "href" : "module-component/6ed1ce0e-1da0-454a-8243-475339c3c5d0",
+      "author" : "cris@sixsq.com",
+      "commit" : "init app"
+    }, {
+      "href" : "module-component/5b21fec9-c0b3-48df-9fab-a0a44a5a9aae",
+      "author" : "cris@sixsq.com",
+      "commit" : "change to http",
+      "published" : false
+    } ],
+    "published" : false,
+    "subtype" : "component"
+  }, {
+    "valid" : true,
+    "description" : "RabbitMQ configured as MQTT and AMQP broker with management web interface.",
+    "path" : "examples/rabbitmq",
+    "compatibility" : "swarm",
+    "updated" : "2022-04-05T15:06:16.863Z",
+    "name" : "RabbitMQ",
+    "created" : "2022-03-31T15:13:11.828Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "group/nuvla-admin",
+    "created-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
+    "id" : "module/bef3b9e6-3c97-494d-9ca9-b7a3120e70e9",
+    "validation-message" : "Docker-compose valid.",
+    "resource-type" : "module",
+    "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/rabbitmq.svg",
+    "versions" : [ {
+      "href" : "module-application/c933dc2c-104d-40ab-82eb-fecaa2c29522",
+      "author" : "lionel@sixsq.com",
+      "commit" : "no commit message"
+    }, {
+      "href" : "module-application/62e70f9e-8c09-421b-9ede-99de215c2077",
+      "author" : "lionel@sixsq.com",
+      "commit" : "Fix URLs"
+    } ],
+    "subtype" : "application"
+  }, {
+    "description" : "Jupyter Notebook deployment with generated access token",
+    "path" : "examples/jupyter",
+    "updated" : "2022-10-03T14:45:44.126Z",
+    "name" : "Jupyter Notebook",
+    "created" : "2019-06-25T13:38:49.265Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/f820e91d-6dc9-404d-9a2c-fa11c372e2f1",
+    "id" : "module/4a4a4632-be1f-4f7a-921a-d56211780094",
+    "resource-type" : "module",
+    "logo-url" : "https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg",
+    "versions" : [ {
+      "href" : "module-component/1dc52a07-f1c8-4455-935c-dfd70c7eb7a2",
+      "author" : "sixsq",
+      "commit" : "initial commit"
+    }, {
+      "href" : "module-component/49303ebb-a1df-466f-9cdf-b0440647a28e",
+      "author" : "super",
+      "commit" : "make public",
+      "published" : false
+    } ],
+    "published" : false,
+    "subtype" : "component"
+  }, {
+    "valid" : true,
+    "description" : "GUI programming tool for wiring together hardware devices, APIs and online services",
+    "path" : "examples/nodered",
+    "license" : {
+      "url" : "https://sixsq.com/legal/sixsq-apps-license.html",
+      "name" : "SixSq Apps 1.0",
+      "description" : "SixSq License for Apps 1.0"
+    },
+    "compatibility" : "swarm",
+    "updated" : "2022-12-21T16:16:56.801Z",
+    "name" : "Node-Red",
+    "created" : "2021-06-08T15:29:34.243Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "user/f820e91d-6dc9-404d-9a2c-fa11c372e2f1",
+    "created-by" : "user/e53f6f2e-c831-4978-b055-b4ecae38bdda",
+    "id" : "module/23587aee-2069-4c05-a1b8-e4259b2979fd",
+    "validation-message" : "Docker-compose valid.",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin" ],
+      "owners" : [ "user/e53f6f2e-c831-4978-b055-b4ecae38bdda" ],
+      "view-acl" : [ "group/nuvla-admin", "group/sixsq-devs" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/sixsq-devs" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/sixsq-devs" ],
+      "manage" : [ "group/nuvla-admin" ],
+      "edit-meta" : [ "group/nuvla-admin" ]
+    },
+    "operations" : [ {
+      "rel" : "edit",
+      "href" : "module/23587aee-2069-4c05-a1b8-e4259b2979fd"
+    }, {
+      "rel" : "delete",
+      "href" : "module/23587aee-2069-4c05-a1b8-e4259b2979fd"
+    }, {
+      "rel" : "validate-docker-compose",
+      "href" : "module/23587aee-2069-4c05-a1b8-e4259b2979fd/validate-docker-compose"
+    }, {
+      "rel" : "publish",
+      "href" : "module/23587aee-2069-4c05-a1b8-e4259b2979fd/publish"
+    }, {
+      "rel" : "unpublish",
+      "href" : "module/23587aee-2069-4c05-a1b8-e4259b2979fd/unpublish"
+    }, {
+      "rel" : "delete-version",
+      "href" : "module/23587aee-2069-4c05-a1b8-e4259b2979fd/delete-version"
+    } ],
+    "logo-url" : "https://upload.wikimedia.org/wikipedia/commons/2/2b/Node-red-icon.png",
+    "versions" : [ {
+      "href" : "module-application/e9249773-4428-44b4-8045-234267b999d1",
+      "author" : "meb@sixsq.com",
+      "commit" : "First commit"
+    }, {
+      "href" : "module-application/c3e79509-2675-4931-ab16-55be6f4455cf",
+      "author" : "meb@sixsq.com",
+      "commit" : "First commit"
+    } ],
+    "subtype" : "application"
+  }, {
+    "description" : "An application composed of two services for demo and learning purpose.  The goal is to show how user can use env variables, secrets, config files, urls and output parameters. We didn't build custom images to make everything visible to the end  user.",
+    "path" : "examples/my-first-application",
+    "compatibility" : "swarm",
+    "updated" : "2019-07-29T12:04:21.789Z",
+    "name" : "My first application",
+    "created" : "2019-07-29T07:26:21.360Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "id" : "module/f34b5882-45b5-4eb3-95a2-bc7fd236b8ff",
+    "resource-type" : "module",
+    "logo-url" : "/ui/images/noimage.png",
+    "versions" : [ {
+      "author" : "super",
+      "commit" : "Fist implementation",
+      "href" : "module-application/506df2fb-b500-4ac1-9ab8-2097b77b0438"
+    }, {
+      "author" : "super",
+      "commit" : "Make this application visible to nuvla users",
+      "href" : "module-application/86c4d906-9a37-4170-b62e-4e8dab2f6819"
+    } ],
+    "subtype" : "application"
+  }, {
+    "valid" : true,
+    "description" : "# What is nginx?\n\nNginx (pronounced \"engine-x\") is an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server (origin server). \n\nThe nginx project started with a strong focus on high concurrency, high performance and low memory usage. \n\nIt is licensed under the 2-clause BSD-like license and it runs on Linux, BSD variants, Mac OS X, Solaris, AIX, HP-UX, as well as on other *nix flavors.",
+    "path" : "examples/nginx",
+    "license" : {
+      "url" : "https://opensource.org/licenses/BSD-2-Clause",
+      "name" : "BSD-2 Clause",
+      "description" : "The 2-Clause BSD License"
+    },
+    "compatibility" : "docker-compose",
+    "updated" : "2023-04-15T10:45:08.166Z",
+    "name" : "Nginx",
+    "created" : "2022-10-10T12:34:15.334Z",
+    "parent-path" : "examples",
+    "data-accept-content-types" : [ ],
+    "updated-by" : "group/nuvla-admin",
+    "created-by" : "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82",
+    "id" : "module/96f09292-6aa4-49e1-a5d6-e0fb90fbf787",
+    "validation-message" : "Docker-compose valid.",
+    "resource-type" : "module",
+    "acl" : {
+      "edit-data" : [ "group/nuvla-admin", "group/sixsq-devs", "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82" ],
+      "owners" : [ "group/sixsq-vendor" ],
+      "view-acl" : [ "group/nuvla-admin", "group/nuvla-user", "group/sixsq-devs", "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82" ],
+      "delete" : [ "group/nuvla-admin" ],
+      "view-meta" : [ "group/nuvla-admin", "group/nuvla-user", "group/sixsq-devs", "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82" ],
+      "edit-acl" : [ "group/nuvla-admin" ],
+      "view-data" : [ "group/nuvla-admin", "group/nuvla-user", "group/sixsq-devs", "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82" ],
+      "manage" : [ "group/nuvla-admin", "group/sixsq-devs", "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82" ],
+      "edit-meta" : [ "group/nuvla-admin", "group/sixsq-devs", "user/7644d34d-4c59-47d5-bdde-6d4c3deedb82" ]
+    },
+    "logo-url" : "https://sos-ch-gva-2.exo.io/nuvla-images/nginx-logo-vignette.png",
+    "versions" : [ {
+      "href" : "module-application/2a8201dc-4db2-4700-a837-a1a2975bea4e",
+      "author" : "lionel@sixsq.com",
+      "commit" : "no commit message"
+    }, {
+      "href" : "module-application/205e93d6-12e9-48fe-954c-64c96a761a4d",
+      "author" : "lionel@sixsq.com",
+      "commit" : "Switch to docker-compose"
+    }, {
+      "href" : "module-application/d3e91f51-abef-475e-ba23-752eddaafa2d",
+      "author" : "lionel@sixsq.com",
+      "commit" : "updated port definition"
+    } ],
+    "subtype" : "application"
+  } ],
+  "operations" : [ {
+    "rel" : "add",
+    "href" : "module"
+  } ]
 }

@@ -126,7 +126,8 @@ test('add app', async ({}, { config }) => {
   await page.goto("https://nuvla.io/ui/apps/examples/New%20Application?subtype=application&apps-tab=details");
   await delay(1000);
   await page.screenshot({ fullPage: false, path: '../docs/assets/img/nuvla-new-app-page-details.png', scale: 'css' });
-  
+
+  await page.pause();
   await page.goto("https://nuvla.io/ui/apps/examples/New%20Application?subtype=application&apps-tab=docker");
   await delay(2000);
   await page.screenshot({ fullPage: false, path: '../docs/assets/img/nuvla-new-app-page-docker.png', scale: 'css' });
@@ -137,7 +138,7 @@ test('add app', async ({}, { config }) => {
 
   // clear Private registries
   await page.locator('#nuvla-ui-content > div.dimmable > div.ui.fluid.container.uix-apps-details > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div.accordion.ui.fluid.styled > div').evaluate(e => e.style.border = '');  
-  await page.getByRole('heading', { name: 'Private registries 0' }).click();
+  await page.locator('#nuvla-ui-content > div.dimmable > div.ui.fluid.container.uix-apps-details > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div.accordion.ui.fluid.styled > div').click();
   // highlight +
   await page.locator('#nuvla-ui-content > div.dimmable > div.ui.fluid.container.uix-apps-details > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div.accordion.ui.fluid.styled > div.content.active > div:nth-child(3) > i').evaluate(e => e.style.border = '3px solid red');  
   await page.locator('#nuvla-ui-content > div.dimmable > div.ui.fluid.container.uix-apps-details > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div.accordion.ui.fluid.styled > div.content.active > div:nth-child(3) > i').evaluate(e => e.style.padding = '0px 15px 20px 5px');  

@@ -146,7 +146,7 @@ export async function selectApp(page, prefix) {
   // Add apps
   let add_app_el = '#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div';
   await page.locator(add_app_el).evaluate(e => e.style.border = '3px solid red');
-  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-from-edges-add-app.png', scale: 'css' });
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/' + prefix + '-add-app.png', scale: 'css' });
 
   // App selection
   await page.click(add_app_el);

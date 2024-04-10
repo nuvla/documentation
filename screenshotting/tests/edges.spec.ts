@@ -71,7 +71,7 @@ test('edges static', async ({}, { config }) => {
 
   // Deployment
   await delay(1000); // wait for the modal to disapear
-  await page.screenshot({ fullPage: false, path: '../docs/assets/img/dg-static-started.png', scale: 'css' });
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/dg-static-from-edges-started.png', scale: 'css' });
   
   await browser.close();
 });
@@ -140,14 +140,14 @@ test('edges dynamic', async ({}, { config }) => {
   
   // Deployment
   await delay(1000); // wait for the modal to disapear
-  await page.screenshot({ fullPage: false, path: '../docs/assets/img/dg-dynamic-started.png', scale: 'css' });
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/dg-dynamic-from-edges-started.png', scale: 'css' });
   
-  // // Recompute fleet (on the overview tab)
-  // let overview_tab_el = 'a:text("Overview")';
-  // await page.locator(overview_tab_el).click();
-  // await highlightElement(page, 'a:text("Recompute fleet")', false);
-  // await delay(1000);
-  // await page.screenshot({ fullPage: false, path: '../docs/assets/img/dg-dynamic-from-edges-highlight-recompute-fleet.png', scale: 'css' });
+  // Recompute fleet (on the overview tab)
+  let overview_tab_el = 'a:text("Overview")';
+  await page.locator(overview_tab_el).click();
+  await highlightElement(page, 'a:text("Recompute fleet")', false);
+  await delay(1000);
+  await page.screenshot({ fullPage: false, path: '../docs/assets/img/dg-dynamic-from-edges-highlight-recompute-fleet.png', scale: 'css' });
 
   await browser.close();
 });

@@ -41,9 +41,11 @@ test('deployment groups', async ({}, { config }) => {
   await delay(1000);
   
   await setName(page, 'dg-dg');
+  
+  await page.pause();
 
   // Pick a NuvlaEdge
-  await page.locator('button').nth(2).click();
+  await page.locator('#nuvla-ui-content > div > div > div.ui.fluid.container > div:nth-child(3) > div.ui.bottom.attached.segment.active.tab > div > div:nth-child(3) > div > div > div > div:nth-child(3) > div:nth-child(1) > button').click();
   await page.getByPlaceholder('Search...').fill('NuvlaEdge Mini Demo');
   await page.getByRole('link', { name: 'select row 0 NuvlaEdge Mini Demo COMMISSIONED' }).click();
   await page.getByRole('button', { name: 'Add to deployment group' }).click();  

@@ -23,6 +23,9 @@ To deploy apps, Nuvla.io needs the following information:
 
 So depending on which page you start from, you'll be asked to define these, but in a different order.
 
+You always deploy an app on a NuvlaEdge or in the cloud.  We'll assume here that you want to deploy an app at the edge. For this, you need access to a NuvlaEdge.  If you don't have one available yet, you can [create a new NuvlaEdge here](/nuvlaedge/installation/). Make sure you have at least one online NuvlaEdge. You can check that on the [Edges page](https://nuvla.io/ui/edges) by looking for an <span style="color:green">online</span> NuvlaEdge.
+
+---
 
 ## Starting from the Edges page
 
@@ -60,19 +63,19 @@ First set the name and description of your new deployment group.
 
 The *NuvlaEdges* section is already filled from the selection you made on the edges page before clicking the Bulk Deploy App. 
 
-{% include deployment-group/dg-apps.md prefix='dg-static' %}
+{% include deployment-group/dg-apps.md prefix='dg-static-from-edges' %}
 
 You can now launch this deployment group by clicking on the *Start* button.  
 
-![nuvla-new-deployment-group-highlight-save-button](/assets/img/dg-static-highlight-start-button.png)
+![nuvla-new-deployment-group-highlight-save-button](/assets/img/dg-static-from-edges-highlight-start-button.png)
 
 Depending on the app, you might have to accept the terms and conditions and price(s) of the app vendor(s).  Then confirm that you want to start the app and start it. 
 
-![nuvla-new-deployment-group-start](/assets/img/dg-static-start.png)
+![nuvla-new-deployment-group-start](/assets/img/dg-static-from-edges-start.png)
 
 Voilà! You have started your deployment group. From here you will be able to manage this deployment group by changing both the fleet of edge device and the apps, including their version and input parameters.
 
-![nuvla-new-deployment-group-started](/assets/img/dg-static-started.png)
+![nuvla-new-deployment-group-started](/assets/img/dg-static-from-edges-started.png)
 
 
 ### Using a dynamic fleet of edge devices
@@ -85,7 +88,7 @@ Note that you cannot convert a _static_ fleet in deployment group into a _dynami
 
 First define the filter you want to define your fleet.
 
-![nuvla-edges-highlight-filter-button](/assets/img/edges-highlight-filter-button.png)
+![nuvla-edges-highlight-filter-button](/assets/img/dg-dynamic-highlight-filter-button.png)
 
 In this example, we choose to select all edge devices that have the tag 'green'.
 
@@ -117,6 +120,7 @@ Voilà! You have started your deployment group. From here you will be able to ma
 
 ![nuvla-new-deployment-group-started](/assets/img/dg-dynamic-from-edges-highlight-recompute-fleet.png)
 
+---
 
 ## Starting from the Deployments page
 
@@ -138,17 +142,16 @@ This will create a new deployment group page. From here you will be able to add 
 
 {% include deployment-group/dg-apps.md prefix='dg-dg' %}
 
+---
 
 ## Starting from the Apps page
 
-There are two types of apps, and There are two ways of deploying apps:
- - Simple app a simple app. You always deploy an app on a NuvlaEdge or in the cloud.  We'll assume here that you want to deploy an app at the edge.
-
-For this, you need access to a NuvlaEdge.  If you don't have one available yet, you can [create a new NuvlaEdge here](/nuvlaedge/installation/).
-
-Make sure you have at least one online NuvlaEdge. You can do that on the [Edges page](https://nuvla.io/ui/edges) by looking for an <span style="color:green">online</span> NuvlaEdge.  
-
----
+There are two types of apps:
+ - **Simple app**: a single app, which can be composed of several containers deployed together and described using a Docker Compose file, or Kubernetes Manifest (Helm charts are on their way)
+ - **Bouquet of Apps**: a composition of simple apps, potentially provided by different providers, but deployed and managed together
+ 
+ From the Apps page, depending on the type of app, the deployment process is a bit different. Up to know, on this documentation page, we have described the way to create a deployment group. In this section, we will describe the user interface for simple apps deployment. This will be deprecated in the future, replaced by the deployment group approach.
+ 
 
 So, **let's deploy a Nuvla App into your NuvlaEdge**:
 
@@ -172,4 +175,4 @@ So, **let's deploy a Nuvla App into your NuvlaEdge**:
  
  6. and if the app is a paying app, you will also have to accept the fees (this Nginx example application doesn't)
  
- 7. click `deploy`, and you'll be redirected to the page of the new deployment, where you can follow the state of your deployment, and interact with it. 
+ 7. click *deploy*, and you'll be redirected to the page of the new deployment, where you can follow the state of your deployment, and interact with it. 

@@ -32,19 +32,18 @@ test('test', async ({}, { config }) => {
   await page.locator('#nuvla-ui-content > div > div.ui.tiny.ten.statistics > div.ui.black.statistic.slight-up.nuvla-credentials > div.value').evaluate(e => e.innerText = "1781");
   
   // Deployments
-  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div.value').evaluate(e => e.innerText = "2593");
-  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div:nth-child(2) > div.value').evaluate(e => e.innerText = "2521");
-  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div:nth-child(3) > div.value').evaluate(e => e.innerText = "2");
-  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div:nth-child(4) > div.value').evaluate(e => e.innerText = "65");
-  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div:nth-child(5) > div.value').evaluate(e => e.innerText = "5");
+  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div.eight.wide.column > div > div:nth-child(1) > div.value').evaluate(e => e.innerText = "2593");
+  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div.eight.wide.column > div > div:nth-child(2) > div.value').evaluate(e => e.innerText = "2521");
+  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div.eight.wide.column > div > div:nth-child(3) > div.value').evaluate(e => e.innerText = "2");
+  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div.eight.wide.column > div > div:nth-child(4) > div.value').evaluate(e => e.innerText = "65");
+  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div.eight.wide.column > div > div:nth-child(5) > div.value').evaluate(e => e.innerText = "5");
 
   // NuvleEdges
-  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div:nth-child(1) > div.value').evaluate(e => e.innerText = "1647");
-  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div:nth-child(2) > div.value').evaluate(e => e.innerText = "1594");
-  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div:nth-child(3) > div.value').evaluate(e => e.innerText = "52");
-  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div:nth-child(4) > div.value').evaluate(e => e.innerText = "1");
+  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div > div:nth-child(1) > div.value').evaluate(e => e.innerText = "1647");
+  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div.value').evaluate(e => e.innerText = "1594");
+  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.value').evaluate(e => e.innerText = "52");
+  await page.locator('#nuvla-ui-content > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > div > div:nth-child(4) > div.value').evaluate(e => e.innerText = "1");
 
-  await delay(1000);
   await page.screenshot({ fullPage: false, path: '../docs/assets/img/nuvla-dashboard.png', scale: 'css' });
 
   await browser.close();
