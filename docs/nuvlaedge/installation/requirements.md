@@ -113,17 +113,3 @@ _Optional_:
   to be used for communication with the edge device managed by NuvlaEdge.
 
 Extended port usage [here](/nuvlaedge/architecture/#network-port-binding).
-
-## NuvlaEdge footprint
-
-<style>
-tr:nth-child(even) {
-  color: #b00000!important;
-}
-</style>
-
-
-| Version | Avg. Memory (MB) | Disk usage (MB) |    Release     |
-|--------:|:----------------:|:---------------:|:--------------:|
-|   2.5.0 |       200        |       350       |  Pre-release   |
-|   2.1.1 |       260        |       980       | Latest release |
