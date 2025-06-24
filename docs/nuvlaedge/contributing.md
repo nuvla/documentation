@@ -3,8 +3,8 @@ layout: nuvlaedge
 title: Contributing
 nav_order: 5
 parent: NuvlaEdge
-has_children: true
-permalink: /nuvlabox/nuvlabox-contributing
+redirect_from:
+  - /nuvlabox/nuvlabox-contributing
 ---
 
 Contributing to NuvlaEdge
@@ -14,4 +14,4 @@ The NuvlaEdge is a fully open-source project - [NuvlaEdge in GitHub](https://git
 
 If you'd like to participate in the development of the NuvlaEdge software, either by writing new code or simply reporting issues and feature requests, you are free and encouraged to do so. 
 
-For each NuvlaEdge component, you'll find a Contributing guide within the respective GitHub repository. Here's an example for a [generic Contributing guide](https://github.com/nuvlaedge/agent/blob/main/CONTRIBUTING.md).
+You'll find a Contributing guide in GitHub repository. Here's an example for a [generic Contributing guide](https://github.com/nuvlaedge/nuvlaedge/blob/main/CONTRIBUTING.md).
